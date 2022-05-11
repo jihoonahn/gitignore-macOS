@@ -23,6 +23,7 @@
 		EEDE5B78282BA92500C0ADBA /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B77282BA92500C0ADBA /* ListView.swift */; };
 		EEDE5B7A282BA9F100C0ADBA /* IssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B79282BA9F100C0ADBA /* IssueView.swift */; };
 		EEDE5B7E282BABC000C0ADBA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B7D282BABC000C0ADBA /* RootView.swift */; };
+		EEDE5B87282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B86282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		EEDE5B77282BA92500C0ADBA /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		EEDE5B79282BA9F100C0ADBA /* IssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueView.swift; sourceTree = "<group>"; };
 		EEDE5B7D282BABC000C0ADBA /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		EEDE5B86282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreTextfieldStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 			children = (
 				EEDE5B66282B990100C0ADBA /* TabButton.swift */,
 				EEDE5B71282BA2EC00C0ADBA /* BlurView.swift */,
+				EEDE5B86282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				EEDE5B78282BA92500C0ADBA /* ListView.swift in Sources */,
 				EEDE5B72282BA2EC00C0ADBA /* BlurView.swift in Sources */,
 				EEDE5B6C282B9DF600C0ADBA /* HomeViewModel.swift in Sources */,
+				EEDE5B87282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift in Sources */,
 				EEDE5B6A282B9DD100C0ADBA /* Home.swift in Sources */,
 				EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */,
 				EEDE5B7A282BA9F100C0ADBA /* IssueView.swift in Sources */,
