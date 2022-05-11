@@ -8,7 +8,6 @@
 import SwiftUI
 
 //MARK: - Screen
-var screen = NSScreen.main!.visibleFrame
 
 struct Home: View {
     @StateObject var homeData = HomeViewModel()
