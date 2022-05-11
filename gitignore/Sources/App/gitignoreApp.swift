@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct gitignoreApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-        }
+        }.windowStyle(HiddenTitleBarWindowStyle())
     }
 }

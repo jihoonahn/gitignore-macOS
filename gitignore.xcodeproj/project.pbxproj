@@ -11,6 +11,10 @@
 		EEDA85C1282B40700047F3AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA85C0282B40700047F3AC /* ContentView.swift */; };
 		EEDA85C3282B40720047F3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C2282B40720047F3AC /* Assets.xcassets */; };
 		EEDA85C6282B40720047F3AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C5282B40720047F3AC /* Preview Assets.xcassets */; };
+		EEDA85CF282B500B0047F3AC /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EEDA85CE282B500B0047F3AC /* ComposableArchitecture */; };
+		EEDA85D2282B506E0047F3AC /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = EEDA85D1282B506E0047F3AC /* CombineMoya */; };
+		EEDA85D5282B51A60047F3AC /* CombineRealm in Frameworks */ = {isa = PBXBuildFile; productRef = EEDA85D4282B51A60047F3AC /* CombineRealm */; };
+		EEDA85D8282B51E10047F3AC /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = EEDA85D7282B51E10047F3AC /* Swinject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,7 +23,7 @@
 		EEDA85C0282B40700047F3AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EEDA85C2282B40720047F3AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEDA85C5282B40720047F3AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		EEDA85C7282B40720047F3AC /* gitignore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = gitignore.entitlements; sourceTree = "<group>"; };
+		EEDA85C7282B40720047F3AC /* gitignore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = gitignore.entitlements; path = gitignore/Supporting/gitignore.entitlements; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +31,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEDA85D2282B506E0047F3AC /* CombineMoya in Frameworks */,
+				EEDA85CF282B500B0047F3AC /* ComposableArchitecture in Frameworks */,
+				EEDA85D5282B51A60047F3AC /* CombineRealm in Frameworks */,
+				EEDA85D8282B51E10047F3AC /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,11 +60,9 @@
 		EEDA85BD282B40700047F3AC /* gitignore */ = {
 			isa = PBXGroup;
 			children = (
-				EEDA85BE282B40700047F3AC /* gitignoreApp.swift */,
-				EEDA85C0282B40700047F3AC /* ContentView.swift */,
-				EEDA85C2282B40720047F3AC /* Assets.xcassets */,
-				EEDA85C7282B40720047F3AC /* gitignore.entitlements */,
-				EEDA85C4282B40720047F3AC /* Preview Content */,
+				EEDE5B4A282B5EC400C0ADBA /* Supporting */,
+				EEDE5B49282B5EB800C0ADBA /* Resources */,
+				EEDE5B48282B5EAF00C0ADBA /* Sources */,
 			);
 			path = gitignore;
 			sourceTree = "<group>";
@@ -66,7 +72,50 @@
 			children = (
 				EEDA85C5282B40720047F3AC /* Preview Assets.xcassets */,
 			);
-			path = "Preview Content";
+			name = "Preview Content";
+			path = "gitignore/Resources/Preview Content";
+			sourceTree = SOURCE_ROOT;
+		};
+		EEDE5B47282B5EAA00C0ADBA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EEDE5B48282B5EAF00C0ADBA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EEDA85C0282B40700047F3AC /* ContentView.swift */,
+				EEDE5B4B282B5ED000C0ADBA /* App */,
+				EEDE5B47282B5EAA00C0ADBA /* View */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		EEDE5B49282B5EB800C0ADBA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EEDA85C4282B40720047F3AC /* Preview Content */,
+				EEDA85C2282B40720047F3AC /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EEDE5B4A282B5EC400C0ADBA /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				EEDA85C7282B40720047F3AC /* gitignore.entitlements */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		EEDE5B4B282B5ED000C0ADBA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EEDA85BE282B40700047F3AC /* gitignoreApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +134,12 @@
 			dependencies = (
 			);
 			name = gitignore;
+			packageProductDependencies = (
+				EEDA85CE282B500B0047F3AC /* ComposableArchitecture */,
+				EEDA85D1282B506E0047F3AC /* CombineMoya */,
+				EEDA85D4282B51A60047F3AC /* CombineRealm */,
+				EEDA85D7282B51E10047F3AC /* Swinject */,
+			);
 			productName = gitignore;
 			productReference = EEDA85BB282B40700047F3AC /* gitignore.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +168,12 @@
 				Base,
 			);
 			mainGroup = EEDA85B2282B40700047F3AC;
+			packageReferences = (
+				EEDA85CD282B500B0047F3AC /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				EEDA85D0282B506E0047F3AC /* XCRemoteSwiftPackageReference "Moya" */,
+				EEDA85D3282B51A60047F3AC /* XCRemoteSwiftPackageReference "CombineRealm" */,
+				EEDA85D6282B51E10047F3AC /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = EEDA85BC282B40700047F3AC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -265,11 +326,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = gitignore/gitignore.entitlements;
+				CODE_SIGN_ENTITLEMENTS = gitignore/Supporting/gitignore.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"gitignore/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"gitignore/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = Q2JZBR7H7Y;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -292,11 +353,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = gitignore/gitignore.entitlements;
+				CODE_SIGN_ENTITLEMENTS = gitignore/Supporting/gitignore.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"gitignore/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"gitignore/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = Q2JZBR7H7Y;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -336,6 +397,64 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EEDA85CD282B500B0047F3AC /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		EEDA85D0282B506E0047F3AC /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		EEDA85D3282B51A60047F3AC /* XCRemoteSwiftPackageReference "CombineRealm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineRealm.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		EEDA85D6282B51E10047F3AC /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EEDA85CE282B500B0047F3AC /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EEDA85CD282B500B0047F3AC /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		EEDA85D1282B506E0047F3AC /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EEDA85D0282B506E0047F3AC /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		EEDA85D4282B51A60047F3AC /* CombineRealm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EEDA85D3282B51A60047F3AC /* XCRemoteSwiftPackageReference "CombineRealm" */;
+			productName = CombineRealm;
+		};
+		EEDA85D7282B51E10047F3AC /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EEDA85D6282B51E10047F3AC /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EEDA85B3282B40700047F3AC /* Project object */;
 }
