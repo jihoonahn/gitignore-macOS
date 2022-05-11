@@ -23,7 +23,6 @@
 		EEDE5B78282BA92500C0ADBA /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B77282BA92500C0ADBA /* ListView.swift */; };
 		EEDE5B7A282BA9F100C0ADBA /* IssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B79282BA9F100C0ADBA /* IssueView.swift */; };
 		EEDE5B7E282BABC000C0ADBA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B7D282BABC000C0ADBA /* RootView.swift */; };
-		EEDE5B83282BAEDB00C0ADBA /* gitignoreColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B82282BAEDB00C0ADBA /* gitignoreColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,9 +40,6 @@
 		EEDE5B77282BA92500C0ADBA /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		EEDE5B79282BA9F100C0ADBA /* IssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueView.swift; sourceTree = "<group>"; };
 		EEDE5B7D282BABC000C0ADBA /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		EEDE5B82282BAEDB00C0ADBA /* gitignoreColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreColor.swift; sourceTree = "<group>"; };
-		EEDE5B84282BCAF100C0ADBA /* Effects */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Effects; sourceTree = "<group>"; };
-		EEDE5B85282BCB6700C0ADBA /* Platform */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Platform; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +60,6 @@
 		EEDA85B2282B40700047F3AC = {
 			isa = PBXGroup;
 			children = (
-				EEDE5B85282BCB6700C0ADBA /* Platform */,
-				EEDE5B84282BCAF100C0ADBA /* Effects */,
 				EEDA85BD282B40700047F3AC /* gitignore */,
 				EEDA85BC282B40700047F3AC /* Products */,
 			);
@@ -115,7 +109,6 @@
 				EEDE5B68282B9B0500C0ADBA /* ViewModel */,
 				EEDE5B52282B646F00C0ADBA /* View */,
 				EEDE5B47282B5EAA00C0ADBA /* UI */,
-				EEDE5B5A282B7C9400C0ADBA /* Utils */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -200,14 +193,6 @@
 			children = (
 			);
 			path = DataMapping;
-			sourceTree = "<group>";
-		};
-		EEDE5B5A282B7C9400C0ADBA /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				EEDE5B82282BAEDB00C0ADBA /* gitignoreColor.swift */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		EEDE5B68282B9B0500C0ADBA /* ViewModel */ = {
@@ -327,7 +312,6 @@
 				EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */,
 				EEDE5B7A282BA9F100C0ADBA /* IssueView.swift in Sources */,
 				EEDE5B67282B990100C0ADBA /* TabButton.swift in Sources */,
-				EEDE5B83282BAEDB00C0ADBA /* gitignoreColor.swift in Sources */,
 				EEDE5B4F282B63B300C0ADBA /* AppDI.swift in Sources */,
 				EEDE5B7E282BABC000C0ADBA /* RootView.swift in Sources */,
 			);
