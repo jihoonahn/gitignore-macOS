@@ -15,10 +15,14 @@
 		EEDA85D5282B51A60047F3AC /* CombineRealm in Frameworks */ = {isa = PBXBuildFile; productRef = EEDA85D4282B51A60047F3AC /* CombineRealm */; };
 		EEDA85D8282B51E10047F3AC /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = EEDA85D7282B51E10047F3AC /* Swinject */; };
 		EEDE5B4F282B63B300C0ADBA /* AppDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B4E282B63B300C0ADBA /* AppDI.swift */; };
-		EEDE5B56282B64D700C0ADBA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B55282B64D700C0ADBA /* MainView.swift */; };
-		EEDE5B58282B64F900C0ADBA /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B57282B64F900C0ADBA /* ListView.swift */; };
 		EEDE5B5C282B7C9C00C0ADBA /* gitignoreColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B5B282B7C9C00C0ADBA /* gitignoreColor.swift */; };
-		EEDE5B60282B85D100C0ADBA /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B5F282B85D100C0ADBA /* NavigationView.swift */; };
+		EEDE5B67282B990100C0ADBA /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B66282B990100C0ADBA /* TabButton.swift */; };
+		EEDE5B6A282B9DD100C0ADBA /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B69282B9DD100C0ADBA /* Home.swift */; };
+		EEDE5B6C282B9DF600C0ADBA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B6B282B9DF600C0ADBA /* HomeViewModel.swift */; };
+		EEDE5B6F282BA27300C0ADBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B6E282BA27300C0ADBA /* ContentView.swift */; };
+		EEDE5B72282BA2EC00C0ADBA /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B71282BA2EC00C0ADBA /* BlurView.swift */; };
+		EEDE5B76282BA8EC00C0ADBA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B75282BA8EC00C0ADBA /* MainView.swift */; };
+		EEDE5B78282BA92500C0ADBA /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B77282BA92500C0ADBA /* ListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +32,14 @@
 		EEDA85C5282B40720047F3AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EEDA85C7282B40720047F3AC /* gitignore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = gitignore.entitlements; path = gitignore/Supporting/gitignore.entitlements; sourceTree = SOURCE_ROOT; };
 		EEDE5B4E282B63B300C0ADBA /* AppDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDI.swift; sourceTree = "<group>"; };
-		EEDE5B55282B64D700C0ADBA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		EEDE5B57282B64F900C0ADBA /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		EEDE5B5B282B7C9C00C0ADBA /* gitignoreColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreColor.swift; sourceTree = "<group>"; };
-		EEDE5B5F282B85D100C0ADBA /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
+		EEDE5B66282B990100C0ADBA /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
+		EEDE5B69282B9DD100C0ADBA /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		EEDE5B6B282B9DF600C0ADBA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		EEDE5B6E282BA27300C0ADBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EEDE5B71282BA2EC00C0ADBA /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		EEDE5B75282BA8EC00C0ADBA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		EEDE5B77282BA92500C0ADBA /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +95,8 @@
 		EEDE5B47282B5EAA00C0ADBA /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				EEDE5B55282B64D700C0ADBA /* MainView.swift */,
-				EEDE5B57282B64F900C0ADBA /* ListView.swift */,
+				EEDE5B6D282BA26300C0ADBA /* Page */,
+				EEDE5B6E282BA27300C0ADBA /* ContentView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -98,6 +106,7 @@
 			children = (
 				EEDE5B4B282B5ED000C0ADBA /* App */,
 				EEDE5B4C282B636C00C0ADBA /* Model */,
+				EEDE5B68282B9B0500C0ADBA /* ViewModel */,
 				EEDE5B52282B646F00C0ADBA /* View */,
 				EEDE5B47282B5EAA00C0ADBA /* UI */,
 				EEDE5B5A282B7C9400C0ADBA /* Utils */,
@@ -167,7 +176,8 @@
 		EEDE5B52282B646F00C0ADBA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EEDE5B5F282B85D100C0ADBA /* NavigationView.swift */,
+				EEDE5B66282B990100C0ADBA /* TabButton.swift */,
+				EEDE5B71282BA2EC00C0ADBA /* BlurView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -192,6 +202,24 @@
 				EEDE5B5B282B7C9C00C0ADBA /* gitignoreColor.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		EEDE5B68282B9B0500C0ADBA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EEDE5B6B282B9DF600C0ADBA /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EEDE5B6D282BA26300C0ADBA /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				EEDE5B69282B9DD100C0ADBA /* Home.swift */,
+				EEDE5B75282BA8EC00C0ADBA /* MainView.swift */,
+				EEDE5B77282BA92500C0ADBA /* ListView.swift */,
+			);
+			path = Page;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,10 +305,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEDE5B5C282B7C9C00C0ADBA /* gitignoreColor.swift in Sources */,
-				EEDE5B58282B64F900C0ADBA /* ListView.swift in Sources */,
-				EEDE5B56282B64D700C0ADBA /* MainView.swift in Sources */,
+				EEDE5B76282BA8EC00C0ADBA /* MainView.swift in Sources */,
+				EEDE5B78282BA92500C0ADBA /* ListView.swift in Sources */,
+				EEDE5B72282BA2EC00C0ADBA /* BlurView.swift in Sources */,
+				EEDE5B6C282B9DF600C0ADBA /* HomeViewModel.swift in Sources */,
+				EEDE5B6F282BA27300C0ADBA /* ContentView.swift in Sources */,
+				EEDE5B6A282B9DD100C0ADBA /* Home.swift in Sources */,
 				EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */,
-				EEDE5B60282B85D100C0ADBA /* NavigationView.swift in Sources */,
+				EEDE5B67282B990100C0ADBA /* TabButton.swift in Sources */,
 				EEDE5B4F282B63B300C0ADBA /* AppDI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
