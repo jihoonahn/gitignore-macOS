@@ -42,6 +42,8 @@
 		EEDE5B79282BA9F100C0ADBA /* IssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueView.swift; sourceTree = "<group>"; };
 		EEDE5B7D282BABC000C0ADBA /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		EEDE5B82282BAEDB00C0ADBA /* gitignoreColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreColor.swift; sourceTree = "<group>"; };
+		EEDE5B84282BCAF100C0ADBA /* Effects */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Effects; sourceTree = "<group>"; };
+		EEDE5B85282BCB6700C0ADBA /* Platform */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Platform; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,8 @@
 		EEDA85B2282B40700047F3AC = {
 			isa = PBXGroup;
 			children = (
+				EEDE5B85282BCB6700C0ADBA /* Platform */,
+				EEDE5B84282BCAF100C0ADBA /* Effects */,
 				EEDA85BD282B40700047F3AC /* gitignore */,
 				EEDA85BC282B40700047F3AC /* Products */,
 			);
