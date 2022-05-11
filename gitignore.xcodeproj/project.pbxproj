@@ -8,22 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA85BE282B40700047F3AC /* gitignoreApp.swift */; };
-		EEDA85C1282B40700047F3AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA85C0282B40700047F3AC /* ContentView.swift */; };
 		EEDA85C3282B40720047F3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C2282B40720047F3AC /* Assets.xcassets */; };
 		EEDA85C6282B40720047F3AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C5282B40720047F3AC /* Preview Assets.xcassets */; };
 		EEDA85CF282B500B0047F3AC /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EEDA85CE282B500B0047F3AC /* ComposableArchitecture */; };
 		EEDA85D2282B506E0047F3AC /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = EEDA85D1282B506E0047F3AC /* CombineMoya */; };
 		EEDA85D5282B51A60047F3AC /* CombineRealm in Frameworks */ = {isa = PBXBuildFile; productRef = EEDA85D4282B51A60047F3AC /* CombineRealm */; };
 		EEDA85D8282B51E10047F3AC /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = EEDA85D7282B51E10047F3AC /* Swinject */; };
+		EEDE5B4F282B63B300C0ADBA /* AppDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B4E282B63B300C0ADBA /* AppDI.swift */; };
+		EEDE5B56282B64D700C0ADBA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B55282B64D700C0ADBA /* MainView.swift */; };
+		EEDE5B58282B64F900C0ADBA /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B57282B64F900C0ADBA /* ListView.swift */; };
+		EEDE5B5C282B7C9C00C0ADBA /* gitignoreColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B5B282B7C9C00C0ADBA /* gitignoreColor.swift */; };
+		EEDE5B60282B85D100C0ADBA /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B5F282B85D100C0ADBA /* NavigationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EEDA85BB282B40700047F3AC /* gitignore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gitignore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEDA85BE282B40700047F3AC /* gitignoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreApp.swift; sourceTree = "<group>"; };
-		EEDA85C0282B40700047F3AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EEDA85C2282B40720047F3AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEDA85C5282B40720047F3AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EEDA85C7282B40720047F3AC /* gitignore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = gitignore.entitlements; path = gitignore/Supporting/gitignore.entitlements; sourceTree = SOURCE_ROOT; };
+		EEDE5B4E282B63B300C0ADBA /* AppDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDI.swift; sourceTree = "<group>"; };
+		EEDE5B55282B64D700C0ADBA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		EEDE5B57282B64F900C0ADBA /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		EEDE5B5B282B7C9C00C0ADBA /* gitignoreColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreColor.swift; sourceTree = "<group>"; };
+		EEDE5B5F282B85D100C0ADBA /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,19 +84,23 @@
 			path = "gitignore/Resources/Preview Content";
 			sourceTree = SOURCE_ROOT;
 		};
-		EEDE5B47282B5EAA00C0ADBA /* View */ = {
+		EEDE5B47282B5EAA00C0ADBA /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				EEDE5B55282B64D700C0ADBA /* MainView.swift */,
+				EEDE5B57282B64F900C0ADBA /* ListView.swift */,
 			);
-			path = View;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		EEDE5B48282B5EAF00C0ADBA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				EEDA85C0282B40700047F3AC /* ContentView.swift */,
 				EEDE5B4B282B5ED000C0ADBA /* App */,
-				EEDE5B47282B5EAA00C0ADBA /* View */,
+				EEDE5B4C282B636C00C0ADBA /* Model */,
+				EEDE5B52282B646F00C0ADBA /* View */,
+				EEDE5B47282B5EAA00C0ADBA /* UI */,
+				EEDE5B5A282B7C9400C0ADBA /* Utils */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -113,9 +125,73 @@
 		EEDE5B4B282B5ED000C0ADBA /* App */ = {
 			isa = PBXGroup;
 			children = (
+				EEDE5B4D282B63A400C0ADBA /* DI */,
 				EEDA85BE282B40700047F3AC /* gitignoreApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		EEDE5B4C282B636C00C0ADBA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EEDE5B51282B63FE00C0ADBA /* Remote */,
+				EEDE5B50282B63F400C0ADBA /* Local */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EEDE5B4D282B63A400C0ADBA /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				EEDE5B4E282B63B300C0ADBA /* AppDI.swift */,
+			);
+			name = DI;
+			sourceTree = "<group>";
+		};
+		EEDE5B50282B63F400C0ADBA /* Local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		EEDE5B51282B63FE00C0ADBA /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				EEDE5B53282B64A500C0ADBA /* API */,
+				EEDE5B54282B64AD00C0ADBA /* DataMapping */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		EEDE5B52282B646F00C0ADBA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EEDE5B5F282B85D100C0ADBA /* NavigationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EEDE5B53282B64A500C0ADBA /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		EEDE5B54282B64AD00C0ADBA /* DataMapping */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataMapping;
+			sourceTree = "<group>";
+		};
+		EEDE5B5A282B7C9400C0ADBA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EEDE5B5B282B7C9C00C0ADBA /* gitignoreColor.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,8 +276,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEDA85C1282B40700047F3AC /* ContentView.swift in Sources */,
+				EEDE5B5C282B7C9C00C0ADBA /* gitignoreColor.swift in Sources */,
+				EEDE5B58282B64F900C0ADBA /* ListView.swift in Sources */,
+				EEDE5B56282B64D700C0ADBA /* MainView.swift in Sources */,
 				EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */,
+				EEDE5B60282B85D100C0ADBA /* NavigationView.swift in Sources */,
+				EEDE5B4F282B63B300C0ADBA /* AppDI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
