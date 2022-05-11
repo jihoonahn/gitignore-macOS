@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  IssueView.swift
 //  gitignore
 //
 //  Created by Ji-hoon Ahn on 2022/05/11.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct IssueView: View {
     var body: some View {
-        Home()
+        Text("Issue")
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct IssueView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        IssueView()
     }
 }

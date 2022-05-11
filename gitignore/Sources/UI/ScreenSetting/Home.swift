@@ -28,10 +28,11 @@ struct Home: View {
                 switch homeData.selectedTab{
                 case "Home": MainView()
                 case "List": ListView()
-                case "Issue": Text("Issue")
+                case "Issue": IssueView()
                 default: Text("")
                 }
             }.frame(maxWidth: .infinity, maxHeight: .infinity)
+            
         }
         .ignoresSafeArea(.all, edges: .all)
         .frame(minWidth: 600, minHeight: 400)
