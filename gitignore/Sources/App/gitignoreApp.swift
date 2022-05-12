@@ -12,7 +12,11 @@ import ComposableArchitecture
 struct gitignoreApp: App {
     var body: some Scene {
         WindowGroup {
-            RootView()
+            RootView(store: Store(
+                initialState: RootState(),
+                reducer: rootReducer,
+                environment: RootEnvironment()
+            ))
         }.windowStyle(HiddenTitleBarWindowStyle())
     }
 }

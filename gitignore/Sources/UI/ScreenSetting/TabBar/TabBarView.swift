@@ -9,8 +9,10 @@ import SwiftUI
 
 //MARK: - Screen
 
-struct Home: View {
-    @StateObject var homeData = HomeViewModel()
+struct TabBarView: View {
+    let store: Store<TabBarState, TabBarAction>
+
+    @StateObject var homeData = TabBarViewModel()
     var body: some View {
         HStack{
             VStack{
