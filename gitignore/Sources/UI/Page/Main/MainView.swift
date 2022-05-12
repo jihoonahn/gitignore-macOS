@@ -6,18 +6,27 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 struct MainView: View {
+    let store : Store<MainState,MainAction>
     @State var text = ""
     var body: some View {
-        VStack{
-            
+        WithViewStore(self.store) { viewStore in
+            VStack{
+                
+                Image("HomeLogo")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 300, height: 180)
+                    .padding()
+                TextField(
+                  "운영체제, 개발환경(IDE), 프로그래밍 언어 검색",
+                  text: $text
+                )
+                
+            }
         }
     }
 }
 
-//struct MainView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TabBarView(store: <#Store<TabBarState, TabBarAction>#>)
-//    }
-//}

@@ -6,15 +6,12 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 struct IssueView: View {
+    let store : Store<IssueState,IssueAction>
+    
     var body: some View {
-        Text("Issue")
-    }
-}
-
-struct IssueView_Previews: PreviewProvider {
-    static var previews: some View {
-        IssueView()
+        WebView(url: URL(string: "https://github.com/JiHoonAHN/.gitignore-macOS/issues")!)
     }
 }

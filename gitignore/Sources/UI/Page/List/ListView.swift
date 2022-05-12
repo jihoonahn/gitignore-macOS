@@ -6,15 +6,12 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 struct ListView: View {
+    let store : Store<ListState,ListAction>
+
     var body: some View {
         Text("List")
-    }
-}
-
-struct ListView_Previews: PreviewProvider {
-    static var previews: some View {
-        ListView()
     }
 }

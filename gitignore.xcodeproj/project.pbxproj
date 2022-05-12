@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EEA21990282D58F5009F2097 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA2198F282D58F5009F2097 /* WebView.swift */; };
 		EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA85BE282B40700047F3AC /* gitignoreApp.swift */; };
 		EEDA85C3282B40720047F3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C2282B40720047F3AC /* Assets.xcassets */; };
 		EEDA85C6282B40720047F3AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C5282B40720047F3AC /* Preview Assets.xcassets */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EEA2198F282D58F5009F2097 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		EEDA85BB282B40700047F3AC /* gitignore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gitignore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEDA85BE282B40700047F3AC /* gitignoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreApp.swift; sourceTree = "<group>"; };
 		EEDA85C2282B40720047F3AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -70,6 +72,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EEA2198E282D58EC009F2097 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				EEA2198F282D58F5009F2097 /* WebView.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 		EEDA85B2282B40700047F3AC = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +285,7 @@
 		EEEBD262282C875800608EB6 /* CustomNavigationView */ = {
 			isa = PBXGroup;
 			children = (
+				EEA2198E282D58EC009F2097 /* WebView */,
 				EEEBD263282C877D00608EB6 /* Button */,
 				EEDE5B68282B9B0500C0ADBA /* ViewModel */,
 			);
@@ -391,6 +402,7 @@
 				EEEBD25D282C86BC00608EB6 /* ListFeacture.swift in Sources */,
 				EEEBD25F282C86C700608EB6 /* IssueFeacture.swift in Sources */,
 				EEEBD268282C8C6000608EB6 /* TabBarFeacture.swift in Sources */,
+				EEA21990282D58F5009F2097 /* WebView.swift in Sources */,
 				EEDE5B7A282BA9F100C0ADBA /* IssueView.swift in Sources */,
 				EEDE5B67282B990100C0ADBA /* TabButton.swift in Sources */,
 				EEDE5B4F282B63B300C0ADBA /* AppDI.swift in Sources */,

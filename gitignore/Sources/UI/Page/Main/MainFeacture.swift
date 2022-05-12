@@ -1,25 +1,28 @@
 import ComposableArchitecture
 
 struct MainState: Equatable{
-    init() {}
+    var searchQuery = ""
 }
 
 enum MainAction{
-
-    
+    case searchQueryChanged(String)
 }
 
 struct MainEnvironmnet{
-    
-    public init(){}
-    
+    var mainQueue: AnySchedulerOf<DispatchQueue>
 }
 
 let mainReducer = Reducer<
     MainState,
     MainAction,
     MainEnvironmnet
->.combine(
-
-
-)
+>{ state, action, environment in
+    switch action{
+        
+    case let .searchQueryChanged(query):
+        enum SearchId {}
+        state.searchQuery = query
+        return .none
+    }
+    
+}
