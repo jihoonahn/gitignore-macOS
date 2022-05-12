@@ -16,16 +16,12 @@ struct RootView: View {
     }
     
     var body: some View {
-        SwitchStore(self.store){
-            CaseLet(state: /RootState.tabBar, action: RootAction.tabBarAction) { store in
-                TabBarView(store: store)
-            }
+        WithViewStore(self.store){ _ in
+            TabBarView(store: self.store.scope(
+                state: \.tabBar,
+                action: RootAction.tabBarAction
+            ))
         }
+    
     }
 }
-
-//struct RootView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        RootView()
-//    }
-//}

@@ -13,6 +13,10 @@ import ComposableArchitecture
 struct TabBarView: View {
     let store: Store<TabBarState, TabBarAction>
 
+    public init(store: Store<TabBarState, TabBarAction>){
+        self.store = store
+    }
+    
     @StateObject var homeData = TabBarViewModel()
     var body: some View {
         HStack{

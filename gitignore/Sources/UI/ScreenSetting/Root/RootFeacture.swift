@@ -7,10 +7,8 @@
 
 import ComposableArchitecture
 
-enum RootState : Equatable{
-    case tabBar(TabBarState)
-    
-    public init() {self = .tabBar(.init())}
+struct RootState : Equatable{
+    var tabBar = TabBarState()
 }
 
 enum RootAction{
@@ -25,7 +23,7 @@ let rootReducer = Reducer<
     RootEnvironment
 >.combine(
     tabBarReducer.pullback(
-        state: /RootState.tabBar,
+        state: \.tabBar,
         action: /RootAction.tabBarAction,
         environment: {_ in TabBarEnvironmnet()}
     )
