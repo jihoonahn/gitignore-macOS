@@ -16,8 +16,10 @@ struct RootView: View {
     }
     
     var body: some View {
-        WithViewStore(self.store){  viewStore in
-            
+        SwitchStore(self.store){
+            CaseLet(state: /RootState.tabBar, action: RootAction.tabBarAction) { store in
+                TabBarView(store: store)
+            }
         }
     }
 }

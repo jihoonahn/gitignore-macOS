@@ -1,8 +1,25 @@
-//
-//  MainCore.swift
-//  gitignore
-//
-//  Created by Ji-hoon Ahn on 2022/05/12.
-//
+import ComposableArchitecture
 
-import Foundation
+struct MainState: Equatable{
+    init() {}
+}
+
+enum MainAction{
+
+    
+}
+
+struct MainEnvironmnet{
+    
+    public init(){}
+    
+}
+
+let mainReducer = Reducer<
+    MainState,
+    MainAction,
+    MainEnvironmnet
+>.combine(
+
+
+)

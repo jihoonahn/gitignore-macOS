@@ -1,8 +1,25 @@
-//
-//  IssueFeacture.swift
-//  gitignore
-//
-//  Created by Ji-hoon Ahn on 2022/05/12.
-//
+import ComposableArchitecture
 
-import Foundation
+struct IssueState: Equatable{
+    init() {}
+}
+
+enum IssueAction{
+
+    
+}
+
+struct IssueEnvironmnet{
+    
+    public init(){}
+    
+}
+
+let issueReducer = Reducer<
+    IssueState,
+    IssueAction,
+    IssueEnvironmnet
+>.combine(
+
+
+)

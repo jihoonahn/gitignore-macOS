@@ -7,3 +7,28 @@
 
 import ComposableArchitecture
 
+struct TabBarState: Equatable{
+    
+    var main = MainState()
+}
+
+enum TabBarAction{
+    case mainAction(MainAction)
+    
+}
+
+struct TabBarEnvironmnet{}
+
+let tabBarReducer = Reducer<
+    TabBarState,
+    TabBarAction,
+    TabBarEnvironmnet
+>.combine(
+    
+    Reducer{ state, action, _ in
+        switch action{
+            
+        }
+    }
+
+)

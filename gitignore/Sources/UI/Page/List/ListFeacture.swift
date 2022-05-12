@@ -1,8 +1,25 @@
-//
-//  ListFeacture.swift
-//  gitignore
-//
-//  Created by Ji-hoon Ahn on 2022/05/12.
-//
+import ComposableArchitecture
 
-import Foundation
+struct ListState: Equatable{
+    init() {}
+}
+
+enum ListAction{
+
+    
+}
+
+struct ListEnvironmnet{
+    
+    public init(){}
+    
+}
+
+let listReducer = Reducer<
+    ListState,
+    ListAction,
+    ListEnvironmnet
+>.combine(
+
+
+)

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 //MARK: - Screen
 
@@ -26,6 +27,7 @@ struct TabBarView: View {
             .background(BlurView())
             
             ZStack{
+                
                 switch homeData.selectedTab{
                 case "Home": MainView()
                 case "List": ListView()

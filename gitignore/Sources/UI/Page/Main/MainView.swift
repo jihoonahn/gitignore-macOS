@@ -16,8 +16,8 @@ struct MainView: View {
     }
 }
 
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        Home()
-    }
-}
+//struct MainView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TabBarView(store: <#Store<TabBarState, TabBarAction>#>)
+//    }
+//}
