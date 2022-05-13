@@ -16,6 +16,14 @@ struct ListView: View {
         .ignoresSafeArea()
         .padding(.leading,-10)
         
-        Text("List")
+        ScrollView(.vertical){
+            
+        }
     }
+}
+
+struct Card {
+    let title: String
+    let subtitle: String
+    let tag : [String]
 }

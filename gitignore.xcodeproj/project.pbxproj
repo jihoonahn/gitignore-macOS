@@ -10,6 +10,8 @@
 		EE78FA01282DD0A90013117A /* gitignoreColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78FA00282DD0A90013117A /* gitignoreColor.swift */; };
 		EE78FA04282DD5C80013117A /* ToolBarButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78FA03282DD5C80013117A /* ToolBarButtonStyle.swift */; };
 		EE78FA07282E01130013117A /* bookStoreRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78FA06282E01130013117A /* bookStoreRow.swift */; };
+		EE78FA0A282E37BF0013117A /* ListCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78FA09282E37BF0013117A /* ListCardView.swift */; };
+		EE78FA0D282E3B020013117A /* typeListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78FA0C282E3B020013117A /* typeListCellView.swift */; };
 		EEA21990282D58F5009F2097 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA2198F282D58F5009F2097 /* WebView.swift */; };
 		EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA85BE282B40700047F3AC /* gitignoreApp.swift */; };
 		EEDA85C3282B40720047F3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C2282B40720047F3AC /* Assets.xcassets */; };
@@ -39,6 +41,8 @@
 		EE78FA00282DD0A90013117A /* gitignoreColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreColor.swift; sourceTree = "<group>"; };
 		EE78FA03282DD5C80013117A /* ToolBarButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarButtonStyle.swift; sourceTree = "<group>"; };
 		EE78FA06282E01130013117A /* bookStoreRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookStoreRow.swift; sourceTree = "<group>"; };
+		EE78FA09282E37BF0013117A /* ListCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCardView.swift; sourceTree = "<group>"; };
+		EE78FA0C282E3B020013117A /* typeListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typeListCellView.swift; sourceTree = "<group>"; };
 		EEA2198F282D58F5009F2097 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		EEDA85BB282B40700047F3AC /* gitignore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gitignore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEDA85BE282B40700047F3AC /* gitignoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreApp.swift; sourceTree = "<group>"; };
@@ -100,6 +104,22 @@
 				EE78FA06282E01130013117A /* bookStoreRow.swift */,
 			);
 			path = bookStoreRow;
+			sourceTree = "<group>";
+		};
+		EE78FA08282E37A30013117A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE78FA09282E37BF0013117A /* ListCardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EE78FA0B282E3ABE0013117A /* customListView */ = {
+			isa = PBXGroup;
+			children = (
+				EE78FA0C282E3B020013117A /* typeListCellView.swift */,
+			);
+			path = customListView;
 			sourceTree = "<group>";
 		};
 		EEA2198E282D58EC009F2097 /* WebView */ = {
@@ -229,6 +249,7 @@
 		EEDE5B52282B646F00C0ADBA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EE78FA0B282E3ABE0013117A /* customListView */,
 				EE78FA05282E00500013117A /* bookStoreRow */,
 				EE78FA02282DD5B30013117A /* ToolBarButtonStyle */,
 				EEA2198E282D58EC009F2097 /* WebView */,
@@ -292,6 +313,7 @@
 		EEEBD255282C7A3C00608EB6 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				EE78FA08282E37A30013117A /* View */,
 				EEDE5B77282BA92500C0ADBA /* ListView.swift */,
 				EEEBD25C282C86BC00608EB6 /* ListFeacture.swift */,
 			);
@@ -431,9 +453,11 @@
 				EEDE5B72282BA2EC00C0ADBA /* BlurView.swift in Sources */,
 				EEDE5B6C282B9DF600C0ADBA /* HomeViewModel.swift in Sources */,
 				EEDE5B87282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift in Sources */,
+				EE78FA0A282E37BF0013117A /* ListCardView.swift in Sources */,
 				EEDE5B6A282B9DD100C0ADBA /* TabBarView.swift in Sources */,
 				EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */,
 				EEEBD25D282C86BC00608EB6 /* ListFeacture.swift in Sources */,
+				EE78FA0D282E3B020013117A /* typeListCellView.swift in Sources */,
 				EEEBD25F282C86C700608EB6 /* IssueFeacture.swift in Sources */,
 				EEEBD268282C8C6000608EB6 /* TabBarFeacture.swift in Sources */,
 				EEA21990282D58F5009F2097 /* WebView.swift in Sources */,

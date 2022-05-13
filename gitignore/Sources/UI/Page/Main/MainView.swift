@@ -64,14 +64,16 @@ struct MainView: View {
                                     .font(.system(size: 12, weight: .regular))
                             })
                             .frame(width:50, height: 40)
-                            .background(.green)
+                            .background(.orange)
                             .buttonStyle(PlainButtonStyle())
                         }
                         .padding(.top,30)
-                        
-                        
+
                     }
                     Spacer()
+//                    ScrollView(.horizontal){
+//                        
+//                    }.background(.red)
                 }
                 Spacer()
                 

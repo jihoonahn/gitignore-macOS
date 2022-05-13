@@ -13,12 +13,13 @@ struct bookStoreRow: View {
             VStack{
                 Text("Title").font(.system(size: 12, weight: .bold))
                 Text("date").font(.system(size: 9, weight: .regular)).foregroundColor(.gray)
-            }
+            }.padding()
             Spacer(minLength: 10)
             Button(action: {}, label: {
                 Image(systemName: "star.fill").foregroundColor(.yellow)
             }).buttonStyle(PlainButtonStyle())
-        }
+                .padding()
+        } 
     }
 }
 
