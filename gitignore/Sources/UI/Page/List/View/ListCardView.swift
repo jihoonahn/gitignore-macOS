@@ -27,10 +27,11 @@ struct ListCardView : View{
                 ScrollView(){
     
                     
-                }
+                }.fixedSize(horizontal: false, vertical: true)
             }
             Spacer()
         }
+        .frame(width: 300)
         .padding([.leading, .trailing, .bottom], 8)
         .cornerRadius(8)
         .background(

@@ -19,7 +19,11 @@ struct typeListCellView: View {
                 Image(systemName: "xmark")
                     .foregroundColor(.primary)
             }).buttonStyle(PlainButtonStyle())
-        }.padding()
+        }
+        .padding()
+        .overlay(
+            RoundedRectangle(cornerRadius: 20)
+            .stroke(lineWidth: 4))
     }
 }
 

@@ -19,7 +19,7 @@ struct bookStoreRow: View {
                 Image(systemName: "star.fill").foregroundColor(.yellow)
             }).buttonStyle(PlainButtonStyle())
                 .padding()
-        } 
+        }
     }
 }
 
