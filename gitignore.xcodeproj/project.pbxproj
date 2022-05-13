@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EE78FA01282DD0A90013117A /* gitignoreColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78FA00282DD0A90013117A /* gitignoreColor.swift */; };
 		EE78FA04282DD5C80013117A /* ToolBarButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78FA03282DD5C80013117A /* ToolBarButtonStyle.swift */; };
+		EE78FA07282E01130013117A /* bookStoreRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78FA06282E01130013117A /* bookStoreRow.swift */; };
 		EEA21990282D58F5009F2097 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA2198F282D58F5009F2097 /* WebView.swift */; };
 		EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA85BE282B40700047F3AC /* gitignoreApp.swift */; };
 		EEDA85C3282B40720047F3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C2282B40720047F3AC /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		EE78FA00282DD0A90013117A /* gitignoreColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreColor.swift; sourceTree = "<group>"; };
 		EE78FA03282DD5C80013117A /* ToolBarButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarButtonStyle.swift; sourceTree = "<group>"; };
+		EE78FA06282E01130013117A /* bookStoreRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookStoreRow.swift; sourceTree = "<group>"; };
 		EEA2198F282D58F5009F2097 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		EEDA85BB282B40700047F3AC /* gitignore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gitignore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEDA85BE282B40700047F3AC /* gitignoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreApp.swift; sourceTree = "<group>"; };
@@ -90,6 +92,14 @@
 				EE78FA03282DD5C80013117A /* ToolBarButtonStyle.swift */,
 			);
 			path = ToolBarButtonStyle;
+			sourceTree = "<group>";
+		};
+		EE78FA05282E00500013117A /* bookStoreRow */ = {
+			isa = PBXGroup;
+			children = (
+				EE78FA06282E01130013117A /* bookStoreRow.swift */,
+			);
+			path = bookStoreRow;
 			sourceTree = "<group>";
 		};
 		EEA2198E282D58EC009F2097 /* WebView */ = {
@@ -219,6 +229,7 @@
 		EEDE5B52282B646F00C0ADBA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EE78FA05282E00500013117A /* bookStoreRow */,
 				EE78FA02282DD5B30013117A /* ToolBarButtonStyle */,
 				EEA2198E282D58EC009F2097 /* WebView */,
 				EEEBD262282C875800608EB6 /* CustomNavigationView */,
@@ -426,6 +437,7 @@
 				EEEBD25F282C86C700608EB6 /* IssueFeacture.swift in Sources */,
 				EEEBD268282C8C6000608EB6 /* TabBarFeacture.swift in Sources */,
 				EEA21990282D58F5009F2097 /* WebView.swift in Sources */,
+				EE78FA07282E01130013117A /* bookStoreRow.swift in Sources */,
 				EEDE5B7A282BA9F100C0ADBA /* IssueView.swift in Sources */,
 				EEDE5B67282B990100C0ADBA /* TabButton.swift in Sources */,
 				EEDE5B4F282B63B300C0ADBA /* AppDI.swift in Sources */,

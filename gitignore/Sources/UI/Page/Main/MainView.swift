@@ -11,8 +11,11 @@ import ComposableArchitecture
 //MARK: - MainView
 struct MainView: View {
     let store : Store<MainState,MainAction>
+    //MARK: - Legacy
+    
     
     @State var text = ""
+    var buttonState : Bool = true
     var body: some View {
         Color.backgroundColor
             .ignoresSafeArea()
@@ -28,16 +31,18 @@ struct MainView: View {
                                 .font(.title2)
                         })
                         .buttonStyle(ToolBarButtonStyle())
-                        Button(action: {print("side")}, label: {
+                        Button(action: {withAnimation{
+                            
+                            
+                        }}, label: {
                             Image(systemName: "sidebar.right")
                                 .font(.title2)
                         })
                         .buttonStyle(ToolBarButtonStyle())
                     }
                     .padding()
-                    .ignoresSafeArea(edges: .top)
                     Spacer()
-
+                    
                     VStack{
                         Image("HomeLogo")
                             .resizable()
@@ -46,19 +51,32 @@ struct MainView: View {
                         Text("프로젝트에 꼭 맞는 .gitignore 파일을 더 빠르게 생성하세요!")
                             .font(.system(size: 13, weight: .medium, design: .default))
                             .padding(.top, 20)
-                        TextField(
-                            "운영체제, 개발환경(IDE), 프로그래밍 언어 검색",
-                            text: $text
-                        ).textFieldStyle(gitignoreTextfieldStyle())
-                            .frame(width: 300, height: 40)
-                            .padding(.top,30)
+                        HStack{
+                            TextField(
+                                "운영체제, 개발환경(IDE), 프로그래밍 언어 검색",
+                                text: $text
+                            ).textFieldStyle(gitignoreTextfieldStyle())
+                                .frame(width: 300, height: 40)
+                            
+                            Button(action: { print("생성")}, label: {
+                                Text("생성")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 12, weight: .regular))
+                            })
+                            .frame(width:50, height: 40)
+                            .background(.green)
+                            .buttonStyle(PlainButtonStyle())
+                        }
+                        .padding(.top,30)
+                        
+                        
                     }
                     Spacer()
                 }
-                           
+                Spacer()
+                
                 ExpandListView()
-                    .frame(width: 200)
-                    .background(BlurView())
+                    .frame(width: buttonState ? 200 : 0)
             }
         }
     }
@@ -68,22 +86,16 @@ struct MainView: View {
 //MARK: - ExpandView
 struct ExpandListView : View{
     var body: some View{
-        HStack{
+        HStack(spacing: 0){
             Divider()
-            
-            VStack(spacing: 25){
-                HStack{
-                    Text("Bookmark")
-                        .font(.system(size: 20, weight: .semibold, design: .default))
-                    Spacer()
+            VStack{
+                List{
+                    Section(header: Text("BookMark")){
+                        bookStoreRow()
+                    }
                 }
-                .padding()
-                
-                Spacer()
             }
-            .ignoresSafeArea(edges: .top)
-            .frame(maxWidth: .infinity)
-
+            .frame(width: 200)
         }
     }
 }
