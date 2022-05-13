@@ -12,6 +12,10 @@ struct ListView: View {
     let store : Store<ListState,ListAction>
 
     var body: some View {
+        Color.backgroundColor
+        .ignoresSafeArea()
+        .padding(.leading,-10)
+        
         Text("List")
     }
 }

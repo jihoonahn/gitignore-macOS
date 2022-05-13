@@ -13,5 +13,6 @@ struct IssueView: View {
     
     var body: some View {
         WebView(url: URL(string: "https://github.com/JiHoonAHN/.gitignore-macOS/issues")!)
+            .padding(.leading, -10)
     }
 }

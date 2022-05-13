@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE78FA01282DD0A90013117A /* gitignoreColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78FA00282DD0A90013117A /* gitignoreColor.swift */; };
+		EE78FA04282DD5C80013117A /* ToolBarButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78FA03282DD5C80013117A /* ToolBarButtonStyle.swift */; };
 		EEA21990282D58F5009F2097 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA2198F282D58F5009F2097 /* WebView.swift */; };
 		EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA85BE282B40700047F3AC /* gitignoreApp.swift */; };
 		EEDA85C3282B40720047F3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C2282B40720047F3AC /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE78FA00282DD0A90013117A /* gitignoreColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreColor.swift; sourceTree = "<group>"; };
+		EE78FA03282DD5C80013117A /* ToolBarButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarButtonStyle.swift; sourceTree = "<group>"; };
 		EEA2198F282D58F5009F2097 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		EEDA85BB282B40700047F3AC /* gitignore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gitignore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEDA85BE282B40700047F3AC /* gitignoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreApp.swift; sourceTree = "<group>"; };
@@ -72,6 +76,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE78F9FF282DD0880013117A /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				EE78FA00282DD0A90013117A /* gitignoreColor.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		EE78FA02282DD5B30013117A /* ToolBarButtonStyle */ = {
+			isa = PBXGroup;
+			children = (
+				EE78FA03282DD5C80013117A /* ToolBarButtonStyle.swift */,
+			);
+			path = ToolBarButtonStyle;
+			sourceTree = "<group>";
+		};
 		EEA2198E282D58EC009F2097 /* WebView */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +152,7 @@
 				EEDE5B4C282B636C00C0ADBA /* Model */,
 				EEDE5B52282B646F00C0ADBA /* View */,
 				EEDE5B47282B5EAA00C0ADBA /* UI */,
+				EE78F9FF282DD0880013117A /* Util */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -198,6 +219,8 @@
 		EEDE5B52282B646F00C0ADBA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EE78FA02282DD5B30013117A /* ToolBarButtonStyle */,
+				EEA2198E282D58EC009F2097 /* WebView */,
 				EEEBD262282C875800608EB6 /* CustomNavigationView */,
 				EEDE5B71282BA2EC00C0ADBA /* BlurView.swift */,
 				EEDE5B86282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift */,
@@ -285,7 +308,6 @@
 		EEEBD262282C875800608EB6 /* CustomNavigationView */ = {
 			isa = PBXGroup;
 			children = (
-				EEA2198E282D58EC009F2097 /* WebView */,
 				EEEBD263282C877D00608EB6 /* Button */,
 				EEDE5B68282B9B0500C0ADBA /* ViewModel */,
 			);
@@ -391,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE78FA01282DD0A90013117A /* gitignoreColor.swift in Sources */,
 				EEEBD265282C879100608EB6 /* RootFeacture.swift in Sources */,
 				EEDE5B76282BA8EC00C0ADBA /* MainView.swift in Sources */,
 				EEDE5B78282BA92500C0ADBA /* ListView.swift in Sources */,
@@ -406,6 +429,7 @@
 				EEDE5B7A282BA9F100C0ADBA /* IssueView.swift in Sources */,
 				EEDE5B67282B990100C0ADBA /* TabButton.swift in Sources */,
 				EEDE5B4F282B63B300C0ADBA /* AppDI.swift in Sources */,
+				EE78FA04282DD5C80013117A /* ToolBarButtonStyle.swift in Sources */,
 				EEDE5B7E282BABC000C0ADBA /* RootView.swift in Sources */,
 				EEEBD258282C7A7200608EB6 /* MainFeacture.swift in Sources */,
 			);

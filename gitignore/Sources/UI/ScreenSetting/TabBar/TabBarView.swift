@@ -30,9 +30,7 @@ struct TabBarView: View {
                 .padding()
                 .padding(.top,35)
                 .background(BlurView())
-                
                 ZStack{
-                    
                     switch homeData.selectedTab{
                     case "Home": MainView(store: self.store.scope(
                         state: \.main,
@@ -49,7 +47,6 @@ struct TabBarView: View {
                     default: Text("")
                     }
                 }.frame(maxWidth: .infinity, maxHeight: .infinity)
-                
             }
             .ignoresSafeArea(.all, edges: .all)
             .frame(minWidth: 600, minHeight: 400)

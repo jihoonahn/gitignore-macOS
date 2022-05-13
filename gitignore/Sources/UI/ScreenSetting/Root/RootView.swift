@@ -22,6 +22,5 @@ struct RootView: View {
                 action: RootAction.tabBarAction
             ))
         }
-    
     }
 }

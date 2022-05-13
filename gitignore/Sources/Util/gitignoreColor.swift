@@ -1,8 +1,5 @@
-//
-//  gitignoreColor.swift
-//  gitignore
-//
-//  Created by Ji-hoon Ahn on 2022/05/13.
-//
+import SwiftUI
 
-import Foundation
+extension Color{
+    static let backgroundColor = Color("BackGround")
+}
