@@ -95,7 +95,7 @@ struct ExpandListView : View{
                     }
                 }
             }
-            .frame(width: 200)
+            .frame(width: .infinity)
         }
     }
 }
