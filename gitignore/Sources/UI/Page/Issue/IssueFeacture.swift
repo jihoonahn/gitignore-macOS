@@ -1,12 +1,11 @@
 import ComposableArchitecture
 
 struct IssueState: Equatable{
-    init() {}
+    var issuePageURL = URL(string: "https://github.com/JiHoonAHN/.gitignore-macOS/issues")
 }
 
 enum IssueAction{
 
-    
 }
 
 struct IssueEnvironmnet{
@@ -19,7 +18,7 @@ let issueReducer = Reducer<
     IssueState,
     IssueAction,
     IssueEnvironmnet
->.combine(
+>.self
 
 
-)
+

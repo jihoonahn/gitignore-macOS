@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EE78FA01282DD0A90013117A /* gitignoreColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78FA00282DD0A90013117A /* gitignoreColor.swift */; };
 		EE78FA04282DD5C80013117A /* ToolBarButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78FA03282DD5C80013117A /* ToolBarButtonStyle.swift */; };
 		EE78FA07282E01130013117A /* bookStoreRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78FA06282E01130013117A /* bookStoreRow.swift */; };
 		EE78FA0A282E37BF0013117A /* ListCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78FA09282E37BF0013117A /* ListCardView.swift */; };
 		EE78FA0D282E3B020013117A /* typeListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78FA0C282E3B020013117A /* typeListCellView.swift */; };
 		EEA21990282D58F5009F2097 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA2198F282D58F5009F2097 /* WebView.swift */; };
+		EEA60417282EB4EE00D79666 /* UIUtil in Frameworks */ = {isa = PBXBuildFile; productRef = EEA60416282EB4EE00D79666 /* UIUtil */; };
+		EEA60419282EB60600D79666 /* WaterfallGrid in Frameworks */ = {isa = PBXBuildFile; productRef = EEA60418282EB60600D79666 /* WaterfallGrid */; };
+		EEA6041D282FFEF700D79666 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA6041C282FFEF700D79666 /* Network.framework */; };
 		EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA85BE282B40700047F3AC /* gitignoreApp.swift */; };
 		EEDA85C3282B40720047F3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C2282B40720047F3AC /* Assets.xcassets */; };
 		EEDA85C6282B40720047F3AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C5282B40720047F3AC /* Preview Assets.xcassets */; };
@@ -38,13 +40,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EE78FA00282DD0A90013117A /* gitignoreColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreColor.swift; sourceTree = "<group>"; };
 		EE78FA03282DD5C80013117A /* ToolBarButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarButtonStyle.swift; sourceTree = "<group>"; };
 		EE78FA06282E01130013117A /* bookStoreRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookStoreRow.swift; sourceTree = "<group>"; };
 		EE78FA09282E37BF0013117A /* ListCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCardView.swift; sourceTree = "<group>"; };
 		EE78FA0C282E3B020013117A /* typeListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typeListCellView.swift; sourceTree = "<group>"; };
 		EEA2198F282D58F5009F2097 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		EEA60414282EB3DA00D79666 /* Platform */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Platform; sourceTree = "<group>"; };
+		EEA6041C282FFEF700D79666 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
 		EEDA85BB282B40700047F3AC /* gitignore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gitignore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEDA85BE282B40700047F3AC /* gitignoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreApp.swift; sourceTree = "<group>"; };
 		EEDA85C2282B40720047F3AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,8 +75,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEA60417282EB4EE00D79666 /* UIUtil in Frameworks */,
 				EEDA85D2282B506E0047F3AC /* CombineMoya in Frameworks */,
 				EEDA85CF282B500B0047F3AC /* ComposableArchitecture in Frameworks */,
+				EEA60419282EB60600D79666 /* WaterfallGrid in Frameworks */,
+				EEA6041D282FFEF700D79666 /* Network.framework in Frameworks */,
 				EEDA85D5282B51A60047F3AC /* CombineRealm in Frameworks */,
 				EEDA85D8282B51E10047F3AC /* Swinject in Frameworks */,
 			);
@@ -83,14 +88,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EE78F9FF282DD0880013117A /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				EE78FA00282DD0A90013117A /* gitignoreColor.swift */,
-			);
-			path = Util;
-			sourceTree = "<group>";
-		};
 		EE78FA02282DD5B30013117A /* ToolBarButtonStyle */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +128,14 @@
 			path = WebView;
 			sourceTree = "<group>";
 		};
+		EEA60415282EB4EE00D79666 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEA6041C282FFEF700D79666 /* Network.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EEDA85B2282B40700047F3AC = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +143,7 @@
 				EEEBD269282C8D2400608EB6 /* Service */,
 				EEDA85BD282B40700047F3AC /* gitignore */,
 				EEDA85BC282B40700047F3AC /* Products */,
+				EEA60415282EB4EE00D79666 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,7 +190,6 @@
 				EEDE5B4C282B636C00C0ADBA /* Model */,
 				EEDE5B52282B646F00C0ADBA /* View */,
 				EEDE5B47282B5EAA00C0ADBA /* UI */,
-				EE78F9FF282DD0880013117A /* Util */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -387,6 +392,8 @@
 				EEDA85D1282B506E0047F3AC /* CombineMoya */,
 				EEDA85D4282B51A60047F3AC /* CombineRealm */,
 				EEDA85D7282B51E10047F3AC /* Swinject */,
+				EEA60416282EB4EE00D79666 /* UIUtil */,
+				EEA60418282EB60600D79666 /* WaterfallGrid */,
 			);
 			productName = gitignore;
 			productReference = EEDA85BB282B40700047F3AC /* gitignore.app */;
@@ -448,7 +455,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE78FA01282DD0A90013117A /* gitignoreColor.swift in Sources */,
 				EEEBD265282C879100608EB6 /* RootFeacture.swift in Sources */,
 				EEDE5B76282BA8EC00C0ADBA /* MainView.swift in Sources */,
 				EEDE5B78282BA92500C0ADBA /* ListView.swift in Sources */,
@@ -702,6 +708,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		EEA60416282EB4EE00D79666 /* UIUtil */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIUtil;
+		};
+		EEA60418282EB60600D79666 /* WaterfallGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WaterfallGrid;
+		};
 		EEDA85CE282B500B0047F3AC /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EEDA85CD282B500B0047F3AC /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;

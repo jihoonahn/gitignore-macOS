@@ -12,7 +12,9 @@ struct IssueView: View {
     let store : Store<IssueState,IssueAction>
     
     var body: some View {
-        WebView(url: URL(string: "https://github.com/JiHoonAHN/.gitignore-macOS/issues")!)
-            .padding(.leading, -10)
+        WithViewStore(self.store){ viewStore in
+            WebView(url: viewStore.issuePageURL!)
+                .padding(.leading,-10)
+        }
     }
 }
