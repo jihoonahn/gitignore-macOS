@@ -6,15 +6,27 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
+import UIUtil
+import WaterfallGrid
 
 struct ListView: View {
+    let store : Store<ListState,ListAction>
+    
     var body: some View {
-        Text("List")
+        Color.backgroundColor
+        .ignoresSafeArea()
+        .padding(.leading,-10)
+        
+        NavigationView{
+            
+
+        }
     }
 }
 
-struct ListView_Previews: PreviewProvider {
-    static var previews: some View {
-        ListView()
-    }
+struct Card {
+    let title: String
+    let subtitle: String
+    let tag : [String]
 }

@@ -11,7 +11,7 @@ struct TabButton: View {
     var image : String
     var title : String
     @Binding var selectedTab : String
-    
+
     var body: some View {
         Button(action: {withAnimation{selectedTab = title}}, label: {
             VStack(spacing: 7){

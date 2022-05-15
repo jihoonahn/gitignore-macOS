@@ -6,15 +6,15 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 struct IssueView: View {
+    let store : Store<IssueState,IssueAction>
+    
     var body: some View {
-        Text("Issue")
-    }
-}
-
-struct IssueView_Previews: PreviewProvider {
-    static var previews: some View {
-        IssueView()
+        WithViewStore(self.store){ viewStore in
+            WebView(url: viewStore.issuePageURL!)
+                .padding(.leading,-10)
+        }
     }
 }

@@ -7,6 +7,6 @@
 
 import SwiftUI
 
-class HomeViewModel : ObservableObject{
+class TabBarViewModel : ObservableObject{
     @Published var selectedTab = "Home"
 }

@@ -10,9 +10,9 @@ import SwiftUI
 struct gitignoreTextfieldStyle : TextFieldStyle{
     func _body(configuration: TextField<Self._Label>) -> some View {
         configuration
+            .textFieldStyle(PlainTextFieldStyle())
             .padding(10)
-            .background(LinearGradient(gradient: Gradient(colors: [Color.orange, Color.orange]), startPoint: .topLeading, endPoint: .bottomTrailing))
             .cornerRadius(20)
-            .shadow(color: .gray, radius: 10)
+            .border(Color.orange, width: 2)
     }
 }
