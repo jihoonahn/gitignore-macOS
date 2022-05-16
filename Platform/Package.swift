@@ -8,6 +8,9 @@ let package = Package(
     platforms: [.macOS(.v10_15)],
     products: [
         .library(
+            name: "FoundationUtil",
+            targets: ["FoundationUtil"]),
+        .library(
             name: "UIUtil",
             targets: ["UIUtil"]),
         .library(
@@ -17,6 +20,9 @@ let package = Package(
     dependencies: [
     ],
     targets: [
+        .target(
+            name: "FoundationUtil",
+            dependencies: []),
         .target(
             name: "UIUtil",
             dependencies: []),

@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import FoundationUtil
 
 struct ListCardView : View{
-    let card : Card
+    let card : ListModel
     
     var body: some View{
         HStack() {
@@ -19,13 +20,13 @@ struct ListCardView : View{
                     .padding(.bottom, 8)
                     .fixedSize(horizontal: false, vertical: true)
                     .layoutPriority(98)
-                Text(card.subtitle)
+                Text(Date().usingDate(time: card.time))
                     .font(.caption)
                     .foregroundColor(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
                     .layoutPriority(99)
-                ScrollView(){
-    
+                ScrollView(.vertical){
+                    
                     
                 }.fixedSize(horizontal: false, vertical: true)
             }
@@ -44,7 +45,7 @@ struct ListCardView : View{
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        ListCardView(card: Card(title: "best Setting", subtitle: "2022년 3월 21일", tag: ["swift","page"]))
+        ListCardView(card: ListModel.init())
             .padding()
             .previewLayout(.sizeThatFits)
     }

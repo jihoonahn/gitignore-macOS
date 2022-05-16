@@ -18,9 +18,9 @@ struct ListView: View {
         .ignoresSafeArea()
         .padding(.leading,-10)
         
-        NavigationView{
+        WithViewStore(self.store) { viewStore in
+            ListCardGrid(models: [ListModel()])
             
-
         }
     }
 }
