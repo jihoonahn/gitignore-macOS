@@ -14,12 +14,12 @@ struct ListView: View {
     let store : Store<ListState,ListAction>
     
     let dummyData : [ListModelex] = [
-        ListModelex(title: "first Collection", tag: ["cocoapods","swift","library", "macos"]),
-        ListModelex(title: "second Collection", tag: ["spm","swift"]),
-        ListModelex(title: "third Collection", tag: ["spm","swift"]),
-        ListModelex(title: "fourth Collection", tag: ["spm","swift"]),
-        ListModelex(title: "fifth Collection", tag: ["spm","swift"]),
-        ListModelex(title: "sixth Collection", tag: ["spm","swift"])
+        ListModelex(title: "first Collection", tag: ["cocoapods","swift","library", "macos"], bookMark: true),
+        ListModelex(title: "second Collection", tag: ["spm","swift"], bookMark: false),
+        ListModelex(title: "third Collection", tag: ["spm","swift"], bookMark: false),
+        ListModelex(title: "fourth Collection", tag: ["spm","swift"], bookMark: false),
+        ListModelex(title: "fifth Collection", tag: ["spm","swift"], bookMark: false),
+        ListModelex(title: "sixth Collection", tag: ["spm","swift"], bookMark: false)
     ]
     
     
@@ -30,7 +30,9 @@ struct ListView: View {
         
         WithViewStore(self.store) { viewStore in
             ListCardGrid(models: dummyData)
-        }.padding()
+        }
+        .padding()
+        .padding(.top, 20)
     }
 }
 

@@ -68,19 +68,3 @@ struct MainView: View {
 }
 
 
-//MARK: - ExpandView
-struct ExpandListView : View{
-    var body: some View{
-        HStack(spacing: 0){
-            Divider()
-            VStack{
-                List{
-                    Section(header: Text("BookMark")){
-                        bookStoreRow()
-                    }
-                }
-            }
-            .frame(width: .infinity)
-        }
-    }
-}

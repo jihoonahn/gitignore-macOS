@@ -12,9 +12,11 @@ class ListModelex{
     var title : String
     var time = Date()
     var tag : [String]
+    var bookMark : Bool
     
-    init(title: String, tag : [String]){
+    init(title: String, tag : [String], bookMark : Bool){
         self.title = title
         self.tag = tag
+        self.bookMark = bookMark
     }
 }
