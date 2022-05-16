@@ -30,7 +30,7 @@ struct ListView: View {
         
         WithViewStore(self.store) { viewStore in
             ListCardGrid(models: dummyData)
-        }
+        }.padding()
     }
 }
 
