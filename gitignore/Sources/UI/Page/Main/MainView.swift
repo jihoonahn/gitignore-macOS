@@ -8,13 +8,12 @@
 import SwiftUI
 import ComposableArchitecture
 import UIUtil
-
+import QGrid
 
 //MARK: - MainView
 struct MainView: View {
     let store : Store<MainState,MainAction>
     //MARK: - Legacy
-    
     
     @State var text = ""
     var buttonState : Bool = true
@@ -34,7 +33,6 @@ struct MainView: View {
                         })
                         .buttonStyle(ToolBarButtonStyle())
                         Button(action: {withAnimation{
-                            
                             
                         }}, label: {
                             Image(systemName: "sidebar.right")
@@ -70,12 +68,8 @@ struct MainView: View {
                             .buttonStyle(PlainButtonStyle())
                         }
                         .padding(.top,30)
-
                     }
                     Spacer()
-//                    ScrollView(.horizontal){
-//                        
-//                    }.background(.red)
                 }
                 Spacer()
                 

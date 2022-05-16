@@ -21,9 +21,10 @@ struct typeListCellView: View {
             }).buttonStyle(PlainButtonStyle())
         }
         .padding()
-        .overlay(
-            RoundedRectangle(cornerRadius: 20)
-            .stroke(lineWidth: 4))
+        .cornerRadius(10)
+        .overlay(RoundedRectangle(cornerRadius: 10)
+            .stroke(Color.orange, lineWidth: 4))
+        .shadow(radius: 10)
     }
 }
 

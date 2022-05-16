@@ -9,7 +9,7 @@ import SwiftUI
 import FoundationUtil
 
 struct ListCardView : View{
-    let card : ListModel
+    let card : ListModelex
     
     var body: some View{
         HStack() {
@@ -25,14 +25,15 @@ struct ListCardView : View{
                     .foregroundColor(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
                     .layoutPriority(99)
-                ScrollView(.vertical){
-                    
-                    
+                ScrollView(.horizontal){
+                    ForEach(0..<card.tag.count, id: \.self) { index in
+                        typeListCellView(type: card.tag[index])
+                    }
                 }.fixedSize(horizontal: false, vertical: true)
             }
             Spacer()
         }
-        .frame(width: 300)
+        .frame(width: 200)
         .padding([.leading, .trailing, .bottom], 8)
         .cornerRadius(8)
         .background(
@@ -45,7 +46,7 @@ struct ListCardView : View{
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        ListCardView(card: ListModel.init())
+        ListCardView(card: ListModelex(title: "ㅇ", tag: ["spm"]))
             .padding()
             .previewLayout(.sizeThatFits)
     }
