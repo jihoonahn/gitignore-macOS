@@ -1,5 +1,0 @@
-import Swinject
-
-extension Container{
-    
-}

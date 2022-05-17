@@ -10,23 +10,16 @@ import ComposableArchitecture
 
 //MARK: - Screen
 
-struct TabBarView: View {
-    let store: Store<TabBarState, TabBarAction>
+struct AppView: View {
+    let store: Store<AppState, AppAction>
 
-    struct ViewState: Equatable {
-        
-        init(state : TabBarState ){
-            
-        }
+    public init(store: Store<AppState, AppAction>) {
+      self.store = store
     }
-    
-    public init(store: Store<TabBarState, TabBarAction>){
-        self.store = store
-    }
+
     
     @StateObject var homeData = TabBarViewModel()
     var body: some View {
-        WithViewStore(self.store.scope(state: ViewState.init)){ viewStore in
             HStack{
                 VStack{
                     TabButton(image: "house.fill", title: "Home", selectedTab: $homeData.selectedTab)
@@ -38,26 +31,21 @@ struct TabBarView: View {
                 .padding(.top,35)
                 .background(BlurView())
                 ZStack{
-                    switch homeData.selectedTab{
-                    case "Home": MainView(store: self.store.scope(
-                        state: \.main,
-                        action: TabBarAction.main
-                    ))
-                    case "List": ListView(store: self.store.scope(
-                        state: \.list,
-                        action: TabBarAction.list
-                    ))
-                    case "Issue": IssueView(store: self.store.scope(
-                        state: \.issue,
-                        action: TabBarAction.issue
-                    ))
-                    default: Text("")
+                    SwitchStore(self.store){
+                        CaseLet(state: /AppState.main, action: AppAction.main) { store in
+                            MainView(store: store)
+                        }
+                        CaseLet(state: /AppState.list, action: AppAction.list) { store in
+                            ListView(store: store)
+                        }
+                        CaseLet(state: /AppState.issue, action: AppAction.issue) { store in
+                            IssueView(store: store)
+                        }
                     }
                 }.frame(maxWidth: .infinity, maxHeight: .infinity)
             }
             .ignoresSafeArea(.all, edges: .all)
             .frame( minWidth: 600,minHeight: 400)
             .environmentObject(homeData)
-        }
     }
 }

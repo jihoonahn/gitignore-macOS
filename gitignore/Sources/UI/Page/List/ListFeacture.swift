@@ -10,9 +10,13 @@ enum ListAction{
 }
 
 struct ListEnvironmnet{
+    var mainQueue: AnySchedulerOf<DispatchQueue>
     
-    public init(){}
-    
+    public init(
+      mainQueue: AnySchedulerOf<DispatchQueue>
+    ) {
+      self.mainQueue = mainQueue
+    }
 }
 
 let listReducer = Reducer<
