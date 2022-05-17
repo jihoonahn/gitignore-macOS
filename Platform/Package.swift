@@ -15,7 +15,10 @@ let package = Package(
             targets: ["UIUtil"]),
         .library(
             name: "WaterfallGrid",
-            targets: ["WaterfallGrid"])
+            targets: ["WaterfallGrid"]),
+        .library(
+            name: "TagListView",
+            targets: ["TagListView"])
     ],
     dependencies: [
     ],
@@ -29,5 +32,10 @@ let package = Package(
         .target(
             name: "WaterfallGrid",
             dependencies: []),
+        .target(
+            name: "TagListView",
+            dependencies: [
+                "FoundationUtil"
+            ]),
     ]
 )

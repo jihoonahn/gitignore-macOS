@@ -12,12 +12,13 @@
 		EE78FA0D282E3B020013117A /* typeListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78FA0C282E3B020013117A /* typeListCellView.swift */; };
 		EEA21990282D58F5009F2097 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA2198F282D58F5009F2097 /* WebView.swift */; };
 		EEA60417282EB4EE00D79666 /* UIUtil in Frameworks */ = {isa = PBXBuildFile; productRef = EEA60416282EB4EE00D79666 /* UIUtil */; };
-		EEA60419282EB60600D79666 /* WaterfallGrid in Frameworks */ = {isa = PBXBuildFile; productRef = EEA60418282EB60600D79666 /* WaterfallGrid */; };
 		EEA6041D282FFEF700D79666 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA6041C282FFEF700D79666 /* Network.framework */; };
 		EEA6041F28301BD700D79666 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA6041E28301BD700D79666 /* ListModel.swift */; };
 		EEA6042228301F1400D79666 /* CombineRealm in Frameworks */ = {isa = PBXBuildFile; productRef = EEA6042128301F1400D79666 /* CombineRealm */; };
 		EEA60424283020C200D79666 /* ListCardGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA60423283020C200D79666 /* ListCardGrid.swift */; };
 		EEA604262830277000D79666 /* FoundationUtil in Frameworks */ = {isa = PBXBuildFile; productRef = EEA604252830277000D79666 /* FoundationUtil */; };
+		EEB8AD712833CE6400C44C6F /* TagListView in Frameworks */ = {isa = PBXBuildFile; productRef = EEB8AD702833CE6400C44C6F /* TagListView */; };
+		EEB8AD752833E19400C44C6F /* WaterfallGrid in Frameworks */ = {isa = PBXBuildFile; productRef = EEB8AD742833E19400C44C6F /* WaterfallGrid */; };
 		EED2E753283343E10040C83A /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2E752283343E10040C83A /* RootView.swift */; };
 		EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA85BE282B40700047F3AC /* gitignoreApp.swift */; };
 		EEDA85C3282B40720047F3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C2282B40720047F3AC /* Assets.xcassets */; };
@@ -79,11 +80,12 @@
 				EEA60417282EB4EE00D79666 /* UIUtil in Frameworks */,
 				EEDA85D2282B506E0047F3AC /* CombineMoya in Frameworks */,
 				EEDA85CF282B500B0047F3AC /* ComposableArchitecture in Frameworks */,
+				EEB8AD752833E19400C44C6F /* WaterfallGrid in Frameworks */,
 				EEA604262830277000D79666 /* FoundationUtil in Frameworks */,
-				EEA60419282EB60600D79666 /* WaterfallGrid in Frameworks */,
 				EEA6041D282FFEF700D79666 /* Network.framework in Frameworks */,
 				EEDA85D8282B51E10047F3AC /* Swinject in Frameworks */,
 				EEA6042228301F1400D79666 /* CombineRealm in Frameworks */,
+				EEB8AD712833CE6400C44C6F /* TagListView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,9 +388,10 @@
 				EEDA85D1282B506E0047F3AC /* CombineMoya */,
 				EEDA85D7282B51E10047F3AC /* Swinject */,
 				EEA60416282EB4EE00D79666 /* UIUtil */,
-				EEA60418282EB60600D79666 /* WaterfallGrid */,
 				EEA6042128301F1400D79666 /* CombineRealm */,
 				EEA604252830277000D79666 /* FoundationUtil */,
+				EEB8AD702833CE6400C44C6F /* TagListView */,
+				EEB8AD742833E19400C44C6F /* WaterfallGrid */,
 			);
 			productName = gitignore;
 			productReference = EEDA85BB282B40700047F3AC /* gitignore.app */;
@@ -707,10 +710,6 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = UIUtil;
 		};
-		EEA60418282EB60600D79666 /* WaterfallGrid */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = WaterfallGrid;
-		};
 		EEA6042128301F1400D79666 /* CombineRealm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EEA6042028301F1400D79666 /* XCRemoteSwiftPackageReference "CombineRealm" */;
@@ -719,6 +718,14 @@
 		EEA604252830277000D79666 /* FoundationUtil */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FoundationUtil;
+		};
+		EEB8AD702833CE6400C44C6F /* TagListView */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TagListView;
+		};
+		EEB8AD742833E19400C44C6F /* WaterfallGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WaterfallGrid;
 		};
 		EEDA85CE282B500B0047F3AC /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;

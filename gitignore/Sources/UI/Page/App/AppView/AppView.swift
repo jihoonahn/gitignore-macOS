@@ -12,11 +12,10 @@ import ComposableArchitecture
 
 struct AppView: View {
     let store: Store<AppState, AppAction>
-
+    
     public init(store: Store<AppState, AppAction>) {
       self.store = store
     }
-
     
     @StateObject var homeData = TabBarViewModel()
     var body: some View {
@@ -31,16 +30,20 @@ struct AppView: View {
                 .padding(.top,35)
                 .background(BlurView())
                 ZStack{
-                    SwitchStore(self.store){
-                        CaseLet(state: /AppState.main, action: AppAction.main) { store in
-                            MainView(store: store)
-                        }
-                        CaseLet(state: /AppState.list, action: AppAction.list) { store in
-                            ListView(store: store)
-                        }
-                        CaseLet(state: /AppState.issue, action: AppAction.issue) { store in
-                            IssueView(store: store)
-                        }
+                    switch homeData.selectedTab{
+                    case "Home": MainView(store: self.store.scope(
+                        state: \.mainState,
+                        action: AppAction.mainAction
+                    ))
+                    case "List": ListView(store: self.store.scope(
+                        state: \.listState,
+                        action: AppAction.listAction
+                    ))
+                    case "Issue": IssueView(store: self.store.scope(
+                        state: \.issueState,
+                        action: AppAction.issueAction
+                    ))
+                    default: Text("")
                     }
                 }.frame(maxWidth: .infinity, maxHeight: .infinity)
             }

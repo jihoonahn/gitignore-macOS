@@ -8,7 +8,7 @@
 import SwiftUI
 import ComposableArchitecture
 import UIUtil
-import QGrid
+import TagListView
 
 //MARK: - MainView
 struct MainView: View {
@@ -61,6 +61,16 @@ struct MainView: View {
                     }
                     .padding(.top,30)
                 }
+                TagView(tags: [
+                    TagViewItem(title: "swift", isSelected: true),
+                    TagViewItem(title: "swiftPM", isSelected: true),
+                    TagViewItem(title: "swift Package Manager", isSelected: true),
+                    TagViewItem(title: "swiftPackage", isSelected: true),
+                    TagViewItem(title: "Package", isSelected: true),
+                ])
+                .frame(width: 400)
+                .fixedSize(horizontal: false, vertical: true)
+                
                 Spacer()
             }
         }

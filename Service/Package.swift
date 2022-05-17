@@ -12,13 +12,17 @@ let package = Package(
             targets: ["Service"]),
     ],
     dependencies: [
-
+        .package(url: "https://github.com/Swinject/Swinject.git", from: "2.8.0"),
+        .package(url: "https://github.com/Moya/Moya.git", .branchItem("master")),
+        .package(url: "https://github.com/CombineCommunity/CombineRealm", .branchItem("master"))
     ],
     targets: [
         .target(
             name: "Service",
             dependencies: [
-
+                "Swinject",
+                "Moya",
+                "CombineRealm"
             ]),
     ]
 )

@@ -7,18 +7,16 @@
 
 import ComposableArchitecture
 
-enum AppState : Equatable{
-    case main(MainState)
-    case list(ListState)
-    case issue(IssueState)
-    
-    public init() {self = .main(.init())}
+struct AppState : Equatable{
+    var mainState = MainState()
+    var listState = ListState()
+    var issueState = IssueState()
 }
 
 enum AppAction{
-    case main(MainAction)
-    case list(ListAction)
-    case issue(IssueAction)
+    case mainAction(MainAction)
+    case listAction(ListAction)
+    case issueAction(IssueAction)
 }
 
 struct AppEnvironmnet{
@@ -34,34 +32,35 @@ struct AppEnvironmnet{
 let appReducer = Reducer<AppState,AppAction,AppEnvironmnet>.combine(
     
     mainReducer.pullback(
-        state: /AppState.main,
-        action: /AppAction.main,
+        state:\.mainState,
+        action: /AppAction.mainAction,
         environment: {
             MainEnvironmnet(mainQueue: $0.mainQueue)
         }
     ),
     listReducer.pullback(
-        state: /AppState.list,
-        action: /AppAction.list,
+        state:\.listState,
+        action: /AppAction.listAction,
         environment: {
             ListEnvironmnet(mainQueue: $0.mainQueue)
         }
     ),
     issueReducer.pullback(
-        state: /AppState.issue,
-        action: /AppAction.issue,
+        state:\.issueState,
+        action: /AppAction.issueAction,
         environment: {
             IssueEnvironmnet(mainQueue: $0.mainQueue)
         }
     ),
     Reducer{ state, action ,_ in
         switch action{
-        case .main:
+        case .mainAction:
             return .none
-        case .list:
+        case .listAction:
             return .none
-        case .issue:
+        case .issueAction:
             return .none
         }
     }
 )
+.debug()
