@@ -13,13 +13,20 @@ import ComposableArchitecture
 struct TabBarView: View {
     let store: Store<TabBarState, TabBarAction>
 
+    struct ViewState: Equatable {
+        
+        init(state : TabBarState ){
+            
+        }
+    }
+    
     public init(store: Store<TabBarState, TabBarAction>){
         self.store = store
     }
     
     @StateObject var homeData = TabBarViewModel()
     var body: some View {
-        WithViewStore(self.store){ viewStore in
+        WithViewStore(self.store.scope(state: ViewState.init)){ viewStore in
             HStack{
                 VStack{
                     TabButton(image: "house.fill", title: "Home", selectedTab: $homeData.selectedTab)

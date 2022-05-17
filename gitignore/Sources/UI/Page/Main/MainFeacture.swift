@@ -10,17 +10,18 @@ enum MainAction{
 
 struct MainEnvironmnet{
     var mainQueue: AnySchedulerOf<DispatchQueue>
+    
+    public init(
+      mainQueue: AnySchedulerOf<DispatchQueue>
+    ) {
+      self.mainQueue = mainQueue
+    }
 }
 
-let mainReducer = Reducer<
-    MainState,
-    MainAction,
-    MainEnvironmnet
->{ state, action, environment in
+let mainReducer = Reducer<MainState,MainAction,MainEnvironmnet>{ state, action, environment in
     switch action{
         
     case let .searchQueryChanged(query):
-        enum SearchId {}
         state.searchQuery = query
         return .none
     }

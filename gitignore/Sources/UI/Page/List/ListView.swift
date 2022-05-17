@@ -19,7 +19,12 @@ struct ListView: View {
         ListModelex(title: "third Collection", tag: ["spm","swift"], bookMark: false),
         ListModelex(title: "fourth Collection", tag: ["spm","swift"], bookMark: false),
         ListModelex(title: "fifth Collection", tag: ["spm","swift"], bookMark: false),
-        ListModelex(title: "sixth Collection", tag: ["spm","swift"], bookMark: false)
+        ListModelex(title: "sixth Collection", tag: ["spm","swift"], bookMark: false),
+        ListModelex(title: "fifth Collection", tag: ["spm","swift"], bookMark: false),
+        ListModelex(title: "sixth Collection", tag: ["spm","swift"], bookMark: false),
+        ListModelex(title: "fifth Collection", tag: ["spm","swift"], bookMark: false),
+        ListModelex(title: "sixth Collection", tag: ["spm","swift"], bookMark: false),
+        ListModelex(title: "fifth Collection", tag: ["spm","cocoapods","github"], bookMark: false),
     ]
     
     
