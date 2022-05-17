@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		EE78FA04282DD5C80013117A /* ToolBarButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78FA03282DD5C80013117A /* ToolBarButtonStyle.swift */; };
-		EE78FA07282E01130013117A /* bookStoreRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78FA06282E01130013117A /* bookStoreRow.swift */; };
 		EE78FA0A282E37BF0013117A /* ListCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78FA09282E37BF0013117A /* ListCardView.swift */; };
 		EE78FA0D282E3B020013117A /* typeListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78FA0C282E3B020013117A /* typeListCellView.swift */; };
 		EEA21990282D58F5009F2097 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA2198F282D58F5009F2097 /* WebView.swift */; };
@@ -25,6 +24,7 @@
 		EEDA85CF282B500B0047F3AC /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EEDA85CE282B500B0047F3AC /* ComposableArchitecture */; };
 		EEDA85D2282B506E0047F3AC /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = EEDA85D1282B506E0047F3AC /* CombineMoya */; };
 		EEDA85D8282B51E10047F3AC /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = EEDA85D7282B51E10047F3AC /* Swinject */; };
+		EEDE594A2831FAB100A7FDF0 /* MainCellGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE59492831FAB100A7FDF0 /* MainCellGrid.swift */; };
 		EEDE5B4F282B63B300C0ADBA /* AppDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B4E282B63B300C0ADBA /* AppDI.swift */; };
 		EEDE5B67282B990100C0ADBA /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B66282B990100C0ADBA /* TabButton.swift */; };
 		EEDE5B6A282B9DD100C0ADBA /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B69282B9DD100C0ADBA /* TabBarView.swift */; };
@@ -44,7 +44,6 @@
 
 /* Begin PBXFileReference section */
 		EE78FA03282DD5C80013117A /* ToolBarButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarButtonStyle.swift; sourceTree = "<group>"; };
-		EE78FA06282E01130013117A /* bookStoreRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookStoreRow.swift; sourceTree = "<group>"; };
 		EE78FA09282E37BF0013117A /* ListCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCardView.swift; sourceTree = "<group>"; };
 		EE78FA0C282E3B020013117A /* typeListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typeListCellView.swift; sourceTree = "<group>"; };
 		EEA2198F282D58F5009F2097 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
@@ -57,6 +56,7 @@
 		EEDA85C2282B40720047F3AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEDA85C5282B40720047F3AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EEDA85C7282B40720047F3AC /* gitignore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = gitignore.entitlements; path = gitignore/Supporting/gitignore.entitlements; sourceTree = SOURCE_ROOT; };
+		EEDE59492831FAB100A7FDF0 /* MainCellGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellGrid.swift; sourceTree = "<group>"; };
 		EEDE5B4E282B63B300C0ADBA /* AppDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDI.swift; sourceTree = "<group>"; };
 		EEDE5B66282B990100C0ADBA /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
 		EEDE5B69282B9DD100C0ADBA /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -100,14 +100,6 @@
 				EE78FA03282DD5C80013117A /* ToolBarButtonStyle.swift */,
 			);
 			path = ToolBarButtonStyle;
-			sourceTree = "<group>";
-		};
-		EE78FA05282E00500013117A /* bookStoreRow */ = {
-			isa = PBXGroup;
-			children = (
-				EE78FA06282E01130013117A /* bookStoreRow.swift */,
-			);
-			path = bookStoreRow;
 			sourceTree = "<group>";
 		};
 		EE78FA08282E37A30013117A /* View */ = {
@@ -180,6 +172,14 @@
 			name = "Preview Content";
 			path = "gitignore/Resources/Preview Content";
 			sourceTree = SOURCE_ROOT;
+		};
+		EEDE59462831F71000A7FDF0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EEDE59492831FAB100A7FDF0 /* MainCellGrid.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
 		};
 		EEDE5B47282B5EAA00C0ADBA /* UI */ = {
 			isa = PBXGroup;
@@ -265,7 +265,6 @@
 			isa = PBXGroup;
 			children = (
 				EE78FA0B282E3ABE0013117A /* customListView */,
-				EE78FA05282E00500013117A /* bookStoreRow */,
 				EE78FA02282DD5B30013117A /* ToolBarButtonStyle */,
 				EEA2198E282D58EC009F2097 /* WebView */,
 				EEEBD262282C875800608EB6 /* CustomNavigationView */,
@@ -319,6 +318,7 @@
 		EEEBD254282C7A3400608EB6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				EEDE59462831F71000A7FDF0 /* View */,
 				EEDE5B75282BA8EC00C0ADBA /* MainView.swift */,
 				EEEBD257282C7A7200608EB6 /* MainFeacture.swift */,
 			);
@@ -479,7 +479,7 @@
 				EEEBD25F282C86C700608EB6 /* IssueFeacture.swift in Sources */,
 				EEEBD268282C8C6000608EB6 /* TabBarFeacture.swift in Sources */,
 				EEA21990282D58F5009F2097 /* WebView.swift in Sources */,
-				EE78FA07282E01130013117A /* bookStoreRow.swift in Sources */,
+				EEDE594A2831FAB100A7FDF0 /* MainCellGrid.swift in Sources */,
 				EEDE5B7A282BA9F100C0ADBA /* IssueView.swift in Sources */,
 				EEDE5B67282B990100C0ADBA /* TabButton.swift in Sources */,
 				EEDE5B4F282B63B300C0ADBA /* AppDI.swift in Sources */,

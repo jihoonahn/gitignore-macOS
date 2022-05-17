@@ -9,43 +9,52 @@ import SwiftUI
 import FoundationUtil
 
 struct ListCardView : View{
-    let card : ListModel
+    let card : ListModelex
     
     var body: some View{
         HStack() {
             VStack(alignment: .leading) {
-                Text(card.title)
-                    .font(.headline)
-                    .foregroundColor(.primary)
-                    .padding(.bottom, 8)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .layoutPriority(98)
+                HStack{
+                    Text(card.title)
+                        .font(.headline)
+                        .foregroundColor(.primary)
+                        .padding(.bottom, 8)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .layoutPriority(98)
+                    Spacer()
+                    Button(action: {
+                        withAnimation{
+                            self.card.bookMark = !self.card.bookMark
+                            Image(systemName: card.bookMark ? "star.fill" : "star")
+                                .foregroundColor(.yellow)
+                        }
+                    }, label: {
+                        Image(systemName: card.bookMark ? "star.fill" : "star")
+                            .foregroundColor(.yellow)
+                    }).buttonStyle(PlainButtonStyle())
+                }
                 Text(Date().usingDate(time: card.time))
                     .font(.caption)
                     .foregroundColor(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
                     .layoutPriority(99)
-                ScrollView(.vertical){
-                    
-                    
+                ScrollView(.horizontal){
+                    ForEach(0..<card.tag.count, id: \.self) { index in
+                        typeListCellView(type: card.tag[index])
+                    }
                 }.fixedSize(horizontal: false, vertical: true)
             }
             Spacer()
         }
-        .frame(width: 300)
-        .padding([.leading, .trailing, .bottom], 8)
+        .padding([.leading, .trailing, .bottom,.top], 10)
         .cornerRadius(8)
-        .background(
-            RoundedRectangle(cornerRadius: 8)
-                .shadow(color: .gray, radius: .infinity, x: 10, y: 10)
-        )
     }
     
 }
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        ListCardView(card: ListModel.init())
+        ListCardView(card: ListModelex(title: "ㅇ", tag: ["spm"], bookMark: true))
             .padding()
             .previewLayout(.sizeThatFits)
     }

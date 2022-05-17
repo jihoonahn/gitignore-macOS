@@ -10,13 +10,15 @@ import WaterfallGrid
 
 struct ListCardGrid: View {
     
-    var models : [ListModel]
+    var models : [ListModelex]
     
     var body: some View {
         ScrollView(){
             WaterfallGrid((0..<models.count), id: \.self) { index  in
                 ListCardView(card: self.models[index])
-            }
+                    .background(BlurView())
+                    .cornerRadius(20)
+            }.gridStyle()
         }
     }
 }

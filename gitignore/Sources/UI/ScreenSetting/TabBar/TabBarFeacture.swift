@@ -30,7 +30,6 @@ let tabBarReducer = Reducer<
     Reducer{ state, action, _ in
         switch action{
         case .main:
-            
             return .none
         case .list:
             return .none
