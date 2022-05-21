@@ -35,13 +35,7 @@ struct ListCardView : View{
                         .foregroundColor(.secondary)
                         .fixedSize(horizontal: false, vertical: true)
                         .layoutPriority(99)
-                    TagView(tags: [
-                        TagViewItem(title: "swift", isSelected: true),
-                        TagViewItem(title: "swiftPM", isSelected: true),
-                        TagViewItem(title: "swift Package Manager", isSelected: true),
-                        TagViewItem(title: "swiftPackage", isSelected: true),
-                        TagViewItem(title: "Package", isSelected: true),
-                    ])
+                    TagView(tags: [ "swift"])
                     .fixedSize(horizontal: false, vertical: true)
                 }
                 Spacer()

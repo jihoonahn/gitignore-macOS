@@ -61,13 +61,7 @@ struct MainView: View {
                     }
                     .padding(.top,30)
                 }
-                TagView(tags: [
-                    TagViewItem(title: "swift", isSelected: true),
-                    TagViewItem(title: "swiftPM", isSelected: true),
-                    TagViewItem(title: "swift Package Manager", isSelected: true),
-                    TagViewItem(title: "swiftPackage", isSelected: true),
-                    TagViewItem(title: "Package", isSelected: true),
-                ])
+                TagView(tags: ["swift","swift Package Manger"])
                 .frame(width: 400)
                 .fixedSize(horizontal: false, vertical: true)
                 

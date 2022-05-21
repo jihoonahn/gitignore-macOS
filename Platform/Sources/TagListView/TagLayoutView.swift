@@ -1,31 +1,9 @@
 import SwiftUI
 
-public struct TagViewItem: Hashable {
-    
-    var title: String
-    var isSelected: Bool
-    
-    public init(
-        title : String,
-        isSelected: Bool
-    ){
-        self.title = title
-        self.isSelected = isSelected
-    }
-    
-    public static func == (lhs: TagViewItem, rhs: TagViewItem) -> Bool {
-        return lhs.isSelected == rhs.isSelected
-    }
-    
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(title)
-        hasher.combine(isSelected)
-    }
-}
 
 public struct TagView: View {
     
-    @State var tags: [TagViewItem]
+    @State var tags: [String]
     @State private var totalHeight = CGFloat.zero       // << variant for ScrollView/List //    = CGFloat.infinity   // << variant for VStack
     public var body: some View {
         VStack {
@@ -37,7 +15,7 @@ public struct TagView: View {
         //.frame(maxHeight: totalHeight) // << variant for VStack
     }
 
-    public init(tags : [TagViewItem]){
+    public init(tags : [String]){
         self.tags = tags
     }
     
@@ -45,8 +23,8 @@ public struct TagView: View {
         var width = CGFloat.zero
         var height = CGFloat.zero
         return ZStack(alignment: .topLeading) {
-            ForEach(tags.indices) { index in
-                item(for: tags[index].title, isSelected: tags[index].isSelected)
+            ForEach(tags.indices, id: \.self) { index in
+                item(for: tags[index])
                     .padding([.horizontal, .vertical], 4)
                     .alignmentGuide(.leading, computeValue: { d in
                         if (abs(width - d.width) > g.size.width) {
@@ -54,7 +32,7 @@ public struct TagView: View {
                             height -= d.height
                         }
                         let result = width
-                        if tags[index].title == self.tags.last!.title {
+                        if tags[index] == self.tags.last! {
                             width = 0 //last item
                         } else {
                             width -= d.width
@@ -63,28 +41,34 @@ public struct TagView: View {
                     })
                     .alignmentGuide(.top, computeValue: {d in
                         let result = height
-                        if tags[index].title == self.tags.last!.title {
+                        if tags[index] == self.tags.last! {
                             height = 0 // last item
                         }
                         return result
-                    }).onTapGesture {
-                        tags[index].isSelected.toggle()
+                    })
+                    .onTapGesture {
+                        tags.remove(at: index)
                     }
             }
         }.background(viewHeightReader($totalHeight))
     }
 
-    private func item(for text: String, isSelected: Bool) -> some View {
-        Text(text)
-            .foregroundColor(isSelected ? Color.white : Color.accentColor)
-            .padding()
-            .lineLimit(1)
-            .background(isSelected ? Color.orange : Color.red)
-            .frame(height: 36)
-            .cornerRadius(18)
-            .overlay(Capsule().stroke(Color.primary, lineWidth: 1))
+    private func item(for text: String) -> some View {
+        HStack{
+            Text(text)
+                .foregroundColor( Color.white )
+                .padding()
+                .lineLimit(1)
+                .background(Color.orange)
+                .frame(height: 36)
+                .cornerRadius(18)
+                .overlay(Capsule().stroke(Color.primary, lineWidth: 1))
+        }
     }
-
+    private func delete (at index : IndexSet){
+        tags.remove(atOffsets: index)
+    }
+    
     private func viewHeightReader(_ binding: Binding<CGFloat>) -> some View {
         return GeometryReader { geometry -> Color in
             let rect = geometry.frame(in: .local)
