@@ -41,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE74C70928396639001EF6E1 /* Effects */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Effects; sourceTree = "<group>"; };
 		EE78FA03282DD5C80013117A /* ToolBarButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarButtonStyle.swift; sourceTree = "<group>"; };
 		EE78FA09282E37BF0013117A /* ListCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCardView.swift; sourceTree = "<group>"; };
 		EE78FA0C282E3B020013117A /* typeListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typeListCellView.swift; sourceTree = "<group>"; };
@@ -149,6 +150,7 @@
 		EEDA85B2282B40700047F3AC = {
 			isa = PBXGroup;
 			children = (
+				EE74C70928396639001EF6E1 /* Effects */,
 				EEA60414282EB3DA00D79666 /* Platform */,
 				EEDA85BD282B40700047F3AC /* gitignore */,
 				EEDA85BC282B40700047F3AC /* Products */,
