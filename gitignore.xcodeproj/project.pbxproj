@@ -24,7 +24,6 @@
 		EEDA85C3282B40720047F3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C2282B40720047F3AC /* Assets.xcassets */; };
 		EEDA85C6282B40720047F3AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C5282B40720047F3AC /* Preview Assets.xcassets */; };
 		EEDA85CF282B500B0047F3AC /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EEDA85CE282B500B0047F3AC /* ComposableArchitecture */; };
-		EEDA85D2282B506E0047F3AC /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = EEDA85D1282B506E0047F3AC /* CombineMoya */; };
 		EEDA85D8282B51E10047F3AC /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = EEDA85D7282B51E10047F3AC /* Swinject */; };
 		EEDE594A2831FAB100A7FDF0 /* MainCellGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE59492831FAB100A7FDF0 /* MainCellGrid.swift */; };
 		EEDE5B67282B990100C0ADBA /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B66282B990100C0ADBA /* TabButton.swift */; };
@@ -78,7 +77,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEA60417282EB4EE00D79666 /* UIUtil in Frameworks */,
-				EEDA85D2282B506E0047F3AC /* CombineMoya in Frameworks */,
 				EEDA85CF282B500B0047F3AC /* ComposableArchitecture in Frameworks */,
 				EEB8AD752833E19400C44C6F /* WaterfallGrid in Frameworks */,
 				EEA604262830277000D79666 /* FoundationUtil in Frameworks */,
@@ -385,7 +383,6 @@
 			name = gitignore;
 			packageProductDependencies = (
 				EEDA85CE282B500B0047F3AC /* ComposableArchitecture */,
-				EEDA85D1282B506E0047F3AC /* CombineMoya */,
 				EEDA85D7282B51E10047F3AC /* Swinject */,
 				EEA60416282EB4EE00D79666 /* UIUtil */,
 				EEA6042128301F1400D79666 /* CombineRealm */,
@@ -423,7 +420,6 @@
 			mainGroup = EEDA85B2282B40700047F3AC;
 			packageReferences = (
 				EEDA85CD282B500B0047F3AC /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
-				EEDA85D0282B506E0047F3AC /* XCRemoteSwiftPackageReference "Moya" */,
 				EEDA85D6282B51E10047F3AC /* XCRemoteSwiftPackageReference "Swinject" */,
 				EEA6042028301F1400D79666 /* XCRemoteSwiftPackageReference "CombineRealm" */,
 			);
@@ -687,14 +683,6 @@
 				kind = branch;
 			};
 		};
-		EEDA85D0282B506E0047F3AC /* XCRemoteSwiftPackageReference "Moya" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Moya/Moya";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		EEDA85D6282B51E10047F3AC /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
@@ -731,11 +719,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EEDA85CD282B500B0047F3AC /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
-		};
-		EEDA85D1282B506E0047F3AC /* CombineMoya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EEDA85D0282B506E0047F3AC /* XCRemoteSwiftPackageReference "Moya" */;
-			productName = CombineMoya;
 		};
 		EEDA85D7282B51E10047F3AC /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
