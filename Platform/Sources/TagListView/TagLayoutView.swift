@@ -4,6 +4,7 @@ import SwiftUI
 public struct TagView: View {
     
     @State var tags: [String]
+    @State var isEnabled : Bool
     @State private var totalHeight = CGFloat.zero       // << variant for ScrollView/List //    = CGFloat.infinity   // << variant for VStack
     public var body: some View {
         VStack {
@@ -15,7 +16,8 @@ public struct TagView: View {
         //.frame(maxHeight: totalHeight) // << variant for VStack
     }
 
-    public init(tags : [String]){
+    public init(tags : [String],isEnabled : Bool){
+        self.isEnabled = isEnabled
         self.tags = tags
     }
     
@@ -47,7 +49,9 @@ public struct TagView: View {
                         return result
                     })
                     .onTapGesture {
-                        tags.remove(at: index)
+                        if isEnabled{
+                            tags.remove(at: index)
+                        }
                     }
             }
         }.background(viewHeightReader($totalHeight))

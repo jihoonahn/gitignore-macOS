@@ -61,7 +61,7 @@ struct MainView: View {
                     }
                     .padding(.top,30)
                 }
-                TagView(tags: ["swift","swift Package Manger"])
+                TagView(tags: ["swift","swift Package Manger"], isEnabled: true)
                 .frame(width: 400)
                 .fixedSize(horizontal: false, vertical: true)
                 
