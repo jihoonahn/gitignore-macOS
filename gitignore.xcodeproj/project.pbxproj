@@ -68,7 +68,6 @@
 		EEEBD25C282C86BC00608EB6 /* ListFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFeacture.swift; sourceTree = "<group>"; };
 		EEEBD25E282C86C700608EB6 /* IssueFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueFeacture.swift; sourceTree = "<group>"; };
 		EEEBD267282C8C6000608EB6 /* AppCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCore.swift; sourceTree = "<group>"; };
-		EEEBD269282C8D2400608EB6 /* Service */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Service; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				EEA60414282EB3DA00D79666 /* Platform */,
-				EEEBD269282C8D2400608EB6 /* Service */,
 				EEDA85BD282B40700047F3AC /* gitignore */,
 				EEDA85BC282B40700047F3AC /* Products */,
 				EEA60415282EB4EE00D79666 /* Frameworks */,
