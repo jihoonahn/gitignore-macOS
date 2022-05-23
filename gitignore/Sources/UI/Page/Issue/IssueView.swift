@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ComposableArchitecture
+import gitignoreView
 
 struct IssueView: View {
     let store : Store<IssueState,IssueAction>

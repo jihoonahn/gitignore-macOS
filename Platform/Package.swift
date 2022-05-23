@@ -8,6 +8,9 @@ let package = Package(
     platforms: [.macOS(.v10_15)],
     products: [
         .library(
+            name: "gitignoreView",
+            targets: ["gitignoreView"]),
+        .library(
             name: "FoundationUtil",
             targets: ["FoundationUtil"]),
         .library(
@@ -23,6 +26,9 @@ let package = Package(
     dependencies: [
     ],
     targets: [
+        .target(
+            name: "gitignoreView",
+            dependencies: []),
         .target(
             name: "FoundationUtil",
             dependencies: []),

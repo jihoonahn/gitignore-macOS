@@ -9,6 +9,7 @@ import SwiftUI
 import ComposableArchitecture
 import UIUtil
 import TagListView
+import gitignoreView
 
 //MARK: - MainView
 struct MainView: View {
@@ -66,6 +67,8 @@ struct MainView: View {
                 .fixedSize(horizontal: false, vertical: true)
                 
                 Spacer()
+            }.onAppear {
+                viewStore.send(.onAppear)
             }
         }
     }

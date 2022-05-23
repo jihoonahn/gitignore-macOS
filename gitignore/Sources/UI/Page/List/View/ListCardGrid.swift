@@ -7,6 +7,7 @@
 
 import SwiftUI
 import WaterfallGrid
+import gitignoreView
 
 struct ListCardGrid: View {
     

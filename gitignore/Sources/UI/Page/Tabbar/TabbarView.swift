@@ -7,13 +7,14 @@
 
 import SwiftUI
 import ComposableArchitecture
+import gitignoreView
 
 //MARK: - Screen
 
-struct AppView: View {
-    let store: Store<AppState, AppAction>
+struct TabbarView: View {
+    let store: Store<TabBarState, TabBarAction>
     
-    public init(store: Store<AppState, AppAction>) {
+    public init(store: Store<TabBarState, TabBarAction>) {
       self.store = store
     }
     
@@ -33,15 +34,15 @@ struct AppView: View {
                     switch homeData.selectedTab{
                     case "Home": MainView(store: self.store.scope(
                         state: \.mainState,
-                        action: AppAction.mainAction
+                        action: TabBarAction.mainAction
                     ))
                     case "List": ListView(store: self.store.scope(
                         state: \.listState,
-                        action: AppAction.listAction
+                        action: TabBarAction.listAction
                     ))
                     case "Issue": IssueView(store: self.store.scope(
                         state: \.issueState,
-                        action: AppAction.issueAction
+                        action: TabBarAction.issueAction
                     ))
                     default: Text("")
                     }
