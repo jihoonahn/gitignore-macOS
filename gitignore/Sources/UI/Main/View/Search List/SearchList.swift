@@ -20,7 +20,8 @@ struct SearchList: View {
                     if !list.isEmpty{
                         Text(list[index])
                             .padding(5)
-                            .frame(maxWidth: .infinity,alignment: .leading)
+                            .background(.red)
+                            .frame(maxWidth : .infinity,alignment: .leading)
                             .onTapGesture {
                                 print( list[index])
                             }

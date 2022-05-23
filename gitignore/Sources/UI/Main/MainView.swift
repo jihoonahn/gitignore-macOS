@@ -33,15 +33,8 @@ struct MainView: View {
                 }
                 .padding()
                 Spacer()
-                
                 VStack{
-                    Image("HomeLogo")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 300, height: 100)
-                    Text("프로젝트에 꼭 맞는 .gitignore 파일을 더 빠르게 생성하세요!")
-                        .font(.system(size: 13, weight: .medium, design: .default))
-                        .padding(.top, 20)
+                    TitleLogo()
                     HStack{
                         TextField(
                             "운영체제, 개발환경(IDE), 프로그래밍 언어 검색",
@@ -50,8 +43,6 @@ struct MainView: View {
                             )
                         )
                         .textFieldStyle(gitignoreTextfieldStyle())
-                        .disableAutocorrection(true)
-                        .frame(width: 300, height: 40)
                         .overlay(alignment: .topLeading){
                             VStack{
                                 Spacer(minLength: 50)
@@ -74,9 +65,7 @@ struct MainView: View {
                                 .foregroundColor(.white)
                                 .font(.system(size: 12, weight: .regular))
                         })
-                        .frame(width:50, height: 40)
-                        .background(.orange)
-                        .buttonStyle(PlainButtonStyle())
+                        .buttonStyle(CreateButtonStyle())
                     }
                     .padding(.top,30)
                 }

@@ -7,6 +7,7 @@ struct MainState: Equatable{
     var liststatus : Bool = true
     var inquiryListString : [String] = .init()
     var gitignoreListString : [String] = .init()
+    var userChooseTag : [String] = .init()
 }
 
 enum MainAction{
@@ -38,10 +39,7 @@ let mainReducer = Reducer<
         state.searchQuery = query
         state.inquiryListString  = state.gitignoreListString.filter{ $0.hasPrefix(query) || state.searchQuery.isEmpty}
         state.liststatus = state.searchQuery.isEmpty || state.inquiryListString.isEmpty
-        
-        if state.searchQuery.isEmpty{
-            state.inquiryListString = .init()
-        }
+        if state.searchQuery.isEmpty{state.inquiryListString = .init()}
         
         guard !query.isEmpty else {return .cancel(id: SearchOptionId.self)}
         return .none
@@ -50,8 +48,7 @@ let mainReducer = Reducer<
             .receive(on: enviroment.mainQueue())
             .catchToEffect(MainAction.dataLoaded)
     case .dataLoaded(.success(let result)):
-        let editResult = result.replacingOccurrences(of: "\n", with: ",")
-        state.gitignoreListString = editResult.split(separator: ",").map{ (value) -> String in return (String(value))}
+        state.gitignoreListString =  result.replacingOccurrences(of: "\n", with: ",").split(separator: ",").map{ (value) -> String in return (String(value))}
         return .none
     case .dataLoaded(.failure(let result)):
         return .none

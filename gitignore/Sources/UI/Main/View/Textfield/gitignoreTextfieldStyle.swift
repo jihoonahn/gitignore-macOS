@@ -14,6 +14,8 @@ struct gitignoreTextfieldStyle : TextFieldStyle{
             .padding(10)
             .cornerRadius(20)
             .border(Color.orange, width: 2)
+            .disableAutocorrection(true)
+            .frame(width: 300, height: 40)
     }
 }
  
