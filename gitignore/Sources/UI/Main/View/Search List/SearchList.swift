@@ -17,12 +17,14 @@ struct SearchList: View {
         ScrollView{
             VStack{
                 ForEach(0..<list.count, id: \.self) { index  in
-                    Text(list[index])
-                        .padding(5)
-                        .frame(maxWidth: .infinity,alignment: .leading)
-                        .onTapGesture {
-                            print( list[index])
-                        }
+                    if !list.isEmpty{
+                        Text(list[index])
+                            .padding(5)
+                            .frame(maxWidth: .infinity,alignment: .leading)
+                            .onTapGesture {
+                                print( list[index])
+                            }
+                    }
                     Divider()
                 }
             }.padding(5)

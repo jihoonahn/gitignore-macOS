@@ -63,8 +63,10 @@ struct MainView: View {
                         .overlay(alignment: .topLeading) {
                             VStack{
                                 Spacer(minLength: 50)
-                                SearchList(list: viewStore.gitignoreListString)
-                                    .frame(width: 300, height: 200)
+                                if !viewStore.liststatus{
+                                    SearchList(list: viewStore.inquiryListString)
+                                        .frame(width: 300, height: 200)
+                                }
                             }
                         }
                         Button(action: { print("생성")}, label: {

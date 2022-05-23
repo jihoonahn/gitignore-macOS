@@ -1,8 +1,11 @@
 import ComposableArchitecture
 import Effects
+import SwiftUI
 
 struct MainState: Equatable{
     var searchQuery = ""
+    var liststatus : Bool = true
+    var inquiryListString : [String] = .init()
     var gitignoreListString : [String] = .init()
 }
 
@@ -33,8 +36,14 @@ let mainReducer = Reducer<
     case .searchQueryChanged(let query):
         enum SearchOptionId {}
         state.searchQuery = query
+        state.inquiryListString  = state.gitignoreListString.filter{ $0.hasPrefix(query) || state.searchQuery.isEmpty}
+        state.liststatus = state.searchQuery.isEmpty || state.inquiryListString.isEmpty
+        
+        if state.searchQuery.isEmpty{
+            state.inquiryListString = .init()
+        }
+        
         guard !query.isEmpty else {return .cancel(id: SearchOptionId.self)}
-        print(query)
         return .none
     case .onAppear:
         return enviroment.request()
