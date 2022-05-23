@@ -3,7 +3,7 @@ import Effects
 
 struct MainState: Equatable{
     var searchQuery = ""
-    var gitignoreListString : String = .init()
+    var gitignoreListString : [String] = .init()
 }
 
 enum MainAction{
@@ -37,8 +37,10 @@ let mainReducer = Reducer<
             .receive(on: enviroment.mainQueue())
             .catchToEffect(MainAction.dataLoaded)
     case .dataLoaded(.success(let result)):
-        state.gitignoreListString = result
+        let editResult = result.replacingOccurrences(of: "\n", with: ",")
+        state.gitignoreListString = editResult.split(separator: ",").map{ (value) -> String in return (String(value))}
         print(result)
+        print(state.gitignoreListString)
         return .none
     case .dataLoaded(.failure(let result)):
         return .none
