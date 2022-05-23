@@ -2,11 +2,11 @@ import SwiftUI
 import ComposableArchitecture
 
 struct RootView: View {
-    let store: Store<RootState, RootAction>
-    
-    init(store: Store<RootState, RootAction>){
-        self.store = store
-    }
+    let store = Store(
+        initialState: RootState(),
+        reducer: rootReducer,
+        environment: RootEnvironment()
+    )
     
     var body: some View {
         SwitchStore(self.store){

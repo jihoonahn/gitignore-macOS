@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		EE78FA0A282E37BF0013117A /* ListCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78FA09282E37BF0013117A /* ListCardView.swift */; };
+		EEA34CC9283B73A700A00BED /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA34CC8283B73A700A00BED /* WebView.swift */; };
 		EEA395D4283A418700A41CC4 /* RootFeacture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA395D3283A418700A41CC4 /* RootFeacture.swift */; };
 		EEA395D7283A42BC00A41CC4 /* gitignoreView in Frameworks */ = {isa = PBXBuildFile; productRef = EEA395D6283A42BC00A41CC4 /* gitignoreView */; };
-		EEA395DF283A445E00A41CC4 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA395DE283A445E00A41CC4 /* WebView.swift */; };
 		EEA60417282EB4EE00D79666 /* UIUtil in Frameworks */ = {isa = PBXBuildFile; productRef = EEA60416282EB4EE00D79666 /* UIUtil */; };
 		EEA6041D282FFEF700D79666 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA6041C282FFEF700D79666 /* Network.framework */; };
 		EEA6041F28301BD700D79666 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA6041E28301BD700D79666 /* ListModel.swift */; };
@@ -43,8 +43,8 @@
 /* Begin PBXFileReference section */
 		EE74C70928396639001EF6E1 /* Effects */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Effects; sourceTree = "<group>"; };
 		EE78FA09282E37BF0013117A /* ListCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCardView.swift; sourceTree = "<group>"; };
+		EEA34CC8283B73A700A00BED /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		EEA395D3283A418700A41CC4 /* RootFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFeacture.swift; sourceTree = "<group>"; };
-		EEA395DE283A445E00A41CC4 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WebView.swift; path = gitignore/Sources/UI/Page/Issue/View/WebView.swift; sourceTree = SOURCE_ROOT; };
 		EEA60414282EB3DA00D79666 /* Platform */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Platform; sourceTree = "<group>"; };
 		EEA6041C282FFEF700D79666 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
 		EEA6041E28301BD700D79666 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 		EEA395D8283A43B100A41CC4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EEA395DE283A445E00A41CC4 /* WebView.swift */,
+				EEA34CC8283B73A700A00BED /* WebView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,7 +182,9 @@
 		EEDE5B47282B5EAA00C0ADBA /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				EEDE5B6D282BA26300C0ADBA /* Page */,
+				EEEBD256282C7A4200608EB6 /* Issue */,
+				EEEBD255282C7A3C00608EB6 /* List */,
+				EEEBD254282C7A3400608EB6 /* Main */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -192,7 +194,7 @@
 			children = (
 				EEDA85BE282B40700047F3AC /* gitignoreApp.swift */,
 				EEA395D2283A417000A41CC4 /* Root */,
-				EEDE5B4C282B636C00C0ADBA /* Model */,
+				EEEBD266282C89CE00608EB6 /* Tabbar */,
 				EEDE5B47282B5EAA00C0ADBA /* UI */,
 			);
 			path = Sources;
@@ -218,7 +220,6 @@
 		EEDE5B4C282B636C00C0ADBA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EEDE5B51282B63FE00C0ADBA /* Remote */,
 				EEDE5B50282B63F400C0ADBA /* Local */,
 			);
 			path = Model;
@@ -232,46 +233,12 @@
 			path = Local;
 			sourceTree = "<group>";
 		};
-		EEDE5B51282B63FE00C0ADBA /* Remote */ = {
-			isa = PBXGroup;
-			children = (
-				EEDE5B53282B64A500C0ADBA /* API */,
-				EEDE5B54282B64AD00C0ADBA /* DataMapping */,
-			);
-			path = Remote;
-			sourceTree = "<group>";
-		};
-		EEDE5B53282B64A500C0ADBA /* API */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
-		EEDE5B54282B64AD00C0ADBA /* DataMapping */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DataMapping;
-			sourceTree = "<group>";
-		};
 		EEDE5B68282B9B0500C0ADBA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				EEDE5B6B282B9DF600C0ADBA /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		EEDE5B6D282BA26300C0ADBA /* Page */ = {
-			isa = PBXGroup;
-			children = (
-				EEEBD266282C89CE00608EB6 /* Tabbar */,
-				EEEBD256282C7A4200608EB6 /* Issue */,
-				EEEBD255282C7A3C00608EB6 /* List */,
-				EEEBD254282C7A3400608EB6 /* Main */,
-			);
-			path = Page;
 			sourceTree = "<group>";
 		};
 		EEEBD254282C7A3400608EB6 /* Main */ = {
@@ -287,6 +254,7 @@
 		EEEBD255282C7A3C00608EB6 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				EEDE5B4C282B636C00C0ADBA /* Model */,
 				EE78FA08282E37A30013117A /* View */,
 				EEDE5B77282BA92500C0ADBA /* ListView.swift */,
 				EEEBD25C282C86BC00608EB6 /* ListFeacture.swift */,
@@ -430,7 +398,7 @@
 				EEEBD25D282C86BC00608EB6 /* ListFeacture.swift in Sources */,
 				EEEBD25F282C86C700608EB6 /* IssueFeacture.swift in Sources */,
 				EEEBD268282C8C6000608EB6 /* TabbarFeacture.swift in Sources */,
-				EEA395DF283A445E00A41CC4 /* WebView.swift in Sources */,
+				EEA34CC9283B73A700A00BED /* WebView.swift in Sources */,
 				EEDE594A2831FAB100A7FDF0 /* MainCellGrid.swift in Sources */,
 				EEDE5B7A282BA9F100C0ADBA /* IssueView.swift in Sources */,
 				EEDE5B67282B990100C0ADBA /* TabButton.swift in Sources */,

@@ -22,7 +22,7 @@ enum TabBarAction{
 
 struct tabBarEnvironmnet{}
 
-let appReducer = Reducer<TabBarState,TabBarAction,tabBarEnvironmnet>.combine(
+let tabBarReducer = Reducer<TabBarState,TabBarAction,tabBarEnvironmnet>.combine(
     
     mainReducer.pullback(
         state:\.mainState,

@@ -22,5 +22,4 @@ public class EffectsImpl: Effects{
             .compactMap{ String(data: $0, encoding: .utf8)}
             .eraseToEffect()
     }
-    
 }
