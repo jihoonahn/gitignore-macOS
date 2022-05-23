@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EE78FA0A282E37BF0013117A /* ListCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78FA09282E37BF0013117A /* ListCardView.swift */; };
 		EEA34CC9283B73A700A00BED /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA34CC8283B73A700A00BED /* WebView.swift */; };
+		EEA34CCE283B9F7C00A00BED /* SearchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA34CCD283B9F7C00A00BED /* SearchList.swift */; };
 		EEA395D4283A418700A41CC4 /* RootFeacture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA395D3283A418700A41CC4 /* RootFeacture.swift */; };
 		EEA395D7283A42BC00A41CC4 /* gitignoreView in Frameworks */ = {isa = PBXBuildFile; productRef = EEA395D6283A42BC00A41CC4 /* gitignoreView */; };
 		EEA60417282EB4EE00D79666 /* UIUtil in Frameworks */ = {isa = PBXBuildFile; productRef = EEA60416282EB4EE00D79666 /* UIUtil */; };
@@ -26,7 +27,6 @@
 		EEDA85C6282B40720047F3AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C5282B40720047F3AC /* Preview Assets.xcassets */; };
 		EEDA85CF282B500B0047F3AC /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EEDA85CE282B500B0047F3AC /* ComposableArchitecture */; };
 		EEDA85D8282B51E10047F3AC /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = EEDA85D7282B51E10047F3AC /* Swinject */; };
-		EEDE594A2831FAB100A7FDF0 /* MainCellGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE59492831FAB100A7FDF0 /* MainCellGrid.swift */; };
 		EEDE5B67282B990100C0ADBA /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B66282B990100C0ADBA /* TabButton.swift */; };
 		EEDE5B6A282B9DD100C0ADBA /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B69282B9DD100C0ADBA /* TabbarView.swift */; };
 		EEDE5B6C282B9DF600C0ADBA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B6B282B9DF600C0ADBA /* HomeViewModel.swift */; };
@@ -44,6 +44,7 @@
 		EE74C70928396639001EF6E1 /* Effects */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Effects; sourceTree = "<group>"; };
 		EE78FA09282E37BF0013117A /* ListCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCardView.swift; sourceTree = "<group>"; };
 		EEA34CC8283B73A700A00BED /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		EEA34CCD283B9F7C00A00BED /* SearchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchList.swift; sourceTree = "<group>"; };
 		EEA395D3283A418700A41CC4 /* RootFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFeacture.swift; sourceTree = "<group>"; };
 		EEA60414282EB3DA00D79666 /* Platform */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Platform; sourceTree = "<group>"; };
 		EEA6041C282FFEF700D79666 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
@@ -55,7 +56,6 @@
 		EEDA85C2282B40720047F3AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEDA85C5282B40720047F3AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EEDA85C7282B40720047F3AC /* gitignore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = gitignore.entitlements; path = gitignore/Supporting/gitignore.entitlements; sourceTree = SOURCE_ROOT; };
-		EEDE59492831FAB100A7FDF0 /* MainCellGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellGrid.swift; sourceTree = "<group>"; };
 		EEDE5B66282B990100C0ADBA /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
 		EEDE5B69282B9DD100C0ADBA /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		EEDE5B6B282B9DF600C0ADBA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -97,6 +97,22 @@
 				EEA60423283020C200D79666 /* ListCardGrid.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		EEA34CCA283B9DD600A00BED /* Textfield */ = {
+			isa = PBXGroup;
+			children = (
+				EEDE5B86282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift */,
+			);
+			path = Textfield;
+			sourceTree = "<group>";
+		};
+		EEA34CCC283B9DF500A00BED /* Search List */ = {
+			isa = PBXGroup;
+			children = (
+				EEA34CCD283B9F7C00A00BED /* SearchList.swift */,
+			);
+			path = "Search List";
 			sourceTree = "<group>";
 		};
 		EEA395D2283A417000A41CC4 /* Root */ = {
@@ -173,8 +189,8 @@
 		EEDE59462831F71000A7FDF0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EEDE5B86282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift */,
-				EEDE59492831FAB100A7FDF0 /* MainCellGrid.swift */,
+				EEA34CCC283B9DF500A00BED /* Search List */,
+				EEA34CCA283B9DD600A00BED /* Textfield */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -396,10 +412,10 @@
 				EEA6041F28301BD700D79666 /* ListModel.swift in Sources */,
 				EEA395D4283A418700A41CC4 /* RootFeacture.swift in Sources */,
 				EEEBD25D282C86BC00608EB6 /* ListFeacture.swift in Sources */,
+				EEA34CCE283B9F7C00A00BED /* SearchList.swift in Sources */,
 				EEEBD25F282C86C700608EB6 /* IssueFeacture.swift in Sources */,
 				EEEBD268282C8C6000608EB6 /* TabbarFeacture.swift in Sources */,
 				EEA34CC9283B73A700A00BED /* WebView.swift in Sources */,
-				EEDE594A2831FAB100A7FDF0 /* MainCellGrid.swift in Sources */,
 				EEDE5B7A282BA9F100C0ADBA /* IssueView.swift in Sources */,
 				EEDE5B67282B990100C0ADBA /* TabButton.swift in Sources */,
 				EEA60424283020C200D79666 /* ListCardGrid.swift in Sources */,

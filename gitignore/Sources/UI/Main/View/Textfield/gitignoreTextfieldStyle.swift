@@ -16,3 +16,4 @@ struct gitignoreTextfieldStyle : TextFieldStyle{
             .border(Color.orange, width: 2)
     }
 }
+ 

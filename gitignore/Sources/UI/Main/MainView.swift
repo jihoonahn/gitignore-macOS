@@ -13,11 +13,9 @@ import gitignoreView
 
 //MARK: - MainView
 struct MainView: View {
-    let store : Store<MainState,MainAction>
-    //MARK: - Legacy
     
-    @State var text = ""
-
+    let store : Store<MainState,MainAction>
+    
     var body: some View {
         Color.backgroundColor
             .ignoresSafeArea()
@@ -47,10 +45,27 @@ struct MainView: View {
                     HStack{
                         TextField(
                             "운영체제, 개발환경(IDE), 프로그래밍 언어 검색",
-                            text: $text
-                        ).textFieldStyle(gitignoreTextfieldStyle())
-                            .frame(width: 300, height: 40)
-                        
+                            text: viewStore.binding(
+                                get: \.searchQuery,send: MainAction.searchQueryChanged
+                            )
+                        )
+                        .textFieldStyle(gitignoreTextfieldStyle())
+                        .disableAutocorrection(true)
+                        .frame(width: 300, height: 40)
+                        .overlay(alignment: .topLeading){
+                            VStack{
+                                Spacer(minLength: 50)
+                                TagView(tags: ["swift","swift Package Manger","cocoapods"], isEnabled: true)
+                                    .frame(width: 400)
+                                    .fixedSize(horizontal: false, vertical: true)
+                            }
+                        }
+                        .overlay(alignment: .topLeading) {
+                            VStack{
+                                Spacer(minLength: 50)
+                                SearchList().frame(width: 300, height: 200)
+                            }
+                        }
                         Button(action: { print("생성")}, label: {
                             Text("생성")
                                 .foregroundColor(.white)
@@ -62,10 +77,6 @@ struct MainView: View {
                     }
                     .padding(.top,30)
                 }
-                TagView(tags: ["swift","swift Package Manger"], isEnabled: true)
-                .frame(width: 400)
-                .fixedSize(horizontal: false, vertical: true)
-                
                 Spacer()
             }.onAppear {
                 viewStore.send(.onAppear)
@@ -73,5 +84,3 @@ struct MainView: View {
         }
     }
 }
-
-

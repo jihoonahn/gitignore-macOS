@@ -30,7 +30,11 @@ let mainReducer = Reducer<
     MainEnvironmnet
 >{ state, action , enviroment in
     switch action{
-    case .searchQueryChanged(_):
+    case .searchQueryChanged(let query):
+        enum SearchOptionId {}
+        state.searchQuery = query
+        guard !query.isEmpty else {return .cancel(id: SearchOptionId.self)}
+        print(query)
         return .none
     case .onAppear:
         return enviroment.request()
@@ -39,8 +43,6 @@ let mainReducer = Reducer<
     case .dataLoaded(.success(let result)):
         let editResult = result.replacingOccurrences(of: "\n", with: ",")
         state.gitignoreListString = editResult.split(separator: ",").map{ (value) -> String in return (String(value))}
-        print(result)
-        print(state.gitignoreListString)
         return .none
     case .dataLoaded(.failure(let result)):
         return .none
