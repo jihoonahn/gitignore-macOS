@@ -16,12 +16,32 @@ struct MainView: View {
     
     let store : Store<MainState,MainAction>
     
+    struct ViewState: Equatable{
+        var searchQuery = ""
+        var liststatus : Bool = true
+        var inquiryListString : [String] = .init()
+        var gitignoreListString : [String] = .init()
+        var userChooseTag : Set<String> = .init()
+        
+        init(state : MainState){
+            self.searchQuery = state.searchQuery
+            self.liststatus = state.liststatus
+            self.inquiryListString = state.inquiryListString
+            self.gitignoreListString = state.gitignoreListString
+            self.userChooseTag = state.userChooseTag
+        }
+    }
+    
+    public init(store: Store<MainState, MainAction>) {
+        self.store = store
+    }
+    
     var body: some View {
         Color.backgroundColor
             .ignoresSafeArea()
             .padding(.leading,-10)
         
-        WithViewStore(self.store) { viewStore in
+        WithViewStore(self.store.scope(state: ViewState.init)) { viewStore in
             VStack{
                 HStack{
                     Spacer()
@@ -41,7 +61,7 @@ struct MainView: View {
                             text: viewStore.binding(
                                 get: \.searchQuery,send: MainAction.searchQueryChanged
                             ), onCommit: {
-                                viewStore.send(MainAction.returnKeyTapTagChoose)
+                                viewStore.send(MainAction.tapTagChoose(0))
                             }
                         )
                         .textFieldStyle(gitignoreTextfieldStyle())
