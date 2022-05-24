@@ -38,8 +38,8 @@ let mainReducer = Reducer<
     switch action{
     case .searchQueryChanged(let query):
         enum SearchOptionId {}
-        state.searchQuery = query.lowercased()
-        state.inquiryListString  = state.gitignoreListString.filter{ $0.hasPrefix(query) || state.searchQuery.isEmpty}
+        state.searchQuery = query
+        state.inquiryListString  = state.gitignoreListString.filter{ $0.hasPrefix(query.lowercased()) || state.searchQuery.isEmpty}
         state.liststatus = state.searchQuery.isEmpty || state.inquiryListString.isEmpty
         if state.searchQuery.isEmpty{state.inquiryListString = .init()}
         
