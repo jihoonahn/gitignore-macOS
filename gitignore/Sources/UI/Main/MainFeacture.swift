@@ -15,6 +15,7 @@ enum MainAction{
     case tapTagChoose(Int)
     case onAppear
     case dataLoaded(Result<String, ApiError>)
+    case tagDelete(Int)
 }
 
 struct MainEnvironmnet{
@@ -62,6 +63,10 @@ let mainReducer = Reducer<
         guard !state.inquiryListString.isEmpty else {return .none}
         state.userChooseTag.insert(state.inquiryListString[index])
         state.searchQuery = ""
+        return .none
+        
+    case .tagDelete(let index) :
+        state.userChooseTag.remove(Array(state.userChooseTag)[index])
         return .none
     }
 }

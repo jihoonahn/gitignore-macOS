@@ -68,7 +68,7 @@ struct MainView: View {
                         .overlay(alignment: .topLeading){
                             VStack{
                                 Spacer(minLength: 50)
-                                TagView(tags: Array(viewStore.userChooseTag), isEnabled: true)
+                                TagMainView(store: store)
                                     .frame(width: 400)
                                     .fixedSize(horizontal: false, vertical: true)
                             }

@@ -15,6 +15,7 @@
 		EEA3F66D283C4D03005D6A15 /* ToolBarButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3F66C283C4D03005D6A15 /* ToolBarButtonStyle.swift */; };
 		EEA3F66F283C4D88005D6A15 /* CreateButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3F66E283C4D88005D6A15 /* CreateButtonStyle.swift */; };
 		EEA3F672283C5055005D6A15 /* TitleLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3F671283C5055005D6A15 /* TitleLogo.swift */; };
+		EEA3F676283CFCB0005D6A15 /* TagListMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3F675283CFCB0005D6A15 /* TagListMain.swift */; };
 		EEA60417282EB4EE00D79666 /* UIUtil in Frameworks */ = {isa = PBXBuildFile; productRef = EEA60416282EB4EE00D79666 /* UIUtil */; };
 		EEA6041D282FFEF700D79666 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA6041C282FFEF700D79666 /* Network.framework */; };
 		EEA6041F28301BD700D79666 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA6041E28301BD700D79666 /* ListModel.swift */; };
@@ -52,6 +53,7 @@
 		EEA3F66C283C4D03005D6A15 /* ToolBarButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarButtonStyle.swift; sourceTree = "<group>"; };
 		EEA3F66E283C4D88005D6A15 /* CreateButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateButtonStyle.swift; sourceTree = "<group>"; };
 		EEA3F671283C5055005D6A15 /* TitleLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLogo.swift; sourceTree = "<group>"; };
+		EEA3F675283CFCB0005D6A15 /* TagListMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListMain.swift; sourceTree = "<group>"; };
 		EEA60414282EB3DA00D79666 /* Platform */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Platform; sourceTree = "<group>"; };
 		EEA6041C282FFEF700D79666 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
 		EEA6041E28301BD700D79666 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
@@ -163,6 +165,14 @@
 			path = Title;
 			sourceTree = "<group>";
 		};
+		EEA3F674283CFCA6005D6A15 /* Tag */ = {
+			isa = PBXGroup;
+			children = (
+				EEA3F675283CFCB0005D6A15 /* TagListMain.swift */,
+			);
+			path = Tag;
+			sourceTree = "<group>";
+		};
 		EEA60415282EB4EE00D79666 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +222,7 @@
 		EEDE59462831F71000A7FDF0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EEA3F674283CFCA6005D6A15 /* Tag */,
 				EEA3F670283C5048005D6A15 /* Title */,
 				EEA3F66B283C4CE8005D6A15 /* Button */,
 				EEA34CCC283B9DF500A00BED /* Search List */,
@@ -442,6 +453,7 @@
 				EEEBD25F282C86C700608EB6 /* IssueFeacture.swift in Sources */,
 				EEEBD268282C8C6000608EB6 /* TabbarFeacture.swift in Sources */,
 				EEA34CC9283B73A700A00BED /* WebView.swift in Sources */,
+				EEA3F676283CFCB0005D6A15 /* TagListMain.swift in Sources */,
 				EEA3F66D283C4D03005D6A15 /* ToolBarButtonStyle.swift in Sources */,
 				EEDE5B7A282BA9F100C0ADBA /* IssueView.swift in Sources */,
 				EEDE5B67282B990100C0ADBA /* TabButton.swift in Sources */,

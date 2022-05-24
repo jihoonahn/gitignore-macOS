@@ -28,11 +28,12 @@ struct SearchList: View {
                     }
                 }
             }
-            .padding([.top,.leading,.bottom], 5)
+            .padding([.all], 8)
         }
         .background(.background)
         .cornerRadius(20)
         .frame(width: 300, height: 200)
+
     }
 }
 
