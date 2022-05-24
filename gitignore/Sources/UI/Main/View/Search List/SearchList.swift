@@ -11,34 +11,34 @@ import gitignoreView
 
 struct SearchList: View {
     
-    var list : [String]
+    private var store : Store<MainState, MainAction>
+//    var list : [String]
     
+    init(store : Store<MainState, MainAction>){
+        self.store = store
+    }
     var body: some View {
-        ScrollView{
-            VStack{
-                ForEach(0..<list.count, id: \.self) { index  in
-                    if !list.isEmpty{
-                        Text(list[index])
-                            .frame(maxWidth : .infinity, minHeight: 40 ,alignment: .leading)
-                            .background(.background)
-                            .font(.title3)
-                            .onTapGesture {
-                                print( list[index])
-                            }
+        WithViewStore(store.self){ viewStore in
+            ScrollView{
+                VStack{
+                    ForEach(0..<viewStore.inquiryListString.count, id: \.self) { index  in
+                        if !viewStore.inquiryListString.isEmpty{
+                            Text(viewStore.inquiryListString[index])
+                                .frame(maxWidth : .infinity, minHeight: 40 ,alignment: .leading)
+                                .background(.background)
+                                .font(.title3)
+                                .onTapGesture {
+                                    viewStore.send(.tapTagChoose(index))
+                                }
+                        }
                     }
                 }
+                .padding([.all], 8)
             }
-            .padding([.all], 8)
+            .background(.background)
+            .cornerRadius(20)
+            .frame(width: 300, height: 200)
         }
-        .background(.background)
-        .cornerRadius(20)
-        .frame(width: 300, height: 200)
-
     }
 }
 
-struct SearchList_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchList(list: ["adobe","ai"])
-    }
-}

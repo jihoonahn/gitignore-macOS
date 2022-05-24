@@ -77,7 +77,7 @@ struct MainView: View {
                             VStack{
                                 Spacer(minLength: 50)
                                 if !viewStore.liststatus{
-                                    SearchList(list: viewStore.inquiryListString)
+                                    SearchList(store: store)
                                 }
                             }
                         }

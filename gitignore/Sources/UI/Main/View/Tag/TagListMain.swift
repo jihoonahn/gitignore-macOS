@@ -25,7 +25,7 @@ public struct TagMainView: View {
         return ZStack(alignment: .topLeading) {
             WithViewStore(store.self) { viewStore in
                 
-                var tag : Array<String> = Array(viewStore.userChooseTag)
+                let tag : Array<String> = Array(viewStore.userChooseTag)
                 
                 ForEach(tag.indices, id: \.self) { index in
                     item(for: tag[index])
