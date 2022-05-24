@@ -8,6 +8,9 @@ let package = Package(
     platforms: [.macOS(.v10_15)],
     products: [
         .library(
+            name: "gitignoreView",
+            targets: ["gitignoreView"]),
+        .library(
             name: "FoundationUtil",
             targets: ["FoundationUtil"]),
         .library(
@@ -15,11 +18,17 @@ let package = Package(
             targets: ["UIUtil"]),
         .library(
             name: "WaterfallGrid",
-            targets: ["WaterfallGrid"])
+            targets: ["WaterfallGrid"]),
+        .library(
+            name: "TagListView",
+            targets: ["TagListView"])
     ],
     dependencies: [
     ],
     targets: [
+        .target(
+            name: "gitignoreView",
+            dependencies: []),
         .target(
             name: "FoundationUtil",
             dependencies: []),
@@ -29,5 +38,10 @@ let package = Package(
         .target(
             name: "WaterfallGrid",
             dependencies: []),
+        .target(
+            name: "TagListView",
+            dependencies: [
+                "FoundationUtil"
+            ]),
     ]
 )

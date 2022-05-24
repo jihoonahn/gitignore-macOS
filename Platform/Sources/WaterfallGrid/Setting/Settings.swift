@@ -1,7 +1,7 @@
 import Foundation
 import SwiftUI
 
-struct Settings {
+public struct Settings {
     var columnsInPortrait: Double
     var columnsInLandscape: Double
     var spacing: Double
