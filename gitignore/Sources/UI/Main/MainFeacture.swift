@@ -7,11 +7,13 @@ struct MainState: Equatable{
     var liststatus : Bool = true
     var inquiryListString : [String] = .init()
     var gitignoreListString : [String] = .init()
-    var userChooseTag : [String] = .init()
+    var userChooseTag : Set<String> = .init()
+    
 }
 
 enum MainAction{
     case searchQueryChanged(String)
+    case returnKeyTapTagChoose
     case onAppear
     case dataLoaded(Result<String, ApiError>)
 }
@@ -51,6 +53,10 @@ let mainReducer = Reducer<
         state.gitignoreListString =  result.replacingOccurrences(of: "\n", with: ",").split(separator: ",").map{ (value) -> String in return (String(value))}
         return .none
     case .dataLoaded(.failure(let result)):
+        return .none
+    case .returnKeyTapTagChoose:
+        guard !state.inquiryListString.isEmpty else {return .none}
+        state.userChooseTag.insert(state.inquiryListString[0])
         return .none
     }
 }

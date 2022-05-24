@@ -19,20 +19,19 @@ struct SearchList: View {
                 ForEach(0..<list.count, id: \.self) { index  in
                     if !list.isEmpty{
                         Text(list[index])
-                            .padding(5)
-                            .background(.red)
-                            .frame(maxWidth : .infinity,alignment: .leading)
+                            .frame(maxWidth : .infinity, minHeight: 40 ,alignment: .leading)
+                            .font(.title3)
                             .onTapGesture {
                                 print( list[index])
                             }
                     }
-                    Divider()
                 }
-            }.padding(5)
+            }
+            .padding([.top,.leading,.bottom], 5)
         }
-        .padding(5)
         .background(.background)
         .cornerRadius(20)
+        .frame(width: 300, height: 200)
     }
 }
 

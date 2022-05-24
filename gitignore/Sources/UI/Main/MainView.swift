@@ -40,13 +40,15 @@ struct MainView: View {
                             "운영체제, 개발환경(IDE), 프로그래밍 언어 검색",
                             text: viewStore.binding(
                                 get: \.searchQuery,send: MainAction.searchQueryChanged
-                            )
+                            ), onCommit: {
+                                viewStore.send(MainAction.returnKeyTapTagChoose)
+                            }
                         )
                         .textFieldStyle(gitignoreTextfieldStyle())
                         .overlay(alignment: .topLeading){
                             VStack{
                                 Spacer(minLength: 50)
-                                TagView(tags: ["swift","swift Package Manger","cocoapods"], isEnabled: true)
+                                TagView(tags: Array(viewStore.userChooseTag), isEnabled: true)
                                     .frame(width: 400)
                                     .fixedSize(horizontal: false, vertical: true)
                             }
@@ -56,7 +58,6 @@ struct MainView: View {
                                 Spacer(minLength: 50)
                                 if !viewStore.liststatus{
                                     SearchList(list: viewStore.inquiryListString)
-                                        .frame(width: 300, height: 200)
                                 }
                             }
                         }
