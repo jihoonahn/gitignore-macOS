@@ -62,7 +62,6 @@ struct MainView: View {
                                 get: \.searchQuery,send: MainAction.searchQueryChanged
                             ), onCommit: {
                                 viewStore.send(MainAction.tapTagChoose(0))
-                                print(viewStore.userChooseTag)
                             }
                         )
                         .textFieldStyle(gitignoreTextfieldStyle())

@@ -41,7 +41,7 @@ let package = Package(
         .target(
             name: "TagListView",
             dependencies: [
-                "FoundationUtil"
+                "FoundationUtil",
             ]),
     ]
 )

@@ -61,6 +61,7 @@ let mainReducer = Reducer<
     case .tapTagChoose(let index):
         guard !state.inquiryListString.isEmpty else {return .none}
         state.userChooseTag.insert(state.inquiryListString[index])
+        state.searchQuery = ""
         return .none
     }
 }

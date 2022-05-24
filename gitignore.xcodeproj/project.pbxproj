@@ -163,13 +163,6 @@
 			path = Title;
 			sourceTree = "<group>";
 		};
-		EEA3F673283CC7B6005D6A15 /* Tag */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tag;
-			sourceTree = "<group>";
-		};
 		EEA60415282EB4EE00D79666 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,7 +212,6 @@
 		EEDE59462831F71000A7FDF0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EEA3F673283CC7B6005D6A15 /* Tag */,
 				EEA3F670283C5048005D6A15 /* Title */,
 				EEA3F66B283C4CE8005D6A15 /* Button */,
 				EEA34CCC283B9DF500A00BED /* Search List */,
