@@ -20,19 +20,39 @@ struct MainView: View {
         self.store = store
     }
     
+    struct ViewState : Equatable{
+        var searchQuery : String
+        var addSheetStatus : Bool
+        var liststatus : Bool
+        var userChooseTag : Set<String>
+        var createStatus : Bool
+        
+        init(state : MainState){
+            searchQuery = state.searchQuery
+            addSheetStatus = state.addSheetStatus
+            liststatus = state.liststatus
+            userChooseTag = state.userChooseTag
+            createStatus = state.createStatus
+        }
+    }
+    
     var body: some View {
         Color.backgroundColor
             .ignoresSafeArea()
             .padding(.leading,-10)
         
-        WithViewStore(self.store) { viewStore in
+        WithViewStore(self.store.scope(state: ViewState.init)) { viewStore in
             VStack{
                 HStack{
                     Spacer()
-                    Button(action: {viewStore.send(.addButtonClick)}, label: {
+                    Button(action: {viewStore.send(.addButtonDidTap)}, label: {
                         Image(systemName: "plus")
                             .font(.title2)
                     })
+                    .sheet(isPresented: viewStore.binding(
+                        get: \.addSheetStatus,send: MainAction.addButtonDidTap)){
+                            SheetView(store: store)
+                    }
                     .buttonStyle(ToolBarButtonStyle())
                 }
                 .padding()

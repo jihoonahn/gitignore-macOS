@@ -25,6 +25,7 @@
 		EEABDA022839F0B400C0F087 /* Effects in Frameworks */ = {isa = PBXBuildFile; productRef = EEABDA012839F0B400C0F087 /* Effects */; };
 		EEB8AD712833CE6400C44C6F /* TagListView in Frameworks */ = {isa = PBXBuildFile; productRef = EEB8AD702833CE6400C44C6F /* TagListView */; };
 		EEB8AD752833E19400C44C6F /* WaterfallGrid in Frameworks */ = {isa = PBXBuildFile; productRef = EEB8AD742833E19400C44C6F /* WaterfallGrid */; };
+		EEC953B4283E7CFF005861AA /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC953B3283E7CFF005861AA /* SheetView.swift */; };
 		EED2E753283343E10040C83A /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2E752283343E10040C83A /* RootView.swift */; };
 		EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA85BE282B40700047F3AC /* gitignoreApp.swift */; };
 		EEDA85C3282B40720047F3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C2282B40720047F3AC /* Assets.xcassets */; };
@@ -58,6 +59,7 @@
 		EEA6041C282FFEF700D79666 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
 		EEA6041E28301BD700D79666 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		EEA60423283020C200D79666 /* ListCardGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCardGrid.swift; sourceTree = "<group>"; };
+		EEC953B3283E7CFF005861AA /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 		EED2E752283343E10040C83A /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		EEDA85BB282B40700047F3AC /* gitignore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gitignore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEDA85BE282B40700047F3AC /* gitignoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreApp.swift; sourceTree = "<group>"; };
@@ -181,6 +183,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EEC953B1283E7BD1005861AA /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				EEA3F66B283C4CE8005D6A15 /* Button */,
+				EEA34CCA283B9DD600A00BED /* Textfield */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		EEC953B2283E7CF3005861AA /* Sheet */ = {
+			isa = PBXGroup;
+			children = (
+				EEC953B3283E7CFF005861AA /* SheetView.swift */,
+			);
+			path = Sheet;
+			sourceTree = "<group>";
+		};
 		EEDA85B2282B40700047F3AC = {
 			isa = PBXGroup;
 			children = (
@@ -222,11 +241,10 @@
 		EEDE59462831F71000A7FDF0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EEC953B2283E7CF3005861AA /* Sheet */,
 				EEA3F674283CFCA6005D6A15 /* Tag */,
 				EEA3F670283C5048005D6A15 /* Title */,
-				EEA3F66B283C4CE8005D6A15 /* Button */,
 				EEA34CCC283B9DF500A00BED /* Search List */,
-				EEA34CCA283B9DD600A00BED /* Textfield */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -296,6 +314,7 @@
 		EEEBD254282C7A3400608EB6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				EEC953B1283E7BD1005861AA /* Style */,
 				EEDE59462831F71000A7FDF0 /* View */,
 				EEDE5B75282BA8EC00C0ADBA /* MainView.swift */,
 				EEEBD257282C7A7200608EB6 /* MainFeacture.swift */,
@@ -459,6 +478,7 @@
 				EEDE5B67282B990100C0ADBA /* TabButton.swift in Sources */,
 				EEA3F672283C5055005D6A15 /* TitleLogo.swift in Sources */,
 				EEA60424283020C200D79666 /* ListCardGrid.swift in Sources */,
+				EEC953B4283E7CFF005861AA /* SheetView.swift in Sources */,
 				EEEBD258282C7A7200608EB6 /* MainFeacture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

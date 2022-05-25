@@ -17,8 +17,17 @@ struct SearchList: View {
     init(store : Store<MainState, MainAction>){
         self.store = store
     }
+    
+    struct ViewState : Equatable{
+        var inquiryListString : [String]
+        
+        init(state : MainState){
+            inquiryListString = state.inquiryListString
+        }
+    }
+    
     var body: some View {
-        WithViewStore(store.self){ viewStore in
+        WithViewStore(self.store.scope(state: ViewState.init)){ viewStore in
             ScrollView{
                 VStack{
                     ForEach(0..<viewStore.inquiryListString.count, id: \.self) { index  in

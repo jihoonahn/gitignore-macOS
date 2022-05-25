@@ -9,12 +9,15 @@ import ComposableArchitecture
 import Effects
 
 struct TabBarState : Equatable{
+    var selectedTab : String = "Home"
+    
     var mainState = MainState()
     var listState = ListState()
     var issueState = IssueState()
 }
 
 enum TabBarAction{
+    case selectTabBarButton(String)
     case mainAction(MainAction)
     case listAction(ListAction)
     case issueAction(IssueAction)
@@ -22,7 +25,7 @@ enum TabBarAction{
 
 struct tabBarEnvironmnet{}
 
-let tabBarReducer = Reducer<TabBarState,TabBarAction,tabBarEnvironmnet>.combine(
+let tabBarReducer = Reducer<TabBarState, TabBarAction, tabBarEnvironmnet>.combine(
     
     mainReducer.pullback(
         state:\.mainState,
@@ -50,7 +53,10 @@ let tabBarReducer = Reducer<TabBarState,TabBarAction,tabBarEnvironmnet>.combine(
     ),
     Reducer{ state, action ,_ in
         switch action{
-        default:
+        case .selectTabBarButton(let title):
+            state.selectedTab = title
+            return .none
+        default :
             return .none
         }
     }

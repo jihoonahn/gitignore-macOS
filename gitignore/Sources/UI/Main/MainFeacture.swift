@@ -1,14 +1,14 @@
 import ComposableArchitecture
 import Effects
 import SwiftUI
-import AppKit
-import Foundation
-import Quartz
+
 
 struct MainState: Equatable{
     var searchQuery = ""
+    var titleQuery = ""
     var liststatus : Bool = true
     var createStatus : Bool = false
+    var addSheetStatus : Bool = false
     var inquiryListString : [String] = .init()
     var gitignoreListString : [String] = .init()
     var userChooseTag : Set<String> = .init()
@@ -17,11 +17,12 @@ struct MainState: Equatable{
 
 enum MainAction{
     case onAppear
+    case titleQueryChanged(String) // Sheet의 title Query
+    case addButtonDidTap // addButton 눌렀을때
     case searchQueryChanged(String) // textfield action
     case tapTagChoose(Int) //search bar 에서 tag 추가
     case createGitignore // gitignore 데이터 Load
     case tagDelete(Int) // tag Click Delete
-    case addButtonClick // addButton 눌렀을때
     case createGitignoreFile(URL?) // Gitignore file 생성
     
     case dataLoaded(Result<String, ApiError>)
@@ -47,6 +48,9 @@ let mainReducer = Reducer<
     MainEnvironmnet
 >{ state, action , enviroment in
     switch action{
+    case .titleQueryChanged(let query):
+        state.titleQuery = query
+        return .none
     case .searchQueryChanged(let query):
         enum SearchOptionId {}
         state.searchQuery = query
@@ -78,13 +82,14 @@ let mainReducer = Reducer<
         state.userChooseTag.remove(Array(state.userChooseTag)[index])
         return .none
         
-    case .addButtonClick:
-        print("add")
-        return .none
-        
     case .createGitignoreFile(let url):
         guard let url = url  else {return .none}
         try? state.gitignoreFileContents.write(to: url, atomically: true, encoding: .utf8)
+        return .none
+        
+    case .addButtonDidTap:
+        state.addSheetStatus = !state.addSheetStatus
+        print(state.addSheetStatus)
         return .none
         
         //MARK: - Data Load

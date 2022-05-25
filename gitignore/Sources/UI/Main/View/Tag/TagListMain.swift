@@ -21,11 +21,18 @@ public struct TagMainView: View {
         self.store = store
     }
     
+    struct ViewState : Equatable{
+        var userChooseTag : Set<String>
+        init(state : MainState){
+            userChooseTag = state.userChooseTag
+        }
+    }
+    
     private func generateContent(in g: GeometryProxy) -> some View {
         var width = CGFloat.zero
         var height = CGFloat.zero
         return ZStack(alignment: .topLeading) {
-            WithViewStore(store.self) { viewStore in
+            WithViewStore(self.store.scope(state: ViewState.init)) { viewStore in
                 
                 let tag : Array<String> = Array(viewStore.userChooseTag)
                 
