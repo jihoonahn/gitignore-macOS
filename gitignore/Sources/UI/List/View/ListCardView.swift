@@ -26,8 +26,8 @@ struct ListCardView : View{
                         Button(action: {
                             withAnimation{ print(card.bookMark)}
                         }, label: {
-                            Image(systemName: card.bookMark ? "star.fill" : "star")
-                                .foregroundColor(.yellow)
+                            Image(systemName: "xmark")
+                                .foregroundColor(.backgourndColor_Opposition)
                         }).buttonStyle(PlainButtonStyle())
                     }
                     Text(Date().usingDate(time: card.time))

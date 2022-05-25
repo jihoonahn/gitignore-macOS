@@ -8,11 +8,11 @@
 import SwiftUI
 import ComposableArchitecture
 import gitignoreView
+import UIUtil
 
 struct SearchList: View {
     
     private var store : Store<MainState, MainAction>
-//    var list : [String]
     
     init(store : Store<MainState, MainAction>){
         self.store = store
@@ -25,7 +25,7 @@ struct SearchList: View {
                         if !viewStore.inquiryListString.isEmpty{
                             Text(viewStore.inquiryListString[index])
                                 .frame(maxWidth : .infinity, minHeight: 40 ,alignment: .leading)
-                                .background(.background)
+                                .background(Color.searchBarColor)
                                 .font(.title3)
                                 .onTapGesture {
                                     viewStore.send(.tapTagChoose(index))
@@ -35,7 +35,7 @@ struct SearchList: View {
                 }
                 .padding([.all], 8)
             }
-            .background(.background)
+            .background(Color.searchBarColor)
             .cornerRadius(20)
         }
     }

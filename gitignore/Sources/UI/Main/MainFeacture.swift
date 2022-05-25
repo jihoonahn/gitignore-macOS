@@ -1,10 +1,14 @@
 import ComposableArchitecture
 import Effects
 import SwiftUI
+import AppKit
+import Foundation
+import Quartz
 
 struct MainState: Equatable{
     var searchQuery = ""
     var liststatus : Bool = true
+    var createStatus : Bool = false
     var inquiryListString : [String] = .init()
     var gitignoreListString : [String] = .init()
     var userChooseTag : Set<String> = .init()
@@ -13,11 +17,13 @@ struct MainState: Equatable{
 
 enum MainAction{
     case onAppear
-    case searchQueryChanged(String)
-    case tapTagChoose(Int)
-    case createGitignore
-    case tagDelete(Int)
-    case createGitignoreFile(URL?)
+    case searchQueryChanged(String) // textfield action
+    case tapTagChoose(Int) //search bar 에서 tag 추가
+    case createGitignore // gitignore 데이터 Load
+    case tagDelete(Int) // tag Click Delete
+    case addButtonClick // addButton 눌렀을때
+    case createGitignoreFile(URL?) // Gitignore file 생성
+    
     case dataLoaded(Result<String, ApiError>)
     case gitignoreDataLoaded(Result<String, ApiError>)
 }
@@ -72,13 +78,24 @@ let mainReducer = Reducer<
         state.userChooseTag.remove(Array(state.userChooseTag)[index])
         return .none
         
+    case .addButtonClick:
+        print("add")
+        return .none
+        
+    case .createGitignoreFile(let url):
+        guard let url = url  else {return .none}
+        try? state.gitignoreFileContents.write(to: url, atomically: true, encoding: .utf8)
+        return .none
+        
         //MARK: - Data Load
     case .dataLoaded(let result):
         switch result{
         case .success(let result):
+            state.createStatus = true
             state.gitignoreListString =  result.replacingOccurrences(of: "\n", with: ",").split(separator: ",").map{ (value) -> String in return (String(value))}
             return .none
         case .failure(let result):
+            state.createStatus = false
             return .none
         }
         
@@ -91,9 +108,6 @@ let mainReducer = Reducer<
             state.gitignoreFileContents = .init()
             return.none
         }
-    case .createGitignoreFile(let url):
-        guard let url = url else {return .none}
-        try? state.gitignoreFileContents.write(to: url, atomically: true, encoding: .utf8)
-        return .none
     }
+
 }

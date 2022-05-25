@@ -34,8 +34,7 @@ struct ListView: View {
         .padding(.leading,-10)
         
         WithViewStore(self.store) { viewStore in
-            let extractedExpr = ListCardGrid(models: dummyData)
-            extractedExpr
+           ListCardGrid(models: dummyData)
         }
     }
 }

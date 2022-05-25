@@ -29,7 +29,7 @@ struct MainView: View {
             VStack{
                 HStack{
                     Spacer()
-                    Button(action: {print("add")}, label: {
+                    Button(action: {viewStore.send(.addButtonClick)}, label: {
                         Image(systemName: "plus")
                             .font(.title2)
                     })
@@ -51,7 +51,9 @@ struct MainView: View {
                         .textFieldStyle(gitignoreTextfieldStyle())
                         Button(action: {
                             viewStore.send(.createGitignore)
-                            guard viewStore.gitignoreFileContents.isEmpty || viewStore.userChooseTag.isEmpty else {return viewStore.send(.createGitignoreFile(showSavePanel()))}
+                            if viewStore.createStatus && !viewStore.userChooseTag.isEmpty{
+                                viewStore.send(.createGitignoreFile(showSavePanel()))
+                            }
                         }, label: {
                             Text("생성")
                                 .foregroundColor(.white)
@@ -78,7 +80,6 @@ struct MainView: View {
             }
         }
     }
-    
     //MARK: - Method
     private func showSavePanel() -> URL? {
         let savePanel = NSSavePanel(nameFieldStringValue: ".gitignore")
