@@ -11,12 +11,13 @@ struct MainState: Equatable{
 }
 
 enum MainAction{
+    case onAppear
     case searchQueryChanged(String)
     case tapTagChoose(Int)
-    case onAppear
-    case dataLoaded(Result<String, ApiError>)
-    case tagDelete(Int)
     case createGitignore
+    case tagDelete(Int)
+    case dataLoaded(Result<String, ApiError>)
+    case gitignoredataLoaded(Result<String, ApiError>)
 }
 
 struct MainEnvironmnet{
@@ -53,13 +54,12 @@ let mainReducer = Reducer<
             .receive(on: enviroment.mainQueue())
             .catchToEffect(MainAction.dataLoaded)
         
-    case .dataLoaded(.success(let result)):
-        state.gitignoreListString =  result.replacingOccurrences(of: "\n", with: ",").split(separator: ",").map{ (value) -> String in return (String(value))}
-        return .none
-        
-    case .dataLoaded(.failure(let result)):
-        return .none
-        
+    case .createGitignore:
+        guard !state.userChooseTag.isEmpty else {return .none}
+        return enviroment.effects().effect.makeGitignoreFileAPI(tag: Array(state.userChooseTag))
+            .receive(on: enviroment.mainQueue())
+            .catchToEffect(MainAction.gitignoredataLoaded)
+
     case .tapTagChoose(let index):
         guard !state.inquiryListString.isEmpty else {return .none}
         state.userChooseTag.insert(state.inquiryListString[index])
@@ -69,9 +69,24 @@ let mainReducer = Reducer<
     case .tagDelete(let index) :
         state.userChooseTag.remove(Array(state.userChooseTag)[index])
         return .none
-    case .createGitignore:
-        guard !state.userChooseTag.isEmpty else {return .none}
         
-        return .none
+        //MARK: - Data Load
+    case .dataLoaded(let result):
+        switch result{
+        case .success(let result):
+            state.gitignoreListString =  result.replacingOccurrences(of: "\n", with: ",").split(separator: ",").map{ (value) -> String in return (String(value))}
+            return .none
+        case .failure(let result):
+            return .none
+        }
+        
+    case .gitignoredataLoaded(let result):
+        switch result{
+        case .success(let result):
+            print(result)
+            return .none
+        case .failure(let result):
+            return.none
+        }
     }
 }
