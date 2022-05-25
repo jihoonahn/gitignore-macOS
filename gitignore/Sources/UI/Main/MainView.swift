@@ -71,9 +71,6 @@ struct MainView: View {
                         .textFieldStyle(gitignoreTextfieldStyle())
                         Button(action: {
                             viewStore.send(.createGitignore)
-                            if viewStore.createStatus && !viewStore.userChooseTag.isEmpty{
-                                viewStore.send(.createGitignoreFile(showSavePanel()))
-                            }
                         }, label: {
                             Text("생성")
                                 .foregroundColor(.white)
@@ -99,11 +96,5 @@ struct MainView: View {
                 viewStore.send(.onAppear)
             }
         }
-    }
-    //MARK: - Method
-    private func showSavePanel() -> URL? {
-        let savePanel = NSSavePanel(nameFieldStringValue: ".gitignore")
-        let response = savePanel.runModal()
-        return response == .OK ? savePanel.url : nil
     }
 }

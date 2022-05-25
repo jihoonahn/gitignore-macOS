@@ -113,6 +113,9 @@ let mainReducer = Reducer<
         switch result{
         case .success(let result):
             state.gitignoreFileContents = result
+            guard let url = NSSavePanel().showSavePanel() else {return .none}
+            try? state.gitignoreFileContents.write(to: url, atomically: true, encoding: .utf8)
+
             return .none
         case .failure(let result):
             state.gitignoreFileContents = .init()

@@ -29,8 +29,10 @@ struct SheetView: View {
                         get: \.titleQuery,send: MainAction.titleQueryChanged
                     )
                 ).textFieldStyle(gitignoreTextfieldStyle())
+
+
                 ScrollView(.vertical){
-                    TagMainView(store: store)
+                    Text("야옹")
                 }
                 .fixedSize(horizontal: false, vertical: true)
                 .frame( height: 100)
