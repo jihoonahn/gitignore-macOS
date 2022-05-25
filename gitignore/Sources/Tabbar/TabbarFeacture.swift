@@ -29,7 +29,7 @@ let tabBarReducer = Reducer<TabBarState,TabBarAction,tabBarEnvironmnet>.combine(
         action: /TabBarAction.mainAction,
         environment: {_ in
                 .init(
-                    effects: { ServiceProvider()},
+                    effects: { ServiceEffect()},
                     mainQueue: {.main}
                 )
         }
