@@ -11,7 +11,6 @@ import UIUtil
 import TagListView
 import gitignoreView
 
-let bounds = NSScreen.main?.frame
 //MARK: - MainView
 struct MainView: View {
     
@@ -81,7 +80,7 @@ struct MainView: View {
                             VStack{
                                 if !viewStore.liststatus{
                                     SearchList(store: store)
-                                        .frame(width: 300, height: bounds!.height/10 )
+                                        .frame(width: 300, height: 100 )
                                 }
                             }
                         }

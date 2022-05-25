@@ -29,8 +29,8 @@ let tabBarReducer = Reducer<TabBarState,TabBarAction,tabBarEnvironmnet>.combine(
         action: /TabBarAction.mainAction,
         environment: {_ in
                 .init(
-                    request: {EffectsImpl().searchGitignoreMenuAPI()},
-                    mainQueue: { .main}
+                    effects: { ServiceProvider()},
+                    mainQueue: {.main}
                 )
         }
     ),

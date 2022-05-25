@@ -20,14 +20,14 @@ enum MainAction{
 }
 
 struct MainEnvironmnet{
-    var request: () -> Effect<String, ApiError>
+    var effects : () -> ServiceEffectType
     var mainQueue: () -> AnySchedulerOf<DispatchQueue>
     
     public init(
-        request: @escaping() -> Effect<String, ApiError>,
+        effects: @escaping() -> ServiceEffectType,
         mainQueue : @escaping() -> AnySchedulerOf<DispatchQueue>
     ){
-        self.request = request
+        self.effects = effects
         self.mainQueue = mainQueue
     }
 }
@@ -49,7 +49,7 @@ let mainReducer = Reducer<
         return .none
         
     case .onAppear:
-        return enviroment.request()
+        return enviroment.effects().effect.searchGitignoreMenuAPI()
             .receive(on: enviroment.mainQueue())
             .catchToEffect(MainAction.dataLoaded)
         
@@ -70,7 +70,8 @@ let mainReducer = Reducer<
         state.userChooseTag.remove(Array(state.userChooseTag)[index])
         return .none
     case .createGitignore:
-        print("Create")
+        guard !state.userChooseTag.isEmpty else {return .none}
+        
         return .none
     }
 }
