@@ -8,6 +8,7 @@ struct MainState: Equatable{
     var inquiryListString : [String] = .init()
     var gitignoreListString : [String] = .init()
     var userChooseTag : Set<String> = .init()
+    var gitignoreFileContents : String = .init()
 }
 
 enum MainAction{
@@ -16,6 +17,7 @@ enum MainAction{
     case tapTagChoose(Int)
     case createGitignore
     case tagDelete(Int)
+    case createGitignoreFile(URL?)
     case dataLoaded(Result<String, ApiError>)
     case gitignoredataLoaded(Result<String, ApiError>)
 }
@@ -59,7 +61,7 @@ let mainReducer = Reducer<
         return enviroment.effects().effect.makeGitignoreFileAPI(tag: Array(state.userChooseTag))
             .receive(on: enviroment.mainQueue())
             .catchToEffect(MainAction.gitignoredataLoaded)
-
+        
     case .tapTagChoose(let index):
         guard !state.inquiryListString.isEmpty else {return .none}
         state.userChooseTag.insert(state.inquiryListString[index])
@@ -83,10 +85,14 @@ let mainReducer = Reducer<
     case .gitignoredataLoaded(let result):
         switch result{
         case .success(let result):
-            print(result)
+            state.gitignoreFileContents = result
             return .none
         case .failure(let result):
             return.none
         }
+    case .createGitignoreFile(let url):
+        guard let url = url else {return .none}
+        try? state.gitignoreFileContents.write(to: url, atomically: true, encoding: .utf8)
+        return .none
     }
 }

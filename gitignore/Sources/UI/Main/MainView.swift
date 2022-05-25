@@ -16,22 +16,6 @@ struct MainView: View {
     
     let store : Store<MainState,MainAction>
     
-    struct ViewState: Equatable{
-        var searchQuery = ""
-        var liststatus : Bool = true
-        var inquiryListString : [String] = .init()
-        var gitignoreListString : [String] = .init()
-        var userChooseTag : Set<String> = .init()
-        
-        init(state : MainState){
-            self.searchQuery = state.searchQuery
-            self.liststatus = state.liststatus
-            self.inquiryListString = state.inquiryListString
-            self.gitignoreListString = state.gitignoreListString
-            self.userChooseTag = state.userChooseTag
-        }
-    }
-    
     public init(store: Store<MainState, MainAction>) {
         self.store = store
     }
@@ -41,7 +25,7 @@ struct MainView: View {
             .ignoresSafeArea()
             .padding(.leading,-10)
         
-        WithViewStore(self.store.scope(state: ViewState.init)) { viewStore in
+        WithViewStore(self.store) { viewStore in
             VStack{
                 HStack{
                     Spacer()
@@ -65,7 +49,11 @@ struct MainView: View {
                             }
                         )
                         .textFieldStyle(gitignoreTextfieldStyle())
-                        Button(action: { viewStore.send(.createGitignore)}, label: {
+                        Button(action: {
+                            viewStore.send(.createGitignore)
+                            guard viewStore.gitignoreFileContents.isEmpty else {return}
+                            viewStore.send(.createGitignoreFile(showSavePanel()))
+                        }, label: {
                             Text("생성")
                                 .foregroundColor(.white)
                                 .font(.system(size: 12, weight: .regular))
@@ -90,5 +78,12 @@ struct MainView: View {
                 viewStore.send(.onAppear)
             }
         }
+    }
+    
+    //MARK: - Method
+    private func showSavePanel() -> URL? {
+        let savePanel = NSSavePanel(nameFieldStringValue: ".gitignore")
+        let response = savePanel.runModal()
+        return response == .OK ? savePanel.url : nil
     }
 }
