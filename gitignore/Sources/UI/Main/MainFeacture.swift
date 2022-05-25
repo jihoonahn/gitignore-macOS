@@ -8,7 +8,6 @@ struct MainState: Equatable{
     var titleQuery = ""
     var totalHeight : CGFloat = .zero
     var liststatus : Bool = true
-    var createStatus : Bool = false
     var addSheetStatus : Bool = false
     var inquiryListString : [String] = .init()
     var gitignoreListString : [String] = .init()
@@ -25,7 +24,6 @@ enum MainAction{
     case tapTagChoose(Int) //search bar 에서 tag 추가
     case createGitignore // gitignore 데이터 Load
     case tagDelete(Int) // tag Click Delete
-    case createGitignoreFile(URL?) // Gitignore file 생성
     
     case dataLoaded(Result<String, ApiError>)
     case gitignoreDataLoaded(Result<String, ApiError>)
@@ -87,11 +85,6 @@ let mainReducer = Reducer<
         state.userChooseTag.remove(Array(state.userChooseTag)[index])
         return .none
         
-    case .createGitignoreFile(let url):
-        guard let url = url  else {return .none}
-        try? state.gitignoreFileContents.write(to: url, atomically: true, encoding: .utf8)
-        return .none
-        
     case .addButtonDidTap:
         state.addSheetStatus = !state.addSheetStatus
         print(state.addSheetStatus)
@@ -101,11 +94,9 @@ let mainReducer = Reducer<
     case .dataLoaded(let result):
         switch result{
         case .success(let result):
-            state.createStatus = true
             state.gitignoreListString =  result.replacingOccurrences(of: "\n", with: ",").split(separator: ",").map{ (value) -> String in return (String(value))}
             return .none
         case .failure(let result):
-            state.createStatus = false
             return .none
         }
         
@@ -122,5 +113,4 @@ let mainReducer = Reducer<
             return.none
         }
     }
-
 }

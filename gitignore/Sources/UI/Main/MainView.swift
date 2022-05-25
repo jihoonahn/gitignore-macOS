@@ -25,14 +25,12 @@ struct MainView: View {
         var addSheetStatus : Bool
         var liststatus : Bool
         var userChooseTag : Set<String>
-        var createStatus : Bool
         
         init(state : MainState){
             searchQuery = state.searchQuery
             addSheetStatus = state.addSheetStatus
             liststatus = state.liststatus
             userChooseTag = state.userChooseTag
-            createStatus = state.createStatus
         }
     }
     
