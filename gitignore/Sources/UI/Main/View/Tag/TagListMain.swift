@@ -8,11 +8,13 @@ public struct TagMainView: View {
     public var body: some View {
         VStack {
             GeometryReader { geometry in
-                self.generateContent(in: geometry)
+                ScrollView(.vertical){
+                    self.generateContent(in: geometry)
+                }.frame(height: 90)
             }
         }
-        .frame(height: totalHeight)// << variant for ScrollView/List
-        //.frame(maxHeight: totalHeight) // << variant for VStack
+        .frame(height: totalHeight)// <s< variant for ScrollView/List
+//        .frame(maxHeight: totalHeight) // << variant for VStack
     }
     
     init(store : Store<MainState, MainAction>){
@@ -54,7 +56,8 @@ public struct TagMainView: View {
                             viewStore.send(MainAction.tagDelete(index))
                         }
                 }
-            }.background(viewHeightReader($totalHeight))
+            }
+            .background(viewHeightReader($totalHeight))
         }
     }
     

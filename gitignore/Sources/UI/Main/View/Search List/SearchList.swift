@@ -37,7 +37,6 @@ struct SearchList: View {
             }
             .background(.background)
             .cornerRadius(20)
-            .frame(width: 300, height: 200)
         }
     }
 }

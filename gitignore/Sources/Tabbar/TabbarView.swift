@@ -49,7 +49,7 @@ struct TabbarView: View {
                 }.frame(maxWidth: .infinity, maxHeight: .infinity)
             }
             .ignoresSafeArea(.all, edges: .all)
-            .frame( minWidth: 600,minHeight: 400)
+            .frame( minWidth: 800,minHeight: 600)
             .environmentObject(homeData)
     }
 }

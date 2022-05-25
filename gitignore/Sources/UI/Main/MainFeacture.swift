@@ -16,6 +16,7 @@ enum MainAction{
     case onAppear
     case dataLoaded(Result<String, ApiError>)
     case tagDelete(Int)
+    case createGitignore
 }
 
 struct MainEnvironmnet{
@@ -67,6 +68,9 @@ let mainReducer = Reducer<
         
     case .tagDelete(let index) :
         state.userChooseTag.remove(Array(state.userChooseTag)[index])
+        return .none
+    case .createGitignore:
+        print("Create")
         return .none
     }
 }

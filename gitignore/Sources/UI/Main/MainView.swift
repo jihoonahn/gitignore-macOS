@@ -11,6 +11,7 @@ import UIUtil
 import TagListView
 import gitignoreView
 
+let bounds = NSScreen.main?.frame
 //MARK: - MainView
 struct MainView: View {
     
@@ -65,23 +66,7 @@ struct MainView: View {
                             }
                         )
                         .textFieldStyle(gitignoreTextfieldStyle())
-                        .overlay(alignment: .topLeading){
-                            VStack{
-                                Spacer(minLength: 50)
-                                TagMainView(store: store)
-                                    .frame(width: 400)
-                                    .fixedSize(horizontal: false, vertical: true)
-                            }
-                        }
-                        .overlay(alignment: .topLeading) {
-                            VStack{
-                                Spacer(minLength: 50)
-                                if !viewStore.liststatus{
-                                    SearchList(store: store)
-                                }
-                            }
-                        }
-                        Button(action: { print("생성")}, label: {
+                        Button(action: { viewStore.send(.createGitignore)}, label: {
                             Text("생성")
                                 .foregroundColor(.white)
                                 .font(.system(size: 12, weight: .regular))
@@ -89,6 +74,17 @@ struct MainView: View {
                         .buttonStyle(CreateButtonStyle())
                     }
                     .padding(.top,30)
+                    TagMainView(store: store)
+                        .frame(width: 360)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .overlay(alignment: .topLeading) {
+                            VStack{
+                                if !viewStore.liststatus{
+                                    SearchList(store: store)
+                                        .frame(width: 300, height: bounds!.height/10 )
+                                }
+                            }
+                        }
                 }
                 Spacer()
             }.onAppear {
