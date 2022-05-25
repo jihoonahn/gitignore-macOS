@@ -51,8 +51,7 @@ struct MainView: View {
                         .textFieldStyle(gitignoreTextfieldStyle())
                         Button(action: {
                             viewStore.send(.createGitignore)
-                            guard viewStore.gitignoreFileContents.isEmpty else {return}
-                            viewStore.send(.createGitignoreFile(showSavePanel()))
+                            guard viewStore.gitignoreFileContents.isEmpty || viewStore.userChooseTag.isEmpty else {return viewStore.send(.createGitignoreFile(showSavePanel()))}
                         }, label: {
                             Text("생성")
                                 .foregroundColor(.white)
