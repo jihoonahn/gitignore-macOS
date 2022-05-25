@@ -88,6 +88,7 @@ let mainReducer = Reducer<
             state.gitignoreFileContents = result
             return .none
         case .failure(let result):
+            state.gitignoreFileContents = .init()
             return.none
         }
     case .createGitignoreFile(let url):
