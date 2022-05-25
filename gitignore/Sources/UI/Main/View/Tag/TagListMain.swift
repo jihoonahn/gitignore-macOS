@@ -4,30 +4,34 @@ import ComposableArchitecture
 public struct TagMainView: View {
     
     private var store : Store<MainState, MainAction>
-    @State private var totalHeight = CGFloat.zero       // << variant for ScrollView/List //    = CGFloat.infinity   // << variant for VStack
-    public var body: some View {
-        VStack {
-            GeometryReader { geometry in
-                ScrollView(.vertical){
-                    self.generateContent(in: geometry)
-                }.frame(height: 90)
-            }
-        }
-        .frame(height: totalHeight)// <s< variant for ScrollView/List
-//        .frame(maxHeight: totalHeight) // << variant for VStack
-    }
-    
+
     init(store : Store<MainState, MainAction>){
         self.store = store
     }
     
     struct ViewState : Equatable{
         var userChooseTag : Set<String>
+        var totalHeight : CGFloat
         init(state : MainState){
             userChooseTag = state.userChooseTag
+            totalHeight = state.totalHeight
         }
     }
     
+    public var body: some View {
+        WithViewStore(store.scope(state: ViewState.init)){ viewStore in
+            VStack {
+                GeometryReader { geometry in
+                    ScrollView(.vertical){
+                        self.generateContent(in: geometry)
+                    }.frame(height: 90)
+                }
+            }
+            .frame(height: viewStore.totalHeight)
+        }
+    }
+    
+    //MARK: - Method
     private func generateContent(in g: GeometryProxy) -> some View {
         var width = CGFloat.zero
         var height = CGFloat.zero
@@ -62,9 +66,10 @@ public struct TagMainView: View {
                         .onTapGesture {
                             viewStore.send(MainAction.tagDelete(index))
                         }
-                }
+                }.background(viewHeightReader(viewStore.binding(
+                    get: \.totalHeight, send: MainAction.tagTotalHeightAction
+                )))
             }
-            .background(viewHeightReader($totalHeight))
         }
     }
     

@@ -6,6 +6,7 @@ import SwiftUI
 struct MainState: Equatable{
     var searchQuery = ""
     var titleQuery = ""
+    var totalHeight : CGFloat = .zero
     var liststatus : Bool = true
     var createStatus : Bool = false
     var addSheetStatus : Bool = false
@@ -17,6 +18,7 @@ struct MainState: Equatable{
 
 enum MainAction{
     case onAppear
+    case tagTotalHeightAction
     case titleQueryChanged(String) // Sheet의 title Query
     case addButtonDidTap // addButton 눌렀을때
     case searchQueryChanged(String) // textfield action
@@ -48,6 +50,9 @@ let mainReducer = Reducer<
     MainEnvironmnet
 >{ state, action , enviroment in
     switch action{
+    case .tagTotalHeightAction:
+        return.none
+        
     case .titleQueryChanged(let query):
         state.titleQuery = query
         return .none

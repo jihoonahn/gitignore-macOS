@@ -31,7 +31,10 @@ struct SheetView: View {
                 ).textFieldStyle(gitignoreTextfieldStyle())
                 ScrollView(.vertical){
                     TagMainView(store: store)
-                }.frame( height: 100)
+                }
+                .fixedSize(horizontal: false, vertical: true)
+                .frame( height: 100)
+                    
                 Spacer()
                 HStack {
                     Button("Cancel") {
