@@ -1,4 +1,5 @@
 import ComposableArchitecture
+import Combine
 import Effects
 import SwiftUI
 import Local
@@ -44,12 +45,14 @@ struct MainEnvironmnet{
         self.mainQueue = mainQueue
     }
 }
+var bag: [AnyCancellable] = []
 
 let mainReducer = Reducer<
     MainState,
     MainAction,
     MainEnvironmnet
 >{ state, action , enviroment in
+    
     switch action{
     case .tagTotalHeightAction:
         return.none
@@ -91,7 +94,7 @@ let mainReducer = Reducer<
     case .addSheetButtonDidTap:
         state.addSheetStatus = !state.addSheetStatus
         return .none
-    
+        
     case .saveGitignoreButtonDidTap:
         guard !state.userChooseTag.isEmpty else {return .none}
         return enviroment.effects().effect.makeGitignoreFileAPI(tag: Array(state.userChooseTag))
@@ -117,11 +120,23 @@ let mainReducer = Reducer<
         case .failure(let result):
             return.none
         }
+        
     case .savegitignoreDataLoaded(let result) :
         switch result{
         case .success(let result):
-            print("save")
-            state.addSheetStatus = !state.addSheetStatus
+            enviroment.locals().coreData.addList(
+                title: state.titleQuery,
+                tag: Array(state.userChooseTag),
+                gitignoreString: result)
+            .sink { completion in
+                if case .failure(let error) = completion{
+                    print(error)
+                }
+            } receiveValue: { success in
+                if success{
+//                    state.addSheetStatus = !state.addSheetStatus
+                }
+            }.store(in: &bag)
             return .none
         case .failure(let result):
             return.none
