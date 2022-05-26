@@ -18,14 +18,11 @@
 		EEA3F676283CFCB0005D6A15 /* TagListMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3F675283CFCB0005D6A15 /* TagListMain.swift */; };
 		EEA60417282EB4EE00D79666 /* UIUtil in Frameworks */ = {isa = PBXBuildFile; productRef = EEA60416282EB4EE00D79666 /* UIUtil */; };
 		EEA6041D282FFEF700D79666 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA6041C282FFEF700D79666 /* Network.framework */; };
-		EEA6041F28301BD700D79666 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA6041E28301BD700D79666 /* ListModel.swift */; };
-		EEA6042228301F1400D79666 /* CombineRealm in Frameworks */ = {isa = PBXBuildFile; productRef = EEA6042128301F1400D79666 /* CombineRealm */; };
 		EEA60424283020C200D79666 /* ListCardGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA60423283020C200D79666 /* ListCardGrid.swift */; };
 		EEA604262830277000D79666 /* FoundationUtil in Frameworks */ = {isa = PBXBuildFile; productRef = EEA604252830277000D79666 /* FoundationUtil */; };
 		EEABDA022839F0B400C0F087 /* Effects in Frameworks */ = {isa = PBXBuildFile; productRef = EEABDA012839F0B400C0F087 /* Effects */; };
 		EEB8AD712833CE6400C44C6F /* TagListView in Frameworks */ = {isa = PBXBuildFile; productRef = EEB8AD702833CE6400C44C6F /* TagListView */; };
 		EEB8AD752833E19400C44C6F /* WaterfallGrid in Frameworks */ = {isa = PBXBuildFile; productRef = EEB8AD742833E19400C44C6F /* WaterfallGrid */; };
-		EEC184D7283F42BE000790E4 /* LocalService in Frameworks */ = {isa = PBXBuildFile; productRef = EEC184D6283F42BE000790E4 /* LocalService */; };
 		EEC953B4283E7CFF005861AA /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC953B3283E7CFF005861AA /* SheetView.swift */; };
 		EED2E753283343E10040C83A /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2E752283343E10040C83A /* RootView.swift */; };
 		EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA85BE282B40700047F3AC /* gitignoreApp.swift */; };
@@ -58,7 +55,6 @@
 		EEA3F675283CFCB0005D6A15 /* TagListMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListMain.swift; sourceTree = "<group>"; };
 		EEA60414282EB3DA00D79666 /* Platform */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Platform; sourceTree = "<group>"; };
 		EEA6041C282FFEF700D79666 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
-		EEA6041E28301BD700D79666 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		EEA60423283020C200D79666 /* ListCardGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCardGrid.swift; sourceTree = "<group>"; };
 		EEC953B3283E7CFF005861AA /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 		EED2E752283343E10040C83A /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -85,7 +81,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEC184D7283F42BE000790E4 /* LocalService in Frameworks */,
 				EEABDA022839F0B400C0F087 /* Effects in Frameworks */,
 				EEA60417282EB4EE00D79666 /* UIUtil in Frameworks */,
 				EEA395D7283A42BC00A41CC4 /* gitignoreView in Frameworks */,
@@ -94,7 +89,6 @@
 				EEA604262830277000D79666 /* FoundationUtil in Frameworks */,
 				EEA6041D282FFEF700D79666 /* Network.framework in Frameworks */,
 				EEDA85D8282B51E10047F3AC /* Swinject in Frameworks */,
-				EEA6042228301F1400D79666 /* CombineRealm in Frameworks */,
 				EEB8AD712833CE6400C44C6F /* TagListView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,22 +299,6 @@
 			path = Supporting;
 			sourceTree = "<group>";
 		};
-		EEDE5B4C282B636C00C0ADBA /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				EEDE5B50282B63F400C0ADBA /* Local */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		EEDE5B50282B63F400C0ADBA /* Local */ = {
-			isa = PBXGroup;
-			children = (
-				EEA6041E28301BD700D79666 /* ListModel.swift */,
-			);
-			path = Local;
-			sourceTree = "<group>";
-		};
 		EEDE5B68282B9B0500C0ADBA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,7 +321,6 @@
 		EEEBD255282C7A3C00608EB6 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				EEDE5B4C282B636C00C0ADBA /* Model */,
 				EE78FA08282E37A30013117A /* View */,
 				EEDE5B77282BA92500C0ADBA /* ListView.swift */,
 				EEEBD25C282C86BC00608EB6 /* ListFeacture.swift */,
@@ -408,13 +385,11 @@
 				EEDA85CE282B500B0047F3AC /* ComposableArchitecture */,
 				EEDA85D7282B51E10047F3AC /* Swinject */,
 				EEA60416282EB4EE00D79666 /* UIUtil */,
-				EEA6042128301F1400D79666 /* CombineRealm */,
 				EEA604252830277000D79666 /* FoundationUtil */,
 				EEB8AD702833CE6400C44C6F /* TagListView */,
 				EEB8AD742833E19400C44C6F /* WaterfallGrid */,
 				EEABDA012839F0B400C0F087 /* Effects */,
 				EEA395D6283A42BC00A41CC4 /* gitignoreView */,
-				EEC184D6283F42BE000790E4 /* LocalService */,
 			);
 			productName = gitignore;
 			productReference = EEDA85BB282B40700047F3AC /* gitignore.app */;
@@ -447,7 +422,6 @@
 			packageReferences = (
 				EEDA85CD282B500B0047F3AC /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 				EEDA85D6282B51E10047F3AC /* XCRemoteSwiftPackageReference "Swinject" */,
-				EEA6042028301F1400D79666 /* XCRemoteSwiftPackageReference "CombineRealm" */,
 			);
 			productRefGroup = EEDA85BC282B40700047F3AC /* Products */;
 			projectDirPath = "";
@@ -483,7 +457,6 @@
 				EE78FA0A282E37BF0013117A /* ListCardView.swift in Sources */,
 				EEDE5B6A282B9DD100C0ADBA /* TabbarView.swift in Sources */,
 				EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */,
-				EEA6041F28301BD700D79666 /* ListModel.swift in Sources */,
 				EEA395D4283A418700A41CC4 /* RootFeacture.swift in Sources */,
 				EEA3F66F283C4D88005D6A15 /* CreateButtonStyle.swift in Sources */,
 				EEEBD25D282C86BC00608EB6 /* ListFeacture.swift in Sources */,
@@ -698,14 +671,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		EEA6042028301F1400D79666 /* XCRemoteSwiftPackageReference "CombineRealm" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/CombineCommunity/CombineRealm.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		EEDA85CD282B500B0047F3AC /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
@@ -733,11 +698,6 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = UIUtil;
 		};
-		EEA6042128301F1400D79666 /* CombineRealm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EEA6042028301F1400D79666 /* XCRemoteSwiftPackageReference "CombineRealm" */;
-			productName = CombineRealm;
-		};
 		EEA604252830277000D79666 /* FoundationUtil */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FoundationUtil;
@@ -753,10 +713,6 @@
 		EEB8AD742833E19400C44C6F /* WaterfallGrid */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WaterfallGrid;
-		};
-		EEC184D6283F42BE000790E4 /* LocalService */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = LocalService;
 		};
 		EEDA85CE282B500B0047F3AC /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;

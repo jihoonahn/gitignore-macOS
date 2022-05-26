@@ -43,12 +43,12 @@ struct MainView: View {
             VStack{
                 HStack{
                     Spacer()
-                    Button(action: {viewStore.send(.addButtonDidTap)}, label: {
+                    Button(action: {viewStore.send(.addSheetButtonDidTap)}, label: {
                         Image(systemName: "plus")
                             .font(.title2)
                     })
                     .sheet(isPresented: viewStore.binding(
-                        get: \.addSheetStatus,send: MainAction.addButtonDidTap)){
+                        get: \.addSheetStatus,send: MainAction.addSheetButtonDidTap)){
                             SheetView(store: store)
                     }
                     .buttonStyle(ToolBarButtonStyle())

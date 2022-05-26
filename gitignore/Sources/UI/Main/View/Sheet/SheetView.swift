@@ -33,10 +33,11 @@ struct SheetView: View {
                 Spacer()
                 HStack {
                     Button("Cancel") {
-                        viewStore.send(.addButtonDidTap)
+                        viewStore.send(.addSheetButtonDidTap)
                     }
                     Spacer()
                     Button("Add") {
+                        viewStore.send(.saveGitignoreButtonDidTap)
                     }
                 }
             }

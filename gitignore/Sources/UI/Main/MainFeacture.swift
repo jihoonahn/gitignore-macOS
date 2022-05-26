@@ -1,9 +1,6 @@
 import ComposableArchitecture
 import Effects
 import SwiftUI
-import CombineRealm
-import RealmSwift
-import LocalService
 
 struct MainState: Equatable{
     var searchQuery = ""
@@ -20,7 +17,8 @@ enum MainAction{
     case onAppear
     case tagTotalHeightAction
     case titleQueryChanged(String) // Sheet의 title Query
-    case addButtonDidTap // addButton 눌렀을때
+    case addSheetButtonDidTap // addSheetButton 눌렀을때
+    case saveGitignoreButtonDidTap
     case searchQueryChanged(String) // textfield action
     case tapTagChoose(Int) //search bar 에서 tag 추가
     case createGitignore // gitignore 데이터 Load
@@ -34,15 +32,12 @@ enum MainAction{
 struct MainEnvironmnet{
     var effects : () -> ServiceEffectType
     var mainQueue: () -> AnySchedulerOf<DispatchQueue>
-    var local : () -> ServiceRealmType
     public init(
         effects: @escaping() -> ServiceEffectType,
-        mainQueue : @escaping() -> AnySchedulerOf<DispatchQueue>,
-        local : @escaping() -> ServiceRealmType
+        mainQueue : @escaping() -> AnySchedulerOf<DispatchQueue>
     ){
         self.effects = effects
         self.mainQueue = mainQueue
-        self.local = local
     }
 }
 
@@ -89,9 +84,15 @@ let mainReducer = Reducer<
         state.userChooseTag.remove(Array(state.userChooseTag)[index])
         return .none
         
-    case .addButtonDidTap:
+    case .addSheetButtonDidTap:
         state.addSheetStatus = !state.addSheetStatus
         return .none
+    
+    case .saveGitignoreButtonDidTap:
+        guard !state.userChooseTag.isEmpty else {return .none}
+        return enviroment.effects().effect.makeGitignoreFileAPI(tag: Array(state.userChooseTag))
+            .receive(on: enviroment.mainQueue())
+            .catchToEffect(MainAction.savegitignoreDataLoaded)
         
         //MARK: - Data Load
     case .dataLoaded(let result):
@@ -115,7 +116,7 @@ let mainReducer = Reducer<
     case .savegitignoreDataLoaded(let result) :
         switch result{
         case .success(let result):
-            
+            print("save")
             return .none
         case .failure(let result):
             return.none
