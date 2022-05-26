@@ -17,7 +17,6 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/pointfreeco/swift-composable-architecture", branch: "main"),
-        .package(url: "https://github.com/CombineCommunity/CombineRealm", branch: "master"),
         .package(path: "../CombineCoreData"),
     ],
     targets: [
