@@ -3,22 +3,27 @@ import Combine
 import CombineCoreData
 
 public protocol CoreDatas{
-//    func addList() -> CoreDataSaveModelPublisher
-//    func fetchPersons() -> CoreDataSaveModelPublisher
-//    func deleteAllPersons() -> CoreDataSaveModelPublisher
+    func addList()
+    func fetchPersons()
+    func deleteAllPersons()
 }
 
-public final class CoreDataService : BaseCoreDataService, CoreDatas{}
+public final class CoreDataService : BaseCoreDataService, CoreDatas{
+    private var bag : [AnyCancellable] = .init()
+    
+}
 
 
 public extension CoreDataService{
-//    func addList() -> CoreDataSaveModelPublisher {
-//
-//    }
-//    func fetchPersons() -> CoreDataSaveModelPublisher {
-//
-//    }
-//    func deleteAllPersons() -> CoreDataSaveModelPublisher{
-//
-//    }
+    func addList()  {
+        let action : Action = {
+            
+        }
+    }
+    func fetchPersons()  {
+
+    }
+    func deleteAllPersons() {
+
+    }
 }
