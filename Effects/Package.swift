@@ -11,16 +11,25 @@ let package = Package(
         .library(
             name: "Effects",
             targets: ["Effects"]),
+        .library(
+            name: "Local",
+            targets: ["Local"]),
     ],
     dependencies: [
         .package(url: "https://github.com/pointfreeco/swift-composable-architecture", branch: "main"),
-        .package(url: "https://github.com/CombineCommunity/CombineRealm", branch: "master")
+        .package(url: "https://github.com/CombineCommunity/CombineRealm", branch: "master"),
+        .package(path: "../CombineCoreData"),
     ],
     targets: [
         .target(
             name: "Effects",
             dependencies: [
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+            ]),
+        .target(
+            name: "Local",
+            dependencies: [
+                .product(name: "CombineCoreData", package: "CombineCoreData")
             ]),
     ]
 )
