@@ -1,6 +1,7 @@
 import ComposableArchitecture
 import Effects
 import SwiftUI
+import Local
 
 struct MainState: Equatable{
     var searchQuery = ""
@@ -31,12 +32,15 @@ enum MainAction{
 
 struct MainEnvironmnet{
     var effects : () -> ServiceEffectType
+    var locals : () -> ServiceDataType
     var mainQueue: () -> AnySchedulerOf<DispatchQueue>
     public init(
         effects: @escaping() -> ServiceEffectType,
+        locals : @escaping() -> ServiceDataType,
         mainQueue : @escaping() -> AnySchedulerOf<DispatchQueue>
     ){
         self.effects = effects
+        self.locals = locals
         self.mainQueue = mainQueue
     }
 }

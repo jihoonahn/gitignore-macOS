@@ -1,4 +1,5 @@
 import ComposableArchitecture
+import Local
 
 struct ListState: Equatable{
     var listcount : Int = .init()
@@ -10,11 +11,13 @@ enum ListAction{
 }
 
 struct ListEnvironmnet{
-    
+    var locals : () -> ServiceDataType
     var mainQueue: () -> AnySchedulerOf<DispatchQueue>
     public init(
+        locals : @escaping() -> ServiceDataType,
         mainQueue : @escaping() -> AnySchedulerOf<DispatchQueue>
     ) {
+        self.locals = locals
         self.mainQueue = mainQueue
     }
 }

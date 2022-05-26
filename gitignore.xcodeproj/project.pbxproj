@@ -23,6 +23,7 @@
 		EEABDA022839F0B400C0F087 /* Effects in Frameworks */ = {isa = PBXBuildFile; productRef = EEABDA012839F0B400C0F087 /* Effects */; };
 		EEB8AD712833CE6400C44C6F /* TagListView in Frameworks */ = {isa = PBXBuildFile; productRef = EEB8AD702833CE6400C44C6F /* TagListView */; };
 		EEB8AD752833E19400C44C6F /* WaterfallGrid in Frameworks */ = {isa = PBXBuildFile; productRef = EEB8AD742833E19400C44C6F /* WaterfallGrid */; };
+		EEC184DD283FA13A000790E4 /* Local in Frameworks */ = {isa = PBXBuildFile; productRef = EEC184DC283FA13A000790E4 /* Local */; };
 		EEC953B4283E7CFF005861AA /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC953B3283E7CFF005861AA /* SheetView.swift */; };
 		EED2E753283343E10040C83A /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2E752283343E10040C83A /* RootView.swift */; };
 		EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA85BE282B40700047F3AC /* gitignoreApp.swift */; };
@@ -32,7 +33,6 @@
 		EEDA85D8282B51E10047F3AC /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = EEDA85D7282B51E10047F3AC /* Swinject */; };
 		EEDE5B67282B990100C0ADBA /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B66282B990100C0ADBA /* TabButton.swift */; };
 		EEDE5B6A282B9DD100C0ADBA /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B69282B9DD100C0ADBA /* TabbarView.swift */; };
-		EEDE5B6C282B9DF600C0ADBA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B6B282B9DF600C0ADBA /* HomeViewModel.swift */; };
 		EEDE5B76282BA8EC00C0ADBA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B75282BA8EC00C0ADBA /* MainView.swift */; };
 		EEDE5B78282BA92500C0ADBA /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B77282BA92500C0ADBA /* ListView.swift */; };
 		EEDE5B7A282BA9F100C0ADBA /* IssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B79282BA9F100C0ADBA /* IssueView.swift */; };
@@ -66,7 +66,6 @@
 		EEDA85C7282B40720047F3AC /* gitignore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = gitignore.entitlements; path = gitignore/Supporting/gitignore.entitlements; sourceTree = SOURCE_ROOT; };
 		EEDE5B66282B990100C0ADBA /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
 		EEDE5B69282B9DD100C0ADBA /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
-		EEDE5B6B282B9DF600C0ADBA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		EEDE5B75282BA8EC00C0ADBA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		EEDE5B77282BA92500C0ADBA /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		EEDE5B79282BA9F100C0ADBA /* IssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueView.swift; sourceTree = "<group>"; };
@@ -88,6 +87,7 @@
 				EEDA85CF282B500B0047F3AC /* ComposableArchitecture in Frameworks */,
 				EEB8AD752833E19400C44C6F /* WaterfallGrid in Frameworks */,
 				EEA604262830277000D79666 /* FoundationUtil in Frameworks */,
+				EEC184DD283FA13A000790E4 /* Local in Frameworks */,
 				EEA6041D282FFEF700D79666 /* Network.framework in Frameworks */,
 				EEDA85D8282B51E10047F3AC /* Swinject in Frameworks */,
 				EEB8AD712833CE6400C44C6F /* TagListView in Frameworks */,
@@ -301,14 +301,6 @@
 			path = Supporting;
 			sourceTree = "<group>";
 		};
-		EEDE5B68282B9B0500C0ADBA /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				EEDE5B6B282B9DF600C0ADBA /* HomeViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		EEEBD254282C7A3400608EB6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,7 +336,6 @@
 			isa = PBXGroup;
 			children = (
 				EEEBD263282C877D00608EB6 /* Button */,
-				EEDE5B68282B9B0500C0ADBA /* ViewModel */,
 			);
 			path = CustomNavigationView;
 			sourceTree = "<group>";
@@ -392,6 +383,7 @@
 				EEB8AD742833E19400C44C6F /* WaterfallGrid */,
 				EEABDA012839F0B400C0F087 /* Effects */,
 				EEA395D6283A42BC00A41CC4 /* gitignoreView */,
+				EEC184DC283FA13A000790E4 /* Local */,
 			);
 			productName = gitignore;
 			productReference = EEDA85BB282B40700047F3AC /* gitignore.app */;
@@ -454,7 +446,6 @@
 				EED2E753283343E10040C83A /* RootView.swift in Sources */,
 				EEDE5B76282BA8EC00C0ADBA /* MainView.swift in Sources */,
 				EEDE5B78282BA92500C0ADBA /* ListView.swift in Sources */,
-				EEDE5B6C282B9DF600C0ADBA /* HomeViewModel.swift in Sources */,
 				EEDE5B87282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift in Sources */,
 				EE78FA0A282E37BF0013117A /* ListCardView.swift in Sources */,
 				EEDE5B6A282B9DD100C0ADBA /* TabbarView.swift in Sources */,
@@ -715,6 +706,10 @@
 		EEB8AD742833E19400C44C6F /* WaterfallGrid */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WaterfallGrid;
+		};
+		EEC184DC283FA13A000790E4 /* Local */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Local;
 		};
 		EEDA85CE282B500B0047F3AC /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
