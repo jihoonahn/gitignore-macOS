@@ -30,25 +30,17 @@ struct SheetView: View {
                     )
                 ).textFieldStyle(gitignoreTextfieldStyle())
 
-
-                ScrollView(.vertical){
-                    Text("야옹")
-                }
-                .fixedSize(horizontal: false, vertical: true)
-                .frame( height: 100)
-                    
                 Spacer()
                 HStack {
                     Button("Cancel") {
-                        
+                        viewStore.send(.addButtonDidTap)
                     }
                     Spacer()
                     Button("Add") {
-                        
                     }
                 }
             }
-            .frame(width: 300, height: 200)
+            .frame(width: 300, height: 100)
             .padding()
         }
     }

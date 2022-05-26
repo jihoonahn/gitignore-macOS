@@ -1,7 +1,8 @@
 import ComposableArchitecture
 import Effects
 import SwiftUI
-
+import CombineRealm
+import RealmSwift
 
 struct MainState: Equatable{
     var searchQuery = ""
@@ -12,7 +13,6 @@ struct MainState: Equatable{
     var inquiryListString : [String] = .init()
     var gitignoreListString : [String] = .init()
     var userChooseTag : Set<String> = .init()
-    var gitignoreFileContents : String = .init()
 }
 
 enum MainAction{
@@ -27,6 +27,7 @@ enum MainAction{
     
     case dataLoaded(Result<String, ApiError>)
     case gitignoreDataLoaded(Result<String, ApiError>)
+    case savegitignoreDataLoaded(Result<String, ApiError>)
 }
 
 struct MainEnvironmnet{
@@ -87,7 +88,6 @@ let mainReducer = Reducer<
         
     case .addButtonDidTap:
         state.addSheetStatus = !state.addSheetStatus
-        print(state.addSheetStatus)
         return .none
         
         //MARK: - Data Load
@@ -103,13 +103,18 @@ let mainReducer = Reducer<
     case .gitignoreDataLoaded(let result):
         switch result{
         case .success(let result):
-            state.gitignoreFileContents = result
             guard let url = NSSavePanel().showSavePanel() else {return .none}
-            try? state.gitignoreFileContents.write(to: url, atomically: true, encoding: .utf8)
-
+            try? result.write(to: url, atomically: true, encoding: .utf8)
             return .none
         case .failure(let result):
-            state.gitignoreFileContents = .init()
+            return.none
+        }
+    case .savegitignoreDataLoaded(let result) :
+        switch result{
+        case .success(let result):
+            let realm = try! Realm()
+            return .none
+        case .failure(let result):
             return.none
         }
     }
