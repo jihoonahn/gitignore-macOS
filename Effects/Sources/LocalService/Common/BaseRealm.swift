@@ -1,5 +1,7 @@
 public class BaseService  {
+    unowned let realm : ServiceRealmType
     
-    init(){
+    init(realm : ServiceRealmType){
+        self.realm = realm
     }
 }

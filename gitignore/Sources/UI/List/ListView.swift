@@ -33,8 +33,12 @@ struct ListView: View {
         .ignoresSafeArea()
         .padding(.leading,-10)
         
+
         WithViewStore(self.store) { viewStore in
-           ListCardGrid(models: dummyData)
+            ListCardGrid(models: dummyData)
+                .onAppear {
+                    viewStore.send(.onAppear)
+                }
         }
     }
 }

@@ -29,7 +29,7 @@ let package = Package(
             name: "LocalService",
             dependencies: [
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
-                "CombineRealm"
+                "CombineRealm",
             ]),
     ]
 )

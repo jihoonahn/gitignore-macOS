@@ -25,6 +25,7 @@
 		EEABDA022839F0B400C0F087 /* Effects in Frameworks */ = {isa = PBXBuildFile; productRef = EEABDA012839F0B400C0F087 /* Effects */; };
 		EEB8AD712833CE6400C44C6F /* TagListView in Frameworks */ = {isa = PBXBuildFile; productRef = EEB8AD702833CE6400C44C6F /* TagListView */; };
 		EEB8AD752833E19400C44C6F /* WaterfallGrid in Frameworks */ = {isa = PBXBuildFile; productRef = EEB8AD742833E19400C44C6F /* WaterfallGrid */; };
+		EEC184D7283F42BE000790E4 /* LocalService in Frameworks */ = {isa = PBXBuildFile; productRef = EEC184D6283F42BE000790E4 /* LocalService */; };
 		EEC953B4283E7CFF005861AA /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC953B3283E7CFF005861AA /* SheetView.swift */; };
 		EED2E753283343E10040C83A /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2E752283343E10040C83A /* RootView.swift */; };
 		EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA85BE282B40700047F3AC /* gitignoreApp.swift */; };
@@ -84,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEC184D7283F42BE000790E4 /* LocalService in Frameworks */,
 				EEABDA022839F0B400C0F087 /* Effects in Frameworks */,
 				EEA60417282EB4EE00D79666 /* UIUtil in Frameworks */,
 				EEA395D7283A42BC00A41CC4 /* gitignoreView in Frameworks */,
@@ -103,8 +105,8 @@
 		EE78FA08282E37A30013117A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EE78FA09282E37BF0013117A /* ListCardView.swift */,
-				EEA60423283020C200D79666 /* ListCardGrid.swift */,
+				EEC184D5283F3E59000790E4 /* Tag */,
+				EEC184D4283F3E51000790E4 /* Grid */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -181,6 +183,22 @@
 				EEA6041C282FFEF700D79666 /* Network.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EEC184D4283F3E51000790E4 /* Grid */ = {
+			isa = PBXGroup;
+			children = (
+				EE78FA09282E37BF0013117A /* ListCardView.swift */,
+				EEA60423283020C200D79666 /* ListCardGrid.swift */,
+			);
+			path = Grid;
+			sourceTree = "<group>";
+		};
+		EEC184D5283F3E59000790E4 /* Tag */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tag;
 			sourceTree = "<group>";
 		};
 		EEC953B1283E7BD1005861AA /* Style */ = {
@@ -396,6 +414,7 @@
 				EEB8AD742833E19400C44C6F /* WaterfallGrid */,
 				EEABDA012839F0B400C0F087 /* Effects */,
 				EEA395D6283A42BC00A41CC4 /* gitignoreView */,
+				EEC184D6283F42BE000790E4 /* LocalService */,
 			);
 			productName = gitignore;
 			productReference = EEDA85BB282B40700047F3AC /* gitignore.app */;
@@ -734,6 +753,10 @@
 		EEB8AD742833E19400C44C6F /* WaterfallGrid */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WaterfallGrid;
+		};
+		EEC184D6283F42BE000790E4 /* LocalService */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LocalService;
 		};
 		EEDA85CE282B500B0047F3AC /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;

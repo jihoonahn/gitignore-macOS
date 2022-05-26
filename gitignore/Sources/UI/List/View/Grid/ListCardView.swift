@@ -24,7 +24,7 @@ struct ListCardView : View{
                             .layoutPriority(98)
                         Spacer()
                         Button(action: {
-                            withAnimation{ print(card.bookMark)}
+                            withAnimation{ print("Delete")}
                         }, label: {
                             Image(systemName: "xmark")
                                 .foregroundColor(.backgourndColor_Opposition)

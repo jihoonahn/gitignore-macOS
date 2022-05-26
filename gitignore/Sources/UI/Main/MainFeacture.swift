@@ -3,6 +3,7 @@ import Effects
 import SwiftUI
 import CombineRealm
 import RealmSwift
+import LocalService
 
 struct MainState: Equatable{
     var searchQuery = ""
@@ -33,13 +34,15 @@ enum MainAction{
 struct MainEnvironmnet{
     var effects : () -> ServiceEffectType
     var mainQueue: () -> AnySchedulerOf<DispatchQueue>
-    
+    var local : () -> ServiceRealmType
     public init(
         effects: @escaping() -> ServiceEffectType,
-        mainQueue : @escaping() -> AnySchedulerOf<DispatchQueue>
+        mainQueue : @escaping() -> AnySchedulerOf<DispatchQueue>,
+        local : @escaping() -> ServiceRealmType
     ){
         self.effects = effects
         self.mainQueue = mainQueue
+        self.local = local
     }
 }
 
@@ -112,7 +115,7 @@ let mainReducer = Reducer<
     case .savegitignoreDataLoaded(let result) :
         switch result{
         case .success(let result):
-            let realm = try! Realm()
+            
             return .none
         case .failure(let result):
             return.none
