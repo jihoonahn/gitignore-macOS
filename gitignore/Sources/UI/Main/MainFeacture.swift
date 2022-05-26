@@ -117,6 +117,7 @@ let mainReducer = Reducer<
         switch result{
         case .success(let result):
             print("save")
+            state.addSheetStatus = !state.addSheetStatus
             return .none
         case .failure(let result):
             return.none
