@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE5AAF98283FA56400E8255C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EE5AAF97283FA56400E8255C /* ComposableArchitecture */; };
+		EE5AAF9B283FA57600E8255C /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = EE5AAF9A283FA57600E8255C /* Swinject */; };
 		EE78FA0A282E37BF0013117A /* ListCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78FA09282E37BF0013117A /* ListCardView.swift */; };
 		EEA34CC9283B73A700A00BED /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA34CC8283B73A700A00BED /* WebView.swift */; };
 		EEA34CCE283B9F7C00A00BED /* SearchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA34CCD283B9F7C00A00BED /* SearchList.swift */; };
@@ -29,8 +31,6 @@
 		EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA85BE282B40700047F3AC /* gitignoreApp.swift */; };
 		EEDA85C3282B40720047F3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C2282B40720047F3AC /* Assets.xcassets */; };
 		EEDA85C6282B40720047F3AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C5282B40720047F3AC /* Preview Assets.xcassets */; };
-		EEDA85CF282B500B0047F3AC /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EEDA85CE282B500B0047F3AC /* ComposableArchitecture */; };
-		EEDA85D8282B51E10047F3AC /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = EEDA85D7282B51E10047F3AC /* Swinject */; };
 		EEDE5B67282B990100C0ADBA /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B66282B990100C0ADBA /* TabButton.swift */; };
 		EEDE5B6A282B9DD100C0ADBA /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B69282B9DD100C0ADBA /* TabbarView.swift */; };
 		EEDE5B76282BA8EC00C0ADBA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B75282BA8EC00C0ADBA /* MainView.swift */; };
@@ -82,14 +82,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEABDA022839F0B400C0F087 /* Effects in Frameworks */,
+				EE5AAF9B283FA57600E8255C /* Swinject in Frameworks */,
 				EEA60417282EB4EE00D79666 /* UIUtil in Frameworks */,
+				EE5AAF98283FA56400E8255C /* ComposableArchitecture in Frameworks */,
 				EEA395D7283A42BC00A41CC4 /* gitignoreView in Frameworks */,
-				EEDA85CF282B500B0047F3AC /* ComposableArchitecture in Frameworks */,
 				EEB8AD752833E19400C44C6F /* WaterfallGrid in Frameworks */,
 				EEA604262830277000D79666 /* FoundationUtil in Frameworks */,
 				EEC184DD283FA13A000790E4 /* Local in Frameworks */,
 				EEA6041D282FFEF700D79666 /* Network.framework in Frameworks */,
-				EEDA85D8282B51E10047F3AC /* Swinject in Frameworks */,
 				EEB8AD712833CE6400C44C6F /* TagListView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,8 +375,6 @@
 			);
 			name = gitignore;
 			packageProductDependencies = (
-				EEDA85CE282B500B0047F3AC /* ComposableArchitecture */,
-				EEDA85D7282B51E10047F3AC /* Swinject */,
 				EEA60416282EB4EE00D79666 /* UIUtil */,
 				EEA604252830277000D79666 /* FoundationUtil */,
 				EEB8AD702833CE6400C44C6F /* TagListView */,
@@ -384,6 +382,8 @@
 				EEABDA012839F0B400C0F087 /* Effects */,
 				EEA395D6283A42BC00A41CC4 /* gitignoreView */,
 				EEC184DC283FA13A000790E4 /* Local */,
+				EE5AAF97283FA56400E8255C /* ComposableArchitecture */,
+				EE5AAF9A283FA57600E8255C /* Swinject */,
 			);
 			productName = gitignore;
 			productReference = EEDA85BB282B40700047F3AC /* gitignore.app */;
@@ -414,8 +414,8 @@
 			);
 			mainGroup = EEDA85B2282B40700047F3AC;
 			packageReferences = (
-				EEDA85CD282B500B0047F3AC /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
-				EEDA85D6282B51E10047F3AC /* XCRemoteSwiftPackageReference "Swinject" */,
+				EE5AAF96283FA56400E8255C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				EE5AAF99283FA57600E8255C /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = EEDA85BC282B40700047F3AC /* Products */;
 			projectDirPath = "";
@@ -664,7 +664,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		EEDA85CD282B500B0047F3AC /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+		EE5AAF96283FA56400E8255C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
 			requirement = {
@@ -672,7 +672,7 @@
 				kind = branch;
 			};
 		};
-		EEDA85D6282B51E10047F3AC /* XCRemoteSwiftPackageReference "Swinject" */ = {
+		EE5AAF99283FA57600E8255C /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
 			requirement = {
@@ -683,6 +683,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		EE5AAF97283FA56400E8255C /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE5AAF96283FA56400E8255C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		EE5AAF9A283FA57600E8255C /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE5AAF99283FA57600E8255C /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
 		EEA395D6283A42BC00A41CC4 /* gitignoreView */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = gitignoreView;
@@ -710,16 +720,6 @@
 		EEC184DC283FA13A000790E4 /* Local */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Local;
-		};
-		EEDA85CE282B500B0047F3AC /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EEDA85CD282B500B0047F3AC /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
-			productName = ComposableArchitecture;
-		};
-		EEDA85D7282B51E10047F3AC /* Swinject */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EEDA85D6282B51E10047F3AC /* XCRemoteSwiftPackageReference "Swinject" */;
-			productName = Swinject;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

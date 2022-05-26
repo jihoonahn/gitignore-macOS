@@ -18,7 +18,6 @@ struct TabbarView: View {
       self.store = store
     }
     
-    @StateObject var homeData = TabBarViewModel()
     var body: some View {
         WithViewStore(self.store){ viewStore in
             HStack{
@@ -51,7 +50,6 @@ struct TabbarView: View {
             }
             .ignoresSafeArea(.all, edges: .all)
             .frame( minWidth: 700,minHeight: 500)
-            .environmentObject(homeData)
         }
     }
 }
