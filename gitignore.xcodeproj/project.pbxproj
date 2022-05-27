@@ -24,6 +24,8 @@
 		EEA604262830277000D79666 /* FoundationUtil in Frameworks */ = {isa = PBXBuildFile; productRef = EEA604252830277000D79666 /* FoundationUtil */; };
 		EEA66E58284059EF0095FB9A /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA66E57284059EF0095FB9A /* TagList.swift */; };
 		EEA66E5E284075590095FB9A /* OSLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA66E5D284075590095FB9A /* OSLog.framework */; };
+		EEA66E60284075E50095FB9A /* OSLogUtil in Frameworks */ = {isa = PBXBuildFile; productRef = EEA66E5F284075E50095FB9A /* OSLogUtil */; };
+		EEA66E6328407A920095FB9A /* AppDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA66E6228407A920095FB9A /* AppDI.swift */; };
 		EEABDA022839F0B400C0F087 /* Effects in Frameworks */ = {isa = PBXBuildFile; productRef = EEABDA012839F0B400C0F087 /* Effects */; };
 		EEB8AD752833E19400C44C6F /* WaterfallGrid in Frameworks */ = {isa = PBXBuildFile; productRef = EEB8AD742833E19400C44C6F /* WaterfallGrid */; };
 		EEC184DD283FA13A000790E4 /* Local in Frameworks */ = {isa = PBXBuildFile; productRef = EEC184DC283FA13A000790E4 /* Local */; };
@@ -59,6 +61,7 @@
 		EEA60423283020C200D79666 /* ListCardGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCardGrid.swift; sourceTree = "<group>"; };
 		EEA66E57284059EF0095FB9A /* TagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
 		EEA66E5D284075590095FB9A /* OSLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSLog.framework; path = System/Library/Frameworks/OSLog.framework; sourceTree = SDKROOT; };
+		EEA66E6228407A920095FB9A /* AppDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDI.swift; sourceTree = "<group>"; };
 		EEC184DB283F9A06000790E4 /* CombineCoreData */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CombineCoreData; path = ../../../../Documents/image/CombineCoreData; sourceTree = "<group>"; };
 		EEC953B3283E7CFF005861AA /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 		EED2E752283343E10040C83A /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -92,6 +95,7 @@
 				EEA395D7283A42BC00A41CC4 /* gitignoreView in Frameworks */,
 				EEB8AD752833E19400C44C6F /* WaterfallGrid in Frameworks */,
 				EEA604262830277000D79666 /* FoundationUtil in Frameworks */,
+				EEA66E60284075E50095FB9A /* OSLogUtil in Frameworks */,
 				EEC184DD283FA13A000790E4 /* Local in Frameworks */,
 				EEA6041D282FFEF700D79666 /* Network.framework in Frameworks */,
 			);
@@ -192,6 +196,14 @@
 			path = Tag;
 			sourceTree = "<group>";
 		};
+		EEA66E6128407A8B0095FB9A /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				EEA66E6228407A920095FB9A /* AppDI.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 		EEC184D4283F3E51000790E4 /* Grid */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +293,7 @@
 		EEDE5B48282B5EAF00C0ADBA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				EEA66E6128407A8B0095FB9A /* DI */,
 				EEDA85BE282B40700047F3AC /* gitignoreApp.swift */,
 				EEA395D2283A417000A41CC4 /* Root */,
 				EEEBD266282C89CE00608EB6 /* Tabbar */,
@@ -388,6 +401,7 @@
 				EEC184DC283FA13A000790E4 /* Local */,
 				EE5AAF97283FA56400E8255C /* ComposableArchitecture */,
 				EE5AAF9A283FA57600E8255C /* Swinject */,
+				EEA66E5F284075E50095FB9A /* OSLogUtil */,
 			);
 			productName = gitignore;
 			productReference = EEDA85BB282B40700047F3AC /* gitignore.app */;
@@ -459,6 +473,7 @@
 				EEEBD25D282C86BC00608EB6 /* ListFeacture.swift in Sources */,
 				EEA34CCE283B9F7C00A00BED /* SearchList.swift in Sources */,
 				EEEBD25F282C86C700608EB6 /* IssueFeacture.swift in Sources */,
+				EEA66E6328407A920095FB9A /* AppDI.swift in Sources */,
 				EEEBD268282C8C6000608EB6 /* TabbarFeacture.swift in Sources */,
 				EEA34CC9283B73A700A00BED /* WebView.swift in Sources */,
 				EEA3F676283CFCB0005D6A15 /* TagListMain.swift in Sources */,
@@ -709,6 +724,10 @@
 		EEA604252830277000D79666 /* FoundationUtil */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FoundationUtil;
+		};
+		EEA66E5F284075E50095FB9A /* OSLogUtil */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = OSLogUtil;
 		};
 		EEABDA012839F0B400C0F087 /* Effects */ = {
 			isa = XCSwiftPackageProductDependency;

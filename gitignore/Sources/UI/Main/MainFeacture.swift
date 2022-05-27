@@ -45,14 +45,14 @@ struct MainEnvironmnet{
         self.mainQueue = mainQueue
     }
 }
-var bag: [AnyCancellable] = []
 
 let mainReducer = Reducer<
     MainState,
     MainAction,
     MainEnvironmnet
 >{ state, action , enviroment in
-    
+    var bag: Set<AnyCancellable> = .init()
+
     switch action{
     case .tagTotalHeightAction:
         return.none
@@ -127,13 +127,14 @@ let mainReducer = Reducer<
             enviroment.locals().coreData.addList(
                 title: state.titleQuery,
                 tag: Array(state.userChooseTag),
-                gitignoreString: result)
+                gitignoreString: result)?
             .sink { completion in
                 if case .failure(let error) = completion{
                     print(error)
                 }
             } receiveValue: { success in
                 if success{
+                    print(success)
 //                    state.addSheetStatus = !state.addSheetStatus
                 }
             }.store(in: &bag)

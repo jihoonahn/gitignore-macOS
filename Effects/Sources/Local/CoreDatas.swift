@@ -5,17 +5,18 @@ import CoreData
 import SwiftUI
 
 public protocol CoreDatas{
-    func addList(title : String, tag : [String], gitignoreString : String) -> CoreDataSaveModelPublisher
+    func addList(title : String, tag : [String], gitignoreString : String) -> CoreDataSaveModelPublisher?
     func fetchPersons() -> CoreDataFetchResultsPublisher<List>
     func deleteAllPersons(title : String) -> CoreDataDeleteModelPublisher
 }
 
 public final class CoreDataService : BaseCoreDataService, CoreDatas{
-    let coreDataStore: CoreDataStoring! = nil
+    var coreDataStore : CoreDataStoring = CoreDataStore.default
 }
 
 public extension CoreDataService{
-    func addList(title : String, tag : [String], gitignoreString : String) -> CoreDataSaveModelPublisher  {
+
+    func addList(title : String, tag : [String], gitignoreString : String) -> CoreDataSaveModelPublisher?  {
         let action : Action = {
             let list : List = self.coreDataStore.createEntity()
             list.title =  title
@@ -25,7 +26,6 @@ public extension CoreDataService{
         }
         return coreDataStore
             .publisher(save: action)
-        
     }
     func fetchPersons() -> CoreDataFetchResultsPublisher<List> {
         let request  = NSFetchRequest<List>(entityName: List.entityName)

@@ -2,7 +2,7 @@
 //  List+CoreDataClass.swift
 //  gitignore
 //
-//  Created by Ji-hoon Ahn on 2022/05/27.
+//  Created by Ji-hoon Ahn on 2022/05/28.
 //
 //
 
@@ -11,5 +11,5 @@ import CoreData
 
 @objc(List)
 public class List: NSManagedObject {
-
+    
 }

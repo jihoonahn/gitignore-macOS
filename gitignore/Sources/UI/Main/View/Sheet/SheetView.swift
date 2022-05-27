@@ -13,7 +13,6 @@ struct SheetView: View {
         var titleQuery : String
         init(state : MainState){
             titleQuery = state.titleQuery
-            
         }
     }
     

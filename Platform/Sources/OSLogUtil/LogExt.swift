@@ -9,7 +9,7 @@ public extension OSLog{
 }
 
 public struct Log {
-    enum Level {
+    public enum Level {
         case debug, info, network, error, custom(categoryName: String)
         fileprivate var category : String{
             switch self{

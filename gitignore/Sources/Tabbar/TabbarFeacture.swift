@@ -1,10 +1,3 @@
-//
-//  TabBarFeacture.swift
-//  gitignore
-//
-//  Created by Ji-hoon Ahn on 2022/05/12.
-//
-
 import ComposableArchitecture
 import Effects
 import Local
@@ -44,7 +37,7 @@ let tabBarReducer = Reducer<TabBarState, TabBarAction, tabBarEnvironmnet>.combin
         action: /TabBarAction.listAction,
         environment: {_ in
                 .init(
-                    locals: { ServiceCoreData()},
+                    locals: ServiceCoreData(),
                     mainQueue: {.main}
                 )
         }

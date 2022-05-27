@@ -7,6 +7,6 @@
         <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="List" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="List" positionX="-63" positionY="-18" width="128" height="89"/>
     </elements>
 </model>
