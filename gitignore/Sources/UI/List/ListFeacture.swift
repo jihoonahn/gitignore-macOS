@@ -2,12 +2,17 @@ import ComposableArchitecture
 import Local
 
 struct ListState: Equatable{
-    var listcount : Int = .init()
+    var totalHeight : CGFloat = .zero
+    var listcount : Int = 10
+    var title : String = "swift"
+    var time : Date = .now
+    var tagList : [String] = ["swift","swiftpackagemanager"]
 }
 
 enum ListAction{
     case onAppear
-    
+    case tagTotalHeightAction
+    case viewHeightReader(CGFloat)
 }
 
 struct ListEnvironmnet{
@@ -30,6 +35,11 @@ let listReducer = Reducer<
     switch action{
     case .onAppear:
         return .none
+    case .tagTotalHeightAction:
+        return .none
+    case .viewHeightReader(let rect):
+        state.totalHeight = rect
+        return .none
     }
-    
 }
+

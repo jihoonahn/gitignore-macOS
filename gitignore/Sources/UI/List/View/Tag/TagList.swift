@@ -1,48 +1,45 @@
 import SwiftUI
 import ComposableArchitecture
 
-public struct TagMainView: View {
+public struct TagListView: View {
     
-    private var store : Store<MainState, MainAction>
-
+    private var store : Store<ListState, ListAction>
     
-    init(store : Store<MainState, MainAction>){
+    init(store : Store<ListState, ListAction>){
         self.store = store
     }
     
     struct ViewState : Equatable{
-        var userChooseTag : Set<String>
-        var totalHeight : CGFloat
-        init(state : MainState){
-            userChooseTag = state.userChooseTag
+        var title : String = .init()
+        var totalHeight : CGFloat = .init()
+        var tagList : [String] = .init()
+        init(state : ListState){
+            title = state.title
             totalHeight = state.totalHeight
+            tagList = state.tagList
         }
     }
     
     public var body: some View {
-        WithViewStore(store.scope(state: ViewState.init)){ viewStore in
+        WithViewStore(store.self){ viewStore in
             VStack {
                 GeometryReader { geometry in
-                    ScrollView(.vertical){
-                        self.generateContent(in: geometry)
-                    }.frame(height: 90)
+                    self.generateContent(in: geometry)
                 }
             }
             .frame(height: viewStore.totalHeight)
         }
     }
     
-    //MARK: - Method
+    
+    
     private func generateContent(in g: GeometryProxy) -> some View {
         var width = CGFloat.zero
         var height = CGFloat.zero
-        return ZStack(alignment: .topLeading) {
-            WithViewStore(self.store.scope(state: ViewState.init)) { viewStore in
-                
-                let tag : Array<String> = Array(viewStore.userChooseTag)
-                
-                ForEach(tag.indices, id: \.self) { index in
-                    item(for: tag[index])
+        return WithViewStore(store.scope(state: ViewState.init)){viewStore in
+        ZStack(alignment: .topLeading) {
+            ForEach(viewStore.tagList.indices, id: \.self) { index in
+                    item(for: viewStore.tagList[index])
                         .padding([.horizontal, .vertical], 4)
                         .alignmentGuide(.leading, computeValue: { d in
                             if (abs(width - d.width) > g.size.width) {
@@ -50,7 +47,7 @@ public struct TagMainView: View {
                                 height -= d.height
                             }
                             let result = width
-                            if tag[index] == tag.last! {
+                            if viewStore.tagList[index] == viewStore.tagList.last! {
                                 width = 0 //last item
                             } else {
                                 width -= d.width
@@ -59,18 +56,13 @@ public struct TagMainView: View {
                         })
                         .alignmentGuide(.top, computeValue: {d in
                             let result = height
-                            if tag[index] == tag.last! {
+                            if viewStore.tagList[index] == viewStore.tagList.last! {
                                 height = 0 // last item
                             }
                             return result
                         })
-                        .onTapGesture {
-                            viewStore.send(MainAction.tagDelete(index))
-                        }
-                }.background(viewHeightReader(viewStore.binding(
-                    get: \.totalHeight, send: MainAction.tagTotalHeightAction
-                )))
-            }
+                }
+        }.background(viewHeightReader())
         }
     }
     
@@ -86,14 +78,15 @@ public struct TagMainView: View {
                 .overlay(Capsule().stroke(Color.primary, lineWidth: 1))
         }
     }
-    
-    private func viewHeightReader(_ binding: Binding<CGFloat>) -> some View {
-        return GeometryReader { geometry -> Color in
-            let rect = geometry.frame(in: .local)
-            DispatchQueue.main.async {
-                binding.wrappedValue = rect.size.height
+    private func viewHeightReader() -> some View {
+        return WithViewStore(store.self){ viewStore in
+            GeometryReader { geometry -> Color in
+                let rect = geometry.frame(in: .local)
+                DispatchQueue.main.async {
+                    viewStore.send(.viewHeightReader(rect.size.height))
+                }
+                return .clear
             }
-            return .clear
         }
     }
 }

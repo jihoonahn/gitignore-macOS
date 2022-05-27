@@ -13,7 +13,6 @@ public final class CoreDataService : BaseCoreDataService, CoreDatas{
     let coreDataStore: CoreDataStoring! = nil
 }
 
-
 public extension CoreDataService{
     func addList(title : String, tag : [String], gitignoreString : String) -> CoreDataSaveModelPublisher  {
         let action : Action = {

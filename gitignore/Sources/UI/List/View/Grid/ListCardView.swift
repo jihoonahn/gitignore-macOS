@@ -7,16 +7,18 @@
 
 import SwiftUI
 import FoundationUtil
+import ComposableArchitecture
 import TagListView
 
 struct ListCardView : View{
-    let card : ListModelex
+    let store : Store<ListState,ListAction>
     
     var body: some View{
+        WithViewStore(self.store){ viewStore in
             HStack() {
                 VStack(alignment: .leading) {
                     HStack{
-                        Text(card.title)
+                        Text(viewStore.title)
                             .font(.headline)
                             .foregroundColor(.primary)
                             .padding(.bottom, 8)
@@ -30,26 +32,20 @@ struct ListCardView : View{
                                 .foregroundColor(.backgourndColor_Opposition)
                         }).buttonStyle(PlainButtonStyle())
                     }
-                    Text(Date().usingDate(time: card.time))
+                    Text(Date().usingDate(time: viewStore.time))
                         .font(.caption)
                         .foregroundColor(.secondary)
                         .fixedSize(horizontal: false, vertical: true)
                         .layoutPriority(99)
-                    TagView(tags: card.tag, isEnabled: false)
-                    .fixedSize(horizontal: false, vertical: true)
+//                    TagListView(tags: viewStore.tagList)
+                    TagListView(store: store)
+                        .fixedSize(horizontal: false, vertical: true)
                 }
                 Spacer()
             }
             .padding([.leading, .trailing, .bottom,.top], 10)
             .cornerRadius(8)
         }
-    
-}
-
-struct CardView_Previews: PreviewProvider {
-    static var previews: some View {
-        ListCardView(card: ListModelex(title: "ㅇ", tag: ["spm"], bookMark: true))
-            .padding()
-            .previewLayout(.sizeThatFits)
     }
 }
+

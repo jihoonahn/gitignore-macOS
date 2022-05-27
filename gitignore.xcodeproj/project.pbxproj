@@ -22,8 +22,8 @@
 		EEA6041D282FFEF700D79666 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA6041C282FFEF700D79666 /* Network.framework */; };
 		EEA60424283020C200D79666 /* ListCardGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA60423283020C200D79666 /* ListCardGrid.swift */; };
 		EEA604262830277000D79666 /* FoundationUtil in Frameworks */ = {isa = PBXBuildFile; productRef = EEA604252830277000D79666 /* FoundationUtil */; };
+		EEA66E58284059EF0095FB9A /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA66E57284059EF0095FB9A /* TagList.swift */; };
 		EEABDA022839F0B400C0F087 /* Effects in Frameworks */ = {isa = PBXBuildFile; productRef = EEABDA012839F0B400C0F087 /* Effects */; };
-		EEB8AD712833CE6400C44C6F /* TagListView in Frameworks */ = {isa = PBXBuildFile; productRef = EEB8AD702833CE6400C44C6F /* TagListView */; };
 		EEB8AD752833E19400C44C6F /* WaterfallGrid in Frameworks */ = {isa = PBXBuildFile; productRef = EEB8AD742833E19400C44C6F /* WaterfallGrid */; };
 		EEC184DD283FA13A000790E4 /* Local in Frameworks */ = {isa = PBXBuildFile; productRef = EEC184DC283FA13A000790E4 /* Local */; };
 		EEC953B4283E7CFF005861AA /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC953B3283E7CFF005861AA /* SheetView.swift */; };
@@ -56,6 +56,7 @@
 		EEA60414282EB3DA00D79666 /* Platform */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Platform; sourceTree = "<group>"; };
 		EEA6041C282FFEF700D79666 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
 		EEA60423283020C200D79666 /* ListCardGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCardGrid.swift; sourceTree = "<group>"; };
+		EEA66E57284059EF0095FB9A /* TagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
 		EEC184DB283F9A06000790E4 /* CombineCoreData */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CombineCoreData; path = ../../../../Documents/image/CombineCoreData; sourceTree = "<group>"; };
 		EEC953B3283E7CFF005861AA /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 		EED2E752283343E10040C83A /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -90,7 +91,6 @@
 				EEA604262830277000D79666 /* FoundationUtil in Frameworks */,
 				EEC184DD283FA13A000790E4 /* Local in Frameworks */,
 				EEA6041D282FFEF700D79666 /* Network.framework in Frameworks */,
-				EEB8AD712833CE6400C44C6F /* TagListView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +100,7 @@
 		EE78FA08282E37A30013117A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EEC184D5283F3E59000790E4 /* Tag */,
+				EEA66E56284059DB0095FB9A /* Tag */,
 				EEC184D4283F3E51000790E4 /* Grid */,
 			);
 			path = View;
@@ -180,6 +180,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EEA66E56284059DB0095FB9A /* Tag */ = {
+			isa = PBXGroup;
+			children = (
+				EEA66E57284059EF0095FB9A /* TagList.swift */,
+			);
+			path = Tag;
+			sourceTree = "<group>";
+		};
 		EEC184D4283F3E51000790E4 /* Grid */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,13 +195,6 @@
 				EEA60423283020C200D79666 /* ListCardGrid.swift */,
 			);
 			path = Grid;
-			sourceTree = "<group>";
-		};
-		EEC184D5283F3E59000790E4 /* Tag */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tag;
 			sourceTree = "<group>";
 		};
 		EEC953B1283E7BD1005861AA /* Style */ = {
@@ -377,7 +378,6 @@
 			packageProductDependencies = (
 				EEA60416282EB4EE00D79666 /* UIUtil */,
 				EEA604252830277000D79666 /* FoundationUtil */,
-				EEB8AD702833CE6400C44C6F /* TagListView */,
 				EEB8AD742833E19400C44C6F /* WaterfallGrid */,
 				EEABDA012839F0B400C0F087 /* Effects */,
 				EEA395D6283A42BC00A41CC4 /* gitignoreView */,
@@ -462,6 +462,7 @@
 				EEDE5B7A282BA9F100C0ADBA /* IssueView.swift in Sources */,
 				EEDE5B67282B990100C0ADBA /* TabButton.swift in Sources */,
 				EEA3F672283C5055005D6A15 /* TitleLogo.swift in Sources */,
+				EEA66E58284059EF0095FB9A /* TagList.swift in Sources */,
 				EEA60424283020C200D79666 /* ListCardGrid.swift in Sources */,
 				EEC953B4283E7CFF005861AA /* SheetView.swift in Sources */,
 				EEEBD258282C7A7200608EB6 /* MainFeacture.swift in Sources */,
@@ -708,10 +709,6 @@
 		EEABDA012839F0B400C0F087 /* Effects */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Effects;
-		};
-		EEB8AD702833CE6400C44C6F /* TagListView */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = TagListView;
 		};
 		EEB8AD742833E19400C44C6F /* WaterfallGrid */ = {
 			isa = XCSwiftPackageProductDependency;

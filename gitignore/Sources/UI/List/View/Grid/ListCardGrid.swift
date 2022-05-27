@@ -7,22 +7,24 @@
 
 import SwiftUI
 import WaterfallGrid
+import ComposableArchitecture
 import gitignoreView
 
 struct ListCardGrid: View {
     
-    var models : [ListModelex]
+    let store : Store<ListState,ListAction>
     
     var body: some View {
         ScrollView(showsIndicators: false){
-            WaterfallGrid((0..<models.count), id: \.self) { index  in
-                ListCardView(card: self.models[index])
-                    .background(BlurView())
-                    .cornerRadius(20)
+            WithViewStore(self.store){ viewStore in
+                WaterfallGrid((0..<viewStore.listcount), id: \.self) { index  in
+                    ListCardView(store: store)
+                        .background(BlurView())
+                        .cornerRadius(20)
+                }
+                .gridStyle()
+                .padding()
             }
-            
-            .gridStyle()
-            .padding()
         }
     }
 }
