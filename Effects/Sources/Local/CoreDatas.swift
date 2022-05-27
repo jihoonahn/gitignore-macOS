@@ -20,11 +20,8 @@ public extension CoreDataService{
             let list : List = self.coreDataStore.createEntity()
             list.title =  title
             list.date = Date()
+            list.tags = tag
             list.gitignoreString = gitignoreString
-            ForEach(0...tag.count) { i in
-                let tags : Tag = self.coreDataStore.createEntity()
-                tags.tagName = tag[i]
-            }
         }
         return coreDataStore
             .publisher(save: action)
