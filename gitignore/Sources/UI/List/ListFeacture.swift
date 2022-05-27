@@ -6,7 +6,7 @@ struct ListState: Equatable{
     var listcount : Int = 10
     var title : String = "swift"
     var time : Date = .now
-    var tagList : [String] = ["swift","swiftpackagemanager"]
+    var tagList : [String] = ["swift","swiftpackagemanager", "cocoapods"]
 }
 
 enum ListAction{

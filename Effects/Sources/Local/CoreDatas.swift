@@ -2,6 +2,7 @@ import Foundation
 import Combine
 import CombineCoreData
 import CoreData
+import SwiftUI
 
 public protocol CoreDatas{
     func addList(title : String, tag : [String], gitignoreString : String) -> CoreDataSaveModelPublisher
@@ -19,8 +20,11 @@ public extension CoreDataService{
             let list : List = self.coreDataStore.createEntity()
             list.title =  title
             list.date = Date()
-            list.tag = tag
             list.gitignoreString = gitignoreString
+            ForEach(0...tag.count) { i in
+                let tags : Tag = self.coreDataStore.createEntity()
+                tags.tagName = tag[i]
+            }
         }
         return coreDataStore
             .publisher(save: action)

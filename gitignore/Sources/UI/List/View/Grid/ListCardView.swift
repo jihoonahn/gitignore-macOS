@@ -8,7 +8,6 @@
 import SwiftUI
 import FoundationUtil
 import ComposableArchitecture
-import TagListView
 
 struct ListCardView : View{
     let store : Store<ListState,ListAction>
@@ -37,7 +36,6 @@ struct ListCardView : View{
                         .foregroundColor(.secondary)
                         .fixedSize(horizontal: false, vertical: true)
                         .layoutPriority(99)
-//                    TagListView(tags: viewStore.tagList)
                     TagListView(store: store)
                         .fixedSize(horizontal: false, vertical: true)
                 }

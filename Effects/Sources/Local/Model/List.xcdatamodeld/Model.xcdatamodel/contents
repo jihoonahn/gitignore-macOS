@@ -3,10 +3,10 @@
     <entity name="List" representedClassName="List" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="gitignoreString" optional="YES" attributeType="String"/>
-        <attribute name="tag" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="[String]"/>
+        <attribute name="tags" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="[String]"/>
         <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="List" positionX="-63" positionY="-18" width="128" height="89"/>
+        <element name="List" positionX="-63" positionY="-18" width="128" height="103"/>
     </elements>
 </model>

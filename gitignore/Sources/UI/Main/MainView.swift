@@ -8,7 +8,6 @@
 import SwiftUI
 import ComposableArchitecture
 import UIUtil
-import TagListView
 import gitignoreView
 
 //MARK: - MainView
