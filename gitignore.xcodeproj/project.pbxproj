@@ -23,6 +23,7 @@
 		EEA60424283020C200D79666 /* ListCardGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA60423283020C200D79666 /* ListCardGrid.swift */; };
 		EEA604262830277000D79666 /* FoundationUtil in Frameworks */ = {isa = PBXBuildFile; productRef = EEA604252830277000D79666 /* FoundationUtil */; };
 		EEA66E58284059EF0095FB9A /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA66E57284059EF0095FB9A /* TagList.swift */; };
+		EEA66E5E284075590095FB9A /* OSLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA66E5D284075590095FB9A /* OSLog.framework */; };
 		EEABDA022839F0B400C0F087 /* Effects in Frameworks */ = {isa = PBXBuildFile; productRef = EEABDA012839F0B400C0F087 /* Effects */; };
 		EEB8AD752833E19400C44C6F /* WaterfallGrid in Frameworks */ = {isa = PBXBuildFile; productRef = EEB8AD742833E19400C44C6F /* WaterfallGrid */; };
 		EEC184DD283FA13A000790E4 /* Local in Frameworks */ = {isa = PBXBuildFile; productRef = EEC184DC283FA13A000790E4 /* Local */; };
@@ -57,6 +58,7 @@
 		EEA6041C282FFEF700D79666 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
 		EEA60423283020C200D79666 /* ListCardGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCardGrid.swift; sourceTree = "<group>"; };
 		EEA66E57284059EF0095FB9A /* TagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
+		EEA66E5D284075590095FB9A /* OSLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSLog.framework; path = System/Library/Frameworks/OSLog.framework; sourceTree = SDKROOT; };
 		EEC184DB283F9A06000790E4 /* CombineCoreData */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CombineCoreData; path = ../../../../Documents/image/CombineCoreData; sourceTree = "<group>"; };
 		EEC953B3283E7CFF005861AA /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 		EED2E752283343E10040C83A /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEABDA022839F0B400C0F087 /* Effects in Frameworks */,
+				EEA66E5E284075590095FB9A /* OSLog.framework in Frameworks */,
 				EE5AAF9B283FA57600E8255C /* Swinject in Frameworks */,
 				EEA60417282EB4EE00D79666 /* UIUtil in Frameworks */,
 				EE5AAF98283FA56400E8255C /* ComposableArchitecture in Frameworks */,
@@ -175,6 +178,7 @@
 		EEA60415282EB4EE00D79666 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EEA66E5D284075590095FB9A /* OSLog.framework */,
 				EEA6041C282FFEF700D79666 /* Network.framework */,
 			);
 			name = Frameworks;

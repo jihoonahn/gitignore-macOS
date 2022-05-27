@@ -14,6 +14,9 @@ let package = Package(
             name: "FoundationUtil",
             targets: ["FoundationUtil"]),
         .library(
+            name: "OSLogUtil",
+            targets: ["OSLogUtil"]),
+        .library(
             name: "UIUtil",
             targets: ["UIUtil"]),
         .library(
@@ -25,6 +28,9 @@ let package = Package(
     targets: [
         .target(
             name: "gitignoreView",
+            dependencies: []),
+        .target(
+            name: "OSLogUtil",
             dependencies: []),
         .target(
             name: "FoundationUtil",

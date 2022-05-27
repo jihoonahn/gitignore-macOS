@@ -34,6 +34,12 @@ let listReducer = Reducer<
 >{ state ,action, environment in
     switch action{
     case .onAppear:
+        environment.locals().coreData.fetchPersons()
+            .sink(receiveCompletion: { error in
+                
+            }, receiveValue: {
+                
+            })
         return .none
     case .tagTotalHeightAction:
         return .none
