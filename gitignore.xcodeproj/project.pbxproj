@@ -10,6 +10,8 @@
 		EE5AAF98283FA56400E8255C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EE5AAF97283FA56400E8255C /* ComposableArchitecture */; };
 		EE5AAF9B283FA57600E8255C /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = EE5AAF9A283FA57600E8255C /* Swinject */; };
 		EE78FA0A282E37BF0013117A /* ListCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78FA09282E37BF0013117A /* ListCardView.swift */; };
+		EE841F6A28427ECA0070EAAC /* CombineRealm in Frameworks */ = {isa = PBXBuildFile; productRef = EE841F6928427ECA0070EAAC /* CombineRealm */; };
+		EE841F6D284283CA0070EAAC /* gitignoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE841F6C284283CA0070EAAC /* gitignoreModel.swift */; };
 		EEA34CC9283B73A700A00BED /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA34CC8283B73A700A00BED /* WebView.swift */; };
 		EEA34CCE283B9F7C00A00BED /* SearchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA34CCD283B9F7C00A00BED /* SearchList.swift */; };
 		EEA395D4283A418700A41CC4 /* RootFeacture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA395D3283A418700A41CC4 /* RootFeacture.swift */; };
@@ -48,6 +50,7 @@
 /* Begin PBXFileReference section */
 		EE74C70928396639001EF6E1 /* Effects */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Effects; sourceTree = "<group>"; };
 		EE78FA09282E37BF0013117A /* ListCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCardView.swift; sourceTree = "<group>"; };
+		EE841F6C284283CA0070EAAC /* gitignoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreModel.swift; sourceTree = "<group>"; };
 		EEA34CC8283B73A700A00BED /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		EEA34CCD283B9F7C00A00BED /* SearchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchList.swift; sourceTree = "<group>"; };
 		EEA395D3283A418700A41CC4 /* RootFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFeacture.swift; sourceTree = "<group>"; };
@@ -93,6 +96,7 @@
 				EEA395D7283A42BC00A41CC4 /* gitignoreView in Frameworks */,
 				EEB8AD752833E19400C44C6F /* WaterfallGrid in Frameworks */,
 				EEA604262830277000D79666 /* FoundationUtil in Frameworks */,
+				EE841F6A28427ECA0070EAAC /* CombineRealm in Frameworks */,
 				EEA66E60284075E50095FB9A /* OSLogUtil in Frameworks */,
 				EEA6041D282FFEF700D79666 /* Network.framework in Frameworks */,
 			);
@@ -117,6 +121,14 @@
 				EEDA85BE282B40700047F3AC /* gitignoreApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		EE841F6B284283BD0070EAAC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE841F6C284283CA0070EAAC /* gitignoreModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		EEA34CCA283B9DD600A00BED /* Textfield */ = {
@@ -298,6 +310,7 @@
 		EEDE5B48282B5EAF00C0ADBA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				EE841F6B284283BD0070EAAC /* Model */,
 				EE841F3E284241B40070EAAC /* App */,
 				EEA395D2283A417000A41CC4 /* Root */,
 				EEEBD266282C89CE00608EB6 /* Tabbar */,
@@ -405,6 +418,7 @@
 				EE5AAF97283FA56400E8255C /* ComposableArchitecture */,
 				EE5AAF9A283FA57600E8255C /* Swinject */,
 				EEA66E5F284075E50095FB9A /* OSLogUtil */,
+				EE841F6928427ECA0070EAAC /* CombineRealm */,
 			);
 			productName = gitignore;
 			productReference = EEDA85BB282B40700047F3AC /* gitignore.app */;
@@ -437,6 +451,7 @@
 			packageReferences = (
 				EE5AAF96283FA56400E8255C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 				EE5AAF99283FA57600E8255C /* XCRemoteSwiftPackageReference "Swinject" */,
+				EE841F6828427ECA0070EAAC /* XCRemoteSwiftPackageReference "CombineRealm" */,
 			);
 			productRefGroup = EEDA85BC282B40700047F3AC /* Products */;
 			projectDirPath = "";
@@ -470,6 +485,7 @@
 				EEDE5B87282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift in Sources */,
 				EE78FA0A282E37BF0013117A /* ListCardView.swift in Sources */,
 				EEDE5B6A282B9DD100C0ADBA /* TabbarView.swift in Sources */,
+				EE841F6D284283CA0070EAAC /* gitignoreModel.swift in Sources */,
 				EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */,
 				EEA395D4283A418700A41CC4 /* RootFeacture.swift in Sources */,
 				EEA3F66F283C4D88005D6A15 /* CreateButtonStyle.swift in Sources */,
@@ -622,6 +638,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = gitignore/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -640,7 +657,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = gitignore/Supporting/gitignore.entitlements;
+				CODE_SIGN_ENTITLEMENTS = gitignore/gitignoreRelease.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -650,6 +667,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = gitignore/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -703,6 +721,14 @@
 				kind = branch;
 			};
 		};
+		EE841F6828427ECA0070EAAC /* XCRemoteSwiftPackageReference "CombineRealm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineRealm.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -715,6 +741,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EE5AAF99283FA57600E8255C /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		EE841F6928427ECA0070EAAC /* CombineRealm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE841F6828427ECA0070EAAC /* XCRemoteSwiftPackageReference "CombineRealm" */;
+			productName = CombineRealm;
 		};
 		EEA395D6283A42BC00A41CC4 /* gitignoreView */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -25,7 +25,7 @@ public struct Log {
                 return categoryName
             }
         }
-        
+
         fileprivate var osLog: OSLog {
             switch self {
             case .debug:
@@ -40,7 +40,7 @@ public struct Log {
                 return OSLog.debug
             }
         }
-        
+
         fileprivate var osLogType: OSLogType {
             switch self {
             case .debug:
@@ -56,7 +56,7 @@ public struct Log {
             }
         }
     }
-    
+
     static private func log(_ message: Any, _ arguments: [Any], level: Level) {
         #if LOG
         if #available(iOS 14.0, *) {

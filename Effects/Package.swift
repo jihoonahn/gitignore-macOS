@@ -11,9 +11,6 @@ let package = Package(
         .library(
             name: "Effects",
             targets: ["Effects"]),
-        .library(
-            name: "Local",
-            targets: ["Local"]),
     ],
     dependencies: [
         .package(url: "https://github.com/pointfreeco/swift-composable-architecture", branch: "main"),
@@ -23,10 +20,6 @@ let package = Package(
             name: "Effects",
             dependencies: [
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
-            ]),
-        .target(
-            name: "Local",
-            dependencies: [
             ]),
     ]
 )
