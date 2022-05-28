@@ -17,7 +17,6 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/pointfreeco/swift-composable-architecture", branch: "main"),
-        .package(path: "../CombineCoreData"),
     ],
     targets: [
         .target(
@@ -28,7 +27,6 @@ let package = Package(
         .target(
             name: "Local",
             dependencies: [
-                .product(name: "CombineCoreData", package: "CombineCoreData")
             ]),
     ]
 )

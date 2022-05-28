@@ -10,10 +10,6 @@
 		EE5AAF98283FA56400E8255C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EE5AAF97283FA56400E8255C /* ComposableArchitecture */; };
 		EE5AAF9B283FA57600E8255C /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = EE5AAF9A283FA57600E8255C /* Swinject */; };
 		EE78FA0A282E37BF0013117A /* ListCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78FA09282E37BF0013117A /* ListCardView.swift */; };
-		EE841F59284271E40070EAAC /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE841F58284271E40070EAAC /* Test.swift */; };
-		EE841F5F2842723B0070EAAC /* GitignoreModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE841F5D2842723B0070EAAC /* GitignoreModel+CoreDataClass.swift */; };
-		EE841F602842723B0070EAAC /* GitignoreModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE841F5E2842723B0070EAAC /* GitignoreModel+CoreDataProperties.swift */; };
-		EE841F65284273390070EAAC /* CombineCoreData in Frameworks */ = {isa = PBXBuildFile; productRef = EE841F64284273390070EAAC /* CombineCoreData */; };
 		EEA34CC9283B73A700A00BED /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA34CC8283B73A700A00BED /* WebView.swift */; };
 		EEA34CCE283B9F7C00A00BED /* SearchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA34CCD283B9F7C00A00BED /* SearchList.swift */; };
 		EEA395D4283A418700A41CC4 /* RootFeacture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA395D3283A418700A41CC4 /* RootFeacture.swift */; };
@@ -52,9 +48,6 @@
 /* Begin PBXFileReference section */
 		EE74C70928396639001EF6E1 /* Effects */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Effects; sourceTree = "<group>"; };
 		EE78FA09282E37BF0013117A /* ListCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCardView.swift; sourceTree = "<group>"; };
-		EE841F58284271E40070EAAC /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
-		EE841F5D2842723B0070EAAC /* GitignoreModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GitignoreModel+CoreDataClass.swift"; sourceTree = "<group>"; };
-		EE841F5E2842723B0070EAAC /* GitignoreModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GitignoreModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		EEA34CC8283B73A700A00BED /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		EEA34CCD283B9F7C00A00BED /* SearchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchList.swift; sourceTree = "<group>"; };
 		EEA395D3283A418700A41CC4 /* RootFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFeacture.swift; sourceTree = "<group>"; };
@@ -68,7 +61,6 @@
 		EEA66E57284059EF0095FB9A /* TagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
 		EEA66E5D284075590095FB9A /* OSLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSLog.framework; path = System/Library/Frameworks/OSLog.framework; sourceTree = SDKROOT; };
 		EEA66E6228407A920095FB9A /* AppDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDI.swift; sourceTree = "<group>"; };
-		EEC184DB283F9A06000790E4 /* CombineCoreData */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CombineCoreData; path = ../../../../Documents/image/CombineCoreData; sourceTree = "<group>"; };
 		EEC953B3283E7CFF005861AA /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 		EED2E752283343E10040C83A /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		EEDA85BB282B40700047F3AC /* gitignore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gitignore.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,7 +85,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE841F65284273390070EAAC /* CombineCoreData in Frameworks */,
 				EEABDA022839F0B400C0F087 /* Effects in Frameworks */,
 				EEA66E5E284075590095FB9A /* OSLog.framework in Frameworks */,
 				EE5AAF9B283FA57600E8255C /* Swinject in Frameworks */,
@@ -126,14 +117,6 @@
 				EEDA85BE282B40700047F3AC /* gitignoreApp.swift */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		EE841F57284271DC0070EAAC /* Test */ = {
-			isa = PBXGroup;
-			children = (
-				EE841F58284271E40070EAAC /* Test.swift */,
-			);
-			path = Test;
 			sourceTree = "<group>";
 		};
 		EEA34CCA283B9DD600A00BED /* Textfield */ = {
@@ -256,9 +239,6 @@
 		EEDA85B2282B40700047F3AC = {
 			isa = PBXGroup;
 			children = (
-				EE841F5D2842723B0070EAAC /* GitignoreModel+CoreDataClass.swift */,
-				EE841F5E2842723B0070EAAC /* GitignoreModel+CoreDataProperties.swift */,
-				EEC184DB283F9A06000790E4 /* CombineCoreData */,
 				EE74C70928396639001EF6E1 /* Effects */,
 				EEA60414282EB3DA00D79666 /* Platform */,
 				EEDA85BD282B40700047F3AC /* gitignore */,
@@ -318,7 +298,6 @@
 		EEDE5B48282B5EAF00C0ADBA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				EE841F57284271DC0070EAAC /* Test */,
 				EE841F3E284241B40070EAAC /* App */,
 				EEA395D2283A417000A41CC4 /* Root */,
 				EEEBD266282C89CE00608EB6 /* Tabbar */,
@@ -426,7 +405,6 @@
 				EE5AAF97283FA56400E8255C /* ComposableArchitecture */,
 				EE5AAF9A283FA57600E8255C /* Swinject */,
 				EEA66E5F284075E50095FB9A /* OSLogUtil */,
-				EE841F64284273390070EAAC /* CombineCoreData */,
 			);
 			productName = gitignore;
 			productReference = EEDA85BB282B40700047F3AC /* gitignore.app */;
@@ -499,14 +477,11 @@
 				EEA34CCE283B9F7C00A00BED /* SearchList.swift in Sources */,
 				EEEBD25F282C86C700608EB6 /* IssueFeacture.swift in Sources */,
 				EEA66E6328407A920095FB9A /* AppDI.swift in Sources */,
-				EE841F602842723B0070EAAC /* GitignoreModel+CoreDataProperties.swift in Sources */,
 				EEEBD268282C8C6000608EB6 /* TabbarFeacture.swift in Sources */,
 				EEA34CC9283B73A700A00BED /* WebView.swift in Sources */,
 				EEA3F676283CFCB0005D6A15 /* TagListMain.swift in Sources */,
 				EEA3F66D283C4D03005D6A15 /* ToolBarButtonStyle.swift in Sources */,
 				EEDE5B7A282BA9F100C0ADBA /* IssueView.swift in Sources */,
-				EE841F5F2842723B0070EAAC /* GitignoreModel+CoreDataClass.swift in Sources */,
-				EE841F59284271E40070EAAC /* Test.swift in Sources */,
 				EEDE5B67282B990100C0ADBA /* TabButton.swift in Sources */,
 				EEA3F672283C5055005D6A15 /* TitleLogo.swift in Sources */,
 				EEA66E58284059EF0095FB9A /* TagList.swift in Sources */,
@@ -740,10 +715,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EE5AAF99283FA57600E8255C /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
-		};
-		EE841F64284273390070EAAC /* CombineCoreData */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = CombineCoreData;
 		};
 		EEA395D6283A42BC00A41CC4 /* gitignoreView */ = {
 			isa = XCSwiftPackageProductDependency;

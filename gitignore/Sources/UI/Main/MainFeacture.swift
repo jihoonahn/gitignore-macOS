@@ -32,15 +32,12 @@ enum MainAction{
 
 struct MainEnvironmnet{
     var effects : () -> ServiceEffectType
-    var locals : () -> ServiceDataType
     var mainQueue: () -> AnySchedulerOf<DispatchQueue>
     public init(
         effects: @escaping() -> ServiceEffectType,
-        locals : @escaping() -> ServiceDataType,
         mainQueue : @escaping() -> AnySchedulerOf<DispatchQueue>
     ){
         self.effects = effects
-        self.locals = locals
         self.mainQueue = mainQueue
     }
 }
@@ -123,20 +120,7 @@ let mainReducer = Reducer<
     case .savegitignoreDataLoaded(let result) :
         switch result{
         case .success(let result):
-            enviroment.locals().coreData.addList(
-                title: state.titleQuery,
-                tag: Array(state.userChooseTag),
-                gitignoreString: result)?
-            .sink { completion in
-                if case .failure(let error) = completion{
-                    print(error)
-                }
-            } receiveValue: { success in
-                if success{
-                    print(success)
-//                    state.addSheetStatus = !state.addSheetStatus
-                }
-            }.store(in: &bag)
+            
             return .none
         case .failure(let result):
             return.none
