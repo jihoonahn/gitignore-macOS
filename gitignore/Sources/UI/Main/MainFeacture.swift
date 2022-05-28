@@ -2,7 +2,6 @@ import ComposableArchitecture
 import Combine
 import Effects
 import SwiftUI
-import Local
 
 struct MainState: Equatable{
     var searchQuery = ""

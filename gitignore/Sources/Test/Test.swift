@@ -1,3 +1,19 @@
+public protocol ServiceDataType : AnyObject{
+    var coreData : CoreDatas {get}
+}
+public final class ServiceCoreData : ServiceDataType{
+    public lazy var coreData: CoreDatas = CoreDataService(data: self)
+    public init(){}
+}
+
+public class BaseCoreDataService  {
+    unowned let data : ServiceDataType
+    
+    init(data : ServiceDataType){
+        self.data = data
+    }
+}
+
 import Foundation
 import Combine
 import CombineCoreData

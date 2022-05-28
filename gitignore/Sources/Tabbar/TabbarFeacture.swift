@@ -1,6 +1,5 @@
 import ComposableArchitecture
 import Effects
-import Local
 
 struct TabBarState : Equatable{
     var selectedTab : String = "Home"
@@ -37,7 +36,7 @@ let tabBarReducer = Reducer<TabBarState, TabBarAction, tabBarEnvironmnet>.combin
         action: /TabBarAction.listAction,
         environment: {_ in
                 .init(
-                    locals: ServiceCoreData(),
+                    locals:{ ServiceCoreData()},
                     mainQueue: {.main}
                 )
         }

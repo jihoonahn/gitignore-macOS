@@ -1,7 +1,6 @@
 import ComposableArchitecture
 import Combine
 import CombineCoreData
-import Local
 import OSLogUtil
 
 struct ListState: Equatable{
@@ -19,10 +18,10 @@ enum ListAction{
 }
 
 struct ListEnvironmnet{
-    var locals : ServiceDataType
+    var locals : () -> ServiceDataType
     var mainQueue: () -> AnySchedulerOf<DispatchQueue>
     public init(
-        locals : ServiceDataType,
+        locals : @escaping() -> ServiceDataType,
         mainQueue : @escaping() -> AnySchedulerOf<DispatchQueue>
     ) {
         self.locals = locals
@@ -39,7 +38,7 @@ let listReducer = Reducer<
 
     switch action{
     case .onAppear:
-        environment.locals.coreData.fetchPersons()
+        environment.locals().coreData.fetchPersons()
             .sink(receiveCompletion: { error in
                 print(error)
             }, receiveValue: { result in
