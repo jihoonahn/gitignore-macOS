@@ -76,6 +76,7 @@
 		EEDE5B77282BA92500C0ADBA /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		EEDE5B79282BA9F100C0ADBA /* IssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueView.swift; sourceTree = "<group>"; };
 		EEDE5B86282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreTextfieldStyle.swift; sourceTree = "<group>"; };
+		EEE7A6A42844633B004228EE /* CombineCoreData */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CombineCoreData; sourceTree = "<group>"; };
 		EEEBD257282C7A7200608EB6 /* MainFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeacture.swift; sourceTree = "<group>"; };
 		EEEBD25C282C86BC00608EB6 /* ListFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFeacture.swift; sourceTree = "<group>"; };
 		EEEBD25E282C86C700608EB6 /* IssueFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueFeacture.swift; sourceTree = "<group>"; };
@@ -249,6 +250,7 @@
 		EEDA85B2282B40700047F3AC = {
 			isa = PBXGroup;
 			children = (
+				EEE7A6A42844633B004228EE /* CombineCoreData */,
 				EE74C70928396639001EF6E1 /* Effects */,
 				EEA60414282EB3DA00D79666 /* Platform */,
 				EEDA85BD282B40700047F3AC /* gitignore */,
