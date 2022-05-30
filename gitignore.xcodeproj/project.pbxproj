@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE09F07E28448752007B7CE5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE7A6B028447F6C004228EE /* Cocoa.framework */; };
+		EE09F07F28448752007B7CE5 /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE7A6B228447F6C004228EE /* XcodeKit.framework */; };
+		EE09F08228448752007B7CE5 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE09F08128448752007B7CE5 /* SourceEditorExtension.swift */; };
+		EE09F08428448752007B7CE5 /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE09F08328448752007B7CE5 /* SourceEditorCommand.swift */; };
+		EE09F08928448752007B7CE5 /* gitignore Editor.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EE09F07D28448752007B7CE5 /* gitignore Editor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EE5AAF98283FA56400E8255C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EE5AAF97283FA56400E8255C /* ComposableArchitecture */; };
 		EE5AAF9B283FA57600E8255C /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = EE5AAF9A283FA57600E8255C /* Swinject */; };
 		EEA34CCE283B9F7C00A00BED /* SearchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA34CCD283B9F7C00A00BED /* SearchList.swift */; };
@@ -29,21 +34,16 @@
 		EEDA85C6282B40720047F3AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C5282B40720047F3AC /* Preview Assets.xcassets */; };
 		EEDE5B76282BA8EC00C0ADBA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B75282BA8EC00C0ADBA /* MainView.swift */; };
 		EEDE5B87282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B86282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift */; };
-		EEE7A6B128447F6C004228EE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE7A6B028447F6C004228EE /* Cocoa.framework */; };
-		EEE7A6B328447F6C004228EE /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE7A6B228447F6C004228EE /* XcodeKit.framework */; };
-		EEE7A6B628447F6C004228EE /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE7A6B528447F6C004228EE /* SourceEditorExtension.swift */; };
-		EEE7A6B828447F6C004228EE /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE7A6B728447F6C004228EE /* SourceEditorCommand.swift */; };
-		EEE7A6BD28447F6C004228EE /* ignore.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EEE7A6AF28447F6C004228EE /* ignore.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EEEBD258282C7A7200608EB6 /* MainFeacture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEBD257282C7A7200608EB6 /* MainFeacture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		EEE7A6BB28447F6C004228EE /* PBXContainerItemProxy */ = {
+		EE09F08728448752007B7CE5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EEDA85B3282B40700047F3AC /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EEE7A6AE28447F6C004228EE;
-			remoteInfo = ignore;
+			remoteGlobalIDString = EE09F07C28448752007B7CE5;
+			remoteInfo = "gitignore Editor";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -54,7 +54,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				EEE7A6BD28447F6C004228EE /* ignore.appex in Embed App Extensions */,
+				EE09F08928448752007B7CE5 /* gitignore Editor.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +62,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EE09F07D28448752007B7CE5 /* gitignore Editor.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "gitignore Editor.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE09F08128448752007B7CE5 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		EE09F08328448752007B7CE5 /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
+		EE09F08528448752007B7CE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE09F08628448752007B7CE5 /* gitignore_Editor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = gitignore_Editor.entitlements; sourceTree = "<group>"; };
 		EE74C70928396639001EF6E1 /* Effects */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Effects; sourceTree = "<group>"; };
 		EEA34CCD283B9F7C00A00BED /* SearchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchList.swift; sourceTree = "<group>"; };
 		EEA395D3283A418700A41CC4 /* RootFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFeacture.swift; sourceTree = "<group>"; };
@@ -81,17 +86,21 @@
 		EEDA85C7282B40720047F3AC /* gitignore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = gitignore.entitlements; path = gitignore/Supporting/gitignore.entitlements; sourceTree = SOURCE_ROOT; };
 		EEDE5B75282BA8EC00C0ADBA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		EEDE5B86282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreTextfieldStyle.swift; sourceTree = "<group>"; };
-		EEE7A6AF28447F6C004228EE /* ignore.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ignore.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE7A6B028447F6C004228EE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		EEE7A6B228447F6C004228EE /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
-		EEE7A6B528447F6C004228EE /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
-		EEE7A6B728447F6C004228EE /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
-		EEE7A6B928447F6C004228EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EEE7A6BA28447F6C004228EE /* ignore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ignore.entitlements; sourceTree = "<group>"; };
 		EEEBD257282C7A7200608EB6 /* MainFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeacture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EE09F07A28448752007B7CE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE09F07E28448752007B7CE5 /* Cocoa.framework in Frameworks */,
+				EE09F07F28448752007B7CE5 /* XcodeKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EEDA85B8282B40700047F3AC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -108,18 +117,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EEE7A6AC28447F6C004228EE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EEE7A6B128447F6C004228EE /* Cocoa.framework in Frameworks */,
-				EEE7A6B328447F6C004228EE /* XcodeKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE09F08028448752007B7CE5 /* gitignore Editor */ = {
+			isa = PBXGroup;
+			children = (
+				EE09F08128448752007B7CE5 /* SourceEditorExtension.swift */,
+				EE09F08328448752007B7CE5 /* SourceEditorCommand.swift */,
+				EE09F08528448752007B7CE5 /* Info.plist */,
+				EE09F08628448752007B7CE5 /* gitignore_Editor.entitlements */,
+			);
+			path = "gitignore Editor";
+			sourceTree = "<group>";
+		};
 		EE841F3E284241B40070EAAC /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,7 +224,7 @@
 				EE74C70928396639001EF6E1 /* Effects */,
 				EEA60414282EB3DA00D79666 /* Platform */,
 				EEDA85BD282B40700047F3AC /* gitignore */,
-				EEE7A6B428447F6C004228EE /* ignore */,
+				EE09F08028448752007B7CE5 /* gitignore Editor */,
 				EEDA85BC282B40700047F3AC /* Products */,
 				EEA60415282EB4EE00D79666 /* Frameworks */,
 			);
@@ -223,7 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				EEDA85BB282B40700047F3AC /* gitignore.app */,
-				EEE7A6AF28447F6C004228EE /* ignore.appex */,
+				EE09F07D28448752007B7CE5 /* gitignore Editor.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -292,17 +303,6 @@
 			path = Supporting;
 			sourceTree = "<group>";
 		};
-		EEE7A6B428447F6C004228EE /* ignore */ = {
-			isa = PBXGroup;
-			children = (
-				EEE7A6B528447F6C004228EE /* SourceEditorExtension.swift */,
-				EEE7A6B728447F6C004228EE /* SourceEditorCommand.swift */,
-				EEE7A6B928447F6C004228EE /* Info.plist */,
-				EEE7A6BA28447F6C004228EE /* ignore.entitlements */,
-			);
-			path = ignore;
-			sourceTree = "<group>";
-		};
 		EEEBD254282C7A3400608EB6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +317,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EE09F07C28448752007B7CE5 /* gitignore Editor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE09F08A28448752007B7CE5 /* Build configuration list for PBXNativeTarget "gitignore Editor" */;
+			buildPhases = (
+				EE09F07928448752007B7CE5 /* Sources */,
+				EE09F07A28448752007B7CE5 /* Frameworks */,
+				EE09F07B28448752007B7CE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "gitignore Editor";
+			productName = "gitignore Editor";
+			productReference = EE09F07D28448752007B7CE5 /* gitignore Editor.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
 		EEDA85BA282B40700047F3AC /* gitignore */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EEDA85CA282B40720047F3AC /* Build configuration list for PBXNativeTarget "gitignore" */;
@@ -329,7 +346,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				EEE7A6BC28447F6C004228EE /* PBXTargetDependency */,
+				EE09F08828448752007B7CE5 /* PBXTargetDependency */,
 			);
 			name = gitignore;
 			packageProductDependencies = (
@@ -345,23 +362,6 @@
 			productReference = EEDA85BB282B40700047F3AC /* gitignore.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EEE7A6AE28447F6C004228EE /* ignore */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EEE7A6BE28447F6C004228EE /* Build configuration list for PBXNativeTarget "ignore" */;
-			buildPhases = (
-				EEE7A6AB28447F6C004228EE /* Sources */,
-				EEE7A6AC28447F6C004228EE /* Frameworks */,
-				EEE7A6AD28447F6C004228EE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ignore;
-			productName = ignore;
-			productReference = EEE7A6AF28447F6C004228EE /* ignore.appex */;
-			productType = "com.apple.product-type.xcode-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -372,11 +372,11 @@
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					EE09F07C28448752007B7CE5 = {
+						CreatedOnToolsVersion = 13.4;
+					};
 					EEDA85BA282B40700047F3AC = {
 						CreatedOnToolsVersion = 13.3.1;
-					};
-					EEE7A6AE28447F6C004228EE = {
-						CreatedOnToolsVersion = 13.4;
 					};
 				};
 			};
@@ -398,12 +398,19 @@
 			projectRoot = "";
 			targets = (
 				EEDA85BA282B40700047F3AC /* gitignore */,
-				EEE7A6AE28447F6C004228EE /* ignore */,
+				EE09F07C28448752007B7CE5 /* gitignore Editor */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EE09F07B28448752007B7CE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EEDA85B9282B40700047F3AC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -413,16 +420,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EEE7A6AD28447F6C004228EE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EE09F07928448752007B7CE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE09F08228448752007B7CE5 /* SourceEditorExtension.swift in Sources */,
+				EE09F08428448752007B7CE5 /* SourceEditorCommand.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EEDA85B7282B40700047F3AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -442,26 +451,73 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EEE7A6AB28447F6C004228EE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EEE7A6B628447F6C004228EE /* SourceEditorExtension.swift in Sources */,
-				EEE7A6B828447F6C004228EE /* SourceEditorCommand.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		EEE7A6BC28447F6C004228EE /* PBXTargetDependency */ = {
+		EE09F08828448752007B7CE5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EEE7A6AE28447F6C004228EE /* ignore */;
-			targetProxy = EEE7A6BB28447F6C004228EE /* PBXContainerItemProxy */;
+			target = EE09F07C28448752007B7CE5 /* gitignore Editor */;
+			targetProxy = EE09F08728448752007B7CE5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		EE09F08B28448752007B7CE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "gitignore Editor/gitignore_Editor.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q2JZBR7H7Y;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "gitignore Editor/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "gitignore Editor";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "JiHoonAHN.gitignore.gitignore-Editor";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		EE09F08C28448752007B7CE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "gitignore Editor/gitignore_Editor.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q2JZBR7H7Y;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "gitignore Editor/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "gitignore Editor";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "JiHoonAHN.gitignore.gitignore-Editor";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		EEDA85C8282B40720047F3AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -637,65 +693,18 @@
 			};
 			name = Release;
 		};
-		EEE7A6BF28447F6C004228EE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = ignore/ignore.entitlements;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q2JZBR7H7Y;
-				ENABLE_HARDENED_RUNTIME = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ignore/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = ignore;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@executable_path/../../../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = JiHoonAHN.gitignore.ignore;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		EEE7A6C028447F6C004228EE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = ignore/ignore.entitlements;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q2JZBR7H7Y;
-				ENABLE_HARDENED_RUNTIME = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ignore/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = ignore;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@executable_path/../../../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = JiHoonAHN.gitignore.ignore;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EE09F08A28448752007B7CE5 /* Build configuration list for PBXNativeTarget "gitignore Editor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE09F08B28448752007B7CE5 /* Debug */,
+				EE09F08C28448752007B7CE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EEDA85B6282B40700047F3AC /* Build configuration list for PBXProject "gitignore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -710,15 +719,6 @@
 			buildConfigurations = (
 				EEDA85CB282B40720047F3AC /* Debug */,
 				EEDA85CC282B40720047F3AC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EEE7A6BE28447F6C004228EE /* Build configuration list for PBXNativeTarget "ignore" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EEE7A6BF28447F6C004228EE /* Debug */,
-				EEE7A6C028447F6C004228EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
