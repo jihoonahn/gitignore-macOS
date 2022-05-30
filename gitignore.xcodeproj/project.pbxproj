@@ -32,6 +32,19 @@
 		EEEBD258282C7A7200608EB6 /* MainFeacture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEBD257282C7A7200608EB6 /* MainFeacture.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		EEE7A6C128447F6C004228EE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		EE74C70928396639001EF6E1 /* Effects */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Effects; sourceTree = "<group>"; };
 		EEA34CCD283B9F7C00A00BED /* SearchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchList.swift; sourceTree = "<group>"; };
@@ -52,6 +65,8 @@
 		EEDA85C7282B40720047F3AC /* gitignore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = gitignore.entitlements; path = gitignore/Supporting/gitignore.entitlements; sourceTree = SOURCE_ROOT; };
 		EEDE5B75282BA8EC00C0ADBA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		EEDE5B86282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreTextfieldStyle.swift; sourceTree = "<group>"; };
+		EEE7A6B028447F6C004228EE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		EEE7A6B228447F6C004228EE /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
 		EEEBD257282C7A7200608EB6 /* MainFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeacture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +154,8 @@
 			children = (
 				EEA66E5D284075590095FB9A /* OSLog.framework */,
 				EEA6041C282FFEF700D79666 /* Network.framework */,
+				EEE7A6B028447F6C004228EE /* Cocoa.framework */,
+				EEE7A6B228447F6C004228EE /* XcodeKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -264,6 +281,7 @@
 				EEDA85B7282B40700047F3AC /* Sources */,
 				EEDA85B8282B40700047F3AC /* Frameworks */,
 				EEDA85B9282B40700047F3AC /* Resources */,
+				EEE7A6C128447F6C004228EE /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -290,7 +308,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1330;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					EEDA85BA282B40700047F3AC = {
@@ -471,6 +489,7 @@
 		EEDA85CB282B40720047F3AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = gitignore/Supporting/gitignore.entitlements;
@@ -501,6 +520,7 @@
 		EEDA85CC282B40720047F3AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = gitignore/Supporting/gitignore.entitlements;
