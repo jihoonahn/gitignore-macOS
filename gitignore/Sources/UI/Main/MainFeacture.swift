@@ -8,7 +8,6 @@ struct MainState: Equatable{
     var titleQuery = ""
     var totalHeight : CGFloat = .zero
     var liststatus : Bool = true
-    var addSheetStatus : Bool = false
     var inquiryListString : [String] = .init()
     var gitignoreListString : [String] = .init()
     var userChooseTag : Set<String> = .init()
@@ -18,8 +17,6 @@ enum MainAction{
     case onAppear
     case tagTotalHeightAction
     case titleQueryChanged(String) // Sheet의 title Query
-    case addSheetButtonDidTap // addSheetButton 눌렀을때
-    case saveGitignoreButtonDidTap
     case searchQueryChanged(String) // textfield action
     case tapTagChoose(Int) //search bar 에서 tag 추가
     case createGitignore // gitignore 데이터 Load
@@ -27,7 +24,6 @@ enum MainAction{
     
     case dataLoaded(Result<String, ApiError>)
     case gitignoreDataLoaded(Result<String, ApiError>)
-    case savegitignoreDataLoaded(Result<String, ApiError>)
 }
 
 struct MainEnvironmnet{
@@ -87,16 +83,7 @@ let mainReducer = Reducer<
         state.userChooseTag.remove(Array(state.userChooseTag)[index])
         return .none
         
-    case .addSheetButtonDidTap:
-        state.addSheetStatus = !state.addSheetStatus
-        return .none
-        
-    case .saveGitignoreButtonDidTap:
-        guard !state.userChooseTag.isEmpty else {return .none}
-        return enviroment.effects().effect.makeGitignoreFileAPI(tag: Array(state.userChooseTag))
-            .receive(on: enviroment.mainQueue())
-            .catchToEffect(MainAction.savegitignoreDataLoaded)
-        
+
         //MARK: - Data Load
     case .dataLoaded(let result):
         switch result{
@@ -112,14 +99,6 @@ let mainReducer = Reducer<
         case .success(let result):
             guard let url = NSSavePanel().showSavePanel() else {return .none}
             try? result.write(to: url, atomically: true, encoding: .utf8)
-            return .none
-        case .failure(let result):
-            return.none
-        }
-        
-    case .savegitignoreDataLoaded(let result) :
-        switch result{
-        case .success(let result):
             return .none
         case .failure(let result):
             return.none

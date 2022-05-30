@@ -9,10 +9,13 @@ struct RootView: View {
     )
     
     var body: some View {
-        SwitchStore(self.store){
-            CaseLet(state: /RootState.tabBar, action: RootAction.tabBarAction) { store in
-                TabbarView(store: store)
-            }
+        WithViewStore(store.self){ viewStore in
+            MainView(store: self.store.scope(
+                state: \.mainState,
+                action: RootAction.mainAction
+            ))
+            .ignoresSafeArea(.all, edges: .all)
+            .frame( minWidth: 700,minHeight: 500)
         }
     }
 }
