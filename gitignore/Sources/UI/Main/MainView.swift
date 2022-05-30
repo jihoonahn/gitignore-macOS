@@ -1,14 +1,6 @@
-//
-//  MainView.swift
-//  gitignore
-//
-//  Created by Ji-hoon Ahn on 2022/05/11.
-//
-
 import SwiftUI
 import ComposableArchitecture
 import UIUtil
-import TagListView
 import gitignoreView
 
 //MARK: - MainView
@@ -16,24 +8,22 @@ struct MainView: View {
     
     let store : Store<MainState,MainAction>
     
-    struct ViewState: Equatable{
-        var searchQuery = ""
-        var liststatus : Bool = true
-        var inquiryListString : [String] = .init()
-        var gitignoreListString : [String] = .init()
-        var userChooseTag : Set<String> = .init()
-        
-        init(state : MainState){
-            self.searchQuery = state.searchQuery
-            self.liststatus = state.liststatus
-            self.inquiryListString = state.inquiryListString
-            self.gitignoreListString = state.gitignoreListString
-            self.userChooseTag = state.userChooseTag
-        }
-    }
-    
     public init(store: Store<MainState, MainAction>) {
         self.store = store
+    }
+    
+    struct ViewState : Equatable{
+        var searchQuery : String
+        var addSheetStatus : Bool
+        var liststatus : Bool
+        var userChooseTag : Set<String>
+        
+        init(state : MainState){
+            searchQuery = state.searchQuery
+            addSheetStatus = state.addSheetStatus
+            liststatus = state.liststatus
+            userChooseTag = state.userChooseTag
+        }
     }
     
     var body: some View {
@@ -45,10 +35,14 @@ struct MainView: View {
             VStack{
                 HStack{
                     Spacer()
-                    Button(action: {print("add")}, label: {
+                    Button(action: {viewStore.send(.addSheetButtonDidTap)}, label: {
                         Image(systemName: "plus")
                             .font(.title2)
                     })
+                    .sheet(isPresented: viewStore.binding(
+                        get: \.addSheetStatus,send: MainAction.addSheetButtonDidTap)){
+                            SheetView(store: store)
+                    }
                     .buttonStyle(ToolBarButtonStyle())
                 }
                 .padding()
@@ -65,23 +59,9 @@ struct MainView: View {
                             }
                         )
                         .textFieldStyle(gitignoreTextfieldStyle())
-                        .overlay(alignment: .topLeading){
-                            VStack{
-                                Spacer(minLength: 50)
-                                TagView(tags: Array(viewStore.userChooseTag), isEnabled: true)
-                                    .frame(width: 400)
-                                    .fixedSize(horizontal: false, vertical: true)
-                            }
-                        }
-                        .overlay(alignment: .topLeading) {
-                            VStack{
-                                Spacer(minLength: 50)
-                                if !viewStore.liststatus{
-                                    SearchList(list: viewStore.inquiryListString)
-                                }
-                            }
-                        }
-                        Button(action: { print("생성")}, label: {
+                        Button(action: {
+                            viewStore.send(.createGitignore)
+                        }, label: {
                             Text("생성")
                                 .foregroundColor(.white)
                                 .font(.system(size: 12, weight: .regular))
@@ -89,6 +69,17 @@ struct MainView: View {
                         .buttonStyle(CreateButtonStyle())
                     }
                     .padding(.top,30)
+                    TagMainView(store: store)
+                        .frame(width: 360)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .overlay(alignment: .topLeading) {
+                            VStack{
+                                if !viewStore.liststatus{
+                                    SearchList(store: store)
+                                        .frame(width: 300, height: 100 )
+                                }
+                            }
+                        }
                 }
                 Spacer()
             }.onAppear {

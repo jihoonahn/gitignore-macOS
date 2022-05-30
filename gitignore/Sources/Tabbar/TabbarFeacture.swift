@@ -1,20 +1,16 @@
-//
-//  TabBarFeacture.swift
-//  gitignore
-//
-//  Created by Ji-hoon Ahn on 2022/05/12.
-//
-
 import ComposableArchitecture
 import Effects
 
 struct TabBarState : Equatable{
+    var selectedTab : String = "Home"
+    
     var mainState = MainState()
     var listState = ListState()
     var issueState = IssueState()
 }
 
 enum TabBarAction{
+    case selectTabBarButton(String)
     case mainAction(MainAction)
     case listAction(ListAction)
     case issueAction(IssueAction)
@@ -22,15 +18,15 @@ enum TabBarAction{
 
 struct tabBarEnvironmnet{}
 
-let tabBarReducer = Reducer<TabBarState,TabBarAction,tabBarEnvironmnet>.combine(
+let tabBarReducer = Reducer<TabBarState, TabBarAction, tabBarEnvironmnet>.combine(
     
     mainReducer.pullback(
         state:\.mainState,
         action: /TabBarAction.mainAction,
         environment: {_ in
                 .init(
-                    request: {EffectsImpl().searchGitignoreMenuAPI()},
-                    mainQueue: { .main}
+                    effects: { ServiceEffect()},
+                    mainQueue: {.main}
                 )
         }
     ),
@@ -38,7 +34,9 @@ let tabBarReducer = Reducer<TabBarState,TabBarAction,tabBarEnvironmnet>.combine(
         state:\.listState,
         action: /TabBarAction.listAction,
         environment: {_ in
-                .init()
+                .init(
+                    mainQueue: {.main}
+                )
         }
     ),
     issueReducer.pullback(
@@ -50,7 +48,10 @@ let tabBarReducer = Reducer<TabBarState,TabBarAction,tabBarEnvironmnet>.combine(
     ),
     Reducer{ state, action ,_ in
         switch action{
-        default:
+        case .selectTabBarButton(let title):
+            state.selectedTab = title
+            return .none
+        default :
             return .none
         }
     }

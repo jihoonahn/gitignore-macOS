@@ -1,43 +1,45 @@
-//
-//  SearchList.swift
-//  gitignore
-//
-//  Created by Ji-hoon Ahn on 2022/05/23.
-//
-
 import SwiftUI
 import ComposableArchitecture
 import gitignoreView
+import UIUtil
 
 struct SearchList: View {
     
-    var list : [String]
+    private var store : Store<MainState, MainAction>
+    
+    init(store : Store<MainState, MainAction>){
+        self.store = store
+    }
+    
+    struct ViewState : Equatable{
+        var inquiryListString : [String]
+        
+        init(state : MainState){
+            inquiryListString = state.inquiryListString
+        }
+    }
     
     var body: some View {
-        ScrollView{
-            VStack{
-                ForEach(0..<list.count, id: \.self) { index  in
-                    if !list.isEmpty{
-                        Text(list[index])
-                            .frame(maxWidth : .infinity, minHeight: 40 ,alignment: .leading)
-                            .background(.background)
-                            .font(.title3)
-                            .onTapGesture {
-                                print( list[index])
-                            }
+        WithViewStore(self.store.scope(state: ViewState.init)){ viewStore in
+            ScrollView{
+                VStack{
+                    ForEach(0..<viewStore.inquiryListString.count, id: \.self) { index  in
+                        if !viewStore.inquiryListString.isEmpty{
+                            Text(viewStore.inquiryListString[index])
+                                .frame(maxWidth : .infinity, minHeight: 40 ,alignment: .leading)
+                                .background(Color.searchBarColor)
+                                .font(.title3)
+                                .onTapGesture {
+                                    viewStore.send(.tapTagChoose(index))
+                                }
+                        }
                     }
                 }
+                .padding([.all], 8)
             }
-            .padding([.top,.leading,.bottom], 5)
+            .background(Color.searchBarColor)
+            .cornerRadius(20)
         }
-        .background(.background)
-        .cornerRadius(20)
-        .frame(width: 300, height: 200)
     }
 }
 
-struct SearchList_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchList(list: ["adobe","ai"])
-    }
-}

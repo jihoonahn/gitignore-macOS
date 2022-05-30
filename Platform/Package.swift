@@ -14,20 +14,23 @@ let package = Package(
             name: "FoundationUtil",
             targets: ["FoundationUtil"]),
         .library(
+            name: "OSLogUtil",
+            targets: ["OSLogUtil"]),
+        .library(
             name: "UIUtil",
             targets: ["UIUtil"]),
         .library(
             name: "WaterfallGrid",
             targets: ["WaterfallGrid"]),
-        .library(
-            name: "TagListView",
-            targets: ["TagListView"])
     ],
     dependencies: [
     ],
     targets: [
         .target(
             name: "gitignoreView",
+            dependencies: []),
+        .target(
+            name: "OSLogUtil",
             dependencies: []),
         .target(
             name: "FoundationUtil",
@@ -38,10 +41,5 @@ let package = Package(
         .target(
             name: "WaterfallGrid",
             dependencies: []),
-        .target(
-            name: "TagListView",
-            dependencies: [
-                "FoundationUtil"
-            ]),
     ]
 )
