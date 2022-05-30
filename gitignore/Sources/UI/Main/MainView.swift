@@ -14,13 +14,11 @@ struct MainView: View {
     
     struct ViewState : Equatable{
         var searchQuery : String
-        var addSheetStatus : Bool
         var liststatus : Bool
         var userChooseTag : Set<String>
         
         init(state : MainState){
             searchQuery = state.searchQuery
-            addSheetStatus = state.addSheetStatus
             liststatus = state.liststatus
             userChooseTag = state.userChooseTag
         }
