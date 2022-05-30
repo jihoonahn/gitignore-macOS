@@ -2,7 +2,6 @@ import ComposableArchitecture
 import Combine
 import Effects
 import SwiftUI
-import RealmSwift
 
 struct MainState: Equatable{
     var searchQuery = ""
@@ -121,7 +120,6 @@ let mainReducer = Reducer<
     case .savegitignoreDataLoaded(let result) :
         switch result{
         case .success(let result):
-            print(Realm.Configuration.defaultConfiguration.fileURL!)
             return .none
         case .failure(let result):
             return.none

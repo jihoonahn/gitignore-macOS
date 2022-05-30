@@ -1,8 +1,6 @@
 import ComposableArchitecture
 import Combine
-import CombineRealm
 import OSLogUtil
-import RealmSwift
 
 struct ListState: Equatable{
     var totalHeight : CGFloat = .zero
@@ -32,8 +30,6 @@ let listReducer = Reducer<
     ListAction,
     ListEnvironmnet
 >{ state ,action, environment in
-    let realm = try! Realm()
-
     switch action{
     case .onAppear:
         

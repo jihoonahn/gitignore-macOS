@@ -10,7 +10,6 @@
 		EE5AAF98283FA56400E8255C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EE5AAF97283FA56400E8255C /* ComposableArchitecture */; };
 		EE5AAF9B283FA57600E8255C /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = EE5AAF9A283FA57600E8255C /* Swinject */; };
 		EE78FA0A282E37BF0013117A /* ListCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78FA09282E37BF0013117A /* ListCardView.swift */; };
-		EE841F6D284283CA0070EAAC /* gitignoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE841F6C284283CA0070EAAC /* gitignoreModel.swift */; };
 		EEA34CC9283B73A700A00BED /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA34CC8283B73A700A00BED /* WebView.swift */; };
 		EEA34CCE283B9F7C00A00BED /* SearchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA34CCD283B9F7C00A00BED /* SearchList.swift */; };
 		EEA395D4283A418700A41CC4 /* RootFeacture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA395D3283A418700A41CC4 /* RootFeacture.swift */; };
@@ -49,7 +48,6 @@
 /* Begin PBXFileReference section */
 		EE74C70928396639001EF6E1 /* Effects */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Effects; sourceTree = "<group>"; };
 		EE78FA09282E37BF0013117A /* ListCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCardView.swift; sourceTree = "<group>"; };
-		EE841F6C284283CA0070EAAC /* gitignoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreModel.swift; sourceTree = "<group>"; };
 		EEA34CC8283B73A700A00BED /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		EEA34CCD283B9F7C00A00BED /* SearchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchList.swift; sourceTree = "<group>"; };
 		EEA395D3283A418700A41CC4 /* RootFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFeacture.swift; sourceTree = "<group>"; };
@@ -120,14 +118,6 @@
 				EEDA85BE282B40700047F3AC /* gitignoreApp.swift */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		EE841F6B284283BD0070EAAC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				EE841F6C284283CA0070EAAC /* gitignoreModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		EEA34CCA283B9DD600A00BED /* Textfield */ = {
@@ -310,7 +300,6 @@
 		EEDE5B48282B5EAF00C0ADBA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				EE841F6B284283BD0070EAAC /* Model */,
 				EE841F3E284241B40070EAAC /* App */,
 				EEA395D2283A417000A41CC4 /* Root */,
 				EEEBD266282C89CE00608EB6 /* Tabbar */,
@@ -483,7 +472,6 @@
 				EEDE5B87282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift in Sources */,
 				EE78FA0A282E37BF0013117A /* ListCardView.swift in Sources */,
 				EEDE5B6A282B9DD100C0ADBA /* TabbarView.swift in Sources */,
-				EE841F6D284283CA0070EAAC /* gitignoreModel.swift in Sources */,
 				EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */,
 				EEA395D4283A418700A41CC4 /* RootFeacture.swift in Sources */,
 				EEA3F66F283C4D88005D6A15 /* CreateButtonStyle.swift in Sources */,
