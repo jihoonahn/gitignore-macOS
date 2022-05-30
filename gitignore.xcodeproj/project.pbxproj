@@ -29,8 +29,37 @@
 		EEDA85C6282B40720047F3AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C5282B40720047F3AC /* Preview Assets.xcassets */; };
 		EEDE5B76282BA8EC00C0ADBA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B75282BA8EC00C0ADBA /* MainView.swift */; };
 		EEDE5B87282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B86282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift */; };
+		EEE7A6B128447F6C004228EE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE7A6B028447F6C004228EE /* Cocoa.framework */; };
+		EEE7A6B328447F6C004228EE /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE7A6B228447F6C004228EE /* XcodeKit.framework */; };
+		EEE7A6B628447F6C004228EE /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE7A6B528447F6C004228EE /* SourceEditorExtension.swift */; };
+		EEE7A6B828447F6C004228EE /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE7A6B728447F6C004228EE /* SourceEditorCommand.swift */; };
+		EEE7A6BD28447F6C004228EE /* ignore.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EEE7A6AF28447F6C004228EE /* ignore.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EEEBD258282C7A7200608EB6 /* MainFeacture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEBD257282C7A7200608EB6 /* MainFeacture.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EEE7A6BB28447F6C004228EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEDA85B3282B40700047F3AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEE7A6AE28447F6C004228EE;
+			remoteInfo = ignore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EEE7A6C128447F6C004228EE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EEE7A6BD28447F6C004228EE /* ignore.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EE74C70928396639001EF6E1 /* Effects */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Effects; sourceTree = "<group>"; };
@@ -52,6 +81,13 @@
 		EEDA85C7282B40720047F3AC /* gitignore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = gitignore.entitlements; path = gitignore/Supporting/gitignore.entitlements; sourceTree = SOURCE_ROOT; };
 		EEDE5B75282BA8EC00C0ADBA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		EEDE5B86282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreTextfieldStyle.swift; sourceTree = "<group>"; };
+		EEE7A6AF28447F6C004228EE /* ignore.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ignore.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEE7A6B028447F6C004228EE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		EEE7A6B228447F6C004228EE /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
+		EEE7A6B528447F6C004228EE /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		EEE7A6B728447F6C004228EE /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
+		EEE7A6B928447F6C004228EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEE7A6BA28447F6C004228EE /* ignore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ignore.entitlements; sourceTree = "<group>"; };
 		EEEBD257282C7A7200608EB6 /* MainFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeacture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +105,15 @@
 				EEA604262830277000D79666 /* FoundationUtil in Frameworks */,
 				EEA66E60284075E50095FB9A /* OSLogUtil in Frameworks */,
 				EEA6041D282FFEF700D79666 /* Network.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEE7A6AC28447F6C004228EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE7A6B128447F6C004228EE /* Cocoa.framework in Frameworks */,
+				EEE7A6B328447F6C004228EE /* XcodeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +184,8 @@
 			children = (
 				EEA66E5D284075590095FB9A /* OSLog.framework */,
 				EEA6041C282FFEF700D79666 /* Network.framework */,
+				EEE7A6B028447F6C004228EE /* Cocoa.framework */,
+				EEE7A6B228447F6C004228EE /* XcodeKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -166,6 +213,7 @@
 				EE74C70928396639001EF6E1 /* Effects */,
 				EEA60414282EB3DA00D79666 /* Platform */,
 				EEDA85BD282B40700047F3AC /* gitignore */,
+				EEE7A6B428447F6C004228EE /* ignore */,
 				EEDA85BC282B40700047F3AC /* Products */,
 				EEA60415282EB4EE00D79666 /* Frameworks */,
 			);
@@ -175,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				EEDA85BB282B40700047F3AC /* gitignore.app */,
+				EEE7A6AF28447F6C004228EE /* ignore.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -243,6 +292,17 @@
 			path = Supporting;
 			sourceTree = "<group>";
 		};
+		EEE7A6B428447F6C004228EE /* ignore */ = {
+			isa = PBXGroup;
+			children = (
+				EEE7A6B528447F6C004228EE /* SourceEditorExtension.swift */,
+				EEE7A6B728447F6C004228EE /* SourceEditorCommand.swift */,
+				EEE7A6B928447F6C004228EE /* Info.plist */,
+				EEE7A6BA28447F6C004228EE /* ignore.entitlements */,
+			);
+			path = ignore;
+			sourceTree = "<group>";
+		};
 		EEEBD254282C7A3400608EB6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,10 +324,12 @@
 				EEDA85B7282B40700047F3AC /* Sources */,
 				EEDA85B8282B40700047F3AC /* Frameworks */,
 				EEDA85B9282B40700047F3AC /* Resources */,
+				EEE7A6C128447F6C004228EE /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EEE7A6BC28447F6C004228EE /* PBXTargetDependency */,
 			);
 			name = gitignore;
 			packageProductDependencies = (
@@ -283,6 +345,23 @@
 			productReference = EEDA85BB282B40700047F3AC /* gitignore.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EEE7A6AE28447F6C004228EE /* ignore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEE7A6BE28447F6C004228EE /* Build configuration list for PBXNativeTarget "ignore" */;
+			buildPhases = (
+				EEE7A6AB28447F6C004228EE /* Sources */,
+				EEE7A6AC28447F6C004228EE /* Frameworks */,
+				EEE7A6AD28447F6C004228EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ignore;
+			productName = ignore;
+			productReference = EEE7A6AF28447F6C004228EE /* ignore.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -290,11 +369,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1330;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					EEDA85BA282B40700047F3AC = {
 						CreatedOnToolsVersion = 13.3.1;
+					};
+					EEE7A6AE28447F6C004228EE = {
+						CreatedOnToolsVersion = 13.4;
 					};
 				};
 			};
@@ -316,6 +398,7 @@
 			projectRoot = "";
 			targets = (
 				EEDA85BA282B40700047F3AC /* gitignore */,
+				EEE7A6AE28447F6C004228EE /* ignore */,
 			);
 		};
 /* End PBXProject section */
@@ -327,6 +410,13 @@
 			files = (
 				EEDA85C6282B40720047F3AC /* Preview Assets.xcassets in Resources */,
 				EEDA85C3282B40720047F3AC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEE7A6AD28447F6C004228EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,7 +442,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EEE7A6AB28447F6C004228EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE7A6B628447F6C004228EE /* SourceEditorExtension.swift in Sources */,
+				EEE7A6B828447F6C004228EE /* SourceEditorCommand.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EEE7A6BC28447F6C004228EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEE7A6AE28447F6C004228EE /* ignore */;
+			targetProxy = EEE7A6BB28447F6C004228EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		EEDA85C8282B40720047F3AC /* Debug */ = {
@@ -471,6 +578,7 @@
 		EEDA85CB282B40720047F3AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = gitignore/Supporting/gitignore.entitlements;
@@ -501,6 +609,7 @@
 		EEDA85CC282B40720047F3AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = gitignore/Supporting/gitignore.entitlements;
@@ -528,6 +637,62 @@
 			};
 			name = Release;
 		};
+		EEE7A6BF28447F6C004228EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ignore/ignore.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q2JZBR7H7Y;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ignore/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ignore;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = JiHoonAHN.gitignore.ignore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		EEE7A6C028447F6C004228EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ignore/ignore.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q2JZBR7H7Y;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ignore/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ignore;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = JiHoonAHN.gitignore.ignore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -545,6 +710,15 @@
 			buildConfigurations = (
 				EEDA85CB282B40720047F3AC /* Debug */,
 				EEDA85CC282B40720047F3AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEE7A6BE28447F6C004228EE /* Build configuration list for PBXNativeTarget "ignore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEE7A6BF28447F6C004228EE /* Debug */,
+				EEE7A6C028447F6C004228EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
