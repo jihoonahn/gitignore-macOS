@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		EE5AAF98283FA56400E8255C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EE5AAF97283FA56400E8255C /* ComposableArchitecture */; };
 		EE5AAF9B283FA57600E8255C /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = EE5AAF9A283FA57600E8255C /* Swinject */; };
-		EE78FA0A282E37BF0013117A /* ListCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78FA09282E37BF0013117A /* ListCardView.swift */; };
-		EEA34CC9283B73A700A00BED /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA34CC8283B73A700A00BED /* WebView.swift */; };
 		EEA34CCE283B9F7C00A00BED /* SearchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA34CCD283B9F7C00A00BED /* SearchList.swift */; };
 		EEA395D4283A418700A41CC4 /* RootFeacture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA395D3283A418700A41CC4 /* RootFeacture.swift */; };
 		EEA395D7283A42BC00A41CC4 /* gitignoreView in Frameworks */ = {isa = PBXBuildFile; productRef = EEA395D6283A42BC00A41CC4 /* gitignoreView */; };
@@ -20,35 +18,35 @@
 		EEA3F676283CFCB0005D6A15 /* TagListMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3F675283CFCB0005D6A15 /* TagListMain.swift */; };
 		EEA60417282EB4EE00D79666 /* UIUtil in Frameworks */ = {isa = PBXBuildFile; productRef = EEA60416282EB4EE00D79666 /* UIUtil */; };
 		EEA6041D282FFEF700D79666 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA6041C282FFEF700D79666 /* Network.framework */; };
-		EEA60424283020C200D79666 /* ListCardGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA60423283020C200D79666 /* ListCardGrid.swift */; };
 		EEA604262830277000D79666 /* FoundationUtil in Frameworks */ = {isa = PBXBuildFile; productRef = EEA604252830277000D79666 /* FoundationUtil */; };
-		EEA66E58284059EF0095FB9A /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA66E57284059EF0095FB9A /* TagList.swift */; };
 		EEA66E5E284075590095FB9A /* OSLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA66E5D284075590095FB9A /* OSLog.framework */; };
 		EEA66E60284075E50095FB9A /* OSLogUtil in Frameworks */ = {isa = PBXBuildFile; productRef = EEA66E5F284075E50095FB9A /* OSLogUtil */; };
 		EEA66E6328407A920095FB9A /* AppDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA66E6228407A920095FB9A /* AppDI.swift */; };
 		EEABDA022839F0B400C0F087 /* Effects in Frameworks */ = {isa = PBXBuildFile; productRef = EEABDA012839F0B400C0F087 /* Effects */; };
-		EEB8AD752833E19400C44C6F /* WaterfallGrid in Frameworks */ = {isa = PBXBuildFile; productRef = EEB8AD742833E19400C44C6F /* WaterfallGrid */; };
-		EEC953B4283E7CFF005861AA /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC953B3283E7CFF005861AA /* SheetView.swift */; };
 		EED2E753283343E10040C83A /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2E752283343E10040C83A /* RootView.swift */; };
 		EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA85BE282B40700047F3AC /* gitignoreApp.swift */; };
 		EEDA85C3282B40720047F3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C2282B40720047F3AC /* Assets.xcassets */; };
 		EEDA85C6282B40720047F3AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C5282B40720047F3AC /* Preview Assets.xcassets */; };
-		EEDE5B67282B990100C0ADBA /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B66282B990100C0ADBA /* TabButton.swift */; };
-		EEDE5B6A282B9DD100C0ADBA /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B69282B9DD100C0ADBA /* TabbarView.swift */; };
 		EEDE5B76282BA8EC00C0ADBA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B75282BA8EC00C0ADBA /* MainView.swift */; };
-		EEDE5B78282BA92500C0ADBA /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B77282BA92500C0ADBA /* ListView.swift */; };
-		EEDE5B7A282BA9F100C0ADBA /* IssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B79282BA9F100C0ADBA /* IssueView.swift */; };
 		EEDE5B87282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B86282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift */; };
 		EEEBD258282C7A7200608EB6 /* MainFeacture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEBD257282C7A7200608EB6 /* MainFeacture.swift */; };
-		EEEBD25D282C86BC00608EB6 /* ListFeacture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEBD25C282C86BC00608EB6 /* ListFeacture.swift */; };
-		EEEBD25F282C86C700608EB6 /* IssueFeacture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEBD25E282C86C700608EB6 /* IssueFeacture.swift */; };
-		EEEBD268282C8C6000608EB6 /* TabbarFeacture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEBD267282C8C6000608EB6 /* TabbarFeacture.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EEE7A6C128447F6C004228EE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EE74C70928396639001EF6E1 /* Effects */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Effects; sourceTree = "<group>"; };
-		EE78FA09282E37BF0013117A /* ListCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCardView.swift; sourceTree = "<group>"; };
-		EEA34CC8283B73A700A00BED /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		EEA34CCD283B9F7C00A00BED /* SearchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchList.swift; sourceTree = "<group>"; };
 		EEA395D3283A418700A41CC4 /* RootFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFeacture.swift; sourceTree = "<group>"; };
 		EEA3F66C283C4D03005D6A15 /* ToolBarButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarButtonStyle.swift; sourceTree = "<group>"; };
@@ -57,28 +55,19 @@
 		EEA3F675283CFCB0005D6A15 /* TagListMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListMain.swift; sourceTree = "<group>"; };
 		EEA60414282EB3DA00D79666 /* Platform */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Platform; sourceTree = "<group>"; };
 		EEA6041C282FFEF700D79666 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
-		EEA60423283020C200D79666 /* ListCardGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCardGrid.swift; sourceTree = "<group>"; };
-		EEA66E57284059EF0095FB9A /* TagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
 		EEA66E5D284075590095FB9A /* OSLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSLog.framework; path = System/Library/Frameworks/OSLog.framework; sourceTree = SDKROOT; };
 		EEA66E6228407A920095FB9A /* AppDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDI.swift; sourceTree = "<group>"; };
-		EEC953B3283E7CFF005861AA /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 		EED2E752283343E10040C83A /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		EEDA85BB282B40700047F3AC /* gitignore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gitignore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEDA85BE282B40700047F3AC /* gitignoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreApp.swift; sourceTree = "<group>"; };
 		EEDA85C2282B40720047F3AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEDA85C5282B40720047F3AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EEDA85C7282B40720047F3AC /* gitignore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = gitignore.entitlements; path = gitignore/Supporting/gitignore.entitlements; sourceTree = SOURCE_ROOT; };
-		EEDE5B66282B990100C0ADBA /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
-		EEDE5B69282B9DD100C0ADBA /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		EEDE5B75282BA8EC00C0ADBA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		EEDE5B77282BA92500C0ADBA /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
-		EEDE5B79282BA9F100C0ADBA /* IssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueView.swift; sourceTree = "<group>"; };
 		EEDE5B86282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreTextfieldStyle.swift; sourceTree = "<group>"; };
-		EEE7A6A42844633B004228EE /* CombineCoreData */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CombineCoreData; sourceTree = "<group>"; };
+		EEE7A6B028447F6C004228EE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		EEE7A6B228447F6C004228EE /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
 		EEEBD257282C7A7200608EB6 /* MainFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeacture.swift; sourceTree = "<group>"; };
-		EEEBD25C282C86BC00608EB6 /* ListFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFeacture.swift; sourceTree = "<group>"; };
-		EEEBD25E282C86C700608EB6 /* IssueFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueFeacture.swift; sourceTree = "<group>"; };
-		EEEBD267282C8C6000608EB6 /* TabbarFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarFeacture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +81,6 @@
 				EEA60417282EB4EE00D79666 /* UIUtil in Frameworks */,
 				EE5AAF98283FA56400E8255C /* ComposableArchitecture in Frameworks */,
 				EEA395D7283A42BC00A41CC4 /* gitignoreView in Frameworks */,
-				EEB8AD752833E19400C44C6F /* WaterfallGrid in Frameworks */,
 				EEA604262830277000D79666 /* FoundationUtil in Frameworks */,
 				EEA66E60284075E50095FB9A /* OSLogUtil in Frameworks */,
 				EEA6041D282FFEF700D79666 /* Network.framework in Frameworks */,
@@ -102,15 +90,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EE78FA08282E37A30013117A /* View */ = {
-			isa = PBXGroup;
-			children = (
-				EEA66E56284059DB0095FB9A /* Tag */,
-				EEC184D4283F3E51000790E4 /* Grid */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		EE841F3E284241B40070EAAC /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,22 +124,6 @@
 			path = Root;
 			sourceTree = "<group>";
 		};
-		EEA395D5283A42AF00A41CC4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				EEEBD262282C875800608EB6 /* CustomNavigationView */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		EEA395D8283A43B100A41CC4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				EEA34CC8283B73A700A00BED /* WebView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		EEA3F66B283C4CE8005D6A15 /* Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,16 +154,10 @@
 			children = (
 				EEA66E5D284075590095FB9A /* OSLog.framework */,
 				EEA6041C282FFEF700D79666 /* Network.framework */,
+				EEE7A6B028447F6C004228EE /* Cocoa.framework */,
+				EEE7A6B228447F6C004228EE /* XcodeKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EEA66E56284059DB0095FB9A /* Tag */ = {
-			isa = PBXGroup;
-			children = (
-				EEA66E57284059EF0095FB9A /* TagList.swift */,
-			);
-			path = Tag;
 			sourceTree = "<group>";
 		};
 		EEA66E6128407A8B0095FB9A /* DI */ = {
@@ -209,15 +166,6 @@
 				EEA66E6228407A920095FB9A /* AppDI.swift */,
 			);
 			path = DI;
-			sourceTree = "<group>";
-		};
-		EEC184D4283F3E51000790E4 /* Grid */ = {
-			isa = PBXGroup;
-			children = (
-				EE78FA09282E37BF0013117A /* ListCardView.swift */,
-				EEA60423283020C200D79666 /* ListCardGrid.swift */,
-			);
-			path = Grid;
 			sourceTree = "<group>";
 		};
 		EEC953B1283E7BD1005861AA /* Style */ = {
@@ -229,18 +177,9 @@
 			path = Style;
 			sourceTree = "<group>";
 		};
-		EEC953B2283E7CF3005861AA /* Sheet */ = {
-			isa = PBXGroup;
-			children = (
-				EEC953B3283E7CFF005861AA /* SheetView.swift */,
-			);
-			path = Sheet;
-			sourceTree = "<group>";
-		};
 		EEDA85B2282B40700047F3AC = {
 			isa = PBXGroup;
 			children = (
-				EEE7A6A42844633B004228EE /* CombineCoreData */,
 				EE74C70928396639001EF6E1 /* Effects */,
 				EEA60414282EB3DA00D79666 /* Platform */,
 				EEDA85BD282B40700047F3AC /* gitignore */,
@@ -279,7 +218,6 @@
 		EEDE59462831F71000A7FDF0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EEC953B2283E7CF3005861AA /* Sheet */,
 				EEA3F674283CFCA6005D6A15 /* Tag */,
 				EEA3F670283C5048005D6A15 /* Title */,
 				EEA34CCC283B9DF500A00BED /* Search List */,
@@ -290,8 +228,6 @@
 		EEDE5B47282B5EAA00C0ADBA /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				EEEBD256282C7A4200608EB6 /* Issue */,
-				EEEBD255282C7A3C00608EB6 /* List */,
 				EEEBD254282C7A3400608EB6 /* Main */,
 			);
 			path = UI;
@@ -302,7 +238,6 @@
 			children = (
 				EE841F3E284241B40070EAAC /* App */,
 				EEA395D2283A417000A41CC4 /* Root */,
-				EEEBD266282C89CE00608EB6 /* Tabbar */,
 				EEDE5B47282B5EAA00C0ADBA /* UI */,
 			);
 			path = Sources;
@@ -336,52 +271,6 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		EEEBD255282C7A3C00608EB6 /* List */ = {
-			isa = PBXGroup;
-			children = (
-				EE78FA08282E37A30013117A /* View */,
-				EEDE5B77282BA92500C0ADBA /* ListView.swift */,
-				EEEBD25C282C86BC00608EB6 /* ListFeacture.swift */,
-			);
-			path = List;
-			sourceTree = "<group>";
-		};
-		EEEBD256282C7A4200608EB6 /* Issue */ = {
-			isa = PBXGroup;
-			children = (
-				EEA395D8283A43B100A41CC4 /* View */,
-				EEDE5B79282BA9F100C0ADBA /* IssueView.swift */,
-				EEEBD25E282C86C700608EB6 /* IssueFeacture.swift */,
-			);
-			path = Issue;
-			sourceTree = "<group>";
-		};
-		EEEBD262282C875800608EB6 /* CustomNavigationView */ = {
-			isa = PBXGroup;
-			children = (
-				EEEBD263282C877D00608EB6 /* Button */,
-			);
-			path = CustomNavigationView;
-			sourceTree = "<group>";
-		};
-		EEEBD263282C877D00608EB6 /* Button */ = {
-			isa = PBXGroup;
-			children = (
-				EEDE5B66282B990100C0ADBA /* TabButton.swift */,
-			);
-			path = Button;
-			sourceTree = "<group>";
-		};
-		EEEBD266282C89CE00608EB6 /* Tabbar */ = {
-			isa = PBXGroup;
-			children = (
-				EEA395D5283A42AF00A41CC4 /* View */,
-				EEEBD267282C8C6000608EB6 /* TabbarFeacture.swift */,
-				EEDE5B69282B9DD100C0ADBA /* TabbarView.swift */,
-			);
-			path = Tabbar;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -392,6 +281,7 @@
 				EEDA85B7282B40700047F3AC /* Sources */,
 				EEDA85B8282B40700047F3AC /* Frameworks */,
 				EEDA85B9282B40700047F3AC /* Resources */,
+				EEE7A6C128447F6C004228EE /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -401,7 +291,6 @@
 			packageProductDependencies = (
 				EEA60416282EB4EE00D79666 /* UIUtil */,
 				EEA604252830277000D79666 /* FoundationUtil */,
-				EEB8AD742833E19400C44C6F /* WaterfallGrid */,
 				EEABDA012839F0B400C0F087 /* Effects */,
 				EEA395D6283A42BC00A41CC4 /* gitignoreView */,
 				EE5AAF97283FA56400E8255C /* ComposableArchitecture */,
@@ -419,7 +308,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1330;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					EEDA85BA282B40700047F3AC = {
@@ -468,27 +357,15 @@
 			files = (
 				EED2E753283343E10040C83A /* RootView.swift in Sources */,
 				EEDE5B76282BA8EC00C0ADBA /* MainView.swift in Sources */,
-				EEDE5B78282BA92500C0ADBA /* ListView.swift in Sources */,
 				EEDE5B87282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift in Sources */,
-				EE78FA0A282E37BF0013117A /* ListCardView.swift in Sources */,
-				EEDE5B6A282B9DD100C0ADBA /* TabbarView.swift in Sources */,
 				EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */,
 				EEA395D4283A418700A41CC4 /* RootFeacture.swift in Sources */,
 				EEA3F66F283C4D88005D6A15 /* CreateButtonStyle.swift in Sources */,
-				EEEBD25D282C86BC00608EB6 /* ListFeacture.swift in Sources */,
 				EEA34CCE283B9F7C00A00BED /* SearchList.swift in Sources */,
-				EEEBD25F282C86C700608EB6 /* IssueFeacture.swift in Sources */,
 				EEA66E6328407A920095FB9A /* AppDI.swift in Sources */,
-				EEEBD268282C8C6000608EB6 /* TabbarFeacture.swift in Sources */,
-				EEA34CC9283B73A700A00BED /* WebView.swift in Sources */,
 				EEA3F676283CFCB0005D6A15 /* TagListMain.swift in Sources */,
 				EEA3F66D283C4D03005D6A15 /* ToolBarButtonStyle.swift in Sources */,
-				EEDE5B7A282BA9F100C0ADBA /* IssueView.swift in Sources */,
-				EEDE5B67282B990100C0ADBA /* TabButton.swift in Sources */,
 				EEA3F672283C5055005D6A15 /* TitleLogo.swift in Sources */,
-				EEA66E58284059EF0095FB9A /* TagList.swift in Sources */,
-				EEA60424283020C200D79666 /* ListCardGrid.swift in Sources */,
-				EEC953B4283E7CFF005861AA /* SheetView.swift in Sources */,
 				EEEBD258282C7A7200608EB6 /* MainFeacture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -612,6 +489,7 @@
 		EEDA85CB282B40720047F3AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = gitignore/Supporting/gitignore.entitlements;
@@ -625,6 +503,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = gitignore/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -641,9 +520,10 @@
 		EEDA85CC282B40720047F3AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = gitignore/gitignoreRelease.entitlements;
+				CODE_SIGN_ENTITLEMENTS = gitignore/Supporting/gitignore.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -654,6 +534,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = gitignore/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -739,10 +620,6 @@
 		EEABDA012839F0B400C0F087 /* Effects */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Effects;
-		};
-		EEB8AD742833E19400C44C6F /* WaterfallGrid */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = WaterfallGrid;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

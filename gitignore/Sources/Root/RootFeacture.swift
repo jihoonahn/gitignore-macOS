@@ -1,12 +1,11 @@
 import ComposableArchitecture
-
-enum RootState: Equatable{
-    case tabBar(TabBarState)
-    public init() { self = .tabBar(.init())}
+import Effects
+struct RootState: Equatable{
+    var mainState = MainState()
 }
 
 enum RootAction{
-    case tabBarAction(TabBarAction)
+    case mainAction(MainAction)
 }
 
 struct RootEnvironment{}
@@ -16,14 +15,20 @@ let rootReducer = Reducer<
     RootAction,
     RootEnvironment
 >.combine(
-    tabBarReducer.pullback(
-        state: /RootState.tabBar,
-        action: /RootAction.tabBarAction,
-        environment: { _ in tabBarEnvironmnet()}
+    mainReducer.pullback(
+        state:\.mainState,
+        action: /RootAction.mainAction,
+        environment: {_ in
+                .init(
+                    effects: { ServiceEffect()},
+                    mainQueue: {.main}
+                )
+        }
     ),
+    
     Reducer{ _ , action, _ in
         switch action {
-        case .tabBarAction:
+        case .mainAction:
             return .none
         }
     }
