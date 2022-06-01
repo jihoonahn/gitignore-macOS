@@ -66,6 +66,6 @@ struct MainView: View {
             }.onAppear {
                 viewStore.send(.onAppear)
             }
-        }
+        }.frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }

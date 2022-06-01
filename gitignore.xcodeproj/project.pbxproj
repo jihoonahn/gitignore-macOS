@@ -23,6 +23,9 @@
 		EEA66E60284075E50095FB9A /* OSLogUtil in Frameworks */ = {isa = PBXBuildFile; productRef = EEA66E5F284075E50095FB9A /* OSLogUtil */; };
 		EEA66E6328407A920095FB9A /* AppDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA66E6228407A920095FB9A /* AppDI.swift */; };
 		EEABDA022839F0B400C0F087 /* Effects in Frameworks */ = {isa = PBXBuildFile; productRef = EEABDA012839F0B400C0F087 /* Effects */; };
+		EEC59ADC28475B73004A2A19 /* gitignoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59ADB28475B73004A2A19 /* gitignoreTests.swift */; };
+		EEC59AE928475E72004A2A19 /* gitignoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59AE828475E72004A2A19 /* gitignoreUITests.swift */; };
+		EEC59AEB28475E72004A2A19 /* gitignoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59AEA28475E72004A2A19 /* gitignoreUITestsLaunchTests.swift */; };
 		EED2E753283343E10040C83A /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2E752283343E10040C83A /* RootView.swift */; };
 		EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA85BE282B40700047F3AC /* gitignoreApp.swift */; };
 		EEDA85C3282B40720047F3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C2282B40720047F3AC /* Assets.xcassets */; };
@@ -31,6 +34,23 @@
 		EEDE5B87282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B86282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift */; };
 		EEEBD258282C7A7200608EB6 /* MainFeacture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEBD257282C7A7200608EB6 /* MainFeacture.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EEC59ADD28475B73004A2A19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEDA85B3282B40700047F3AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEDA85BA282B40700047F3AC;
+			remoteInfo = gitignore;
+		};
+		EEC59AEC28475E72004A2A19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEDA85B3282B40700047F3AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEDA85BA282B40700047F3AC;
+			remoteInfo = gitignore;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		EEE7A6C128447F6C004228EE /* Embed App Extensions */ = {
@@ -57,6 +77,11 @@
 		EEA6041C282FFEF700D79666 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
 		EEA66E5D284075590095FB9A /* OSLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSLog.framework; path = System/Library/Frameworks/OSLog.framework; sourceTree = SDKROOT; };
 		EEA66E6228407A920095FB9A /* AppDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDI.swift; sourceTree = "<group>"; };
+		EEC59AD928475B73004A2A19 /* gitignoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gitignoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEC59ADB28475B73004A2A19 /* gitignoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreTests.swift; sourceTree = "<group>"; };
+		EEC59AE628475E72004A2A19 /* gitignoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gitignoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEC59AE828475E72004A2A19 /* gitignoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreUITests.swift; sourceTree = "<group>"; };
+		EEC59AEA28475E72004A2A19 /* gitignoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EED2E752283343E10040C83A /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		EEDA85BB282B40700047F3AC /* gitignore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gitignore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEDA85BE282B40700047F3AC /* gitignoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreApp.swift; sourceTree = "<group>"; };
@@ -71,6 +96,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EEC59AD628475B73004A2A19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEC59AE328475E72004A2A19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EEDA85B8282B40700047F3AC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -168,6 +207,23 @@
 			path = DI;
 			sourceTree = "<group>";
 		};
+		EEC59ADA28475B73004A2A19 /* gitignoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				EEC59ADB28475B73004A2A19 /* gitignoreTests.swift */,
+			);
+			path = gitignoreTests;
+			sourceTree = "<group>";
+		};
+		EEC59AE728475E72004A2A19 /* gitignoreUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EEC59AE828475E72004A2A19 /* gitignoreUITests.swift */,
+				EEC59AEA28475E72004A2A19 /* gitignoreUITestsLaunchTests.swift */,
+			);
+			path = gitignoreUITests;
+			sourceTree = "<group>";
+		};
 		EEC953B1283E7BD1005861AA /* Style */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +239,8 @@
 				EE74C70928396639001EF6E1 /* Effects */,
 				EEA60414282EB3DA00D79666 /* Platform */,
 				EEDA85BD282B40700047F3AC /* gitignore */,
+				EEC59ADA28475B73004A2A19 /* gitignoreTests */,
+				EEC59AE728475E72004A2A19 /* gitignoreUITests */,
 				EEDA85BC282B40700047F3AC /* Products */,
 				EEA60415282EB4EE00D79666 /* Frameworks */,
 			);
@@ -192,6 +250,8 @@
 			isa = PBXGroup;
 			children = (
 				EEDA85BB282B40700047F3AC /* gitignore.app */,
+				EEC59AD928475B73004A2A19 /* gitignoreTests.xctest */,
+				EEC59AE628475E72004A2A19 /* gitignoreUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -274,6 +334,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EEC59AD828475B73004A2A19 /* gitignoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEC59AE128475B73004A2A19 /* Build configuration list for PBXNativeTarget "gitignoreTests" */;
+			buildPhases = (
+				EEC59AD528475B73004A2A19 /* Sources */,
+				EEC59AD628475B73004A2A19 /* Frameworks */,
+				EEC59AD728475B73004A2A19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EEC59ADE28475B73004A2A19 /* PBXTargetDependency */,
+			);
+			name = gitignoreTests;
+			productName = gitignoreTests;
+			productReference = EEC59AD928475B73004A2A19 /* gitignoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EEC59AE528475E72004A2A19 /* gitignoreUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEC59AEE28475E72004A2A19 /* Build configuration list for PBXNativeTarget "gitignoreUITests" */;
+			buildPhases = (
+				EEC59AE228475E72004A2A19 /* Sources */,
+				EEC59AE328475E72004A2A19 /* Frameworks */,
+				EEC59AE428475E72004A2A19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EEC59AED28475E72004A2A19 /* PBXTargetDependency */,
+			);
+			name = gitignoreUITests;
+			productName = gitignoreUITests;
+			productReference = EEC59AE628475E72004A2A19 /* gitignoreUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		EEDA85BA282B40700047F3AC /* gitignore */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EEDA85CA282B40720047F3AC /* Build configuration list for PBXNativeTarget "gitignore" */;
@@ -311,6 +407,14 @@
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					EEC59AD828475B73004A2A19 = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = EEDA85BA282B40700047F3AC;
+					};
+					EEC59AE528475E72004A2A19 = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = EEDA85BA282B40700047F3AC;
+					};
 					EEDA85BA282B40700047F3AC = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
@@ -334,11 +438,27 @@
 			projectRoot = "";
 			targets = (
 				EEDA85BA282B40700047F3AC /* gitignore */,
+				EEC59AD828475B73004A2A19 /* gitignoreTests */,
+				EEC59AE528475E72004A2A19 /* gitignoreUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EEC59AD728475B73004A2A19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEC59AE428475E72004A2A19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EEDA85B9282B40700047F3AC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -351,6 +471,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EEC59AD528475B73004A2A19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEC59ADC28475B73004A2A19 /* gitignoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEC59AE228475E72004A2A19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEC59AE928475E72004A2A19 /* gitignoreUITests.swift in Sources */,
+				EEC59AEB28475E72004A2A19 /* gitignoreUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EEDA85B7282B40700047F3AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -372,7 +509,86 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		EEC59ADE28475B73004A2A19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEDA85BA282B40700047F3AC /* gitignore */;
+			targetProxy = EEC59ADD28475B73004A2A19 /* PBXContainerItemProxy */;
+		};
+		EEC59AED28475E72004A2A19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEDA85BA282B40700047F3AC /* gitignore */;
+			targetProxy = EEC59AEC28475E72004A2A19 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		EEC59ADF28475B73004A2A19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q2JZBR7H7Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = JiHoonAHN.gitignoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gitignore.app/Contents/MacOS/gitignore";
+			};
+			name = Debug;
+		};
+		EEC59AE028475B73004A2A19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q2JZBR7H7Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = JiHoonAHN.gitignoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gitignore.app/Contents/MacOS/gitignore";
+			};
+			name = Release;
+		};
+		EEC59AEF28475E72004A2A19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q2JZBR7H7Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = JiHoonAHN.gitignoreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = gitignore;
+			};
+			name = Debug;
+		};
+		EEC59AF028475E72004A2A19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q2JZBR7H7Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = JiHoonAHN.gitignoreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = gitignore;
+			};
+			name = Release;
+		};
 		EEDA85C8282B40720047F3AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -551,6 +767,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EEC59AE128475B73004A2A19 /* Build configuration list for PBXNativeTarget "gitignoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEC59ADF28475B73004A2A19 /* Debug */,
+				EEC59AE028475B73004A2A19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEC59AEE28475E72004A2A19 /* Build configuration list for PBXNativeTarget "gitignoreUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEC59AEF28475E72004A2A19 /* Debug */,
+				EEC59AF028475E72004A2A19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EEDA85B6282B40700047F3AC /* Build configuration list for PBXProject "gitignore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
