@@ -8,7 +8,8 @@ struct gitignoreApp: App {
     var body: some Scene {
         WindowGroup {
             RootView()
-        }.windowStyle(HiddenTitleBarWindowStyle())
+        }
+        .windowStyle(HiddenTitleBarWindowStyle())
     }
 }
 

@@ -14,8 +14,8 @@ struct RootView: View {
                 state: \.mainState,
                 action: RootAction.mainAction
             ))
+            .frame(minWidth: 700, minHeight: 500)
             .ignoresSafeArea(.all, edges: .all)
-            .frame( minWidth: 700,minHeight: 500)
         }
     }
 }
