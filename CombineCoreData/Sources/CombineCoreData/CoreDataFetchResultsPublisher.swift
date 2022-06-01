@@ -1,9 +1,9 @@
 import Combine
 import CoreData
 
-struct CoreDataFetchResultsPublisher<Entity>: Publisher where Entity: NSManagedObject {
-    typealias Output = [Entity]
-    typealias Failure = NSError
+public struct CoreDataFetchResultsPublisher<Entity>: Publisher where Entity: NSManagedObject {
+    public typealias Output = [Entity]
+    public typealias Failure = NSError
     
     private let request: NSFetchRequest<Entity>
     private let context: NSManagedObjectContext
@@ -13,14 +13,14 @@ struct CoreDataFetchResultsPublisher<Entity>: Publisher where Entity: NSManagedO
         self.context = context
     }
     
-    func receive<S>(subscriber: S) where S : Subscriber, Self.Failure == S.Failure, Self.Output == S.Input {
+    public func receive<S>(subscriber: S) where S : Subscriber, Self.Failure == S.Failure, Self.Output == S.Input {
         let subscription = Subscription(subscriber: subscriber, context: context, request: request)
         subscriber.receive(subscription: subscription)
     }
 }
 
 extension CoreDataFetchResultsPublisher {
-    class Subscription<S> where S : Subscriber, Failure == S.Failure, Output == S.Input {
+    public class Subscription<S> where S : Subscriber, Failure == S.Failure, Output == S.Input {
         private var subscriber: S?
         private var request: NSFetchRequest<Entity>
         private var context: NSManagedObjectContext
@@ -34,7 +34,7 @@ extension CoreDataFetchResultsPublisher {
 }
 
 extension CoreDataFetchResultsPublisher.Subscription: Subscription {
-    func request(_ demand: Subscribers.Demand) {
+    public func request(_ demand: Subscribers.Demand) {
         var demand = demand
         guard let subscriber = subscriber, demand > 0 else { return }
         do {
@@ -48,7 +48,7 @@ extension CoreDataFetchResultsPublisher.Subscription: Subscription {
 }
 
 extension CoreDataFetchResultsPublisher.Subscription: Cancellable {
-    func cancel() {
+    public func cancel() {
         subscriber = nil
     }
 }

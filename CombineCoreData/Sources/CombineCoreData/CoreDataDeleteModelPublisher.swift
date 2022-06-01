@@ -1,9 +1,9 @@
 import Combine
 import CoreData
 
-struct CoreDataDeleteModelPublisher: Publisher {
-    typealias Output = NSBatchDeleteResult
-    typealias Failure = NSError
+public struct CoreDataDeleteModelPublisher: Publisher {
+    public typealias Output = NSBatchDeleteResult
+    public typealias Failure = NSError
     
     private let request: NSFetchRequest<NSFetchRequestResult>
     private let context: NSManagedObjectContext
@@ -13,14 +13,14 @@ struct CoreDataDeleteModelPublisher: Publisher {
         self.context = context
     }
     
-    func receive<S>(subscriber: S) where S : Subscriber, Self.Failure == S.Failure, Self.Output == S.Input {
+    public func receive<S>(subscriber: S) where S : Subscriber, Self.Failure == S.Failure, Self.Output == S.Input {
         let subscription = Subscription(subscriber: subscriber, context: context, request: request)
         subscriber.receive(subscription: subscription)
     }
 }
 
 extension CoreDataDeleteModelPublisher {
-    class Subscription<S> where S : Subscriber, Failure == S.Failure, Output == S.Input {
+    public class Subscription<S> where S : Subscriber, Failure == S.Failure, Output == S.Input {
         private var subscriber: S?
         private let request: NSFetchRequest<NSFetchRequestResult>
         private var context: NSManagedObjectContext
@@ -34,7 +34,7 @@ extension CoreDataDeleteModelPublisher {
 }
 
 extension CoreDataDeleteModelPublisher.Subscription: Subscription  {
-    func request(_ demand: Subscribers.Demand) {
+    public func request(_ demand: Subscribers.Demand) {
         var demand = demand
         guard let subscriber = subscriber, demand > 0 else { return }
         
@@ -57,7 +57,7 @@ extension CoreDataDeleteModelPublisher.Subscription: Subscription  {
 }
 
 extension CoreDataDeleteModelPublisher.Subscription: Cancellable {
-    func cancel() {
+    public func cancel() {
         subscriber = nil
     }
 }

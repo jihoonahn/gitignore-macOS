@@ -1,5 +1,6 @@
 import ComposableArchitecture
 import Effects
+import Local
 struct RootState: Equatable{
     var mainState = MainState()
 }
@@ -20,6 +21,7 @@ let rootReducer = Reducer<
         action: /RootAction.mainAction,
         environment: {_ in
                 .init(
+                    locals: {ServiceCoreData()},
                     effects: { ServiceEffect()},
                     mainQueue: {.main}
                 )

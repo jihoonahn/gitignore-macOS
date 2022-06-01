@@ -23,33 +23,33 @@ public extension EntityCreating {
 
 public protocol CoreDataFetchResultsPublishing {
     var viewContext: NSManagedObjectContext { get }
-    func publicher<T: NSManagedObject>(fetch request: NSFetchRequest<T>) -> CoreDataFetchResultsPublisher<T>
+    func publisher<T: NSManagedObject>(fetch request: NSFetchRequest<T>) -> CoreDataFetchResultsPublisher<T>
 }
 
 public extension CoreDataFetchResultsPublishing {
-    func publicher<T: NSManagedObject>(fetch request: NSFetchRequest<T>) -> CoreDataFetchResultsPublisher<T> {
+    func publisher<T: NSManagedObject>(fetch request: NSFetchRequest<T>) -> CoreDataFetchResultsPublisher<T> {
         return CoreDataFetchResultsPublisher(request: request, context: viewContext)
     }
 }
 
 public protocol CoreDataDeleteModelPublishing {
     var viewContext: NSManagedObjectContext { get }
-    func publicher(delete request: NSFetchRequest<NSFetchRequestResult>) -> CoreDataDeleteModelPublisher
+    func publisher(delete request: NSFetchRequest<NSFetchRequestResult>) -> CoreDataDeleteModelPublisher
 }
 
 public extension CoreDataDeleteModelPublishing {
-    func publicher(delete request: NSFetchRequest<NSFetchRequestResult>) -> CoreDataDeleteModelPublisher {
+    func publisher(delete request: NSFetchRequest<NSFetchRequestResult>) -> CoreDataDeleteModelPublisher {
         return CoreDataDeleteModelPublisher(delete: request, context: viewContext)
     }
 }
 
 public protocol CoreDataSaveModelPublishing {
     var viewContext: NSManagedObjectContext { get }
-    func publicher(save action: @escaping Action) -> CoreDataSaveModelPublisher
+    func publisher(save action: @escaping Action) -> CoreDataSaveModelPublisher
 }
 
-public extension CoreDataSaveModelPublishing {
-    func publicher(save action: @escaping Action) -> CoreDataSaveModelPublisher {
+extension CoreDataSaveModelPublishing {
+    public func publisher(save action: @escaping Action) -> CoreDataSaveModelPublisher {
         return CoreDataSaveModelPublisher(action: action, context: viewContext)
     }
 }
