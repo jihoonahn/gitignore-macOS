@@ -10,6 +10,7 @@ struct MainState: Equatable{
     var totalHeight : CGFloat = .zero
     var liststatus : Bool = true
     var addSheetStatus : Bool = false
+    var editSheetStatus : Bool = false
     var inquiryListString : [String] = .init()
     var gitignoreListString : [String] = .init()
     var userChooseTag : Set<String> = .init()
@@ -19,7 +20,8 @@ enum MainAction{
     case onAppear
     case tagTotalHeightAction
     case titleQueryChanged(String) // Sheet의 title Query
-    case addSheetButtonDidTap // addSheetButton 눌렀을때
+    case editSheetButtonDidTap// EditSheetButton 눌렀을 때
+    case addSheetButtonDidTap // addSheetButton 눌렀을 때
     case saveGitignoreButtonDidTap
     case searchQueryChanged(String) // textfield action
     case tapTagChoose(Int) //search bar 에서 tag 추가
@@ -32,12 +34,15 @@ enum MainAction{
 }
 
 struct MainEnvironmnet{
+    var locals : () -> ServiceCoreDataType
     var effects : () -> ServiceEffectType
     var mainQueue: () -> AnySchedulerOf<DispatchQueue>
     public init(
+        locals : @escaping() -> ServiceCoreDataType,
         effects: @escaping() -> ServiceEffectType,
         mainQueue : @escaping() -> AnySchedulerOf<DispatchQueue>
     ){
+        self.locals = locals
         self.effects = effects
         self.mainQueue = mainQueue
     }
@@ -51,6 +56,7 @@ let mainReducer = Reducer<
     var bag: Set<AnyCancellable> = .init()
     
     switch action{
+        
     case .tagTotalHeightAction:
         return.none
         
@@ -63,7 +69,6 @@ let mainReducer = Reducer<
         state.inquiryListString  = state.gitignoreListString.filter{ $0.hasPrefix(query.lowercased()) || state.searchQuery.isEmpty}
         state.liststatus = state.searchQuery.isEmpty || state.inquiryListString.isEmpty
         if state.searchQuery.isEmpty{state.inquiryListString = .init()}
-        
         guard !query.isEmpty else {return .cancel(id: SearchOptionId.self)}
         return .none
         
@@ -90,6 +95,10 @@ let mainReducer = Reducer<
         
     case .addSheetButtonDidTap:
         state.addSheetStatus = !state.addSheetStatus
+        return .none
+        
+    case .editSheetButtonDidTap:
+        state.editSheetStatus = !state.editSheetStatus
         return .none
         
     case .saveGitignoreButtonDidTap:
@@ -121,6 +130,7 @@ let mainReducer = Reducer<
     case .savegitignoreDataLoaded(let result) :
         switch result{
         case .success(let result):
+            enviroment.locals().coreData.save()
             return .none
         case .failure(let result):
             return.none

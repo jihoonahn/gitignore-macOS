@@ -1,7 +1,7 @@
 import SwiftUI
 import ComposableArchitecture
 
-struct SheetView: View {
+struct AddSheetView: View {
     
     private var store : Store<MainState, MainAction>
 

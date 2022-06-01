@@ -15,12 +15,14 @@ struct MainView: View {
     struct ViewState : Equatable{
         var searchQuery : String
         var addSheetStatus : Bool
+        var editSheetStatus : Bool
         var liststatus : Bool
         var userChooseTag : Set<String>
         
         init(state : MainState){
             searchQuery = state.searchQuery
             addSheetStatus = state.addSheetStatus
+            editSheetStatus = state.editSheetStatus
             liststatus = state.liststatus
             userChooseTag = state.userChooseTag
         }
@@ -35,14 +37,26 @@ struct MainView: View {
             VStack{
                 HStack{
                     Spacer()
+                    Button(action: {viewStore.send(.editSheetButtonDidTap)}, label: {
+                        Image(systemName: "square.and.pencil")
+                            .font(.title2)
+                    })
+                    .sheet(isPresented: viewStore.binding(
+                        get: \.editSheetStatus ,send: MainAction.editSheetButtonDidTap)){
+                            EditSheetView(store: store)
+                    }
+                    .padding(5)
+                    .buttonStyle(ToolBarButtonStyle())
+
                     Button(action: {viewStore.send(.addSheetButtonDidTap)}, label: {
                         Image(systemName: "plus")
                             .font(.title2)
                     })
                     .sheet(isPresented: viewStore.binding(
                         get: \.addSheetStatus,send: MainAction.addSheetButtonDidTap)){
-                            SheetView(store: store)
+                            AddSheetView(store: store)
                     }
+                    .padding(5)
                     .buttonStyle(ToolBarButtonStyle())
                 }
                 .padding()
