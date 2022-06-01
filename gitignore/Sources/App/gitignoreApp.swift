@@ -1,6 +1,7 @@
 import SwiftUI
 import Swinject
 import ComposableArchitecture
+import MetricKit
 
 @main
 struct gitignoreApp: App {
