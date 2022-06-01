@@ -27,6 +27,7 @@
 		EEC59AE928475E72004A2A19 /* gitignoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59AE828475E72004A2A19 /* gitignoreUITests.swift */; };
 		EEC59AEB28475E72004A2A19 /* gitignoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59AEA28475E72004A2A19 /* gitignoreUITestsLaunchTests.swift */; };
 		EEC59AF6284772E2004A2A19 /* Local in Frameworks */ = {isa = PBXBuildFile; productRef = EEC59AF5284772E2004A2A19 /* Local */; };
+		EEC59AFD28477C6F004A2A19 /* WaterfallGrid in Frameworks */ = {isa = PBXBuildFile; productRef = EEC59AFC28477C6F004A2A19 /* WaterfallGrid */; };
 		EED2E753283343E10040C83A /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2E752283343E10040C83A /* RootView.swift */; };
 		EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA85BE282B40700047F3AC /* gitignoreApp.swift */; };
 		EEDA85C3282B40720047F3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C2282B40720047F3AC /* Assets.xcassets */; };
@@ -126,6 +127,7 @@
 				EEA604262830277000D79666 /* FoundationUtil in Frameworks */,
 				EEA66E60284075E50095FB9A /* OSLogUtil in Frameworks */,
 				EEA6041D282FFEF700D79666 /* Network.framework in Frameworks */,
+				EEC59AFD28477C6F004A2A19 /* WaterfallGrid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +399,7 @@
 				EE5AAF9A283FA57600E8255C /* Swinject */,
 				EEA66E5F284075E50095FB9A /* OSLogUtil */,
 				EEC59AF5284772E2004A2A19 /* Local */,
+				EEC59AFC28477C6F004A2A19 /* WaterfallGrid */,
 			);
 			productName = gitignore;
 			productReference = EEDA85BB282B40700047F3AC /* gitignore.app */;
@@ -863,6 +866,10 @@
 		EEC59AF5284772E2004A2A19 /* Local */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Local;
+		};
+		EEC59AFC28477C6F004A2A19 /* WaterfallGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WaterfallGrid;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

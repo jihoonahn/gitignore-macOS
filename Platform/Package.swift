@@ -19,6 +19,9 @@ let package = Package(
         .library(
             name: "UIUtil",
             targets: ["UIUtil"]),
+        .library(
+            name: "WaterfallGrid",
+            targets: ["WaterfallGrid"]),
     ],
     dependencies: [
     ],
@@ -34,6 +37,9 @@ let package = Package(
             dependencies: []),
         .target(
             name: "UIUtil",
+            dependencies: []),
+        .target(
+            name: "WaterfallGrid",
             dependencies: []),
     ]
 )
