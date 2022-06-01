@@ -26,6 +26,7 @@
 		EEC59ADC28475B73004A2A19 /* gitignoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59ADB28475B73004A2A19 /* gitignoreTests.swift */; };
 		EEC59AE928475E72004A2A19 /* gitignoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59AE828475E72004A2A19 /* gitignoreUITests.swift */; };
 		EEC59AEB28475E72004A2A19 /* gitignoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59AEA28475E72004A2A19 /* gitignoreUITestsLaunchTests.swift */; };
+		EEC59AF6284772E2004A2A19 /* Local in Frameworks */ = {isa = PBXBuildFile; productRef = EEC59AF5284772E2004A2A19 /* Local */; };
 		EED2E753283343E10040C83A /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2E752283343E10040C83A /* RootView.swift */; };
 		EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA85BE282B40700047F3AC /* gitignoreApp.swift */; };
 		EEDA85C3282B40720047F3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C2282B40720047F3AC /* Assets.xcassets */; };
@@ -66,7 +67,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EE74C70928396639001EF6E1 /* Effects */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Effects; sourceTree = "<group>"; };
 		EEA34CCD283B9F7C00A00BED /* SearchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchList.swift; sourceTree = "<group>"; };
 		EEA395D3283A418700A41CC4 /* RootFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFeacture.swift; sourceTree = "<group>"; };
 		EEA3F66C283C4D03005D6A15 /* ToolBarButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarButtonStyle.swift; sourceTree = "<group>"; };
@@ -82,6 +82,7 @@
 		EEC59AE628475E72004A2A19 /* gitignoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gitignoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC59AE828475E72004A2A19 /* gitignoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreUITests.swift; sourceTree = "<group>"; };
 		EEC59AEA28475E72004A2A19 /* gitignoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EEC59AF4284770C8004A2A19 /* Service */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Service; sourceTree = "<group>"; };
 		EED2E752283343E10040C83A /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		EEDA85BB282B40700047F3AC /* gitignore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gitignore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEDA85BE282B40700047F3AC /* gitignoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreApp.swift; sourceTree = "<group>"; };
@@ -120,6 +121,7 @@
 				EEA60417282EB4EE00D79666 /* UIUtil in Frameworks */,
 				EE5AAF98283FA56400E8255C /* ComposableArchitecture in Frameworks */,
 				EEA395D7283A42BC00A41CC4 /* gitignoreView in Frameworks */,
+				EEC59AF6284772E2004A2A19 /* Local in Frameworks */,
 				EEA604262830277000D79666 /* FoundationUtil in Frameworks */,
 				EEA66E60284075E50095FB9A /* OSLogUtil in Frameworks */,
 				EEA6041D282FFEF700D79666 /* Network.framework in Frameworks */,
@@ -236,7 +238,7 @@
 		EEDA85B2282B40700047F3AC = {
 			isa = PBXGroup;
 			children = (
-				EE74C70928396639001EF6E1 /* Effects */,
+				EEC59AF4284770C8004A2A19 /* Service */,
 				EEA60414282EB3DA00D79666 /* Platform */,
 				EEDA85BD282B40700047F3AC /* gitignore */,
 				EEC59ADA28475B73004A2A19 /* gitignoreTests */,
@@ -392,6 +394,7 @@
 				EE5AAF97283FA56400E8255C /* ComposableArchitecture */,
 				EE5AAF9A283FA57600E8255C /* Swinject */,
 				EEA66E5F284075E50095FB9A /* OSLogUtil */,
+				EEC59AF5284772E2004A2A19 /* Local */,
 			);
 			productName = gitignore;
 			productReference = EEDA85BB282B40700047F3AC /* gitignore.app */;
@@ -854,6 +857,10 @@
 		EEABDA012839F0B400C0F087 /* Effects */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Effects;
+		};
+		EEC59AF5284772E2004A2A19 /* Local */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Local;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
