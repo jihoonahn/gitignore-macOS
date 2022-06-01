@@ -1,7 +1,6 @@
 import SwiftUI
 import Swinject
 import ComposableArchitecture
-import RealmSwift
 
 @main
 struct gitignoreApp: App {
