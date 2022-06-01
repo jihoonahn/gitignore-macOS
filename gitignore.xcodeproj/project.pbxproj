@@ -83,6 +83,7 @@
 		EEC59AE828475E72004A2A19 /* gitignoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreUITests.swift; sourceTree = "<group>"; };
 		EEC59AEA28475E72004A2A19 /* gitignoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EEC59AF4284770C8004A2A19 /* Service */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Service; sourceTree = "<group>"; };
+		EEC59AF7284773C9004A2A19 /* CombineCoreData */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CombineCoreData; sourceTree = "<group>"; };
 		EED2E752283343E10040C83A /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		EEDA85BB282B40700047F3AC /* gitignore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gitignore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEDA85BE282B40700047F3AC /* gitignoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreApp.swift; sourceTree = "<group>"; };
@@ -238,6 +239,7 @@
 		EEDA85B2282B40700047F3AC = {
 			isa = PBXGroup;
 			children = (
+				EEC59AF7284773C9004A2A19 /* CombineCoreData */,
 				EEC59AF4284770C8004A2A19 /* Service */,
 				EEA60414282EB3DA00D79666 /* Platform */,
 				EEDA85BD282B40700047F3AC /* gitignore */,
