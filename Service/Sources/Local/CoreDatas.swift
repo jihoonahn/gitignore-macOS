@@ -31,14 +31,14 @@ public final class CoreDataService : BaseCoreData, CoreDatas,CoreDataStoring{
 
 public extension CoreDataService{
     func save() {
-        
+        print("Save")
     }
     
     func fetch() {
-        
+        print("fetch")
     }
     
     func delete() {
-        
+        print("delete")
     }
 }
