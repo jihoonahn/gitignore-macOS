@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		EE5AAF98283FA56400E8255C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EE5AAF97283FA56400E8255C /* ComposableArchitecture */; };
 		EE5AAF9B283FA57600E8255C /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = EE5AAF9A283FA57600E8255C /* Swinject */; };
-		EEA2E5E42847B19F008A7C38 /* EditSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA2E5E32847B19F008A7C38 /* EditSheetView.swift */; };
 		EEA34CCE283B9F7C00A00BED /* SearchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA34CCD283B9F7C00A00BED /* SearchList.swift */; };
 		EEA395D4283A418700A41CC4 /* RootFeacture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA395D3283A418700A41CC4 /* RootFeacture.swift */; };
 		EEA395D7283A42BC00A41CC4 /* gitignoreView in Frameworks */ = {isa = PBXBuildFile; productRef = EEA395D6283A42BC00A41CC4 /* gitignoreView */; };
@@ -78,7 +77,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EEA2E5E32847B19F008A7C38 /* EditSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSheetView.swift; sourceTree = "<group>"; };
 		EEA34CCD283B9F7C00A00BED /* SearchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchList.swift; sourceTree = "<group>"; };
 		EEA395D3283A418700A41CC4 /* RootFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFeacture.swift; sourceTree = "<group>"; };
 		EEA3F66C283C4D03005D6A15 /* ToolBarButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarButtonStyle.swift; sourceTree = "<group>"; };
@@ -169,14 +167,6 @@
 				EEC59B1728477DA0004A2A19 /* AddSheetView.swift */,
 			);
 			path = Add;
-			sourceTree = "<group>";
-		};
-		EEA2E5E22847B188008A7C38 /* Edit */ = {
-			isa = PBXGroup;
-			children = (
-				EEA2E5E32847B19F008A7C38 /* EditSheetView.swift */,
-			);
-			path = Edit;
 			sourceTree = "<group>";
 		};
 		EEA34CCA283B9DD600A00BED /* Textfield */ = {
@@ -338,7 +328,6 @@
 		EEC59B1628477DA0004A2A19 /* Sheet */ = {
 			isa = PBXGroup;
 			children = (
-				EEA2E5E22847B188008A7C38 /* Edit */,
 				EEA2E5E12847B180008A7C38 /* Add */,
 			);
 			path = Sheet;
@@ -630,7 +619,6 @@
 				EEC59B1528477CED004A2A19 /* ListFeacture.swift in Sources */,
 				EEC59B1228477CED004A2A19 /* ListCardGrid.swift in Sources */,
 				EEA3F66F283C4D88005D6A15 /* CreateButtonStyle.swift in Sources */,
-				EEA2E5E42847B19F008A7C38 /* EditSheetView.swift in Sources */,
 				EEA34CCE283B9F7C00A00BED /* SearchList.swift in Sources */,
 				EEA66E6328407A920095FB9A /* AppDI.swift in Sources */,
 				EEA3F676283CFCB0005D6A15 /* TagListMain.swift in Sources */,
