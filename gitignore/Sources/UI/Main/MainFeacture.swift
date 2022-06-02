@@ -84,9 +84,7 @@ let mainReducer = Reducer<
             .catchToEffect(MainAction.dataLoaded)
         
     case .addSheetonAppear:
-        if state.userChooseTag.isEmpty{
-            state.gitignoreStringQuery = ""
-        }
+        if state.userChooseTag.isEmpty{state.gitignoreStringQuery = .init()}
         return enviroment.effects().effect.makeGitignoreFileAPI(tag: Array(state.userChooseTag))
             .receive(on: enviroment.mainQueue())
             .catchToEffect(MainAction.addSheetgitignoreDataLoaded)
@@ -113,7 +111,7 @@ let mainReducer = Reducer<
         
     case .saveGitignoreButtonDidTap:
         guard !state.userChooseTag.isEmpty && !state.titleQuery.isEmpty else {return .none}
-        enviroment.locals().coreData.save()
+        enviroment.locals().coreData.save(title: state.titleQuery, tags: Array(state.userChooseTag), gitignoreString: state.gitignoreStringQuery)
         state.addSheetStatus = !state.addSheetStatus
         return .none
         

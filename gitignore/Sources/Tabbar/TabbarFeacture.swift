@@ -35,6 +35,7 @@ let tabBarReducer = Reducer<TabBarState, TabBarAction, tabBarEnvironmnet>.combin
         action: /TabBarAction.listAction,
         environment: {_ in
                 .init(
+                    locals: { ServiceCoreData()},
                     mainQueue: {.main}
                 )
         }

@@ -7,5 +7,8 @@ extension String {
         let size = self.size(withAttributes: fontAttributes)
         return size.width
     }
-
+    
+    public func localized(comment : String = "") -> String{
+        return NSLocalizedString(self, comment: comment)
+    }
 }
