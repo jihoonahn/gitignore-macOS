@@ -21,7 +21,9 @@ enum MainAction{
     case tagTotalHeightAction
     case titleQueryChanged(String) // Sheet의 title Query
     case gitignoreStringQueryChanged(String)
-    case addSheetButtonDidTap // addSheetButton 눌렀을 때
+    case addSheetButtonDidTap // addSheetButton 눌렸을 때
+    case addSheetCreateFileButtonDidTap // Create File 눌렸을 때
+    case addSheetonAppear //add Sheet Button 이 나타났을때
     case saveGitignoreButtonDidTap // Local에 저장할 때
     case searchQueryChanged(String) // textfield action
     case tapTagChoose(Int) //search bar 에서 tag 추가
@@ -30,7 +32,7 @@ enum MainAction{
     
     case dataLoaded(Result<String, ApiError>)
     case gitignoreDataLoaded(Result<String, ApiError>)
-    case savegitignoreDataLoaded(Result<String, ApiError>)
+    case addSheetgitignoreDataLoaded(Result<String,ApiError>)
 }
 
 struct MainEnvironmnet{
@@ -62,9 +64,11 @@ let mainReducer = Reducer<
     case .titleQueryChanged(let query):
         state.titleQuery = query
         return .none
+        
     case .gitignoreStringQueryChanged(let query):
         state.gitignoreStringQuery = query
         return .none
+        
     case .searchQueryChanged(let query):
         enum SearchOptionId {}
         state.searchQuery = query
@@ -78,6 +82,14 @@ let mainReducer = Reducer<
         return enviroment.effects().effect.searchGitignoreMenuAPI()
             .receive(on: enviroment.mainQueue())
             .catchToEffect(MainAction.dataLoaded)
+        
+    case .addSheetonAppear:
+        if state.userChooseTag.isEmpty{
+            state.gitignoreStringQuery = ""
+        }
+        return enviroment.effects().effect.makeGitignoreFileAPI(tag: Array(state.userChooseTag))
+            .receive(on: enviroment.mainQueue())
+            .catchToEffect(MainAction.addSheetgitignoreDataLoaded)
         
     case .createGitignore:
         guard !state.userChooseTag.isEmpty else {return .none}
@@ -100,10 +112,15 @@ let mainReducer = Reducer<
         return .none
         
     case .saveGitignoreButtonDidTap:
-        guard !state.userChooseTag.isEmpty else {return .none}
-        return enviroment.effects().effect.makeGitignoreFileAPI(tag: Array(state.userChooseTag))
-            .receive(on: enviroment.mainQueue())
-            .catchToEffect(MainAction.savegitignoreDataLoaded)
+        guard !state.userChooseTag.isEmpty && !state.titleQuery.isEmpty else {return .none}
+        enviroment.locals().coreData.save()
+        state.addSheetStatus = !state.addSheetStatus
+        return .none
+        
+    case .addSheetCreateFileButtonDidTap:
+        guard let url = NSSavePanel().showSavePanel() else {return .none}
+        try? state.gitignoreStringQuery.write(to: url, atomically: true, encoding: .utf8)
+        return  .none
         
         //MARK: - Data Load
     case .dataLoaded(let result):
@@ -124,16 +141,14 @@ let mainReducer = Reducer<
         case .failure(let result):
             return.none
         }
-        
-    
-        //MARK: - local
-    case .savegitignoreDataLoaded(let result) :
+    case .addSheetgitignoreDataLoaded(let result):
         switch result{
         case .success(let result):
-            enviroment.locals().coreData.save()
+            guard !state.userChooseTag.isEmpty else {return .none}
+            state.gitignoreStringQuery = result
             return .none
         case .failure(let result):
-            return.none
+            return .none
         }
     }
 }

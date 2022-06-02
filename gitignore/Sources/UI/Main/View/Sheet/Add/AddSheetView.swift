@@ -45,16 +45,18 @@ struct AddSheetView: View {
                     }
                     Spacer()
                     Button("Create File") {
-                        viewStore.send(.saveGitignoreButtonDidTap)
+                        viewStore.send(.addSheetCreateFileButtonDidTap)
                     }
                     Button("Data Add") {
                         viewStore.send(.saveGitignoreButtonDidTap)
                     }
                 }
             }
-            
             .frame(width: 600, height: 400)
             .padding()
+            .onAppear {
+                viewStore.send(MainAction.addSheetonAppear)
+            }
         }
     }
 }
