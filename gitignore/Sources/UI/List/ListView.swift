@@ -14,6 +14,7 @@ struct ListView: View {
         WithViewStore(self.store) { viewStore in
             ZStack{
                 ListCardGrid(store: store)
+                SwiftUIView()
             }
             .onAppear{
                 viewStore.send(.onAppear)

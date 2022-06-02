@@ -7,22 +7,22 @@ struct LottieView : NSViewRepresentable{
     var fileName : String
     
     func makeNSView(context: Context) -> NSView {
-        let view = NSViewType(frame: .zero)
+        let views = NSViewType(frame: .zero)
         let animationView = AnimationView()
         animationView.animation = Animation.named(fileName)
-        animationView.contentMode = .scaleAspectFit
+        animationView.contentMode = .scaleAspectFill
         animationView.loopMode = .loop
         
         animationView.play()
         animationView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(animationView)
+        views.addSubview(animationView)
         
         NSLayoutConstraint.activate([
-            animationView.widthAnchor.constraint(equalTo: view.widthAnchor),
-            animationView.heightAnchor.constraint(equalTo: view.heightAnchor)
+            animationView.widthAnchor.constraint(equalToConstant:  400),
+            animationView.heightAnchor.constraint(equalToConstant:  250)
         ])
         
-        return view
+        return views
     }
     
     func updateNSView(_ nsView: NSView, context: Context) {
