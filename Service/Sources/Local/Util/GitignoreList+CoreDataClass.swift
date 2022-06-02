@@ -2,14 +2,14 @@
 //  GitignoreList+CoreDataClass.swift
 //  gitignore
 //
-//  Created by Ji-hoon Ahn on 2022/06/01.
+//  Created by Ji-hoon Ahn on 2022/06/02.
 //
 //
 
 import Foundation
 import CoreData
 
-@objc(GitignoreList)
+
 public class GitignoreList: NSManagedObject {
 
 }

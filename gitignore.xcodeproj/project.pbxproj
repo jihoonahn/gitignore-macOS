@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EE5AAF98283FA56400E8255C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EE5AAF97283FA56400E8255C /* ComposableArchitecture */; };
 		EE5AAF9B283FA57600E8255C /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = EE5AAF9A283FA57600E8255C /* Swinject */; };
+		EEA243FF28486132000486F2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEA243FE28486132000486F2 /* Info.plist */; };
 		EEA34CCE283B9F7C00A00BED /* SearchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA34CCD283B9F7C00A00BED /* SearchList.swift */; };
 		EEA395D4283A418700A41CC4 /* RootFeacture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA395D3283A418700A41CC4 /* RootFeacture.swift */; };
 		EEA395D7283A42BC00A41CC4 /* gitignoreView in Frameworks */ = {isa = PBXBuildFile; productRef = EEA395D6283A42BC00A41CC4 /* gitignoreView */; };
@@ -77,6 +78,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EEA243FB2848606D000486F2 /* gitignoreDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = gitignoreDebug.entitlements; path = gitignore/Supporting/gitignoreDebug.entitlements; sourceTree = SOURCE_ROOT; };
+		EEA243FD284860E6000486F2 /* gitignoreRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = gitignoreRelease.entitlements; sourceTree = "<group>"; };
+		EEA243FE28486132000486F2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = gitignore/Supporting/Info.plist; sourceTree = SOURCE_ROOT; };
 		EEA34CCD283B9F7C00A00BED /* SearchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchList.swift; sourceTree = "<group>"; };
 		EEA395D3283A418700A41CC4 /* RootFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFeacture.swift; sourceTree = "<group>"; };
 		EEA3F66C283C4D03005D6A15 /* ToolBarButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarButtonStyle.swift; sourceTree = "<group>"; };
@@ -428,6 +432,9 @@
 		EEDE5B4A282B5EC400C0ADBA /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				EEA243FE28486132000486F2 /* Info.plist */,
+				EEA243FD284860E6000486F2 /* gitignoreRelease.entitlements */,
+				EEA243FB2848606D000486F2 /* gitignoreDebug.entitlements */,
 				EEDA85C7282B40720047F3AC /* gitignore.entitlements */,
 			);
 			path = Supporting;
@@ -580,6 +587,7 @@
 			files = (
 				EEDA85C6282B40720047F3AC /* Preview Assets.xcassets in Resources */,
 				EEDA85C3282B40720047F3AC /* Assets.xcassets in Resources */,
+				EEA243FF28486132000486F2 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -832,7 +840,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = gitignore/gitignoreDebug.entitlements;
+				CODE_SIGN_ENTITLEMENTS = gitignore/Supporting/gitignoreDebug.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -842,7 +850,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = gitignore/Info.plist;
+				INFOPLIST_FILE = gitignore/Supporting/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -873,7 +881,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = gitignore/Info.plist;
+				INFOPLIST_FILE = gitignore/Supporting/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (

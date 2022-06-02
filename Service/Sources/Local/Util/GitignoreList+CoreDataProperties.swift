@@ -2,7 +2,7 @@
 //  GitignoreList+CoreDataProperties.swift
 //  gitignore
 //
-//  Created by Ji-hoon Ahn on 2022/06/01.
+//  Created by Ji-hoon Ahn on 2022/06/02.
 //
 //
 
@@ -16,11 +16,12 @@ extension GitignoreList {
         return NSFetchRequest<GitignoreList>(entityName: "GitignoreList")
     }
 
-    @NSManaged public var title: String?
-    @NSManaged public var id: UUID?
     @NSManaged public var date: Date?
     @NSManaged public var gitignoreString: String?
-    @NSManaged public var tags: [String]
+    @NSManaged public var id: UUID?
+    @NSManaged public var title: String?
+    @NSManaged public var tags: [String]?
+
 }
 
 extension GitignoreList : Identifiable {
