@@ -7,10 +7,10 @@ import Local
 struct MainState: Equatable{
     var searchQuery = ""
     var titleQuery = ""
+    var gitignoreStringQuery = ""
     var totalHeight : CGFloat = .zero
     var liststatus : Bool = true
     var addSheetStatus : Bool = false
-    var editSheetStatus : Bool = false
     var inquiryListString : [String] = .init()
     var gitignoreListString : [String] = .init()
     var userChooseTag : Set<String> = .init()
@@ -20,9 +20,9 @@ enum MainAction{
     case onAppear
     case tagTotalHeightAction
     case titleQueryChanged(String) // Sheet의 title Query
-    case editSheetButtonDidTap// EditSheetButton 눌렀을 때
+    case gitignoreStringQueryChanged(String)
     case addSheetButtonDidTap // addSheetButton 눌렀을 때
-    case saveGitignoreButtonDidTap
+    case saveGitignoreButtonDidTap // Local에 저장할 때
     case searchQueryChanged(String) // textfield action
     case tapTagChoose(Int) //search bar 에서 tag 추가
     case createGitignore // gitignore 데이터 Load
@@ -56,12 +56,14 @@ let mainReducer = Reducer<
     var bag: Set<AnyCancellable> = .init()
     
     switch action{
-        
     case .tagTotalHeightAction:
         return.none
         
     case .titleQueryChanged(let query):
         state.titleQuery = query
+        return .none
+    case .gitignoreStringQueryChanged(let query):
+        state.gitignoreStringQuery = query
         return .none
     case .searchQueryChanged(let query):
         enum SearchOptionId {}
@@ -97,10 +99,6 @@ let mainReducer = Reducer<
         state.addSheetStatus = !state.addSheetStatus
         return .none
         
-    case .editSheetButtonDidTap:
-        state.editSheetStatus = !state.editSheetStatus
-        return .none
-        
     case .saveGitignoreButtonDidTap:
         guard !state.userChooseTag.isEmpty else {return .none}
         return enviroment.effects().effect.makeGitignoreFileAPI(tag: Array(state.userChooseTag))
@@ -127,6 +125,8 @@ let mainReducer = Reducer<
             return.none
         }
         
+    
+        //MARK: - local
     case .savegitignoreDataLoaded(let result) :
         switch result{
         case .success(let result):

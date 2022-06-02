@@ -12,6 +12,7 @@ struct EditSheetView: View {
     struct ViewState : Equatable{
         var titleQuery : String
         init(state : MainState){
+            
             titleQuery = state.titleQuery
         }
     }
@@ -25,13 +26,13 @@ struct EditSheetView: View {
                 TextEditor(text: viewStore.binding(
                     get: \.titleQuery,send: MainAction.titleQueryChanged
                 ))
-                .font(.title)
+                .font(.title3)
                 .frame(minWidth: 400, minHeight: 200)
 
                 Spacer()
                 HStack {
                     Button("Cancel") {
-                        viewStore.send(.editSheetButtonDidTap)
+
                     }
                     Spacer()
                     Button("Save") {

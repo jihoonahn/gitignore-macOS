@@ -8,7 +8,7 @@ struct gitignoreTextfieldStyle : TextFieldStyle{
             .cornerRadius(20)
             .border(Color.orange, width: 2)
             .disableAutocorrection(true)
-            .frame(width: 300, height: 40)
+            .frame(height: 40)
     }
 }
  
