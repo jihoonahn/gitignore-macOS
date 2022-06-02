@@ -10,8 +10,8 @@ struct ListCardGrid: View {
     var body: some View {
         ScrollView(showsIndicators: false){
             WithViewStore(self.store){ viewStore in
-                WaterfallGrid((0..<viewStore.listcount), id: \.self) { index  in
-                    ListCardView(store: store)
+                WaterfallGrid((0..<viewStore.list.count), id: \.self) { index  in
+                    ListCardView(store: store, list: viewStore.list[index])
                         .background(BlurView())
                         .cornerRadius(20)
                 }

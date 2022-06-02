@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EE5AAF98283FA56400E8255C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EE5AAF97283FA56400E8255C /* ComposableArchitecture */; };
 		EE5AAF9B283FA57600E8255C /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = EE5AAF9A283FA57600E8255C /* Swinject */; };
+		EEA2442128487E8A000486F2 /* gitignoreList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEA2441F28487E8A000486F2 /* gitignoreList.xcdatamodeld */; };
 		EEA34CCE283B9F7C00A00BED /* SearchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA34CCD283B9F7C00A00BED /* SearchList.swift */; };
 		EEA395D4283A418700A41CC4 /* RootFeacture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA395D3283A418700A41CC4 /* RootFeacture.swift */; };
 		EEA395D7283A42BC00A41CC4 /* gitignoreView in Frameworks */ = {isa = PBXBuildFile; productRef = EEA395D6283A42BC00A41CC4 /* gitignoreView */; };
@@ -78,6 +79,7 @@
 
 /* Begin PBXFileReference section */
 		EEA243FB2848606D000486F2 /* gitignoreDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = gitignoreDebug.entitlements; path = gitignore/Supporting/gitignoreDebug.entitlements; sourceTree = SOURCE_ROOT; };
+		EEA2442028487E8A000486F2 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		EEA34CCD283B9F7C00A00BED /* SearchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchList.swift; sourceTree = "<group>"; };
 		EEA395D3283A418700A41CC4 /* RootFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFeacture.swift; sourceTree = "<group>"; };
 		EEA3F66C283C4D03005D6A15 /* ToolBarButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarButtonStyle.swift; sourceTree = "<group>"; };
@@ -160,6 +162,14 @@
 				EEDA85BE282B40700047F3AC /* gitignoreApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		EEA2442228487F5F000486F2 /* CoreDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				EEA2441F28487E8A000486F2 /* gitignoreList.xcdatamodeld */,
+			);
+			path = CoreDataModel;
 			sourceTree = "<group>";
 		};
 		EEA2E5E12847B180008A7C38 /* Add */ = {
@@ -420,6 +430,7 @@
 		EEDE5B49282B5EB800C0ADBA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EEA2442228487F5F000486F2 /* CoreDataModel */,
 				EEDA85C4282B40720047F3AC /* Preview Content */,
 				EEDA85C2282B40720047F3AC /* Assets.xcassets */,
 			);
@@ -613,6 +624,7 @@
 				EEC59B1828477DA0004A2A19 /* AddSheetView.swift in Sources */,
 				EEC59B1428477CED004A2A19 /* ListView.swift in Sources */,
 				EED2E753283343E10040C83A /* RootView.swift in Sources */,
+				EEA2442128487E8A000486F2 /* gitignoreList.xcdatamodeld in Sources */,
 				EEDE5B76282BA8EC00C0ADBA /* MainView.swift in Sources */,
 				EEDE5B87282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift in Sources */,
 				EEC59B1328477CED004A2A19 /* ListCardView.swift in Sources */,
@@ -990,6 +1002,19 @@
 			productName = WaterfallGrid;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		EEA2441F28487E8A000486F2 /* gitignoreList.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EEA2442028487E8A000486F2 /* Model.xcdatamodel */,
+			);
+			currentVersion = EEA2442028487E8A000486F2 /* Model.xcdatamodel */;
+			path = gitignoreList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EEDA85B3282B40700047F3AC /* Project object */;
 }

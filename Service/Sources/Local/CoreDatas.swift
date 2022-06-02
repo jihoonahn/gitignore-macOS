@@ -6,7 +6,7 @@ import OSLogUtil
 
 public protocol CoreDatas{
     func save(title : String, tags : [String], gitignoreString : String)
-    func fetch()
+    func fetch() -> [GitignoreList]
     func delete()
 }
 
@@ -31,18 +31,16 @@ public final class CoreDataService : BaseCoreData, CoreDatas,CoreDataStoring{
 public extension CoreDataService{
     func save(title : String, tags : [String], gitignoreString : String) {
         
-
     }
     
-    func fetch() {
+    func fetch() -> [GitignoreList]{
         let request = GitignoreList.fetchRequest()
         do {
-            let savedEntities = try container.viewContext.fetch(request)
-            print(savedEntities)
+            return try container.viewContext.fetch(request)
         } catch let error {
             print("Error fetching GitignoreList Entities. \(error)")
         }
-        print("fetch")
+        return []
     }
     
     func delete() {

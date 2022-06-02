@@ -1,22 +1,21 @@
 import SwiftUI
 import ComposableArchitecture
+import Local
 
 public struct TagListView: View {
     
     private var store : Store<ListState, ListAction>
+    private var list : GitignoreList
     
-    init(store : Store<ListState, ListAction>){
+    init(store : Store<ListState, ListAction>, list : GitignoreList){
         self.store = store
+        self.list = list
     }
     
     struct ViewState : Equatable{
-        var title : String = .init()
         var totalHeight : CGFloat = .init()
-        var tagList : [String] = .init()
         init(state : ListState){
-            title = state.title
             totalHeight = state.totalHeight
-            tagList = state.tagList
         }
     }
     
@@ -38,8 +37,8 @@ public struct TagListView: View {
         var height = CGFloat.zero
         return WithViewStore(store.scope(state: ViewState.init)){viewStore in
         ZStack(alignment: .topLeading) {
-            ForEach(viewStore.tagList.indices, id: \.self) { index in
-                    item(for: viewStore.tagList[index])
+            ForEach(list.tags!.indices, id: \.self) { index in
+                item(for: list.tags![index])
                         .padding([.horizontal, .vertical], 4)
                         .alignmentGuide(.leading, computeValue: { d in
                             if (abs(width - d.width) > g.size.width) {
@@ -47,7 +46,7 @@ public struct TagListView: View {
                                 height -= d.height
                             }
                             let result = width
-                            if viewStore.tagList[index] == viewStore.tagList.last! {
+                            if list.tags![index] == list.tags?.last! {
                                 width = 0 //last item
                             } else {
                                 width -= d.width
@@ -56,7 +55,7 @@ public struct TagListView: View {
                         })
                         .alignmentGuide(.top, computeValue: {d in
                             let result = height
-                            if viewStore.tagList[index] == viewStore.tagList.last! {
+                            if list.tags![index] == list.tags?.last! {
                                 height = 0 // last item
                             }
                             return result

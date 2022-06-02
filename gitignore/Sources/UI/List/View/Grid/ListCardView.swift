@@ -1,16 +1,23 @@
 import SwiftUI
 import FoundationUtil
 import ComposableArchitecture
+import Local
 
 struct ListCardView : View{
     let store : Store<ListState,ListAction>
+    let list : GitignoreList
+    
+    init(store : Store<ListState,ListAction>, list : GitignoreList) {
+        self.store = store
+        self.list = list
+    }
     
     var body: some View{
         WithViewStore(self.store){ viewStore in
             HStack() {
                 VStack(alignment: .leading) {
                     HStack{
-                        Text(viewStore.title)
+                        Text(list.title ?? "")
                             .font(.headline)
                             .foregroundColor(.primary)
                             .padding(.bottom, 8)
@@ -24,12 +31,12 @@ struct ListCardView : View{
                                 .foregroundColor(.backgourndColor_Opposition)
                         }).buttonStyle(PlainButtonStyle())
                     }
-                    Text(Date().usingDate(time: viewStore.time))
+                    Text(Date().usingDate(time: list.date ?? Date()))
                         .font(.caption)
                         .foregroundColor(.secondary)
                         .fixedSize(horizontal: false, vertical: true)
                         .layoutPriority(99)
-                    TagListView(store: store)
+                    TagListView(store: store, list: list)
                         .fixedSize(horizontal: false, vertical: true)
                 }
                 Spacer()
