@@ -14,8 +14,6 @@ struct ListView: View {
         WithViewStore(self.store) { viewStore in
             ZStack{
                 ListCardGrid(store: store)
-                Image("")
-                    .resizable().hi
             }
             .onAppear{
                 viewStore.send(.onAppear)

@@ -13,6 +13,7 @@
 		EEA244252848844C000486F2 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA244242848844C000486F2 /* SwiftUIView.swift */; };
 		EEA2442828488593000486F2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = EEA2442728488593000486F2 /* Lottie */; };
 		EEA2442B284885B5000486F2 /* 73178-question-boy-orange.json in Resources */ = {isa = PBXBuildFile; fileRef = EEA2442A284885B5000486F2 /* 73178-question-boy-orange.json */; };
+		EEA2442E284885F0000486F2 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA2442D284885F0000486F2 /* LottieView.swift */; };
 		EEA34CCE283B9F7C00A00BED /* SearchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA34CCD283B9F7C00A00BED /* SearchList.swift */; };
 		EEA395D4283A418700A41CC4 /* RootFeacture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA395D3283A418700A41CC4 /* RootFeacture.swift */; };
 		EEA395D7283A42BC00A41CC4 /* gitignoreView in Frameworks */ = {isa = PBXBuildFile; productRef = EEA395D6283A42BC00A41CC4 /* gitignoreView */; };
@@ -85,6 +86,7 @@
 		EEA2442028487E8A000486F2 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		EEA244242848844C000486F2 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		EEA2442A284885B5000486F2 /* 73178-question-boy-orange.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "73178-question-boy-orange.json"; sourceTree = "<group>"; };
+		EEA2442D284885F0000486F2 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		EEA34CCD283B9F7C00A00BED /* SearchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchList.swift; sourceTree = "<group>"; };
 		EEA395D3283A418700A41CC4 /* RootFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFeacture.swift; sourceTree = "<group>"; };
 		EEA3F66C283C4D03005D6A15 /* ToolBarButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarButtonStyle.swift; sourceTree = "<group>"; };
@@ -192,6 +194,14 @@
 				EEA2442A284885B5000486F2 /* 73178-question-boy-orange.json */,
 			);
 			path = Lottie;
+			sourceTree = "<group>";
+		};
+		EEA2442C284885E4000486F2 /* LottieView */ = {
+			isa = PBXGroup;
+			children = (
+				EEA2442D284885F0000486F2 /* LottieView.swift */,
+			);
+			path = LottieView;
 			sourceTree = "<group>";
 		};
 		EEA2E5E12847B180008A7C38 /* Add */ = {
@@ -335,6 +345,7 @@
 		EEC59B0928477CED004A2A19 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EEA2442C284885E4000486F2 /* LottieView */,
 				EEA2442328488440000486F2 /* NoList */,
 				EEC59B0A28477CED004A2A19 /* Tag */,
 				EEC59B0C28477CED004A2A19 /* Grid */,
@@ -670,6 +681,7 @@
 				EEC59B0728477C9E004A2A19 /* TabbarFeacture.swift in Sources */,
 				EEC59B0528477C9E004A2A19 /* TabbarView.swift in Sources */,
 				EEC59B0628477C9E004A2A19 /* TabButton.swift in Sources */,
+				EEA2442E284885F0000486F2 /* LottieView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@ import SwiftUI
 struct SwiftUIView: View {
     var body: some View {
         VStack{
-            Image("")
+            
         }
     }
 }
