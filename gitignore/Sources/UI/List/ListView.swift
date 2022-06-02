@@ -14,7 +14,8 @@ struct ListView: View {
         WithViewStore(self.store) { viewStore in
             ZStack{
                 ListCardGrid(store: store)
-                SwiftUIView()
+                NoList()
+                    .opacity(viewStore.state.list.count == 0 ? 1 : 0)
             }
             .onAppear{
                 viewStore.send(.onAppear)

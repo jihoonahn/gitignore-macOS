@@ -7,19 +7,13 @@
 
 import SwiftUI
 
-struct SwiftUIView: View {
+struct NoList: View {
     var body: some View {
         VStack{
             LottieView(fileName: "73178-question-boy-orange")
                 .frame(width: 400, height: 275)
-            Text("리스트에 저장된 값이 없습니다")
+            Text("저장된 gitignore가 없어요!")
                 .font(.title2)
         }
-    }
-}
-
-struct SwiftUIView_Previews: PreviewProvider {
-    static var previews: some View {
-        SwiftUIView()
     }
 }
