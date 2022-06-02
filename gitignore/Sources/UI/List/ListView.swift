@@ -12,10 +12,14 @@ struct ListView: View {
         .padding(.leading,-10)
         
         WithViewStore(self.store) { viewStore in
-            ListCardGrid(store: store)
-                .onAppear{
-                    viewStore.send(.onAppear)
-                }
+            ZStack{
+                ListCardGrid(store: store)
+                Image("")
+                    .resizable().hi
+            }
+            .onAppear{
+                viewStore.send(.onAppear)
+            }
         }
     }
 }

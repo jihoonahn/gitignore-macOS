@@ -10,6 +10,8 @@
 		EE5AAF98283FA56400E8255C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EE5AAF97283FA56400E8255C /* ComposableArchitecture */; };
 		EE5AAF9B283FA57600E8255C /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = EE5AAF9A283FA57600E8255C /* Swinject */; };
 		EEA2442128487E8A000486F2 /* gitignoreList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEA2441F28487E8A000486F2 /* gitignoreList.xcdatamodeld */; };
+		EEA244252848844C000486F2 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA244242848844C000486F2 /* SwiftUIView.swift */; };
+		EEA2442828488593000486F2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = EEA2442728488593000486F2 /* Lottie */; };
 		EEA34CCE283B9F7C00A00BED /* SearchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA34CCD283B9F7C00A00BED /* SearchList.swift */; };
 		EEA395D4283A418700A41CC4 /* RootFeacture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA395D3283A418700A41CC4 /* RootFeacture.swift */; };
 		EEA395D7283A42BC00A41CC4 /* gitignoreView in Frameworks */ = {isa = PBXBuildFile; productRef = EEA395D6283A42BC00A41CC4 /* gitignoreView */; };
@@ -80,6 +82,7 @@
 /* Begin PBXFileReference section */
 		EEA243FB2848606D000486F2 /* gitignoreDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = gitignoreDebug.entitlements; path = gitignore/Supporting/gitignoreDebug.entitlements; sourceTree = SOURCE_ROOT; };
 		EEA2442028487E8A000486F2 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		EEA244242848844C000486F2 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		EEA34CCD283B9F7C00A00BED /* SearchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchList.swift; sourceTree = "<group>"; };
 		EEA395D3283A418700A41CC4 /* RootFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFeacture.swift; sourceTree = "<group>"; };
 		EEA3F66C283C4D03005D6A15 /* ToolBarButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarButtonStyle.swift; sourceTree = "<group>"; };
@@ -149,6 +152,7 @@
 				EEA66E60284075E50095FB9A /* OSLogUtil in Frameworks */,
 				EEA6041D282FFEF700D79666 /* Network.framework in Frameworks */,
 				EEC59AFD28477C6F004A2A19 /* WaterfallGrid in Frameworks */,
+				EEA2442828488593000486F2 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +174,14 @@
 				EEA2441F28487E8A000486F2 /* gitignoreList.xcdatamodeld */,
 			);
 			path = CoreDataModel;
+			sourceTree = "<group>";
+		};
+		EEA2442328488440000486F2 /* NoList */ = {
+			isa = PBXGroup;
+			children = (
+				EEA244242848844C000486F2 /* SwiftUIView.swift */,
+			);
+			path = NoList;
 			sourceTree = "<group>";
 		};
 		EEA2E5E12847B180008A7C38 /* Add */ = {
@@ -313,6 +325,7 @@
 		EEC59B0928477CED004A2A19 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EEA2442328488440000486F2 /* NoList */,
 				EEC59B0A28477CED004A2A19 /* Tag */,
 				EEC59B0C28477CED004A2A19 /* Grid */,
 			);
@@ -520,6 +533,7 @@
 				EEA66E5F284075E50095FB9A /* OSLogUtil */,
 				EEC59AF5284772E2004A2A19 /* Local */,
 				EEC59AFC28477C6F004A2A19 /* WaterfallGrid */,
+				EEA2442728488593000486F2 /* Lottie */,
 			);
 			productName = gitignore;
 			productReference = EEDA85BB282B40700047F3AC /* gitignore.app */;
@@ -560,6 +574,7 @@
 			packageReferences = (
 				EE5AAF96283FA56400E8255C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 				EE5AAF99283FA57600E8255C /* XCRemoteSwiftPackageReference "Swinject" */,
+				EEA2442628488593000486F2 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = EEDA85BC282B40700047F3AC /* Products */;
 			projectDirPath = "";
@@ -626,6 +641,7 @@
 				EED2E753283343E10040C83A /* RootView.swift in Sources */,
 				EEA2442128487E8A000486F2 /* gitignoreList.xcdatamodeld in Sources */,
 				EEDE5B76282BA8EC00C0ADBA /* MainView.swift in Sources */,
+				EEA244252848844C000486F2 /* SwiftUIView.swift in Sources */,
 				EEDE5B87282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift in Sources */,
 				EEC59B1328477CED004A2A19 /* ListCardView.swift in Sources */,
 				EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */,
@@ -960,6 +976,14 @@
 				kind = branch;
 			};
 		};
+		EEA2442628488593000486F2 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -972,6 +996,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EE5AAF99283FA57600E8255C /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		EEA2442728488593000486F2 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EEA2442628488593000486F2 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 		EEA395D6283A42BC00A41CC4 /* gitignoreView */ = {
 			isa = XCSwiftPackageProductDependency;
