@@ -30,7 +30,19 @@ public final class CoreDataService : BaseCoreData, CoreDatas,CoreDataStoring{
 
 public extension CoreDataService{
     func save(title : String, tags : [String], gitignoreString : String) {
+        print("💀 : title : \(title), tags : \(tags)")
+        let entity = GitignoreList(context: container.viewContext)
+        entity.id = UUID()
+        entity.date = Date()
+        entity.title = title
+        entity.tags = tags
+        entity.gitignoreString = gitignoreString
         
+        do{
+            try container.viewContext.save()
+        }catch let error{
+            print("Error Saving to CoreData. \(error)")
+        }
     }
     
     func fetch() -> [GitignoreList]{

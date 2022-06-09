@@ -28,6 +28,8 @@
 		EEA66E60284075E50095FB9A /* OSLogUtil in Frameworks */ = {isa = PBXBuildFile; productRef = EEA66E5F284075E50095FB9A /* OSLogUtil */; };
 		EEA66E6328407A920095FB9A /* AppDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA66E6228407A920095FB9A /* AppDI.swift */; };
 		EEABDA022839F0B400C0F087 /* Effects in Frameworks */ = {isa = PBXBuildFile; productRef = EEABDA012839F0B400C0F087 /* Effects */; };
+		EEB7BE972851EFE900FCC459 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = EEB7BE962851EFE900FCC459 /* Realm */; };
+		EEB7BE992851EFE900FCC459 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EEB7BE982851EFE900FCC459 /* RealmSwift */; };
 		EEC59ADC28475B73004A2A19 /* gitignoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59ADB28475B73004A2A19 /* gitignoreTests.swift */; };
 		EEC59AE928475E72004A2A19 /* gitignoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59AE828475E72004A2A19 /* gitignoreUITests.swift */; };
 		EEC59AEB28475E72004A2A19 /* gitignoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59AEA28475E72004A2A19 /* gitignoreUITestsLaunchTests.swift */; };
@@ -147,6 +149,7 @@
 			files = (
 				EEABDA022839F0B400C0F087 /* Effects in Frameworks */,
 				EEA66E5E284075590095FB9A /* OSLog.framework in Frameworks */,
+				EEB7BE992851EFE900FCC459 /* RealmSwift in Frameworks */,
 				EE5AAF9B283FA57600E8255C /* Swinject in Frameworks */,
 				EEA60417282EB4EE00D79666 /* UIUtil in Frameworks */,
 				EE5AAF98283FA56400E8255C /* ComposableArchitecture in Frameworks */,
@@ -156,6 +159,7 @@
 				EEA66E60284075E50095FB9A /* OSLogUtil in Frameworks */,
 				EEA6041D282FFEF700D79666 /* Network.framework in Frameworks */,
 				EEC59AFD28477C6F004A2A19 /* WaterfallGrid in Frameworks */,
+				EEB7BE972851EFE900FCC459 /* Realm in Frameworks */,
 				EEA2442828488593000486F2 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,6 +560,8 @@
 				EEC59AF5284772E2004A2A19 /* Local */,
 				EEC59AFC28477C6F004A2A19 /* WaterfallGrid */,
 				EEA2442728488593000486F2 /* Lottie */,
+				EEB7BE962851EFE900FCC459 /* Realm */,
+				EEB7BE982851EFE900FCC459 /* RealmSwift */,
 			);
 			productName = gitignore;
 			productReference = EEDA85BB282B40700047F3AC /* gitignore.app */;
@@ -597,6 +603,7 @@
 				EE5AAF96283FA56400E8255C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 				EE5AAF99283FA57600E8255C /* XCRemoteSwiftPackageReference "Swinject" */,
 				EEA2442628488593000486F2 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				EEB7BE952851EFE900FCC459 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = EEDA85BC282B40700047F3AC /* Products */;
 			projectDirPath = "";
@@ -1008,6 +1015,14 @@
 				kind = branch;
 			};
 		};
+		EEB7BE952851EFE900FCC459 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1045,6 +1060,16 @@
 		EEABDA012839F0B400C0F087 /* Effects */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Effects;
+		};
+		EEB7BE962851EFE900FCC459 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EEB7BE952851EFE900FCC459 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		EEB7BE982851EFE900FCC459 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EEB7BE952851EFE900FCC459 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 		EEC59AF5284772E2004A2A19 /* Local */ = {
 			isa = XCSwiftPackageProductDependency;
