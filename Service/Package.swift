@@ -7,28 +7,38 @@ let package = Package(
     name: "Service",
     platforms: [.macOS(.v10_15)],
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "Effects",
-            targets: ["Effects"]),
+            name: "gitignoreAPI",
+            targets: ["gitignoreAPI"]),
         .library(
-            name: "Local",
-            targets: ["Local"]),
+            name: "gitignoreLocal",
+            targets: ["gitignoreLocal"]),
+        .library(
+            name: "gitignoreService",
+            targets: ["gitignoreService"]),
     ],
     dependencies: [
         .package(url: "https://github.com/pointfreeco/swift-composable-architecture", branch: "main"),
-        .package(path: "../CombineCoreData"),
+        .package(url: "https://github.com/realm/realm-swift", branch: "master"),
+        .package(url: "https://github.com/Swinject/Swinject", branch: "master")
     ],
     targets: [
         .target(
-            name: "Effects",
+            name: "gitignoreAPI",
             dependencies: [
-                .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+                .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
             ]),
         .target(
-            name: "Local",
+            name: "gitignoreLocal",
             dependencies: [
-                .product(name: "CombineCoreData", package: "CombineCoreData")
+                .product(name: "Realm", package: "realm-swift")
+            ]),
+        .target(
+            name: "gitignoreService",
+            dependencies: [
+                    "gitignoreAPI",
+                    "gitignoreLocal",
+                    "Swinject",
             ]),
     ]
 )
