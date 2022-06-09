@@ -1,6 +1,6 @@
 import ComposableArchitecture
-import Effects
-import Local
+import gitignoreAPI
+import gitignoreLocal
 
 struct TabBarState : Equatable{
     var selectedTab : String = "Home"
@@ -24,7 +24,6 @@ let tabBarReducer = Reducer<TabBarState, TabBarAction, tabBarEnvironmnet>.combin
         action: /TabBarAction.mainAction,
         environment: {_ in
                 .init(
-                    locals: {ServiceCoreData()},
                     effects: { ServiceEffect()},
                     mainQueue: {.main}
                 )
@@ -35,7 +34,6 @@ let tabBarReducer = Reducer<TabBarState, TabBarAction, tabBarEnvironmnet>.combin
         action: /TabBarAction.listAction,
         environment: {_ in
                 .init(
-                    locals: { ServiceCoreData()},
                     mainQueue: {.main}
                 )
         }

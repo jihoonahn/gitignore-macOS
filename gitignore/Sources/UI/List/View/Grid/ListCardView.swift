@@ -1,7 +1,7 @@
 import SwiftUI
 import FoundationUtil
 import ComposableArchitecture
-import Local
+import gitignoreLocal
 
 struct ListCardView : View{
     let store : Store<ListState,ListAction>

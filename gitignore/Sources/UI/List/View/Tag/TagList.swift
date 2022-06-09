@@ -1,6 +1,6 @@
 import SwiftUI
 import ComposableArchitecture
-import Local
+import gitignoreLocal
 
 public struct TagListView: View {
     
@@ -37,8 +37,8 @@ public struct TagListView: View {
         var height = CGFloat.zero
         return WithViewStore(store.scope(state: ViewState.init)){viewStore in
         ZStack(alignment: .topLeading) {
-            ForEach(list.tags!.indices, id: \.self) { index in
-                item(for: list.tags![index])
+            ForEach(list.arrayTags.indices, id: \.self) { index in
+                item(for: list.arrayTags[index])
                         .padding([.horizontal, .vertical], 4)
                         .alignmentGuide(.leading, computeValue: { d in
                             if (abs(width - d.width) > g.size.width) {
@@ -46,7 +46,7 @@ public struct TagListView: View {
                                 height -= d.height
                             }
                             let result = width
-                            if list.tags![index] == list.tags?.last! {
+                            if list.arrayTags[index] == list.arrayTags.last! {
                                 width = 0 //last item
                             } else {
                                 width -= d.width
@@ -55,7 +55,7 @@ public struct TagListView: View {
                         })
                         .alignmentGuide(.top, computeValue: {d in
                             let result = height
-                            if list.tags![index] == list.tags?.last! {
+                            if list.arrayTags[index] == list.arrayTags.last! {
                                 height = 0 // last item
                             }
                             return result

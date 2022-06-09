@@ -4,15 +4,16 @@ import ComposableArchitecture
 
 final class DefaultGitignoreRepository : GitignoreAPIRepository & GitignoreLocalRepository{
     
-    
+    private let gitignoreRemote = GitignoreRemote.shared
+//    private let gitignoreLocal = gitignoreLocal.shared
     
     //MARK: - API
     func searchGitignoreMenuAPI() -> Effect<String, gitignoreError> {
-        
+        gitignoreRemote.searchGitignoreMenuAPI()
     }
     
-    func makeGitignoreFileAPI(tag: [String]) -> Effect<String, gitignoreError> {
-        
+    func createGitignoreFileAPI(tag: [String]) -> Effect<String, gitignoreError> {
+        gitignoreRemote.createGitignoreFileAPI(tag: tag)
     }
     
     
@@ -28,6 +29,4 @@ final class DefaultGitignoreRepository : GitignoreAPIRepository & GitignoreLocal
     func deleteGitignoreRealm(id: String) {
         
     }
-    
-    
 }

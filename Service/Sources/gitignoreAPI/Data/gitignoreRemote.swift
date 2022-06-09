@@ -2,10 +2,10 @@ import Foundation
 import Combine
 import ComposableArchitecture
 
-final public class gitignoreRemote {
-    static public let shared = gitignoreRemote()
+final public class GitignoreRemote {
+    static public let shared = GitignoreRemote()
     
-    func searchGitignoreMenuAPI() -> Effect<String, gitignoreError>{
+    public func searchGitignoreMenuAPI() -> Effect<String, gitignoreError>{
         guard let url = URL(string: "https://www.toptal.com/developers/gitignore/api/list") else {
             fatalError("Error on creating url")
         }
@@ -16,7 +16,7 @@ final public class gitignoreRemote {
             .eraseToEffect()
     }
     
-    func makeGitignoreFileAPI(tag : [String]) -> Effect<String, gitignoreError>{
+    public func createGitignoreFileAPI(tag : [String]) -> Effect<String, gitignoreError>{
         guard let url = URL(string: "https://www.toptal.com/developers/gitignore/api/\(tag.joined(separator: ","))") else {
             fatalError("Error on creating url")
         }

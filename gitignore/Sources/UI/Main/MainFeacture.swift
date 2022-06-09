@@ -1,8 +1,8 @@
 import ComposableArchitecture
 import Combine
-import Effects
 import SwiftUI
-import Local
+import gitignoreAPI
+import gitignoreLocal
 
 struct MainState: Equatable{
     var searchQuery = ""
@@ -36,15 +36,12 @@ enum MainAction{
 }
 
 struct MainEnvironmnet{
-    var locals : () -> ServiceCoreDataType
     var effects : () -> ServiceEffectType
     var mainQueue: () -> AnySchedulerOf<DispatchQueue>
     public init(
-        locals : @escaping() -> ServiceCoreDataType,
         effects: @escaping() -> ServiceEffectType,
         mainQueue : @escaping() -> AnySchedulerOf<DispatchQueue>
     ){
-        self.locals = locals
         self.effects = effects
         self.mainQueue = mainQueue
     }
@@ -111,7 +108,7 @@ let mainReducer = Reducer<
         
     case .saveGitignoreButtonDidTap:
         guard !state.userChooseTag.isEmpty && !state.titleQuery.isEmpty else {return .none}
-        enviroment.locals().coreData.save(title: state.titleQuery, tags: Array(state.userChooseTag), gitignoreString: state.gitignoreStringQuery)
+//        enviroment.locals().coreData.save(title: state.titleQuery, tags: Array(state.userChooseTag), gitignoreString: state.gitignoreStringQuery)
         state.addSheetStatus = !state.addSheetStatus
         return .none
         
