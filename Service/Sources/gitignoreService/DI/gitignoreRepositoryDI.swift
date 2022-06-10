@@ -38,5 +38,10 @@ public extension Container{
                 gitignoreRepository: r.resolve(GitignoreLocalRepository.self)!
             )
         }
+        self.register(GitignoreListFetchUseCase.self) { r in
+            GitignoreListFetchUseCase(
+                gitignoreRepository: r.resolve(GitignoreLocalRepository.self)!
+            )
+        }
     }
 }

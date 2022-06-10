@@ -21,9 +21,9 @@ final class DefaultGitignoreRepository : GitignoreAPIRepository & GitignoreLocal
     }
     
     //MARK: - Local
-//    func fetchGitignoreRealm() -> AnyPublisher<[GitignoreList],Never>{
-//        gitignoreLocal.
-//    }
+    func fetchGitignoreRealm() -> AnyPublisher<[GitignoreList],Never>{
+        gitignoreLocal.fetchGitignoreRealm()
+    }
     
     func saveGitignoreRealm(gitignore: GitignoreList) {
         gitignoreLocal.saveGitignoreList(gitignoreList: gitignore)

@@ -38,6 +38,7 @@ let tabBarReducer = Reducer<TabBarState, TabBarAction, tabBarEnvironmnet>.combin
         action: /TabBarAction.listAction,
         environment: {_ in
                 .init(
+                    gitignoreListFetchUseCase: { gitignoreApp.container.resolve(GitignoreListFetchUseCase.self)!},
                     mainQueue: {.main}
                 )
         }

@@ -10,6 +10,15 @@ final public class GitignoreLocal{
     
     private init(){}
     
+    public func fetchGitignoreRealm() -> AnyPublisher<[GitignoreList],Never>{
+        return realm.fetchObjects(
+            for: GitignoreListEntity.self,
+            filter: .where(query: { entity in
+                entity.title.equals(entity.title)
+            })
+        ).map{ $0.map{ $0.toDomain()}}.eraseToAnyPublisher()
+    }
+    
     public func saveGitignoreList(gitignoreList : GitignoreList)  {
         let add : GitignoreListEntity = {
             let entity = GitignoreListEntity()
