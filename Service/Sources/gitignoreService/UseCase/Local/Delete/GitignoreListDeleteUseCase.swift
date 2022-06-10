@@ -7,7 +7,7 @@ public struct GitignoreListDeleteUseCase {
     }
     private let gitignoreRepository : GitignoreLocalRepository
 
-    public func execute(id : UUID) {
+    public func execute(id : String) {
         return gitignoreRepository.deleteGitignoreRealm(id: id)
     }
 }

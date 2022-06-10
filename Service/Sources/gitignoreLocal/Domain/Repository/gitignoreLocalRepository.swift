@@ -4,5 +4,5 @@ import Foundation
 public protocol GitignoreLocalRepository{
     func fetchGitignoreRealm() -> AnyPublisher<[GitignoreList],Never>
     func saveGitignoreRealm(gitignore : GitignoreList)
-    func deleteGitignoreRealm(id : UUID)
+    func deleteGitignoreRealm(id : String)
 }

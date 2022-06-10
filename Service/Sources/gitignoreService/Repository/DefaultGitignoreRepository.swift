@@ -29,7 +29,7 @@ final class DefaultGitignoreRepository : GitignoreAPIRepository & GitignoreLocal
         gitignoreLocal.saveGitignoreList(gitignoreList: gitignore)
     }
     
-    func deleteGitignoreRealm(id: UUID) {
+    func deleteGitignoreRealm(id: String) {
         gitignoreLocal.deleteGitignoreList(id: id)
     }
 }

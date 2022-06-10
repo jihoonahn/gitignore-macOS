@@ -4,6 +4,7 @@ import OSLogUtil
 import RealmSwift
 import gitignoreLocal
 import gitignoreService
+import Foundation
 
 struct ListState: Equatable{
     var totalHeight : CGFloat = .zero
@@ -13,7 +14,7 @@ struct ListState: Equatable{
 enum ListAction{
     case onAppear
     case tagTotalHeightAction
-    case deleteListCell(ObjectId)
+    case deleteListCell(String)
     case viewHeightReader(CGFloat)
     
     case fetchList(Result<[GitignoreList],Never>)
@@ -57,7 +58,10 @@ let listReducer = Reducer<
         
     case .deleteListCell(let id):
         environment.gitignoreListDeleteUseCase().execute(id: id)
-        return .none
+        return environment.gitignoreListFetchUseCase().execute()
+            .receive(on: environment.mainQueue())
+            .eraseToEffect()
+            .catchToEffect(ListAction.fetchList)
         
         //MARK: - Local
     case .fetchList(let result):

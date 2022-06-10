@@ -2,7 +2,7 @@ import Foundation
 import RealmSwift
 
 public class GitignoreListEntity : Object{
-    @Persisted(primaryKey: true) public var id : UUID
+    @Persisted(primaryKey: true) public var id : ObjectId
     @Persisted public var date : Date
     @Persisted public var title : String
     @Persisted public var tags = List<String>()
@@ -20,7 +20,6 @@ public class GitignoreListEntity : Object{
 
 public extension GitignoreListEntity{
     func setup(gitignoreList : GitignoreList){
-        self.id = id
         self.title = gitignoreList.title
         self.date = gitignoreList.date
         self.arrayTags = gitignoreList.arrayTags
@@ -31,7 +30,6 @@ public extension GitignoreListEntity{
 public extension GitignoreListEntity{
     func toDomain() -> GitignoreList{
         return .init(
-            id: id,
             title: title,
             arrayTags: arrayTags,
             date: date,
