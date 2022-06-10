@@ -25,7 +25,7 @@ struct ListCardView : View{
                             .layoutPriority(98)
                         Spacer()
                         Button(action: {
-                            withAnimation{ print("Delete")}
+                            withAnimation{ viewStore.send(.deleteListCell(list.id))}
                         }, label: {
                             Image(systemName: "xmark")
                                 .foregroundColor(.backgourndColor_Opposition)

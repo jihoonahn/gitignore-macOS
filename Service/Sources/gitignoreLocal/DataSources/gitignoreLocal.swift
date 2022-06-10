@@ -28,7 +28,7 @@ final public class GitignoreLocal{
         realm.add(add)
     }
 
-    public func deleteGitignoreList(id: ObjectId) {
+    public func deleteGitignoreList(id: UUID) {
         let list = realm.fetchObjectsResults(for: GitignoreListEntity.self).filter{ $0.id == id}
         realm.delete(list.reversed())
     }

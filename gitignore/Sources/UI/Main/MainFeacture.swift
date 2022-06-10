@@ -119,6 +119,7 @@ let mainReducer = Reducer<
     case .saveGitignoreButtonDidTap:
         guard !state.userChooseTag.isEmpty && !state.titleQuery.isEmpty else {return .none}
         enviroment.gitignoreLocalSaveUseCase().execute(gitignore: GitignoreList(
+            id: UUID(),
             title: state.titleQuery,
             arrayTags: Array(state.userChooseTag),
             date: Date(),
