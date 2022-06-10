@@ -17,7 +17,7 @@ struct ListCardView : View{
             HStack() {
                 VStack(alignment: .leading) {
                     HStack{
-                        Text(list.title ?? "")
+                        Text(list.title )
                             .font(.headline)
                             .foregroundColor(.primary)
                             .padding(.bottom, 8)
@@ -31,7 +31,7 @@ struct ListCardView : View{
                                 .foregroundColor(.backgourndColor_Opposition)
                         }).buttonStyle(PlainButtonStyle())
                     }
-                    Text(Date().usingDate(time: list.date ?? Date()))
+                    Text(Date().usingDate(time: list.date))
                         .font(.caption)
                         .foregroundColor(.secondary)
                         .fixedSize(horizontal: false, vertical: true)

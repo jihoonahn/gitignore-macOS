@@ -1,6 +1,7 @@
 import ComposableArchitecture
 import gitignoreAPI
 import gitignoreLocal
+import gitignoreService
 
 struct TabBarState : Equatable{
     var selectedTab : String = "Home"
@@ -24,6 +25,9 @@ let tabBarReducer = Reducer<TabBarState, TabBarAction, tabBarEnvironmnet>.combin
         action: /TabBarAction.mainAction,
         environment: {_ in
                 .init(
+                    searchGitignoreMenuUseCase: {gitignoreApp.container.resolve(SearchGitignoreMenuUseCase.self)!},
+                    createGitignoreFileUseCase: { gitignoreApp.container.resolve(CreateGitignoreFileUseCase.self)!},
+                    gitignoreLocalSaveUseCase: {gitignoreApp.container.resolve(GitignoreListSaveUseCase.self)!},
                     effects: { ServiceEffect()},
                     mainQueue: {.main}
                 )

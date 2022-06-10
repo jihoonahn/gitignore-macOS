@@ -3,6 +3,7 @@ import Combine
 import SwiftUI
 import gitignoreAPI
 import gitignoreLocal
+import gitignoreService
 
 struct MainState: Equatable{
     var searchQuery = ""
@@ -30,19 +31,27 @@ enum MainAction{
     case createGitignore // gitignore 데이터 Load
     case tagDelete(Int) // tag Click Delete
     
-    case dataLoaded(Result<String, ApiError>)
-    case gitignoreDataLoaded(Result<String, ApiError>)
-    case addSheetgitignoreDataLoaded(Result<String,ApiError>)
+    case dataLoaded(Result<String, gitignoreError>)
+    case gitignoreDataLoaded(Result<String, gitignoreError>)
+    case addSheetgitignoreDataLoaded(Result<String,gitignoreError>)
 }
 
 struct MainEnvironmnet{
-    var effects : () -> ServiceEffectType
+    var searchGitignoreMenuUseCase : () -> SearchGitignoreMenuUseCase
+    var createGitignoreFileUseCase : () -> CreateGitignoreFileUseCase
+    var gitignoreLocalSaveUseCase : () -> GitignoreListSaveUseCase
     var mainQueue: () -> AnySchedulerOf<DispatchQueue>
+    
     public init(
+        searchGitignoreMenuUseCase : @escaping() -> SearchGitignoreMenuUseCase,
+        createGitignoreFileUseCase : @escaping() -> CreateGitignoreFileUseCase,
+        gitignoreLocalSaveUseCase : @escaping() -> GitignoreListSaveUseCase,
         effects: @escaping() -> ServiceEffectType,
         mainQueue : @escaping() -> AnySchedulerOf<DispatchQueue>
     ){
-        self.effects = effects
+        self.searchGitignoreMenuUseCase = searchGitignoreMenuUseCase
+        self.createGitignoreFileUseCase = createGitignoreFileUseCase
+        self.gitignoreLocalSaveUseCase = gitignoreLocalSaveUseCase
         self.mainQueue = mainQueue
     }
 }
@@ -76,19 +85,20 @@ let mainReducer = Reducer<
         return .none
         
     case .onAppear:
-        return enviroment.effects().effect.searchGitignoreMenuAPI()
+        return enviroment.searchGitignoreMenuUseCase().execute()
             .receive(on: enviroment.mainQueue())
+            .map{ $0 }
             .catchToEffect(MainAction.dataLoaded)
         
     case .addSheetonAppear:
         if state.userChooseTag.isEmpty{state.gitignoreStringQuery = .init()}
-        return enviroment.effects().effect.makeGitignoreFileAPI(tag: Array(state.userChooseTag))
+        return enviroment.createGitignoreFileUseCase().execute(tag: Array(state.userChooseTag))
             .receive(on: enviroment.mainQueue())
             .catchToEffect(MainAction.addSheetgitignoreDataLoaded)
         
     case .createGitignore:
         guard !state.userChooseTag.isEmpty else {return .none}
-        return enviroment.effects().effect.makeGitignoreFileAPI(tag: Array(state.userChooseTag))
+        return enviroment.createGitignoreFileUseCase().execute(tag: Array(state.userChooseTag))
             .receive(on: enviroment.mainQueue())
             .catchToEffect(MainAction.gitignoreDataLoaded)
         
@@ -108,6 +118,7 @@ let mainReducer = Reducer<
         
     case .saveGitignoreButtonDidTap:
         guard !state.userChooseTag.isEmpty && !state.titleQuery.isEmpty else {return .none}
+        
 //        enviroment.locals().coreData.save(title: state.titleQuery, tags: Array(state.userChooseTag), gitignoreString: state.gitignoreStringQuery)
         state.addSheetStatus = !state.addSheetStatus
         return .none

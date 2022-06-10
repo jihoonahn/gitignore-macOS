@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		EE5AAF98283FA56400E8255C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EE5AAF97283FA56400E8255C /* ComposableArchitecture */; };
-		EE5AAF9B283FA57600E8255C /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = EE5AAF9A283FA57600E8255C /* Swinject */; };
 		EEA2442128487E8A000486F2 /* gitignoreList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEA2441F28487E8A000486F2 /* gitignoreList.xcdatamodeld */; };
 		EEA244252848844C000486F2 /* NoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA244242848844C000486F2 /* NoListView.swift */; };
 		EEA2442828488593000486F2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = EEA2442728488593000486F2 /* Lottie */; };
@@ -31,7 +30,9 @@
 		EEB7BE992851EFE900FCC459 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EEB7BE982851EFE900FCC459 /* RealmSwift */; };
 		EEB7BE9B28520BB000FCC459 /* gitignoreAPI in Frameworks */ = {isa = PBXBuildFile; productRef = EEB7BE9A28520BB000FCC459 /* gitignoreAPI */; };
 		EEB7BE9D28520BB000FCC459 /* gitignoreLocal in Frameworks */ = {isa = PBXBuildFile; productRef = EEB7BE9C28520BB000FCC459 /* gitignoreLocal */; };
-		EEB7BE9F28520BB000FCC459 /* gitignoreService in Frameworks */ = {isa = PBXBuildFile; productRef = EEB7BE9E28520BB000FCC459 /* gitignoreService */; };
+		EEBFD72A28530062006D00C3 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = EEBFD72928530062006D00C3 /* Swinject */; };
+		EEBFD72C285306A9006D00C3 /* gitignoreService in Frameworks */ = {isa = PBXBuildFile; productRef = EEBFD72B285306A9006D00C3 /* gitignoreService */; };
+		EEBFD72F28530731006D00C3 /* ViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBFD72E28530731006D00C3 /* ViewAssembly.swift */; };
 		EEC59ADC28475B73004A2A19 /* gitignoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59ADB28475B73004A2A19 /* gitignoreTests.swift */; };
 		EEC59AE928475E72004A2A19 /* gitignoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59AE828475E72004A2A19 /* gitignoreUITests.swift */; };
 		EEC59AEB28475E72004A2A19 /* gitignoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59AEA28475E72004A2A19 /* gitignoreUITestsLaunchTests.swift */; };
@@ -100,6 +101,7 @@
 		EEA6041C282FFEF700D79666 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
 		EEA66E5D284075590095FB9A /* OSLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSLog.framework; path = System/Library/Frameworks/OSLog.framework; sourceTree = SDKROOT; };
 		EEA66E6228407A920095FB9A /* AppDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDI.swift; sourceTree = "<group>"; };
+		EEBFD72E28530731006D00C3 /* ViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAssembly.swift; sourceTree = "<group>"; };
 		EEC59AD928475B73004A2A19 /* gitignoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gitignoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC59ADB28475B73004A2A19 /* gitignoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreTests.swift; sourceTree = "<group>"; };
 		EEC59AE628475E72004A2A19 /* gitignoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gitignoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,10 +150,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEA66E5E284075590095FB9A /* OSLog.framework in Frameworks */,
-				EEB7BE9F28520BB000FCC459 /* gitignoreService in Frameworks */,
+				EEBFD72C285306A9006D00C3 /* gitignoreService in Frameworks */,
 				EEB7BE9D28520BB000FCC459 /* gitignoreLocal in Frameworks */,
 				EEB7BE992851EFE900FCC459 /* RealmSwift in Frameworks */,
-				EE5AAF9B283FA57600E8255C /* Swinject in Frameworks */,
 				EEA60417282EB4EE00D79666 /* UIUtil in Frameworks */,
 				EE5AAF98283FA56400E8255C /* ComposableArchitecture in Frameworks */,
 				EEA395D7283A42BC00A41CC4 /* gitignoreView in Frameworks */,
@@ -162,6 +163,7 @@
 				EEC59AFD28477C6F004A2A19 /* WaterfallGrid in Frameworks */,
 				EEB7BE972851EFE900FCC459 /* Realm in Frameworks */,
 				EEA2442828488593000486F2 /* Lottie in Frameworks */,
+				EEBFD72A28530062006D00C3 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,9 +283,18 @@
 		EEA66E6128407A8B0095FB9A /* DI */ = {
 			isa = PBXGroup;
 			children = (
+				EEBFD72D2853071F006D00C3 /* Assembly */,
 				EEA66E6228407A920095FB9A /* AppDI.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		EEBFD72D2853071F006D00C3 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				EEBFD72E28530731006D00C3 /* ViewAssembly.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 		EEC59ADA28475B73004A2A19 /* gitignoreTests */ = {
@@ -554,7 +565,6 @@
 				EEA604252830277000D79666 /* FoundationUtil */,
 				EEA395D6283A42BC00A41CC4 /* gitignoreView */,
 				EE5AAF97283FA56400E8255C /* ComposableArchitecture */,
-				EE5AAF9A283FA57600E8255C /* Swinject */,
 				EEA66E5F284075E50095FB9A /* OSLogUtil */,
 				EEC59AFC28477C6F004A2A19 /* WaterfallGrid */,
 				EEA2442728488593000486F2 /* Lottie */,
@@ -562,7 +572,8 @@
 				EEB7BE982851EFE900FCC459 /* RealmSwift */,
 				EEB7BE9A28520BB000FCC459 /* gitignoreAPI */,
 				EEB7BE9C28520BB000FCC459 /* gitignoreLocal */,
-				EEB7BE9E28520BB000FCC459 /* gitignoreService */,
+				EEBFD72928530062006D00C3 /* Swinject */,
+				EEBFD72B285306A9006D00C3 /* gitignoreService */,
 			);
 			productName = gitignore;
 			productReference = EEDA85BB282B40700047F3AC /* gitignore.app */;
@@ -602,9 +613,9 @@
 			mainGroup = EEDA85B2282B40700047F3AC;
 			packageReferences = (
 				EE5AAF96283FA56400E8255C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
-				EE5AAF99283FA57600E8255C /* XCRemoteSwiftPackageReference "Swinject" */,
 				EEA2442628488593000486F2 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				EEB7BE952851EFE900FCC459 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				EEBFD72828530062006D00C3 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = EEDA85BC282B40700047F3AC /* Products */;
 			projectDirPath = "";
@@ -666,6 +677,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEBFD72F28530731006D00C3 /* ViewAssembly.swift in Sources */,
 				EEC59B1128477CED004A2A19 /* TagList.swift in Sources */,
 				EEC59B1828477DA0004A2A19 /* AddSheetView.swift in Sources */,
 				EEC59B1428477CED004A2A19 /* ListView.swift in Sources */,
@@ -1000,14 +1012,6 @@
 				kind = branch;
 			};
 		};
-		EE5AAF99283FA57600E8255C /* XCRemoteSwiftPackageReference "Swinject" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Swinject/Swinject.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		EEA2442628488593000486F2 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
@@ -1024,6 +1028,14 @@
 				kind = branch;
 			};
 		};
+		EEBFD72828530062006D00C3 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1031,11 +1043,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EE5AAF96283FA56400E8255C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
-		};
-		EE5AAF9A283FA57600E8255C /* Swinject */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EE5AAF99283FA57600E8255C /* XCRemoteSwiftPackageReference "Swinject" */;
-			productName = Swinject;
 		};
 		EEA2442728488593000486F2 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1076,7 +1083,12 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = gitignoreLocal;
 		};
-		EEB7BE9E28520BB000FCC459 /* gitignoreService */ = {
+		EEBFD72928530062006D00C3 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EEBFD72828530062006D00C3 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		EEBFD72B285306A9006D00C3 /* gitignoreService */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = gitignoreService;
 		};

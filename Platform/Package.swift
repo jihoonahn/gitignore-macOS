@@ -38,6 +38,7 @@ let package = Package(
         .target(
             name: "UIUtil",
             dependencies: []),
+
         .target(
             name: "WaterfallGrid",
             dependencies: []),

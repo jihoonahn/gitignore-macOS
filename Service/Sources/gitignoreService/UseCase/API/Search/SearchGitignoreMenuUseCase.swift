@@ -1,7 +1,7 @@
 import gitignoreAPI
 import ComposableArchitecture
 
-public struct searchGitignoreMenuUseCase{
+public struct SearchGitignoreMenuUseCase{
     public init(gitignoreRepository : GitignoreAPIRepository){
         self.gitignoreRepository = gitignoreRepository
     }
