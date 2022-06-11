@@ -8,6 +8,7 @@ struct TabBarState : Equatable{
     
     var mainState = MainState()
     var listState = ListState()
+    
 }
 
 enum TabBarAction{

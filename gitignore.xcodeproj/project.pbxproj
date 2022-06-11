@@ -25,7 +25,6 @@
 		EEA604262830277000D79666 /* FoundationUtil in Frameworks */ = {isa = PBXBuildFile; productRef = EEA604252830277000D79666 /* FoundationUtil */; };
 		EEA66E5E284075590095FB9A /* OSLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA66E5D284075590095FB9A /* OSLog.framework */; };
 		EEA66E60284075E50095FB9A /* OSLogUtil in Frameworks */ = {isa = PBXBuildFile; productRef = EEA66E5F284075E50095FB9A /* OSLogUtil */; };
-		EEA66E6328407A920095FB9A /* AppDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA66E6228407A920095FB9A /* AppDI.swift */; };
 		EEB7BE972851EFE900FCC459 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = EEB7BE962851EFE900FCC459 /* Realm */; };
 		EEB7BE992851EFE900FCC459 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EEB7BE982851EFE900FCC459 /* RealmSwift */; };
 		EEB7BE9B28520BB000FCC459 /* gitignoreAPI in Frameworks */ = {isa = PBXBuildFile; productRef = EEB7BE9A28520BB000FCC459 /* gitignoreAPI */; };
@@ -100,7 +99,6 @@
 		EEA60414282EB3DA00D79666 /* Platform */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Platform; sourceTree = "<group>"; };
 		EEA6041C282FFEF700D79666 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
 		EEA66E5D284075590095FB9A /* OSLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSLog.framework; path = System/Library/Frameworks/OSLog.framework; sourceTree = SDKROOT; };
-		EEA66E6228407A920095FB9A /* AppDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDI.swift; sourceTree = "<group>"; };
 		EEBFD72E28530731006D00C3 /* ViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAssembly.swift; sourceTree = "<group>"; };
 		EEC59AD928475B73004A2A19 /* gitignoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gitignoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC59ADB28475B73004A2A19 /* gitignoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreTests.swift; sourceTree = "<group>"; };
@@ -284,7 +282,6 @@
 			isa = PBXGroup;
 			children = (
 				EEBFD72D2853071F006D00C3 /* Assembly */,
-				EEA66E6228407A920095FB9A /* AppDI.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -693,7 +690,6 @@
 				EEC59B1228477CED004A2A19 /* ListCardGrid.swift in Sources */,
 				EEA3F66F283C4D88005D6A15 /* CreateButtonStyle.swift in Sources */,
 				EEA34CCE283B9F7C00A00BED /* SearchList.swift in Sources */,
-				EEA66E6328407A920095FB9A /* AppDI.swift in Sources */,
 				EEA3F676283CFCB0005D6A15 /* TagListMain.swift in Sources */,
 				EEA3F66D283C4D03005D6A15 /* ToolBarButtonStyle.swift in Sources */,
 				EEA3F672283C5055005D6A15 /* TitleLogo.swift in Sources */,
