@@ -130,6 +130,7 @@ let mainReducer = Reducer<
         return .none
         
     case .addSheetCreateFileButtonDidTap:
+        guard !state.gitignoreStringQuery.isEmpty else {return .none}
         guard let url = NSSavePanel().showSavePanel() else {return .none}
         try? state.gitignoreStringQuery.write(to: url, atomically: true, encoding: .utf8)
         return  .none
