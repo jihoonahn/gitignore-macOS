@@ -13,6 +13,9 @@ struct ListCardGrid: View {
                 WaterfallGrid((0..<viewStore.list.count), id: \.self) { index  in
                     ListCardView(store: store, list: viewStore.list[index])
                         .background(BlurView())
+                        .onTapGesture {
+                            viewStore.send(.createGitignoreFile(viewStore.list[index].gitignoreString))
+                        }
                         .cornerRadius(20)
                 }
                 .gridStyle()

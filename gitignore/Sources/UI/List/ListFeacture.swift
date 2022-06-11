@@ -1,6 +1,7 @@
 import ComposableArchitecture
 import Combine
 import OSLogUtil
+import SwiftUI
 import RealmSwift
 import gitignoreLocal
 import gitignoreService
@@ -16,6 +17,7 @@ enum ListAction{
     case tagTotalHeightAction
     case deleteListCell(String)
     case viewHeightReader(CGFloat)
+    case createGitignoreFile(String)
     
     case fetchList(Result<[GitignoreList],Never>)
 }
@@ -63,6 +65,11 @@ let listReducer = Reducer<
             .eraseToEffect()
             .catchToEffect(ListAction.fetchList)
         
+    case let .createGitignoreFile(gitignoreString):
+        guard let url = NSSavePanel().showSavePanel() else {return .none}
+        try? gitignoreString.write(to: url, atomically: true, encoding: .utf8)
+        return .none
+        
         //MARK: - Local
     case .fetchList(let result):
         switch result{
@@ -70,7 +77,6 @@ let listReducer = Reducer<
             state.list = result
             return.none
         }
-
     }
 }
 
