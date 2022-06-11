@@ -15,7 +15,7 @@ struct ListState: Equatable{
 enum ListAction{
     case onAppear
     case tagTotalHeightAction
-    case deleteListCell(String)
+    case deleteListCell(ObjectId)
     case viewHeightReader(CGFloat)
     case createGitignoreFile(String)
     

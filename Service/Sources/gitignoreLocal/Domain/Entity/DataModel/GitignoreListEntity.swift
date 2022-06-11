@@ -20,6 +20,7 @@ public class GitignoreListEntity : Object{
 
 public extension GitignoreListEntity{
     func setup(gitignoreList : GitignoreList){
+        self.id = gitignoreList.id
         self.title = gitignoreList.title
         self.date = gitignoreList.date
         self.arrayTags = gitignoreList.arrayTags
@@ -30,6 +31,7 @@ public extension GitignoreListEntity{
 public extension GitignoreListEntity{
     func toDomain() -> GitignoreList{
         return .init(
+            id: id,
             title: title,
             arrayTags: arrayTags,
             date: date,

@@ -1,4 +1,5 @@
 import gitignoreLocal
+import RealmSwift
 import Foundation
 
 public struct GitignoreListDeleteUseCase {
@@ -7,7 +8,7 @@ public struct GitignoreListDeleteUseCase {
     }
     private let gitignoreRepository : GitignoreLocalRepository
 
-    public func execute(id : String) {
+    public func execute(id : ObjectId) {
         return gitignoreRepository.deleteGitignoreRealm(id: id)
     }
 }
