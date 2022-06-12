@@ -1,12 +1,15 @@
 import SwiftUI
 import ComposableArchitecture
 import UIUtil
-import WaterfallGrid
 
-struct ListView: View {
+public struct ListView: View {
     let store : Store<ListState,ListAction>
 
-    var body: some View {
+    public init(store : Store<ListState,ListAction>){
+        self.store = store
+    }
+    
+    public var body: some View {
         Color.backgroundColor
         .ignoresSafeArea()
         .padding(.leading,-10)
@@ -14,7 +17,8 @@ struct ListView: View {
         WithViewStore(self.store) { viewStore in
             ZStack{
                 ListCardGrid(store: store)
-                NoList()
+                Text("저장된 gitignore가 없어요!")
+                    .font(.title2)
                     .opacity(viewStore.state.list.count == 0 ? 1 : 0)
             }
             .onAppear{

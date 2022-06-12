@@ -1,6 +1,8 @@
 import SwiftUI
 import ComposableArchitecture
 import gitignoreView
+import gitignoreList
+import gitignoreMain
 
 //MARK: - Screen
 

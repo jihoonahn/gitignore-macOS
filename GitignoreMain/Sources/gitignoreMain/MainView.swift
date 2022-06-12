@@ -4,7 +4,7 @@ import UIUtil
 import gitignoreView
 
 //MARK: - MainView
-struct MainView: View {
+public struct MainView: View {
     
     let store : Store<MainState,MainAction>
     
@@ -26,7 +26,7 @@ struct MainView: View {
         }
     }
     
-    var body: some View {
+    public var body: some View {
         Color.backgroundColor
             .ignoresSafeArea()
             .padding(.leading,-10)

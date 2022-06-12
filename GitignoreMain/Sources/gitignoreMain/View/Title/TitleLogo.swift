@@ -14,9 +14,3 @@ struct TitleLogo: View {
     }
     
 }
-
-struct TitleLogo_Previews: PreviewProvider {
-    static var previews: some View {
-        TitleLogo()
-    }
-}

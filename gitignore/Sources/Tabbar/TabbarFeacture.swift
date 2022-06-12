@@ -2,6 +2,8 @@ import ComposableArchitecture
 import gitignoreAPI
 import gitignoreLocal
 import gitignoreService
+import gitignoreList
+import gitignoreMain
 
 struct TabBarState : Equatable{
     var selectedTab : String = "Home"

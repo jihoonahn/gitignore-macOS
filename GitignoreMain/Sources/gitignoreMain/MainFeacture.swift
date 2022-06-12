@@ -6,7 +6,7 @@ import gitignoreAPI
 import gitignoreLocal
 import gitignoreService
 
-struct MainState: Equatable{
+public struct MainState: Equatable{
     var searchQuery = ""
     var titleQuery = ""
     var gitignoreStringQuery = ""
@@ -16,9 +16,11 @@ struct MainState: Equatable{
     var inquiryListString : [String] = .init()
     var gitignoreListString : [String] = .init()
     var userChooseTag : Set<String> = .init()
+    
+    public init() {}
 }
 
-enum MainAction{
+public enum MainAction{
     case onAppear
     case tagTotalHeightAction
     case titleQueryChanged(String) // Sheet의 title Query
@@ -37,7 +39,7 @@ enum MainAction{
     case addSheetgitignoreDataLoaded(Result<String,gitignoreError>)
 }
 
-struct MainEnvironmnet{
+public struct MainEnvironmnet{
     var searchGitignoreMenuUseCase : () -> SearchGitignoreMenuUseCase
     var createGitignoreFileUseCase : () -> CreateGitignoreFileUseCase
     var gitignoreLocalSaveUseCase : () -> GitignoreListSaveUseCase
@@ -57,7 +59,7 @@ struct MainEnvironmnet{
     }
 }
 
-let mainReducer = Reducer<
+public let mainReducer = Reducer<
     MainState,
     MainAction,
     MainEnvironmnet

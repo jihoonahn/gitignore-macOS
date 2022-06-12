@@ -8,18 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		EE5AAF98283FA56400E8255C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EE5AAF97283FA56400E8255C /* ComposableArchitecture */; };
-		EEA2442128487E8A000486F2 /* gitignoreList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEA2441F28487E8A000486F2 /* gitignoreList.xcdatamodeld */; };
-		EEA244252848844C000486F2 /* NoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA244242848844C000486F2 /* NoListView.swift */; };
-		EEA2442828488593000486F2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = EEA2442728488593000486F2 /* Lottie */; };
-		EEA2442B284885B5000486F2 /* 73178-question-boy-orange.json in Resources */ = {isa = PBXBuildFile; fileRef = EEA2442A284885B5000486F2 /* 73178-question-boy-orange.json */; };
-		EEA2442E284885F0000486F2 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA2442D284885F0000486F2 /* LottieView.swift */; };
-		EEA34CCE283B9F7C00A00BED /* SearchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA34CCD283B9F7C00A00BED /* SearchList.swift */; };
 		EEA395D4283A418700A41CC4 /* RootFeacture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA395D3283A418700A41CC4 /* RootFeacture.swift */; };
 		EEA395D7283A42BC00A41CC4 /* gitignoreView in Frameworks */ = {isa = PBXBuildFile; productRef = EEA395D6283A42BC00A41CC4 /* gitignoreView */; };
-		EEA3F66D283C4D03005D6A15 /* ToolBarButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3F66C283C4D03005D6A15 /* ToolBarButtonStyle.swift */; };
-		EEA3F66F283C4D88005D6A15 /* CreateButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3F66E283C4D88005D6A15 /* CreateButtonStyle.swift */; };
-		EEA3F672283C5055005D6A15 /* TitleLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3F671283C5055005D6A15 /* TitleLogo.swift */; };
-		EEA3F676283CFCB0005D6A15 /* TagListMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3F675283CFCB0005D6A15 /* TagListMain.swift */; };
 		EEA60417282EB4EE00D79666 /* UIUtil in Frameworks */ = {isa = PBXBuildFile; productRef = EEA60416282EB4EE00D79666 /* UIUtil */; };
 		EEA6041D282FFEF700D79666 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA6041C282FFEF700D79666 /* Network.framework */; };
 		EEA604262830277000D79666 /* FoundationUtil in Frameworks */ = {isa = PBXBuildFile; productRef = EEA604252830277000D79666 /* FoundationUtil */; };
@@ -39,19 +29,12 @@
 		EEC59B0528477C9E004A2A19 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59AFF28477C9E004A2A19 /* TabbarView.swift */; };
 		EEC59B0628477C9E004A2A19 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59B0328477C9E004A2A19 /* TabButton.swift */; };
 		EEC59B0728477C9E004A2A19 /* TabbarFeacture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59B0428477C9E004A2A19 /* TabbarFeacture.swift */; };
-		EEC59B1128477CED004A2A19 /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59B0B28477CED004A2A19 /* TagList.swift */; };
-		EEC59B1228477CED004A2A19 /* ListCardGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59B0D28477CED004A2A19 /* ListCardGrid.swift */; };
-		EEC59B1328477CED004A2A19 /* ListCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59B0E28477CED004A2A19 /* ListCardView.swift */; };
-		EEC59B1428477CED004A2A19 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59B0F28477CED004A2A19 /* ListView.swift */; };
-		EEC59B1528477CED004A2A19 /* ListFeacture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59B1028477CED004A2A19 /* ListFeacture.swift */; };
-		EEC59B1828477DA0004A2A19 /* AddSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59B1728477DA0004A2A19 /* AddSheetView.swift */; };
+		EECA500928551E99005F57F4 /* gitignoreList in Frameworks */ = {isa = PBXBuildFile; productRef = EECA500828551E99005F57F4 /* gitignoreList */; };
+		EECA500B28551E99005F57F4 /* gitignoreMain in Frameworks */ = {isa = PBXBuildFile; productRef = EECA500A28551E99005F57F4 /* gitignoreMain */; };
 		EED2E753283343E10040C83A /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2E752283343E10040C83A /* RootView.swift */; };
 		EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA85BE282B40700047F3AC /* gitignoreApp.swift */; };
 		EEDA85C3282B40720047F3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C2282B40720047F3AC /* Assets.xcassets */; };
 		EEDA85C6282B40720047F3AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C5282B40720047F3AC /* Preview Assets.xcassets */; };
-		EEDE5B76282BA8EC00C0ADBA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B75282BA8EC00C0ADBA /* MainView.swift */; };
-		EEDE5B87282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B86282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift */; };
-		EEEBD258282C7A7200608EB6 /* MainFeacture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEBD257282C7A7200608EB6 /* MainFeacture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,16 +69,7 @@
 
 /* Begin PBXFileReference section */
 		EEA243FB2848606D000486F2 /* gitignoreDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = gitignoreDebug.entitlements; path = gitignore/Supporting/gitignoreDebug.entitlements; sourceTree = SOURCE_ROOT; };
-		EEA2442028487E8A000486F2 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		EEA244242848844C000486F2 /* NoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoListView.swift; sourceTree = "<group>"; };
-		EEA2442A284885B5000486F2 /* 73178-question-boy-orange.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "73178-question-boy-orange.json"; sourceTree = "<group>"; };
-		EEA2442D284885F0000486F2 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
-		EEA34CCD283B9F7C00A00BED /* SearchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchList.swift; sourceTree = "<group>"; };
 		EEA395D3283A418700A41CC4 /* RootFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFeacture.swift; sourceTree = "<group>"; };
-		EEA3F66C283C4D03005D6A15 /* ToolBarButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarButtonStyle.swift; sourceTree = "<group>"; };
-		EEA3F66E283C4D88005D6A15 /* CreateButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateButtonStyle.swift; sourceTree = "<group>"; };
-		EEA3F671283C5055005D6A15 /* TitleLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLogo.swift; sourceTree = "<group>"; };
-		EEA3F675283CFCB0005D6A15 /* TagListMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListMain.swift; sourceTree = "<group>"; };
 		EEA60414282EB3DA00D79666 /* Platform */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Platform; sourceTree = "<group>"; };
 		EEA6041C282FFEF700D79666 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
 		EEA66E5D284075590095FB9A /* OSLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSLog.framework; path = System/Library/Frameworks/OSLog.framework; sourceTree = SDKROOT; };
@@ -109,23 +83,16 @@
 		EEC59AFF28477C9E004A2A19 /* TabbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		EEC59B0328477C9E004A2A19 /* TabButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
 		EEC59B0428477C9E004A2A19 /* TabbarFeacture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarFeacture.swift; sourceTree = "<group>"; };
-		EEC59B0B28477CED004A2A19 /* TagList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
-		EEC59B0D28477CED004A2A19 /* ListCardGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCardGrid.swift; sourceTree = "<group>"; };
-		EEC59B0E28477CED004A2A19 /* ListCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCardView.swift; sourceTree = "<group>"; };
-		EEC59B0F28477CED004A2A19 /* ListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
-		EEC59B1028477CED004A2A19 /* ListFeacture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListFeacture.swift; sourceTree = "<group>"; };
-		EEC59B1728477DA0004A2A19 /* AddSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSheetView.swift; sourceTree = "<group>"; };
+		EECA4FEA285512D5005F57F4 /* GitignoreMain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GitignoreMain; sourceTree = "<group>"; };
+		EECA4FEB285512E6005F57F4 /* GitignoreList */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GitignoreList; sourceTree = "<group>"; };
 		EED2E752283343E10040C83A /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		EEDA85BB282B40700047F3AC /* gitignore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gitignore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEDA85BE282B40700047F3AC /* gitignoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreApp.swift; sourceTree = "<group>"; };
 		EEDA85C2282B40720047F3AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEDA85C5282B40720047F3AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EEDA85C7282B40720047F3AC /* gitignore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = gitignore.entitlements; path = gitignore/Supporting/gitignore.entitlements; sourceTree = SOURCE_ROOT; };
-		EEDE5B75282BA8EC00C0ADBA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		EEDE5B86282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreTextfieldStyle.swift; sourceTree = "<group>"; };
 		EEE7A6B028447F6C004228EE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		EEE7A6B228447F6C004228EE /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
-		EEEBD257282C7A7200608EB6 /* MainFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeacture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,8 +115,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEA66E5E284075590095FB9A /* OSLog.framework in Frameworks */,
+				EECA500928551E99005F57F4 /* gitignoreList in Frameworks */,
 				EEBFD72C285306A9006D00C3 /* gitignoreService in Frameworks */,
 				EEB7BE9D28520BB000FCC459 /* gitignoreLocal in Frameworks */,
+				EECA500B28551E99005F57F4 /* gitignoreMain in Frameworks */,
 				EEB7BE992851EFE900FCC459 /* RealmSwift in Frameworks */,
 				EEA60417282EB4EE00D79666 /* UIUtil in Frameworks */,
 				EE5AAF98283FA56400E8255C /* ComposableArchitecture in Frameworks */,
@@ -160,7 +129,6 @@
 				EEA6041D282FFEF700D79666 /* Network.framework in Frameworks */,
 				EEC59AFD28477C6F004A2A19 /* WaterfallGrid in Frameworks */,
 				EEB7BE972851EFE900FCC459 /* Realm in Frameworks */,
-				EEA2442828488593000486F2 /* Lottie in Frameworks */,
 				EEBFD72A28530062006D00C3 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,62 +145,6 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		EEA2442228487F5F000486F2 /* CoreDataModel */ = {
-			isa = PBXGroup;
-			children = (
-				EEA2441F28487E8A000486F2 /* gitignoreList.xcdatamodeld */,
-			);
-			path = CoreDataModel;
-			sourceTree = "<group>";
-		};
-		EEA2442328488440000486F2 /* NoList */ = {
-			isa = PBXGroup;
-			children = (
-				EEA244242848844C000486F2 /* NoListView.swift */,
-			);
-			path = NoList;
-			sourceTree = "<group>";
-		};
-		EEA24429284885A7000486F2 /* Lottie */ = {
-			isa = PBXGroup;
-			children = (
-				EEA2442A284885B5000486F2 /* 73178-question-boy-orange.json */,
-			);
-			path = Lottie;
-			sourceTree = "<group>";
-		};
-		EEA2442C284885E4000486F2 /* LottieView */ = {
-			isa = PBXGroup;
-			children = (
-				EEA2442D284885F0000486F2 /* LottieView.swift */,
-			);
-			path = LottieView;
-			sourceTree = "<group>";
-		};
-		EEA2E5E12847B180008A7C38 /* Add */ = {
-			isa = PBXGroup;
-			children = (
-				EEC59B1728477DA0004A2A19 /* AddSheetView.swift */,
-			);
-			path = Add;
-			sourceTree = "<group>";
-		};
-		EEA34CCA283B9DD600A00BED /* Textfield */ = {
-			isa = PBXGroup;
-			children = (
-				EEDE5B86282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift */,
-			);
-			path = Textfield;
-			sourceTree = "<group>";
-		};
-		EEA34CCC283B9DF500A00BED /* Search List */ = {
-			isa = PBXGroup;
-			children = (
-				EEA34CCD283B9F7C00A00BED /* SearchList.swift */,
-			);
-			path = "Search List";
-			sourceTree = "<group>";
-		};
 		EEA395D2283A417000A41CC4 /* Root */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,31 +152,6 @@
 				EEA395D3283A418700A41CC4 /* RootFeacture.swift */,
 			);
 			path = Root;
-			sourceTree = "<group>";
-		};
-		EEA3F66B283C4CE8005D6A15 /* Button */ = {
-			isa = PBXGroup;
-			children = (
-				EEA3F66C283C4D03005D6A15 /* ToolBarButtonStyle.swift */,
-				EEA3F66E283C4D88005D6A15 /* CreateButtonStyle.swift */,
-			);
-			path = Button;
-			sourceTree = "<group>";
-		};
-		EEA3F670283C5048005D6A15 /* Title */ = {
-			isa = PBXGroup;
-			children = (
-				EEA3F671283C5055005D6A15 /* TitleLogo.swift */,
-			);
-			path = Title;
-			sourceTree = "<group>";
-		};
-		EEA3F674283CFCA6005D6A15 /* Tag */ = {
-			isa = PBXGroup;
-			children = (
-				EEA3F675283CFCB0005D6A15 /* TagListMain.swift */,
-			);
-			path = Tag;
 			sourceTree = "<group>";
 		};
 		EEA60415282EB4EE00D79666 /* Frameworks */ = {
@@ -345,64 +232,11 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
-		EEC59B0828477CE2004A2A19 /* List */ = {
-			isa = PBXGroup;
-			children = (
-				EEC59B1028477CED004A2A19 /* ListFeacture.swift */,
-				EEC59B0F28477CED004A2A19 /* ListView.swift */,
-				EEC59B0928477CED004A2A19 /* View */,
-			);
-			path = List;
-			sourceTree = "<group>";
-		};
-		EEC59B0928477CED004A2A19 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				EEA2442C284885E4000486F2 /* LottieView */,
-				EEA2442328488440000486F2 /* NoList */,
-				EEC59B0A28477CED004A2A19 /* Tag */,
-				EEC59B0C28477CED004A2A19 /* Grid */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		EEC59B0A28477CED004A2A19 /* Tag */ = {
-			isa = PBXGroup;
-			children = (
-				EEC59B0B28477CED004A2A19 /* TagList.swift */,
-			);
-			path = Tag;
-			sourceTree = "<group>";
-		};
-		EEC59B0C28477CED004A2A19 /* Grid */ = {
-			isa = PBXGroup;
-			children = (
-				EEC59B0D28477CED004A2A19 /* ListCardGrid.swift */,
-				EEC59B0E28477CED004A2A19 /* ListCardView.swift */,
-			);
-			path = Grid;
-			sourceTree = "<group>";
-		};
-		EEC59B1628477DA0004A2A19 /* Sheet */ = {
-			isa = PBXGroup;
-			children = (
-				EEA2E5E12847B180008A7C38 /* Add */,
-			);
-			path = Sheet;
-			sourceTree = "<group>";
-		};
-		EEC953B1283E7BD1005861AA /* Style */ = {
-			isa = PBXGroup;
-			children = (
-				EEA3F66B283C4CE8005D6A15 /* Button */,
-				EEA34CCA283B9DD600A00BED /* Textfield */,
-			);
-			path = Style;
-			sourceTree = "<group>";
-		};
 		EEDA85B2282B40700047F3AC = {
 			isa = PBXGroup;
 			children = (
+				EECA4FEB285512E6005F57F4 /* GitignoreList */,
+				EECA4FEA285512D5005F57F4 /* GitignoreMain */,
 				EEC59AF4284770C8004A2A19 /* Service */,
 				EEA60414282EB3DA00D79666 /* Platform */,
 				EEDA85BD282B40700047F3AC /* gitignore */,
@@ -442,33 +276,12 @@
 			path = "gitignore/Resources/Preview Content";
 			sourceTree = SOURCE_ROOT;
 		};
-		EEDE59462831F71000A7FDF0 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				EEC59B1628477DA0004A2A19 /* Sheet */,
-				EEA3F674283CFCA6005D6A15 /* Tag */,
-				EEA3F670283C5048005D6A15 /* Title */,
-				EEA34CCC283B9DF500A00BED /* Search List */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		EEDE5B47282B5EAA00C0ADBA /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				EEC59B0828477CE2004A2A19 /* List */,
-				EEEBD254282C7A3400608EB6 /* Main */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
 		EEDE5B48282B5EAF00C0ADBA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				EE841F3E284241B40070EAAC /* App */,
 				EEA395D2283A417000A41CC4 /* Root */,
 				EEC59AFE28477C9E004A2A19 /* Tabbar */,
-				EEDE5B47282B5EAA00C0ADBA /* UI */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -476,8 +289,6 @@
 		EEDE5B49282B5EB800C0ADBA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EEA24429284885A7000486F2 /* Lottie */,
-				EEA2442228487F5F000486F2 /* CoreDataModel */,
 				EEDA85C4282B40720047F3AC /* Preview Content */,
 				EEDA85C2282B40720047F3AC /* Assets.xcassets */,
 			);
@@ -491,17 +302,6 @@
 				EEDA85C7282B40720047F3AC /* gitignore.entitlements */,
 			);
 			path = Supporting;
-			sourceTree = "<group>";
-		};
-		EEEBD254282C7A3400608EB6 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				EEC953B1283E7BD1005861AA /* Style */,
-				EEDE59462831F71000A7FDF0 /* View */,
-				EEDE5B75282BA8EC00C0ADBA /* MainView.swift */,
-				EEEBD257282C7A7200608EB6 /* MainFeacture.swift */,
-			);
-			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -564,13 +364,14 @@
 				EE5AAF97283FA56400E8255C /* ComposableArchitecture */,
 				EEA66E5F284075E50095FB9A /* OSLogUtil */,
 				EEC59AFC28477C6F004A2A19 /* WaterfallGrid */,
-				EEA2442728488593000486F2 /* Lottie */,
 				EEB7BE962851EFE900FCC459 /* Realm */,
 				EEB7BE982851EFE900FCC459 /* RealmSwift */,
 				EEB7BE9A28520BB000FCC459 /* gitignoreAPI */,
 				EEB7BE9C28520BB000FCC459 /* gitignoreLocal */,
 				EEBFD72928530062006D00C3 /* Swinject */,
 				EEBFD72B285306A9006D00C3 /* gitignoreService */,
+				EECA500828551E99005F57F4 /* gitignoreList */,
+				EECA500A28551E99005F57F4 /* gitignoreMain */,
 			);
 			productName = gitignore;
 			productReference = EEDA85BB282B40700047F3AC /* gitignore.app */;
@@ -610,7 +411,6 @@
 			mainGroup = EEDA85B2282B40700047F3AC;
 			packageReferences = (
 				EE5AAF96283FA56400E8255C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
-				EEA2442628488593000486F2 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				EEB7BE952851EFE900FCC459 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				EEBFD72828530062006D00C3 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
@@ -646,7 +446,6 @@
 			files = (
 				EEDA85C6282B40720047F3AC /* Preview Assets.xcassets in Resources */,
 				EEDA85C3282B40720047F3AC /* Assets.xcassets in Resources */,
-				EEA2442B284885B5000486F2 /* 73178-question-boy-orange.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,29 +474,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEBFD72F28530731006D00C3 /* ViewAssembly.swift in Sources */,
-				EEC59B1128477CED004A2A19 /* TagList.swift in Sources */,
-				EEC59B1828477DA0004A2A19 /* AddSheetView.swift in Sources */,
-				EEC59B1428477CED004A2A19 /* ListView.swift in Sources */,
 				EED2E753283343E10040C83A /* RootView.swift in Sources */,
-				EEA2442128487E8A000486F2 /* gitignoreList.xcdatamodeld in Sources */,
-				EEDE5B76282BA8EC00C0ADBA /* MainView.swift in Sources */,
-				EEA244252848844C000486F2 /* NoListView.swift in Sources */,
-				EEDE5B87282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift in Sources */,
-				EEC59B1328477CED004A2A19 /* ListCardView.swift in Sources */,
 				EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */,
 				EEA395D4283A418700A41CC4 /* RootFeacture.swift in Sources */,
-				EEC59B1528477CED004A2A19 /* ListFeacture.swift in Sources */,
-				EEC59B1228477CED004A2A19 /* ListCardGrid.swift in Sources */,
-				EEA3F66F283C4D88005D6A15 /* CreateButtonStyle.swift in Sources */,
-				EEA34CCE283B9F7C00A00BED /* SearchList.swift in Sources */,
-				EEA3F676283CFCB0005D6A15 /* TagListMain.swift in Sources */,
-				EEA3F66D283C4D03005D6A15 /* ToolBarButtonStyle.swift in Sources */,
-				EEA3F672283C5055005D6A15 /* TitleLogo.swift in Sources */,
-				EEEBD258282C7A7200608EB6 /* MainFeacture.swift in Sources */,
 				EEC59B0728477C9E004A2A19 /* TabbarFeacture.swift in Sources */,
 				EEC59B0528477C9E004A2A19 /* TabbarView.swift in Sources */,
 				EEC59B0628477C9E004A2A19 /* TabButton.swift in Sources */,
-				EEA2442E284885F0000486F2 /* LottieView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1008,14 +790,6 @@
 				kind = branch;
 			};
 		};
-		EEA2442628488593000486F2 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		EEB7BE952851EFE900FCC459 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
@@ -1039,11 +813,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EE5AAF96283FA56400E8255C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
-		};
-		EEA2442728488593000486F2 /* Lottie */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EEA2442628488593000486F2 /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = Lottie;
 		};
 		EEA395D6283A42BC00A41CC4 /* gitignoreView */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1092,20 +861,15 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = WaterfallGrid;
 		};
-/* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		EEA2441F28487E8A000486F2 /* gitignoreList.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				EEA2442028487E8A000486F2 /* Model.xcdatamodel */,
-			);
-			currentVersion = EEA2442028487E8A000486F2 /* Model.xcdatamodel */;
-			path = gitignoreList.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+		EECA500828551E99005F57F4 /* gitignoreList */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = gitignoreList;
 		};
-/* End XCVersionGroup section */
+		EECA500A28551E99005F57F4 /* gitignoreMain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = gitignoreMain;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EEDA85B3282B40700047F3AC /* Project object */;
 }

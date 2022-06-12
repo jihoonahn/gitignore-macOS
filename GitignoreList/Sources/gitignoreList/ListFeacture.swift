@@ -1,18 +1,19 @@
 import ComposableArchitecture
 import Combine
-import OSLogUtil
 import SwiftUI
 import RealmSwift
 import gitignoreLocal
 import gitignoreService
 import Foundation
 
-struct ListState: Equatable{
+public struct ListState: Equatable{
     var totalHeight : CGFloat = .zero
     var list : [GitignoreList] = .init()
+    
+    public init() {}
 }
 
-enum ListAction{
+public enum ListAction{
     case onAppear
     case tagTotalHeightAction
     case deleteListCell(ObjectId)
@@ -22,7 +23,7 @@ enum ListAction{
     case fetchList(Result<[GitignoreList],Never>)
 }
 
-struct ListEnvironmnet{
+public struct ListEnvironmnet{
     var gitignoreListFetchUseCase : () -> GitignoreListFetchUseCase
     var gitignoreListDeleteUseCase : () -> GitignoreListDeleteUseCase
     var mainQueue: () -> AnySchedulerOf<DispatchQueue>
@@ -39,7 +40,7 @@ struct ListEnvironmnet{
 }
 var bag = Set<AnyCancellable>()
 
-let listReducer = Reducer<
+public let listReducer = Reducer<
     ListState,
     ListAction,
     ListEnvironmnet
