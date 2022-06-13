@@ -8,31 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		EE5AAF98283FA56400E8255C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EE5AAF97283FA56400E8255C /* ComposableArchitecture */; };
-		EE5AAF9B283FA57600E8255C /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = EE5AAF9A283FA57600E8255C /* Swinject */; };
-		EEA34CCE283B9F7C00A00BED /* SearchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA34CCD283B9F7C00A00BED /* SearchList.swift */; };
+		EEA3804C285628F20091BA9C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EEC066252855B9A0006D01B5 /* Localizable.strings */; };
 		EEA395D4283A418700A41CC4 /* RootFeacture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA395D3283A418700A41CC4 /* RootFeacture.swift */; };
 		EEA395D7283A42BC00A41CC4 /* gitignoreView in Frameworks */ = {isa = PBXBuildFile; productRef = EEA395D6283A42BC00A41CC4 /* gitignoreView */; };
-		EEA3F66D283C4D03005D6A15 /* ToolBarButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3F66C283C4D03005D6A15 /* ToolBarButtonStyle.swift */; };
-		EEA3F66F283C4D88005D6A15 /* CreateButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3F66E283C4D88005D6A15 /* CreateButtonStyle.swift */; };
-		EEA3F672283C5055005D6A15 /* TitleLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3F671283C5055005D6A15 /* TitleLogo.swift */; };
-		EEA3F676283CFCB0005D6A15 /* TagListMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3F675283CFCB0005D6A15 /* TagListMain.swift */; };
 		EEA60417282EB4EE00D79666 /* UIUtil in Frameworks */ = {isa = PBXBuildFile; productRef = EEA60416282EB4EE00D79666 /* UIUtil */; };
 		EEA6041D282FFEF700D79666 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA6041C282FFEF700D79666 /* Network.framework */; };
 		EEA604262830277000D79666 /* FoundationUtil in Frameworks */ = {isa = PBXBuildFile; productRef = EEA604252830277000D79666 /* FoundationUtil */; };
 		EEA66E5E284075590095FB9A /* OSLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA66E5D284075590095FB9A /* OSLog.framework */; };
 		EEA66E60284075E50095FB9A /* OSLogUtil in Frameworks */ = {isa = PBXBuildFile; productRef = EEA66E5F284075E50095FB9A /* OSLogUtil */; };
-		EEA66E6328407A920095FB9A /* AppDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA66E6228407A920095FB9A /* AppDI.swift */; };
-		EEABDA022839F0B400C0F087 /* Effects in Frameworks */ = {isa = PBXBuildFile; productRef = EEABDA012839F0B400C0F087 /* Effects */; };
+		EEB7BE972851EFE900FCC459 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = EEB7BE962851EFE900FCC459 /* Realm */; };
+		EEB7BE992851EFE900FCC459 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EEB7BE982851EFE900FCC459 /* RealmSwift */; };
+		EEB7BE9B28520BB000FCC459 /* gitignoreAPI in Frameworks */ = {isa = PBXBuildFile; productRef = EEB7BE9A28520BB000FCC459 /* gitignoreAPI */; };
+		EEB7BE9D28520BB000FCC459 /* gitignoreLocal in Frameworks */ = {isa = PBXBuildFile; productRef = EEB7BE9C28520BB000FCC459 /* gitignoreLocal */; };
+		EEBFD72A28530062006D00C3 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = EEBFD72928530062006D00C3 /* Swinject */; };
+		EEBFD72C285306A9006D00C3 /* gitignoreService in Frameworks */ = {isa = PBXBuildFile; productRef = EEBFD72B285306A9006D00C3 /* gitignoreService */; };
+		EEBFD72F28530731006D00C3 /* ViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBFD72E28530731006D00C3 /* ViewAssembly.swift */; };
 		EEC59ADC28475B73004A2A19 /* gitignoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59ADB28475B73004A2A19 /* gitignoreTests.swift */; };
 		EEC59AE928475E72004A2A19 /* gitignoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59AE828475E72004A2A19 /* gitignoreUITests.swift */; };
 		EEC59AEB28475E72004A2A19 /* gitignoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59AEA28475E72004A2A19 /* gitignoreUITestsLaunchTests.swift */; };
+		EEC59AFD28477C6F004A2A19 /* WaterfallGrid in Frameworks */ = {isa = PBXBuildFile; productRef = EEC59AFC28477C6F004A2A19 /* WaterfallGrid */; };
+		EEC59B0528477C9E004A2A19 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59AFF28477C9E004A2A19 /* TabbarView.swift */; };
+		EEC59B0628477C9E004A2A19 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59B0328477C9E004A2A19 /* TabButton.swift */; };
+		EEC59B0728477C9E004A2A19 /* TabbarFeacture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC59B0428477C9E004A2A19 /* TabbarFeacture.swift */; };
+		EECA500928551E99005F57F4 /* gitignoreList in Frameworks */ = {isa = PBXBuildFile; productRef = EECA500828551E99005F57F4 /* gitignoreList */; };
+		EECA500B28551E99005F57F4 /* gitignoreMain in Frameworks */ = {isa = PBXBuildFile; productRef = EECA500A28551E99005F57F4 /* gitignoreMain */; };
 		EED2E753283343E10040C83A /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2E752283343E10040C83A /* RootView.swift */; };
 		EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA85BE282B40700047F3AC /* gitignoreApp.swift */; };
 		EEDA85C3282B40720047F3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C2282B40720047F3AC /* Assets.xcassets */; };
 		EEDA85C6282B40720047F3AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA85C5282B40720047F3AC /* Preview Assets.xcassets */; };
-		EEDE5B76282BA8EC00C0ADBA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B75282BA8EC00C0ADBA /* MainView.swift */; };
-		EEDE5B87282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE5B86282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift */; };
-		EEEBD258282C7A7200608EB6 /* MainFeacture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEBD257282C7A7200608EB6 /* MainFeacture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,33 +69,34 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EE74C70928396639001EF6E1 /* Effects */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Effects; sourceTree = "<group>"; };
-		EEA34CCD283B9F7C00A00BED /* SearchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchList.swift; sourceTree = "<group>"; };
+		EEA243FB2848606D000486F2 /* gitignoreDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = gitignoreDebug.entitlements; path = gitignore/Supporting/gitignoreDebug.entitlements; sourceTree = SOURCE_ROOT; };
 		EEA395D3283A418700A41CC4 /* RootFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFeacture.swift; sourceTree = "<group>"; };
-		EEA3F66C283C4D03005D6A15 /* ToolBarButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarButtonStyle.swift; sourceTree = "<group>"; };
-		EEA3F66E283C4D88005D6A15 /* CreateButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateButtonStyle.swift; sourceTree = "<group>"; };
-		EEA3F671283C5055005D6A15 /* TitleLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLogo.swift; sourceTree = "<group>"; };
-		EEA3F675283CFCB0005D6A15 /* TagListMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListMain.swift; sourceTree = "<group>"; };
 		EEA60414282EB3DA00D79666 /* Platform */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Platform; sourceTree = "<group>"; };
 		EEA6041C282FFEF700D79666 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
 		EEA66E5D284075590095FB9A /* OSLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSLog.framework; path = System/Library/Frameworks/OSLog.framework; sourceTree = SDKROOT; };
-		EEA66E6228407A920095FB9A /* AppDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDI.swift; sourceTree = "<group>"; };
+		EEBFD72E28530731006D00C3 /* ViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAssembly.swift; sourceTree = "<group>"; };
+		EEC066242855B9A0006D01B5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EEC066262855C9CC006D01B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EEC066272855C9CD006D01B5 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EEC59AD928475B73004A2A19 /* gitignoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gitignoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC59ADB28475B73004A2A19 /* gitignoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreTests.swift; sourceTree = "<group>"; };
 		EEC59AE628475E72004A2A19 /* gitignoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gitignoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC59AE828475E72004A2A19 /* gitignoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreUITests.swift; sourceTree = "<group>"; };
 		EEC59AEA28475E72004A2A19 /* gitignoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EEC59AF4284770C8004A2A19 /* Service */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Service; sourceTree = "<group>"; };
+		EEC59AFF28477C9E004A2A19 /* TabbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
+		EEC59B0328477C9E004A2A19 /* TabButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
+		EEC59B0428477C9E004A2A19 /* TabbarFeacture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarFeacture.swift; sourceTree = "<group>"; };
+		EECA4FEA285512D5005F57F4 /* GitignoreMain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GitignoreMain; sourceTree = "<group>"; };
+		EECA4FEB285512E6005F57F4 /* GitignoreList */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GitignoreList; sourceTree = "<group>"; };
 		EED2E752283343E10040C83A /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		EEDA85BB282B40700047F3AC /* gitignore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gitignore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEDA85BE282B40700047F3AC /* gitignoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreApp.swift; sourceTree = "<group>"; };
 		EEDA85C2282B40720047F3AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEDA85C5282B40720047F3AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EEDA85C7282B40720047F3AC /* gitignore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = gitignore.entitlements; path = gitignore/Supporting/gitignore.entitlements; sourceTree = SOURCE_ROOT; };
-		EEDE5B75282BA8EC00C0ADBA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		EEDE5B86282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitignoreTextfieldStyle.swift; sourceTree = "<group>"; };
 		EEE7A6B028447F6C004228EE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		EEE7A6B228447F6C004228EE /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
-		EEEBD257282C7A7200608EB6 /* MainFeacture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeacture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,21 +118,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEABDA022839F0B400C0F087 /* Effects in Frameworks */,
 				EEA66E5E284075590095FB9A /* OSLog.framework in Frameworks */,
-				EE5AAF9B283FA57600E8255C /* Swinject in Frameworks */,
+				EECA500928551E99005F57F4 /* gitignoreList in Frameworks */,
+				EEBFD72C285306A9006D00C3 /* gitignoreService in Frameworks */,
+				EEB7BE9D28520BB000FCC459 /* gitignoreLocal in Frameworks */,
+				EECA500B28551E99005F57F4 /* gitignoreMain in Frameworks */,
+				EEB7BE992851EFE900FCC459 /* RealmSwift in Frameworks */,
 				EEA60417282EB4EE00D79666 /* UIUtil in Frameworks */,
 				EE5AAF98283FA56400E8255C /* ComposableArchitecture in Frameworks */,
 				EEA395D7283A42BC00A41CC4 /* gitignoreView in Frameworks */,
 				EEA604262830277000D79666 /* FoundationUtil in Frameworks */,
 				EEA66E60284075E50095FB9A /* OSLogUtil in Frameworks */,
+				EEB7BE9B28520BB000FCC459 /* gitignoreAPI in Frameworks */,
 				EEA6041D282FFEF700D79666 /* Network.framework in Frameworks */,
+				EEC59AFD28477C6F004A2A19 /* WaterfallGrid in Frameworks */,
+				EEB7BE972851EFE900FCC459 /* Realm in Frameworks */,
+				EEBFD72A28530062006D00C3 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE2A4E4C2856B572001B4E36 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				EEC066252855B9A0006D01B5 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		EE841F3E284241B40070EAAC /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,22 +157,6 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		EEA34CCA283B9DD600A00BED /* Textfield */ = {
-			isa = PBXGroup;
-			children = (
-				EEDE5B86282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift */,
-			);
-			path = Textfield;
-			sourceTree = "<group>";
-		};
-		EEA34CCC283B9DF500A00BED /* Search List */ = {
-			isa = PBXGroup;
-			children = (
-				EEA34CCD283B9F7C00A00BED /* SearchList.swift */,
-			);
-			path = "Search List";
-			sourceTree = "<group>";
-		};
 		EEA395D2283A417000A41CC4 /* Root */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,31 +164,6 @@
 				EEA395D3283A418700A41CC4 /* RootFeacture.swift */,
 			);
 			path = Root;
-			sourceTree = "<group>";
-		};
-		EEA3F66B283C4CE8005D6A15 /* Button */ = {
-			isa = PBXGroup;
-			children = (
-				EEA3F66C283C4D03005D6A15 /* ToolBarButtonStyle.swift */,
-				EEA3F66E283C4D88005D6A15 /* CreateButtonStyle.swift */,
-			);
-			path = Button;
-			sourceTree = "<group>";
-		};
-		EEA3F670283C5048005D6A15 /* Title */ = {
-			isa = PBXGroup;
-			children = (
-				EEA3F671283C5055005D6A15 /* TitleLogo.swift */,
-			);
-			path = Title;
-			sourceTree = "<group>";
-		};
-		EEA3F674283CFCA6005D6A15 /* Tag */ = {
-			isa = PBXGroup;
-			children = (
-				EEA3F675283CFCB0005D6A15 /* TagListMain.swift */,
-			);
-			path = Tag;
 			sourceTree = "<group>";
 		};
 		EEA60415282EB4EE00D79666 /* Frameworks */ = {
@@ -202,9 +180,17 @@
 		EEA66E6128407A8B0095FB9A /* DI */ = {
 			isa = PBXGroup;
 			children = (
-				EEA66E6228407A920095FB9A /* AppDI.swift */,
+				EEBFD72D2853071F006D00C3 /* Assembly */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		EEBFD72D2853071F006D00C3 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				EEBFD72E28530731006D00C3 /* ViewAssembly.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 		EEC59ADA28475B73004A2A19 /* gitignoreTests */ = {
@@ -224,19 +210,47 @@
 			path = gitignoreUITests;
 			sourceTree = "<group>";
 		};
-		EEC953B1283E7BD1005861AA /* Style */ = {
+		EEC59AFE28477C9E004A2A19 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
-				EEA3F66B283C4CE8005D6A15 /* Button */,
-				EEA34CCA283B9DD600A00BED /* Textfield */,
+				EE2A4E4C2856B572001B4E36 /* Localization */,
+				EEC59B0028477C9E004A2A19 /* View */,
+				EEC59AFF28477C9E004A2A19 /* TabbarView.swift */,
+				EEC59B0428477C9E004A2A19 /* TabbarFeacture.swift */,
 			);
-			path = Style;
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		EEC59B0028477C9E004A2A19 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EEC59B0128477C9E004A2A19 /* CustomNavigationView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EEC59B0128477C9E004A2A19 /* CustomNavigationView */ = {
+			isa = PBXGroup;
+			children = (
+				EEC59B0228477C9E004A2A19 /* Button */,
+			);
+			path = CustomNavigationView;
+			sourceTree = "<group>";
+		};
+		EEC59B0228477C9E004A2A19 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				EEC59B0328477C9E004A2A19 /* TabButton.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 		EEDA85B2282B40700047F3AC = {
 			isa = PBXGroup;
 			children = (
-				EE74C70928396639001EF6E1 /* Effects */,
+				EECA4FEB285512E6005F57F4 /* GitignoreList */,
+				EECA4FEA285512D5005F57F4 /* GitignoreMain */,
+				EEC59AF4284770C8004A2A19 /* Service */,
 				EEA60414282EB3DA00D79666 /* Platform */,
 				EEDA85BD282B40700047F3AC /* gitignore */,
 				EEC59ADA28475B73004A2A19 /* gitignoreTests */,
@@ -275,30 +289,12 @@
 			path = "gitignore/Resources/Preview Content";
 			sourceTree = SOURCE_ROOT;
 		};
-		EEDE59462831F71000A7FDF0 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				EEA3F674283CFCA6005D6A15 /* Tag */,
-				EEA3F670283C5048005D6A15 /* Title */,
-				EEA34CCC283B9DF500A00BED /* Search List */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		EEDE5B47282B5EAA00C0ADBA /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				EEEBD254282C7A3400608EB6 /* Main */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
 		EEDE5B48282B5EAF00C0ADBA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				EE841F3E284241B40070EAAC /* App */,
 				EEA395D2283A417000A41CC4 /* Root */,
-				EEDE5B47282B5EAA00C0ADBA /* UI */,
+				EEC59AFE28477C9E004A2A19 /* Tabbar */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -315,20 +311,10 @@
 		EEDE5B4A282B5EC400C0ADBA /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				EEA243FB2848606D000486F2 /* gitignoreDebug.entitlements */,
 				EEDA85C7282B40720047F3AC /* gitignore.entitlements */,
 			);
 			path = Supporting;
-			sourceTree = "<group>";
-		};
-		EEEBD254282C7A3400608EB6 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				EEC953B1283E7BD1005861AA /* Style */,
-				EEDE59462831F71000A7FDF0 /* View */,
-				EEDE5B75282BA8EC00C0ADBA /* MainView.swift */,
-				EEEBD257282C7A7200608EB6 /* MainFeacture.swift */,
-			);
-			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,11 +373,18 @@
 			packageProductDependencies = (
 				EEA60416282EB4EE00D79666 /* UIUtil */,
 				EEA604252830277000D79666 /* FoundationUtil */,
-				EEABDA012839F0B400C0F087 /* Effects */,
 				EEA395D6283A42BC00A41CC4 /* gitignoreView */,
 				EE5AAF97283FA56400E8255C /* ComposableArchitecture */,
-				EE5AAF9A283FA57600E8255C /* Swinject */,
 				EEA66E5F284075E50095FB9A /* OSLogUtil */,
+				EEC59AFC28477C6F004A2A19 /* WaterfallGrid */,
+				EEB7BE962851EFE900FCC459 /* Realm */,
+				EEB7BE982851EFE900FCC459 /* RealmSwift */,
+				EEB7BE9A28520BB000FCC459 /* gitignoreAPI */,
+				EEB7BE9C28520BB000FCC459 /* gitignoreLocal */,
+				EEBFD72928530062006D00C3 /* Swinject */,
+				EEBFD72B285306A9006D00C3 /* gitignoreService */,
+				EECA500828551E99005F57F4 /* gitignoreList */,
+				EECA500A28551E99005F57F4 /* gitignoreMain */,
 			);
 			productName = gitignore;
 			productReference = EEDA85BB282B40700047F3AC /* gitignore.app */;
@@ -405,7 +398,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1330;
+				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					EEC59AD828475B73004A2A19 = {
 						CreatedOnToolsVersion = 13.4;
@@ -427,11 +420,14 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
+				ko,
 			);
 			mainGroup = EEDA85B2282B40700047F3AC;
 			packageReferences = (
 				EE5AAF96283FA56400E8255C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
-				EE5AAF99283FA57600E8255C /* XCRemoteSwiftPackageReference "Swinject" */,
+				EEB7BE952851EFE900FCC459 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				EEBFD72828530062006D00C3 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = EEDA85BC282B40700047F3AC /* Products */;
 			projectDirPath = "";
@@ -464,6 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEDA85C6282B40720047F3AC /* Preview Assets.xcassets in Resources */,
+				EEA3804C285628F20091BA9C /* Localizable.strings in Resources */,
 				EEDA85C3282B40720047F3AC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,18 +489,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEBFD72F28530731006D00C3 /* ViewAssembly.swift in Sources */,
 				EED2E753283343E10040C83A /* RootView.swift in Sources */,
-				EEDE5B76282BA8EC00C0ADBA /* MainView.swift in Sources */,
-				EEDE5B87282BD1B400C0ADBA /* gitignoreTextfieldStyle.swift in Sources */,
 				EEDA85BF282B40700047F3AC /* gitignoreApp.swift in Sources */,
 				EEA395D4283A418700A41CC4 /* RootFeacture.swift in Sources */,
-				EEA3F66F283C4D88005D6A15 /* CreateButtonStyle.swift in Sources */,
-				EEA34CCE283B9F7C00A00BED /* SearchList.swift in Sources */,
-				EEA66E6328407A920095FB9A /* AppDI.swift in Sources */,
-				EEA3F676283CFCB0005D6A15 /* TagListMain.swift in Sources */,
-				EEA3F66D283C4D03005D6A15 /* ToolBarButtonStyle.swift in Sources */,
-				EEA3F672283C5055005D6A15 /* TitleLogo.swift in Sources */,
-				EEEBD258282C7A7200608EB6 /* MainFeacture.swift in Sources */,
+				EEC59B0728477C9E004A2A19 /* TabbarFeacture.swift in Sources */,
+				EEC59B0528477C9E004A2A19 /* TabbarView.swift in Sources */,
+				EEC59B0628477C9E004A2A19 /* TabButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +513,19 @@
 			targetProxy = EEC59AEC28475E72004A2A19 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EEC066252855B9A0006D01B5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEC066242855B9A0006D01B5 /* ja */,
+				EEC066262855C9CC006D01B5 /* en */,
+				EEC066272855C9CD006D01B5 /* ko */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EEC59ADF28475B73004A2A19 /* Debug */ = {
@@ -593,6 +598,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -653,6 +659,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -708,7 +715,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = gitignore/Supporting/gitignore.entitlements;
+				CODE_SIGN_ENTITLEMENTS = gitignore/Supporting/gitignoreDebug.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -718,7 +725,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = gitignore/Info.plist;
+				INFOPLIST_FILE = gitignore/Supporting/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -749,7 +756,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = gitignore/Info.plist;
+				INFOPLIST_FILE = gitignore/Supporting/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -814,7 +821,15 @@
 				kind = branch;
 			};
 		};
-		EE5AAF99283FA57600E8255C /* XCRemoteSwiftPackageReference "Swinject" */ = {
+		EEB7BE952851EFE900FCC459 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		EEBFD72828530062006D00C3 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
 			requirement = {
@@ -829,11 +844,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EE5AAF96283FA56400E8255C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
-		};
-		EE5AAF9A283FA57600E8255C /* Swinject */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EE5AAF99283FA57600E8255C /* XCRemoteSwiftPackageReference "Swinject" */;
-			productName = Swinject;
 		};
 		EEA395D6283A42BC00A41CC4 /* gitignoreView */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -851,9 +861,44 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = OSLogUtil;
 		};
-		EEABDA012839F0B400C0F087 /* Effects */ = {
+		EEB7BE962851EFE900FCC459 /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Effects;
+			package = EEB7BE952851EFE900FCC459 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		EEB7BE982851EFE900FCC459 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EEB7BE952851EFE900FCC459 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		EEB7BE9A28520BB000FCC459 /* gitignoreAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = gitignoreAPI;
+		};
+		EEB7BE9C28520BB000FCC459 /* gitignoreLocal */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = gitignoreLocal;
+		};
+		EEBFD72928530062006D00C3 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EEBFD72828530062006D00C3 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		EEBFD72B285306A9006D00C3 /* gitignoreService */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = gitignoreService;
+		};
+		EEC59AFC28477C6F004A2A19 /* WaterfallGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WaterfallGrid;
+		};
+		EECA500828551E99005F57F4 /* gitignoreList */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = gitignoreList;
+		};
+		EECA500A28551E99005F57F4 /* gitignoreMain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = gitignoreMain;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
