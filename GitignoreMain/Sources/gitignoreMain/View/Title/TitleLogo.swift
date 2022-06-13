@@ -7,7 +7,7 @@ struct TitleLogo: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 300, height: 100)
-            Text("프로젝트에 꼭 맞는 .gitignore 파일을 더 빠르게 생성하세요!")
+            Text("Create a .gitignore file for your project faster!", bundle:  .module)
                 .font(.system(size: 13, weight: .medium, design: .default))
                 .padding(.top, 20)
         }

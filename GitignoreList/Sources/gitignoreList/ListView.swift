@@ -1,6 +1,7 @@
 import SwiftUI
 import ComposableArchitecture
 import UIUtil
+import FoundationUtil
 
 public struct ListView: View {
     let store : Store<ListState,ListAction>
@@ -17,7 +18,7 @@ public struct ListView: View {
         WithViewStore(self.store) { viewStore in
             ZStack{
                 ListCardGrid(store: store)
-                Text("저장된 gitignore 파일이 없어요!",bundle: .module)
+                Text("No gitignore files saved!", bundle: .module)
                     .font(.title2)
                     .opacity(viewStore.state.list.count == 0 ? 1 : 0)
             }

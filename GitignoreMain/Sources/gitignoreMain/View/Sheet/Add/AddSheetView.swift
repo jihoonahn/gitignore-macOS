@@ -21,11 +21,11 @@ struct AddSheetView: View {
     var body: some View {
         WithViewStore(self.store.scope(state: ViewState.init)){ viewStore in
             VStack {
-                Text("Save your gitignore file")
+                Text("Save your gitignore file", bundle: .module)
                     .font(.headline)
                     .multilineTextAlignment(.center)
                 TextField(
-                    "제목을 입력해주세요",
+                    String(localized: "Please enter a title", bundle: .module),
                     text: viewStore.binding(
                         get: \.titleQuery,send: MainAction.titleQueryChanged
                     )
@@ -40,14 +40,14 @@ struct AddSheetView: View {
                 
                 Spacer()
                 HStack {
-                    Button("Cancel") {
+                    Button(String(localized: "Cancel", bundle: .module)) {
                         viewStore.send(.addSheetButtonDidTap)
                     }
                     Spacer()
-                    Button("Create File") {
+                    Button(String(localized: "Create File", bundle: .module)) {
                         viewStore.send(.addSheetCreateFileButtonDidTap)
                     }
-                    Button("Data Add") {
+                    Button(String(localized: "Data Add", bundle: .module)) {
                         viewStore.send(.saveGitignoreButtonDidTap)
                     }
                 }

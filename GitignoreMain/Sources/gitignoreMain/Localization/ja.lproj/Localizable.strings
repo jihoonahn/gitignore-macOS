@@ -1,7 +1,8 @@
-/* 
-  Localizable.strings
-  gitignore
-
-  Created by Ji-hoon Ahn on 2022/06/12.
-  
-*/
+"Cancel" = "キャンセル";
+"Create File" = "ファイル生成";
+"Data Add" = "データ追加";
+"Please enter a title" = "タイトルを入力してください";
+"Save your gitignore file" = "Gitignoreファイルを保存します。";
+"Create a .gitignore file for your project faster!" = "プロジェクト用の.gitignoreファイルをより迅速に作成できます。";
+"Search for operating systems, development environments (IDE), and programming languages" = "オペレーティングシステム、開発環境(IDE)及びプログラミング言語検索";
+"Create" = "生成";

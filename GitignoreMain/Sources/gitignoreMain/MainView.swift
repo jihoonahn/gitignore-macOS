@@ -52,7 +52,7 @@ public struct MainView: View {
                     TitleLogo()
                     HStack{
                         TextField(
-                            "운영체제, 개발환경(IDE), 프로그래밍 언어 검색",
+                            String(localized:"Search for operating systems, development environments (IDE), and programming languages",bundle: .module),
                             text: viewStore.binding(
                                 get: \.searchQuery,send: MainAction.searchQueryChanged
                             ), onCommit: {
@@ -64,7 +64,7 @@ public struct MainView: View {
                         Button(action: {
                             viewStore.send(.createGitignore)
                         }, label: {
-                            Text("생성")
+                            Text("Create", bundle: .module)
                                 .foregroundColor(.white)
                                 .font(.system(size: 12, weight: .regular))
                         })

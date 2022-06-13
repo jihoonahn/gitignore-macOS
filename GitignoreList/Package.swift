@@ -22,14 +22,15 @@ let package = Package(
         .target(
             name: "gitignoreList",
             dependencies: [
+                .product(name: "Realm", package: "realm-swift"),
+                .product(name: "RealmSwift", package: "realm-swift"),
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
                 .product(name: "gitignoreView", package: "Platform"),
                 .product(name: "WaterfallGrid", package: "Platform"),
+                .product(name: "UIUtil", package: "Platform"),
+                .product(name: "FoundationUtil", package: "Platform"),
                 .product(name: "gitignoreLocal", package: "Service"),
-                .product(name: "gitignoreService", package: "Service"),
-                .product(name: "Realm", package: "realm-swift"),
-                .product(name: "RealmSwift", package: "realm-swift"),
-                .product(name: "UIUtil", package: "Platform")
+                .product(name: "gitignoreService", package: "Service")
             ],
             resources: [
                 .process("Localization")
