@@ -22,7 +22,6 @@ width = 300>
 
 ## Features
 - gitignore file Create
-##### Todo Feactures 
-- User Custom gitignoreFile with List 
+##### Todo Features 
 - Xcode Editor Extension
 - macos Menubar Gitignore
