@@ -11,7 +11,11 @@ Quickly create a .gitignore file for your project using the .gitignore app
 ## Promotion
 <div>
 <img src = "https://user-images.githubusercontent.com/68891494/171304917-c71339fe-87f5-4562-a0a1-666e1fda1c5a.svg" width = 300>
-<img src = "https://user-images.githubusercontent.com/68891494/171304929-65ff069a-5923-415b-8049-4a62b0b039c4.svg"
+<img src = "https://user-images.githubusercontent.com/68891494/173374099-a3daad18-8742-4b50-90a3-c08561a62cc6.png"
+width = 300>
+<img src = "https://user-images.githubusercontent.com/68891494/173374279-1e2195a2-791b-47f2-8259-97085967f607.png"
+width = 300>
+<img src = "https://user-images.githubusercontent.com/68891494/173374384-f377bd0c-ba51-40c9-824a-be457f546600.png"
 width = 300>
 </div>
 
