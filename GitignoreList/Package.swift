@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "GitignoreList",
+    defaultLocalization: "en",
     platforms: [.macOS(.v11)],
     products: [
         .library(
@@ -25,9 +26,13 @@ let package = Package(
                 .product(name: "gitignoreView", package: "Platform"),
                 .product(name: "WaterfallGrid", package: "Platform"),
                 .product(name: "gitignoreLocal", package: "Service"),
+                .product(name: "gitignoreService", package: "Service"),
                 .product(name: "Realm", package: "realm-swift"),
                 .product(name: "RealmSwift", package: "realm-swift"),
                 .product(name: "UIUtil", package: "Platform")
+            ],
+            resources: [
+                .process("Localization")
             ]
         ),
 

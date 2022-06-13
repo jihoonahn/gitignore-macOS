@@ -14,7 +14,7 @@ struct TabButton: View {
                     Image(systemName: image)
                         .font(.system(size: 16,weight: .semibold))
                         .foregroundColor(viewStore.selectedTab == title ? .white : .gray)
-                    Text(title)
+                    Text(title.localized())
                         .fontWeight(.semibold)
                         .font(.system(size: 11))
                         .foregroundColor(viewStore.selectedTab == title ? .white : .gray)

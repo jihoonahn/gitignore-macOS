@@ -17,7 +17,7 @@ public struct ListView: View {
         WithViewStore(self.store) { viewStore in
             ZStack{
                 ListCardGrid(store: store)
-                Text("저장된 gitignore가 없어요!")
+                Text("저장된 gitignore 파일이 없어요!",bundle: .module)
                     .font(.title2)
                     .opacity(viewStore.state.list.count == 0 ? 1 : 0)
             }

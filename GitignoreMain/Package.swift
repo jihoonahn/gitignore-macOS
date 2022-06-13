@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "GitignoreMain",
+    defaultLocalization: "en",
     platforms: [.macOS(.v12)],
     products: [
         .library(
@@ -29,7 +30,11 @@ let package = Package(
                 .product(name: "Realm", package: "realm-swift"),
                 .product(name: "RealmSwift", package: "realm-swift"),
                 .product(name: "UIUtil", package: "Platform")
-            ]),
+            ],
+            resources: [
+                .process("Localization"),
+            ]
+        ),
         .testTarget(
             name: "gitignoreMainTests",
             dependencies: ["gitignoreMain"]),
