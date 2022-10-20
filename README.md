@@ -22,6 +22,5 @@ width = 300>
 
 ## Features
 - gitignore file Create
-##### Todo Features 
-- Xcode Editor Extension
-- macos Menubar Gitignore
+- gitignore file Custom
+- gitignore template Save
